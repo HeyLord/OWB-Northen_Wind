@@ -1,0 +1,143 @@
+﻿division_template = {
+	name = "Commonwealth National Guard"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+	}
+	support = {
+		anti_tank_company = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Settlement Police"
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+		militia = { x = 2 y = 0 }
+		militia = { x = 2 y = 1 }
+		militia = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Great War Veterans"
+	regiments = {
+		ghoul_infantry = { x = 0 y = 0 }
+		ghoul_infantry = { x = 0 y = 1 }
+		ghoul_infantry = { x = 1 y = 0 }
+		ghoul_infantry = { x = 1 y = 1 }
+		ghoul_infantry = { x = 2 y = 0 }
+		ghoul_infantry = { x = 2 y = 1 }
+	}
+	support = {
+		fireteam_support = { x = 0 y = 0 }
+	}
+}
+units = {
+	division = {
+		name = "5th Expeditionary Battalion"
+		location = 14010
+		division_template = "Commonwealth National Guard"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		name = "6th Expeditionary Battalion"
+		location = 13904
+		division_template = "Commonwealth National Guard"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		name = "7th Infantry Battalion"
+		location = 13904
+		division_template = "Commonwealth National Guard"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		name = "9th Infantry Battalion"
+		location = 13961
+		division_template = "Commonwealth National Guard"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		name = "4th Infantry Battalion"
+		location = 14020
+		division_template = "Commonwealth National Guard"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		name = "Delburne Police Detachment"
+		location = 13864
+		division_template = "Settlement Police"
+		start_experience_factor = 0.45
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		name = "Alix Police Detachment"
+		location = 13909
+		division_template = "Settlement Police"
+		start_experience_factor = 0.45
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		name = "Johnson's Fighting Fourth"
+		location = 16367
+		division_template = "Great War Veterans"
+		start_experience_factor = 0.45
+		start_equipment_factor = 1.0
+	}
+
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ballistic_equipment_1
+			creator = "COM"
+		}
+		requested_factories = 3
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = anti_tank_equipment_1
+			creator = "COM"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = demolitions_equipment_1
+			creator = "COM"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+}
+

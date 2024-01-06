@@ -19,21 +19,21 @@ division_template = {
 units = {
 	division = {
 		name = "Hell's Skullfuckers"
-		location = 14013
+		location = 12872
 		division_template = "Kamlo Survivalists"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Miner Molesters"
-		location = 14014
+		location = 13119
 		division_template = "Kamlo Survivalists"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Oldtimer Scouts"
-		location = 14013
+		location = 12872
 		division_template = "Kamlo Survivalists"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0

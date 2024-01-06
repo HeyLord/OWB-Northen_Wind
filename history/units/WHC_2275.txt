@@ -48,87 +48,52 @@ division_template = {
 units = {
 	division = {
 		name = "The Kingsman"
-		location = 14029
+		location = 13970
 		division_template = "Kingsguard"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "Whitecourt Banderium"
-		location = 14029
+		name = "Kings Banderium"
+		location = 13970
 		division_template = "Army of the White"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Blueridge Banderium"
-		location = 14037
-		division_template = "Army of the White"
-		start_experience_factor = 0.25
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "Marlboro Banderium"
-		location = 14067
-		division_template = "Army of the White"
-		start_experience_factor = 0.25
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "Dragon Valley Banderium"
-		location = 14050
-		division_template = "Army of the White"
-		start_experience_factor = 0.25
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "Cynthia Banderium"
-		location = 14049
-		division_template = "Army of the White"
-		start_experience_factor = 0.25
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "Muskeg Banderium"
-		location = 14054
-		division_template = "Army of the White"
-		start_experience_factor = 0.25
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "Hinton Banderium"
-		location = 14020
-		division_template = "Army of the White"
-		start_experience_factor = 0.25
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "Lodgepole Banderium"
-		location = 13982
-		division_template = "Army of the White"
-		start_experience_factor = 0.25
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "Hornburg Banderium"
-		location = 14010
-		division_template = "Army of the White"
-		start_experience_factor = 0.25
-		start_equipment_factor = 1.0
-	}
-	division = {
-		name = "Nordegg Banderium"
 		location = 13970
 		division_template = "Army of the White"
 		start_experience_factor = 0.25
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "Muskeg Banderium"
+		name = "Marlboro Banderium"
 		location = 13995
 		division_template = "Army of the White"
 		start_experience_factor = 0.25
 		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Dragon Valley Banderium"
+		location = 13888
+		division_template = "Army of the White"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Cochrane Levvy"
+		location = 13792
+		division_template = "People's Guard"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Trochy Levvy"
+		location = 13880
+		division_template = "People's Guard"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.7
 	}
 }
 
