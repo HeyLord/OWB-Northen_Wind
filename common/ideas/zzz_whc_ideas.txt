@@ -1,5 +1,12 @@
 ideas = {
     country = {
+        whc_king_without_a_crown = {
+            picture = WHC_broken_crown
+            removal_cost = -1
+            modifier = {
+                stability_factor = -0.05
+            }
+        }
         whc_security_personel_lost = {
             picture = generic_helm_security
             removal_cost = -1
@@ -51,19 +58,7 @@ ideas = {
                 attack_bonus_against = 0.1
             }
             targeted_modifier = {
-                tag = VER
-                attack_bonus_against = 0.1
-            }
-            targeted_modifier = {
-                tag = IRC
-                attack_bonus_against = 0.1
-            }
-            targeted_modifier = {
                 tag = LOI
-                attack_bonus_against = 0.1
-            }
-            targeted_modifier = {
-                tag = COM
                 attack_bonus_against = 0.1
             }
         }

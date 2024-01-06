@@ -126,4 +126,5 @@ set_popularities = {
 add_ideas = {
 	WHC_centralized_authority
 	oregon_cannibal_widespread_cannibalism
+	whc_king_without_a_crown
 }

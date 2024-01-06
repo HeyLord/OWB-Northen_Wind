@@ -31,6 +31,8 @@
   whc_wasp_lands:0 "§8The Drones§!"
   whc_mosquito_lands:0 "§RProgress Has A Cost§!"
   whc_flying_heroes:0 "Flying Heroes"
+  whc_king_without_a_crown:0 "The King Without a Crown"
+  whc_king_without_a_crown_desc:0 "In the good old days, the kingdom had a lot more land under control. But those pesky interdimensional creatures kicked us out to the very backwaters we're in now, and Whitecourt is now under the control of those false communist robots!\nBut we'll get it back under control sooner or later, for the sake of the king and the people!"
 
   #Tech
   special_vintage:0 "Special Vintage"

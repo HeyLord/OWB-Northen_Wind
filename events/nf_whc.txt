@@ -413,6 +413,14 @@ country_event = {
 	option = {
 		name = nf_whc.9.a
 		add_stability = 0.1
+		set_capital = {
+			state = 1156
+		}
+		add_victory_points = {
+			province = 14029
+			value = 15
+		}
+		remove_ideas = whc_king_without_a_crown
 		hidden_effect = {
 			BRA = {
 				country_event = nf_whc.10

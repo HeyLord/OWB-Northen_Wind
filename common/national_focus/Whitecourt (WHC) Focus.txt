@@ -94,12 +94,26 @@ focus_tree = {
 		}
 		relative_position_id = whc_washington_trail
 		completion_reward = {
-			1156 = {
-				add_resource = {
-					type = water
-					amount = 24
+			if = {
+				limit = {
+					owns_state = 1156
+				}
+				1156 = {
+					add_resource = {
+						type = water
+						amount = 24
+					}
 				}
 			}
+			else = {
+				1217 = {
+					add_resource = {
+						type = water
+						amount = 12
+					}
+				}
+			}
+
 			set_temp_variable = { caps_to_add = 300 }
 			add_caps = yes
 		}
@@ -218,7 +232,7 @@ focus_tree = {
 		}
 		relative_position_id = whc_feeding_the_people
 		completion_reward = {
-			1157 = {
+			1221 = {
 				add_resource = {
 					type = metal
 					amount = 20
@@ -699,15 +713,6 @@ focus_tree = {
 			BGR = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
-			VER = {
-				all_core_land_owned_by_prev_sphere = yes
-			}
-			IRC = {
-				all_core_land_owned_by_prev_sphere = yes
-			}
-			VER = {
-				all_core_land_owned_by_prev_sphere = yes
-			}
 			LOI = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
@@ -772,7 +777,7 @@ focus_tree = {
 	focus = {
 		id = whc_capitalist_horrors
 		icon = GFX_goal_TTM_Big_Sister
-		cost =40
+		cost = 40
 		x = -1
 		y = 1
 		available = {
@@ -783,15 +788,9 @@ focus_tree = {
 		}
 		relative_position_id = whc_prince_communism
 		completion_reward = {
-			custom_effect_tooltip = sta_nordikon_claims_tt
-			hidden_effect = {
-				every_state = {
-					limit = {
-						OR = {
-							region = 164
-						}
-					}
-					add_claim_by = ROOT
+			NOR = {
+				WHC = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
 				}
 			}
 		}
@@ -825,7 +824,7 @@ focus_tree = {
 			ai_has_no_other_wars_or_wargoals = yes
 		}
 		bypass = {
-			BAT = {
+			VSH = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
 		}
@@ -834,7 +833,7 @@ focus_tree = {
 		}
 		relative_position_id = whc_prince_communism
 		completion_reward = {
-			BAT = {
+			VSH = {
 				WHC = {
 					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
 				}
@@ -848,7 +847,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		available = {
-			BAT = {
+			VSH = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
 		}

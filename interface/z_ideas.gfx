@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	spriteType = {
+        name = "GFX_idea_WHC_broken_crown"
+        texturefile = "gfx/interface/ideas/whc_broken_crown.dds"
+    }
+}
+
