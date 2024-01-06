@@ -1,0 +1,36 @@
+﻿l_english:
+  RMM_coral_hall_name:0 "Coral Hall"
+  RMM_rebecca_davis_name:0 "Rebecca Davis"
+  RMM_zayden_preston_name:0 "Zayden Preston"
+  RMM_zayden_preston_desc:0 "Zayden Preston is said to hold the honor of being the first to utter the words, "Death to the corpse king", if so it is just one crime against the monarchy in his illustrious career."
+  RMM_scarlett_hines_name:0 "Scarlett Hines"
+  RMM_scarlett_hines_desc:0 ""Ugly bastards but tenacious. There's no one else I'd rather have by my side in a war of attrition, and almost anyone else I'd rather have against me.""
+  RMM_mason_harper_name:0 "Mason Harper"
+  RMM_mason_harper_desc:0 "In a rare display of tolerance, the Iron Chancellor let his ever-insubordinate master of explosives depart to forge his own legacy. Since that day the two have settled into a tense but tolerable arrangement, Harper fighting at the Mooseketeers' side when the cause is suitably great or the situation understandably dire, but otherwise remaining free to maraud throughout the kingdom at will."
+  RMM_DELTA_NAME:0 "Agent Sigma"
+  RMM_MISTER_SMITH_NAME:0 "Mr. Smith"
+  RMM_NO_ONE_NAME:0 "Lawless Wasteland"
+  RMM_BUGMAN_NAME:0 "Bugman"
+
+
+  ###Traits
+  rmm_the_admiral:0 "§CThe Admiral§!"
+  rmm_iron_chancelor:0 "§gThe Iron Chancellor§!"
+  rmm_agent_of_chaos:0 "Agent of Chaos"
+  rmm_first_servant_of_the_republic:0 "First Servant of the Republic"
+
+  RMM_patriot_general:0 "Patriotic General"
+  RMM_republican_general:0 "Republican General"
+  rmm_free:0 "§RFree At Last§!"
+
+  rmm_iron_chancelor_advisor:0 "§gThe Iron Chancellor§!"
+  rmm_chicago_finest:0 "Chicago Finest"
+  rmm_mother_to_many:0 "Mother to Many"
+  rmm_flying_fireband:0 "Flying Fireband"
+	rmm_first_revolutionary:0 "First Revolutionary"
+  rmm_anti_monarch:0 "Staunch Anti Monarchist"
+  rmm_liberty_bomber:0 "Liberty Bomber"
+
+
+  rmm_chicago_colony:0 "Canada Exploitation"
+  rmm_no_one_tt:0 "§RTrue Freedom§!"

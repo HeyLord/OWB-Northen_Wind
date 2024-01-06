@@ -1,0 +1,55 @@
+spriteTypes = {
+
+	#RMM
+	spriteType = {
+		name = "GFX_Portrait_RMM_mcclane"
+		texturefile = "gfx/leaders/RMM/portrait_RMM_mcclane.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_RMM_mason_harper"
+		texturefile = "gfx/leaders/RMM/portrait_rmm_mason_harper.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_RMM_rebecca_davis"
+		texturefile = "gfx/leaders/RMM/portrait_rmm_rebecca_davis.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_RMM_scarlett_hines"
+		texturefile = "gfx/leaders/RMM/portrait_rmm_scarlett_hines.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_RMM_zayden_preston"
+		texturefile = "gfx/leaders/RMM/portrait_rmm_zayden_preston.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_RMM_coral_hall"
+		texturefile = "gfx/leaders/RMM/portrait_rmm_coral_hall.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_RMM_agent_delta"
+		texturefile = "gfx/leaders/RMM/portrait_rmm_agent_delta.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_RMM_no_one"
+		texturefile = "gfx/leaders/RMM/portrait_rmm_no_one.dds"
+	}
+
+	#WHC
+	spriteType = {
+		name = "GFX_Portrait_WHC_leader"
+		texturefile = "gfx/leaders/WHC/portrait_whc_leader.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_WHC_mortis_ghost_harkess"
+		texturefile = "gfx/leaders/WHC/portrait_whc_portrait_mortis_ghost_harkess.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_WHC_frank_kang"
+		texturefile = "gfx/leaders/WHC/portrait_whc_portrait_frank_kang.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_WHC_marshall_gordon"
+		texturefile = "gfx/leaders/WHC/portrait_whc_marshall_gordon.dds"
+	}
+
+}

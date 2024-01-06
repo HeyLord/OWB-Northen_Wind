@@ -1,0 +1,16 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_decision_cat_rmm_chicago_shipments"
+		texturefile = "gfx/interface/decisions/decision_cat_rmm_chicago_shipments.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_enclave_weapon_box"
+		texturefile = "gfx/interface/decisions/decision_enclave_weapon_box.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_fusion_cell2"
+		texturefile = "gfx/interface/decisions/decision_fusion_cell2.dds"
+	}
+
+}
