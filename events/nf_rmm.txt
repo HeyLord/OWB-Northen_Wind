@@ -1,0 +1,496 @@
+﻿add_namespace = nf_rmm
+
+country_event = { #Moose decides to go alone
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.1" }
+	id = nf_rmm.1
+	title = nf_rmm.1.t
+	desc = nf_rmm.1.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.1.a #How rude!
+		set_country_flag = rmm_cuts_ties
+		custom_effect_tooltip = rmm_generals_tt
+		hidden_effect = {
+			RMM = {
+				RMM_rebecca_davis = {
+					set_nationality = WPG
+					remove_unit_leader_trait = RMM_republican_general
+				}
+				RMM_zayden_preston = {
+					set_nationality = WPG
+					remove_unit_leader_trait = RMM_republican_general
+				}
+			}
+		}
+	}
+}
+#Starting speach
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.2" }
+	id = nf_rmm.2
+	title = nf_rmm.2.t
+	desc = nf_rmm.2.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.2.a
+		set_global_flag = rmm_manitoba_war_flag
+		activate_mission = RMM_war_breaks_out
+	}
+}
+#Manitoba gets an event about Moose escaping
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.3" }
+	id = nf_rmm.3
+	title = nf_rmm.3.t
+	desc = nf_rmm.3.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.3.a
+		set_country_flag = bra_rmm_escapes
+	}
+}
+#Agents kill everyone
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.4" }
+	id = nf_rmm.4
+	title = nf_rmm.4.t
+	desc = nf_rmm.4.d
+	picture = GFX_event_generic_civil_unrest
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.4.a
+		add_manpower = -312
+		set_cosmetic_tag = RMM_CRA
+		set_politics = {
+			ruling_party = intellectuals
+			elections_allowed = no
+		}
+		add_ideas = rmm_revolution_betrayed
+		add_ideas = rmm_dead_leadership
+		add_ideas = rmm_strangers
+		remove_ideas = RMM_independance
+		custom_effect_tooltip = rmm_plasma_clots_tt
+		hidden_effect = {
+			set_popularities = {
+				elites = 0
+				ruler = 0
+				intellectuals = 100
+				people = 0
+			}
+			retire_character = RMM_chancellor_mcclane
+			retire_character = RMM_coral_hall
+			retire_character = RMM_rebecca_davis
+			retire_character = RMM_zayden_preston
+			retire_character = RMM_scarlett_hines
+		}
+	}
+}
+#Manitoba victory event
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.5" }
+	id = nf_rmm.5
+	title = nf_rmm.5.t
+	desc = nf_rmm.5.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.5.a
+		country_event = {
+			id = nf_rmm.6
+			days = 7
+		}
+	}
+}
+#Trials on nobility
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.6" }
+	id = nf_rmm.6
+	title = nf_rmm.6.t
+	desc = nf_rmm.6.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = { #Courts
+		name = nf_rmm.6.a
+		complete_national_focus = rmm_irc_gutter
+		country_event = {
+			id = nf_rmm.7
+			days = 7
+		}
+	}
+	option = { #Kill
+		name = nf_rmm.6.a
+		complete_national_focus = rmm_irc_judgement
+		country_event = {
+			id = nf_rmm.7
+			days = 7
+		}
+	}
+}
+#Soldier reward
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.7" }
+	id = nf_rmm.7
+	title = nf_rmm.7.t
+	desc = nf_rmm.7.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = { #PLunder the cities
+		name = nf_rmm.7.a
+		complete_national_focus = rmm_irc_vengeance
+		country_event = {
+			id = nf_rmm.8
+			days = 7
+		}
+	}
+	option = { #Pensions
+		name = nf_rmm.7.a
+		complete_national_focus = rmm_irc_glorious_days
+		country_event = {
+			id = nf_rmm.8
+			days = 7
+		}
+	}
+}
+#Ruling style
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.7" }
+	id = nf_rmm.8
+	title = nf_rmm.8.t
+	desc = nf_rmm.8.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = { #Autocracy
+		name = nf_rmm.8.a
+		complete_national_focus = rmm_irc_world_may_be_ugly
+	}
+	option = { #Democracy
+		name = nf_rmm.8.a
+		complete_national_focus = rmm_irc_do_what_must
+	}
+}
+#Coral Hall talks about her idea
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.7" }
+	id = nf_rmm.9
+	title = nf_rmm.9.t
+	desc = nf_rmm.9.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.9.a
+		set_politics = {
+			ruling_party = elites
+			elections_allowed = no
+		}
+		set_cosmetic_tag = RMM_Order
+		hidden_effect = {
+			set_popularities = {
+				elites = 80
+				ruler = 0
+				intellectuals = 0
+				people = 20
+			}
+		}
+	}
+}
+#Give back our cores pls uwu
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.7" }
+	id = nf_rmm.10
+	title = nf_rmm.10.t
+	desc = nf_rmm.10.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = { #yes
+		name = nf_rmm.10.a
+		ai_chance = {
+			factor = 1
+		}
+		RMM = {
+			country_event = nf_rmm.11
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 1380
+					state = 1379
+					state = 1381
+				}
+				NOT = {
+					is_owned_by = RMM
+				}
+			}
+			RMM = {
+				transfer_state = PREV
+			}
+		}
+	}
+	option = { #no
+		name = nf_rmm.10.a
+		ai_chance = {
+			factor = 0
+		}
+		RMM = {
+			country_event = nf_rmm.12
+		}
+	}
+}
+#Cores are returned
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.7" }
+	id = nf_rmm.11
+	title = nf_rmm.11.t
+	desc = nf_rmm.11.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = { #Move capital back to Dawfin
+		name = nf_rmm.11.a
+		set_capital = {state = 1380}
+		add_stability = 0.05
+	}
+	option = { #Stay in Rock Bridge
+		name = nf_rmm.11.a
+		add_victory_points = {
+			province = 13298
+			value = 5
+		}
+		add_war_support = 0.05
+	}
+}
+#No cores?
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.7" }
+	id = nf_rmm.12
+	title = nf_rmm.12.t
+	desc = nf_rmm.12.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.12.a
+		add_stability = -0.15
+	}
+}
+#Secretary scolds Sigma
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.13" }
+	id = nf_rmm.13
+	title = nf_rmm.13.t
+	desc = nf_rmm.13.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.13.a
+		add_ideas = rmm_the_secretary_is_watching
+		custom_effect_tooltip = rmm_agency_tt
+		hidden_effect = {
+			create_intelligence_agency = {
+				name = "Canadian Civil Intelligence Agency"
+				icon = GFX_intelligence_agency_logo_csis2
+			}
+		}
+	}
+}
+#Agents victory
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.13" }
+	id = nf_rmm.14
+	title = nf_rmm.14.t
+	desc = nf_rmm.14.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.14.a
+		set_cosmetic_tag = RMM_CRA_final
+		add_ideas = rmm_tanner_resist_1
+		add_ideas = rmm_canada_defiant_1
+		remove_ideas = rmm_revolution_betrayed
+		add_country_leader_trait = cruel_tyrant
+		add_dynamic_modifier = { modifier = rmm_chicago_colony }
+	}
+}
+#Chicago shipments
+country_event = {
+	id = nf_rmm.15
+	title = nf_rmm.15.t
+	desc = nf_rmm.15.d
+	picture = GFX_event_event_enclave_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.15.a
+        trigger = {
+            check_variable = { resource@water > 15 }
+			NOT = {
+				check_variable = { rmm_resource_water < -25 }
+			}
+        }
+        set_temp_variable = { temp_water_rmm = resource@water }
+		divide_temp_variable = { temp_water_rmm = 5 }
+        round_temp_variable = temp_water_mca
+        subtract_from_variable = { rmm_resource_water = temp_water_rmm }
+        custom_effect_tooltip = nf_rmm.15.a_tt
+        force_update_dynamic_modifier = yes
+    }
+    option = {
+		name = nf_rmm.15.b
+        trigger = {
+            check_variable = { resource@metal > 10}
+			NOT = {
+				check_variable = { rmm_resource_energy < -20 }
+			}
+        }
+        set_temp_variable = { temp_metal_rmm = resource@metal }
+		divide_temp_variable = { temp_metal_mca = 8 }
+        round_temp_variable = temp_metal_mca
+        subtract_from_variable = { rmm_resource_metal = temp_metal_mca }
+        custom_effect_tooltip = nf_rmm.15.b_tt
+        force_update_dynamic_modifier = yes
+
+
+	}
+    option = {
+		name = nf_rmm.15.c
+        trigger = {
+            check_variable = { resource@energy > 10}
+			NOT = {
+				check_variable = { rmm_resource_metal < -20 }
+			}
+        }
+        set_temp_variable = { temp_energy_rmm = resource@energy }
+		divide_temp_variable = { temp_energy_mca = 5 }
+        round_temp_variable = temp_energy_mca
+        subtract_from_variable = { rmm_resource_energy = temp_energy_rmm }
+        custom_effect_tooltip = nf_rmm.15.c_tt
+        force_update_dynamic_modifier = yes
+
+	}
+    option = {
+		name = nf_rmm.15.e
+        trigger = {
+			OR = {
+				check_variable = { rmm_resource_water < -25 }
+				check_variable = { rmm_resource_energy < -20 }
+				check_variable = { rmm_resource_metal < -20 }
+			}
+        }
+		custom_effect_tooltip = nf_rmm.15.e_tt
+		hidden_effect = {
+			country_event = {
+				id = nf_rmm.16
+				days = 7
+			}
+		}
+	}
+}
+#Chicago pulls out all support
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.13" }
+	id = nf_rmm.16
+	title = nf_rmm.16.t
+	desc = nf_rmm.16.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.16.a
+		set_stability = 0.0
+		set_war_support = 0.0
+		if = {
+			limit = {
+				has_idea = rmm_chicago_leadership
+			}
+			remove_ideas = rmm_chicago_leadership
+		}
+		hidden_effect = {
+			country_event = {
+				id = nf_rmm.17
+				days = 7
+			}
+		}
+	}
+}
+#Anarchy
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.13" }
+	id = nf_rmm.17
+	title = nf_rmm.17.t
+	desc = nf_rmm.17.d
+	picture = GFX_event_sub_generic_coast
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.17.a
+		custom_effect_tooltip = RMM_anarchy_tt
+		hidden_effect = {
+			retire_character = RMM_agent_delta
+			promote_character = RMM_no_one
+			set_cosmetic_tag = RMM_Anarchy
+			set_politics = {
+				ruling_party = people
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = people
+				long_name = rmm_no_one_tt
+				name = rmm_no_one_tt
+			}
+			set_party_name = {
+				ideology = ruler
+				long_name = rmm_no_one_tt
+				name = rmm_no_one_tt
+			}
+			set_party_name = {
+				ideology = intellectuals
+				long_name = rmm_no_one_tt
+				name = rmm_no_one_tt
+			}
+			set_party_name = {
+				ideology = elites
+				long_name = rmm_no_one_tt
+				name = rmm_no_one_tt
+			}
+			set_popularities = {
+				elites = 0
+				ruler = 0
+				intellectuals = 0
+				people = 100
+			}
+		}
+	}
+}
+
+

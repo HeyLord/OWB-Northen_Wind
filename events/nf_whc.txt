@@ -1,0 +1,508 @@
+﻿add_namespace = nf_whc
+
+country_event = {
+	id = nf_whc.1
+	title = nf_whc.1.t
+	desc = nf_whc.1.d
+	picture = GFX_event_sub_generic_vault_generic_4
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.1.a
+		add_ideas = whc_security_personel_lost
+	}
+    option = {
+		name = nf_whc.1.b
+		add_ideas = whc_essential_resources_lost
+	}
+    option = {
+		name = nf_whc.1.c
+		add_ideas = whc_followers_behind_the_door
+	}
+	option = {
+		name = nf_whc.1.e
+		add_political_power = -300
+		remove_ideas = WHC_centralized_authority
+	}
+}
+country_event = {
+	id = nf_whc.2
+	title = nf_whc.2.t
+	desc = nf_whc.2.d
+	picture = GFX_event_sub_generic_wasteland_5
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.2.a
+		capital_scope = {
+			add_extra_state_shared_building_slots = 8
+		}
+	}
+    option = {
+		name = nf_whc.2.b
+		capital_scope = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = nf_whc.3
+	title = nf_whc.3.t
+	desc = nf_whc.3.d
+	picture = GFX_event_art_wassily_kandinsky_1
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.3.a
+		custom_effect_tooltip = whc_border_strath_tt
+		hidden_effect = {
+			1154 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 14026
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 14036
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 14040
+				}
+			}
+			1155 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 14047
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 14046
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 14045
+				}
+			}
+			1215 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 13984
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 14004
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 14008
+				}
+			}
+			1216 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 14009
+				}
+			}
+		}
+	}
+    option = {
+		name = nf_whc.3.b
+		custom_effect_tooltip = whc_border_every_tt
+		hidden_effect = {
+			1153 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+			1160 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+			1156 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+			1154 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+			1155 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+			1215 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+			1216 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+			1218 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+			1217 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+			1158 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = nf_whc.3.c
+		set_technology = {
+			robotics_tech_level_settler = 1
+		}
+		add_tech_bonus = {
+			name = robotics_tech_category
+			bonus = 1
+			uses = 2
+			category = robotics_tech_category
+		}
+		add_tech_bonus = {
+			name = robotics_tech_category
+			bonus = 0.5
+			uses = 2
+			category = electronics
+		}
+	}
+    option = {
+		name = nf_whc.3.e
+		ai_chance = {
+			factor = 0
+		}
+		navy_experience = 100
+		add_equipment_to_stockpile = {
+			type = convoy_1
+			amount = 200
+			producer = ROOT
+		}
+		add_tech_bonus = {
+			bonus = 1.0
+			uses = 3
+			category = naval_tech_category
+		}
+	}
+}
+country_event = {
+	id = nf_whc.4
+	title = nf_whc.4.t
+	desc = nf_whc.4.d
+	picture = GFX_event_sub_generic_wasteland_5
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.4.a
+		WHC = {
+            add_equipment_to_stockpile = {
+                type = energy_equipment_1
+                amount = 1000
+                producer = USA
+            }
+		}
+	}
+}
+country_event = {
+	id = nf_whc.5
+	title = nf_whc.5.t
+	desc = nf_whc.5.d
+	picture = GFX_event_sub_generic_wasteland_5
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.5.a
+		trigger = {
+			has_war = yes
+		}
+		add_timed_idea = {
+			idea = whc_final_attack_2
+			days = 180
+		}
+		custom_effect_tooltip = whc_180_tt
+	}
+	option = {
+		name = nf_whc.5.b
+		trigger = {
+			has_war = no
+		}
+		add_stability = 0.15
+	}
+}
+country_event = {
+	id = nf_whc.6
+	title = nf_whc.6.t
+	desc = nf_whc.6.d
+	picture = GFX_event_sub_generic_wasteland_5
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.6.a
+		trigger = {
+			has_war = yes
+		}
+		set_war_support = 0.0
+	}
+	option = {
+		name = nf_whc.6.b
+		trigger = {
+			has_war = no
+		}
+		add_stability = 0.05
+	}
+}
+#Heroes get rewards
+country_event = {
+	id = nf_whc.7
+	title = nf_whc.7.t
+	desc = nf_whc.7.d
+	picture = GFX_event_sub_generic_wasteland_5
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.7.a
+		every_unit_leader = {
+			add_attack = 1
+		}
+	}
+	option = {
+		name = nf_whc.7.b
+		every_unit_leader = {
+			add_defense = 1
+		}
+	}
+	option = {
+		name = nf_whc.7.c
+		every_unit_leader = {
+			add_logistics = 1
+		}
+	}
+	option = {
+		name = nf_whc.7.e
+		every_unit_leader = {
+			add_maneuver = 1
+		}
+	}
+}
+#Frank and Nordikon lands
+country_event = {
+	id = nf_whc.8
+	title = nf_whc.8.t
+	desc = nf_whc.8.d
+	picture = GFX_event_sub_generic_wasteland_5
+
+	is_triggered_only = yes
+
+	option = { #Get good robot
+		name = nf_whc.8.a
+		custom_effect_tooltip = whc_yj_tt
+		add_timed_idea = {
+			idea = whc_yj_lands
+			days = 420
+		}
+	}
+	option = { #Get specops
+		name = nf_whc.8.b
+		custom_effect_tooltip = whc_wasp_tt
+		add_timed_idea = {
+			idea = whc_wasp_lands
+			days = 420
+		}
+	}
+	option = { #Get plasma
+		name = nf_whc.8.c
+		custom_effect_tooltip = whc_msq_tt
+		add_timed_idea = {
+			idea = whc_mosquito_lands
+			days = 420
+		}
+	}
+}
+#Victory celebration
+country_event = {
+	id = nf_whc.9
+	title = nf_whc.9.t
+	desc = nf_whc.9.d
+	picture = GFX_event_emotion_happy
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.9.a
+		add_stability = 0.1
+		hidden_effect = {
+			BRA = {
+				country_event = nf_whc.10
+			}
+		}
+	}
+}
+#King Communism is dead (BRA)
+country_event = {
+	id = nf_whc.10
+	title = nf_whc.10.t
+	desc = nf_whc.10.d
+	picture = GFX_event_sub_generic_wasteland_5
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.10.a
+		add_stability = -0.01
+	}
+}
+#King Communism is dead (WHC)
+country_event = {
+	id = nf_whc.11
+	title = nf_whc.11.t
+	desc = nf_whc.11.d
+	picture = GFX_event_sub_generic_wasteland_5
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.11.a
+		add_stability = -0.15
+	}
+}
+#Chose successor
+country_event = {
+	id = nf_whc.12
+	title = nf_whc.12.t
+	desc = nf_whc.12.d
+	picture = GFX_event_sub_generic_wasteland_5
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.12.a
+		complete_national_focus = whc_prince_communism
+	}
+	option = {
+		name = nf_whc.12.b
+		complete_national_focus = whc_queen_communism
+	}
+}
+#Big Grass
+country_event = {
+	id = nf_whc.13
+	title = nf_whc.13.t
+	desc = nf_whc.13.d
+	picture = GFX_event_brain
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.13.a
+		add_ideas = whc_big_grass_comrades
+		BGR = {
+			BGR_ALKOM = {
+				set_nationality = WHC
+			}
+		}
+	}
+}
