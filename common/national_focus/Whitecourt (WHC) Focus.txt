@@ -369,7 +369,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_kingly_aid
-		icon = GFX_goal_TLA_Zap_worker
+		icon = GFX_goal_TLA_Zap_car
 		cost = 35
 		x = -1
 		y = 1
@@ -1413,19 +1413,37 @@ focus_tree = {
 		}
 		relative_position_id = whc_red_sun_over_the_paradise
 		completion_reward = {
-			every_owned_state = {
-				limit = {
-					NOT = {
-						is_core_of = WHC
+			effect_tooltip = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = LOI
+							is_core_of = COM
+							is_core_of = STC
+							is_core_of = BGR
+						}
 					}
+					add_compliance = 15
 				}
-				add_compliance = 15
+			}
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_core_of = LOI
+							is_core_of = COM
+							is_core_of = STC
+							is_core_of = BGR
+						}
+					}
+					add_compliance = 15
+				}
 			}
 		}
 	}
 	focus = {
 		id = whc_the_last_supper
-		icon = GFX_goal_BDT_bloody_skull
+		icon = GFX_goal_WBH_skull_knives_kill_the_first
 		cost = 40
 		x = -2
 		y = 1
@@ -1659,7 +1677,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_some_are_more_metal
-		icon = GFX_focus_canada_generic_funny_pa_1
+		icon = GFX_goal_ZAP_red_robot
 		cost = 40
 		x = 1
 		y = 1
@@ -1679,7 +1697,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_true_communist_man
-		icon = GFX_goal_LOI_soviet_forward
+		icon = GFX_goal_TLA_Zap_worker
 		cost = 40
 		x = 1
 		y = 1

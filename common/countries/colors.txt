@@ -58,11 +58,6 @@ BDT = {
 	color_ui = rgb { 39 0 97 }
 }
 
-BYE = {
-	color = rgb { 255 69 0 }
-	color_ui = rgb { 255 69 0 }
-}
-
 LUL = {
 	color = rgb { 39 0 97 }
 	color_ui = rgb { 39 0 97 }
@@ -240,11 +235,6 @@ EXE = {
 FAR = {
 	color = rgb { 50 205 50 }
 	color_ui = rgb { 50 205 50 }
-}
-
-FEN = {
-	color = rgb { 0 0 0 }
-	color_ui = rgb { 0 0 0 }
 }
 
 FIE = {
@@ -1161,14 +1151,6 @@ MNC = {
 	color = rgb { 0 106 164 }
 	color_ui = rgb { 0 106 164 }
 }
-BCA = {
-	color = rgb { 0 106 164 }
-	color_ui = rgb { 0 106 164 }
-}
-SOH = {
-	color = rgb { 0 106 164 }
-	color_ui = rgb { 0 106 164 }
-}
 PRO = {
 	color = rgb { 78 177 102 }
 	color_ui = rgb { 78 177 102 }
@@ -1285,22 +1267,12 @@ STC = {
 	color_ui = rgb { 122 0 0 }
 }
 
-BAD = {
-	color = rgb { 115 77 38 }
-	color_ui = rgb { 115 77 38 }
-}
-
 NOR = {
-	color = rgb { 0 72 14 }
-	color_ui = rgb { 0 72 14 }
+	color = rgb { 189 142 0 }
+	color_ui = rgb { 189 142 0 }
 }
 
 WPG = {
-	color = rgb { 0 42 135 }
-	color_ui = rgb { 0 42 135 }
-}
-
-KIN = {
 	color = rgb { 0 42 135 }
 	color_ui = rgb { 0 42 135 }
 }
@@ -1481,8 +1453,8 @@ PAP = {
 }
 
 URA = {
-	color = rgb { 44 66 13 }
-	color_ui = rgb { 44 66 13 }
+	color = rgb { 108 55 39 }
+	color_ui = rgb { 108 55 39 }
 }
 
 DUK = {
@@ -1555,73 +1527,4 @@ NPC = {
 WNC = {
 	color = rgb { 0 78 102 }
 	color_ui = rgb { 0 78 102 }
-}
-CPL = {
-	color = rgb { 204 0 0 }
-	color_ui = rgb { 204 0 0 }
-}
-
-CAC = {
-	color = rgb { 37 94 48 }
-	color_ui = rgb { 37 94 48 }
-}
-NWC = {
-	color = rgb { 24 74 135 }
-	color_ui = rgb { 24 74 135 }
-}
-WCO = {
-	color = rgb { 24 74 135 }
-	color_ui = rgb { 24 74 135 }
-}
-MCO = {
-	color = rgb { 24 74 135 }
-	color_ui = rgb { 24 74 135 }
-}
-TXC = {
-	color = rgb { 24 74 135 }
-	color_ui = rgb { 24 74 135 }
-}
-SNC = {
-	color = rgb { 24 74 135 }
-	color_ui = rgb { 24 74 135 }
-}
-MUC = {
-	color = rgb { 24 74 135 }
-	color_ui = rgb { 24 74 135 }
-}
-FSC = {
-	color = rgb { 24 74 135 }
-	color_ui = rgb { 24 74 135 }
-}
-RIC = {
-	color = rgb { 24 74 135 }
-	color_ui = rgb { 24 74 135 }
-}
-NPC = {
-	color = rgb { 191 0 0 }
-	color_ui = rgb { 191 0 0 }
-}
-SHE = {
-	color = rgb { 178 33 50 }
-	color_ui = rgb { 178 33 50 }
-}
-RID = {
-	color = rgb { 230 230 230 }
-	color_ui = rgb { 230 230 230 }
-}
-MIC = {
-	color = rgb { 0 104 72 }
-	color_ui = rgb { 0 104 72 }
-}
-UCF = {
-	color = rgb { 223 0 37 }
-	color_ui = rgb { 223 0 37 }
-}
-EOS = {
-	color = rgb { 135 0 0 }
-	color_ui = rgb { 135 0 0 }
-}
-DAK = {
-	color = rgb { 19 19 189 }
-	color_ui = rgb { 19 19 189 }
 }
