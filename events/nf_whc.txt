@@ -4,7 +4,7 @@ country_event = {
 	id = nf_whc.1
 	title = nf_whc.1.t
 	desc = nf_whc.1.d
-	picture = GFX_event_sub_generic_vault_generic_4
+	picture = GFX_event_vault_generic_4
 
 	is_triggered_only = yes
 
@@ -63,72 +63,84 @@ country_event = {
 		name = nf_whc.3.a
 		custom_effect_tooltip = whc_border_strath_tt
 		hidden_effect = {
-			1154 = {
+			1217 = {
 				add_building_construction = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = 14026
+					province = 13968
 				}
 				add_building_construction = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = 14036
+					province = 13968
 				}
 				add_building_construction = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = 14040
-				}
-			}
-			1155 = {
-				add_building_construction = {
-					type = bunker
-					level = 2
-					instant_build = yes
-					province = 14047
+					province = 13971
 				}
 				add_building_construction = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = 14046
-				}
-				add_building_construction = {
-					type = bunker
-					level = 2
-					instant_build = yes
-					province = 14045
+					province = 13972
 				}
 			}
-			1215 = {
+			1218 = {
 				add_building_construction = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = 13984
+					province = 13973
 				}
 				add_building_construction = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = 14004
+					province = 13977
 				}
 				add_building_construction = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = 14008
+					province = 13962
 				}
 			}
-			1216 = {
+			1221 = {
 				add_building_construction = {
 					type = bunker
 					level = 2
 					instant_build = yes
-					province = 14009
+					province = 13877
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 13875
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 13886
+				}
+			}
+			1226 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 13879
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 13874
 				}
 			}
 		}
@@ -137,73 +149,7 @@ country_event = {
 		name = nf_whc.3.b
 		custom_effect_tooltip = whc_border_every_tt
 		hidden_effect = {
-			1153 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = {
-						all_provinces = yes
-						limit_to_border = yes
-					}
-					instant_build = yes
-				}
-			}
-			1160 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = {
-						all_provinces = yes
-						limit_to_border = yes
-					}
-					instant_build = yes
-				}
-			}
-			1156 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = {
-						all_provinces = yes
-						limit_to_border = yes
-					}
-					instant_build = yes
-				}
-			}
-			1154 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = {
-						all_provinces = yes
-						limit_to_border = yes
-					}
-					instant_build = yes
-				}
-			}
-			1155 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = {
-						all_provinces = yes
-						limit_to_border = yes
-					}
-					instant_build = yes
-				}
-			}
-			1215 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = {
-						all_provinces = yes
-						limit_to_border = yes
-					}
-					instant_build = yes
-				}
-			}
-			1216 = {
+			1217 = {
 				add_building_construction = {
 					type = bunker
 					level = 1
@@ -225,7 +171,7 @@ country_event = {
 					instant_build = yes
 				}
 			}
-			1217 = {
+			1221 = {
 				add_building_construction = {
 					type = bunker
 					level = 1
@@ -236,7 +182,40 @@ country_event = {
 					instant_build = yes
 				}
 			}
-			1158 = {
+			1226 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+			1220 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+			1222 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					instant_build = yes
+				}
+			}
+			1223 = {
 				add_building_construction = {
 					type = bunker
 					level = 1

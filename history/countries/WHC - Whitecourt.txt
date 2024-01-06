@@ -1,4 +1,4 @@
-﻿capital = 1156
+﻿capital = 1217
 oob = "WHC_2275"
 
 set_technology = {
@@ -111,6 +111,11 @@ recruit_character = WHC_marshall_gordon
 recruit_character = WHC_natalia_bell
 recruit_character = WHC_elis_mikoshi
 recruit_character = WHC_alexei_soltz
+
+set_province_name = {
+	id = 13970
+	name = whc_capital
+}
 
 set_popularities = {
 	people = 40
