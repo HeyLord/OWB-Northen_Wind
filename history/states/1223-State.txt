@@ -1,9 +1,11 @@
+
 state={
 	id=1223
 	name="STATE_1223"
-	provinces={
-		12872 13119 13786 13787 13788 13789 13796 13797
+	resources={
+		metal=8.000
 	}
+
 	history={
 		owner =  WHC
 		add_core_of =  WHC
@@ -13,12 +15,15 @@ state={
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 1
+
 		}
+
 	}
-	resources = {
-		metal = 8
+
+	provinces={
+		12872 13119 13787 13788 13789 13796 13797
 	}
-	state_category = rural
 	manpower = 4500
 	buildings_max_level_factor=1.000
+	state_category=rural
 }

@@ -1,12 +1,11 @@
+
 state={
 	id=1218
 	name="STATE_1218"
-	provinces={
-		13959 13962 13963 13964 13973 13975 13977 13994 13995 13996 13997
+	resources={
+		metal=6.000
 	}
-	resources = {
-		metal = 6
-	}
+
 	history={
 		owner =  WHC
 		add_core_of =  WHC
@@ -15,7 +14,13 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
+
 		}
+
+	}
+
+	provinces={
+		13959 13962 13963 13964 13973 13977 13994 13995 13996 13997
 	}
 	state_category = pastoral
 	manpower = 3100
