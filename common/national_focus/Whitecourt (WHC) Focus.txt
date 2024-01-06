@@ -141,7 +141,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_special_vintage
-		icon = GFX_goal_LOI_soviet_booze
+		icon = GFX_goal_BDT_bloody_skull
 		cost = 35
 		x = 0
 		y = 1
@@ -180,7 +180,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_feeding_the_people
-		icon = GFX_goal_LOI_soviet_wheat_idealism
+		icon = GFX_goal_TLA_Zap_Food
 		cost = 35
 		x = -1
 		y = 1
@@ -223,7 +223,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_heavy_industry
-		icon = GFX_goal_LOI_soviet_industry_4
+		icon = GFX_goal_TLA_Zap_miner
 		cost = 35
 		x = 1
 		y = 1
@@ -339,7 +339,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_all_roads_lead_to_socialism
-		icon = GFX_goal_generic_industrial_truck
+		icon = GFX_goal_generic_vault_car
 		cost = 35
 		x = 0
 		y = 1
@@ -369,7 +369,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_kingly_aid
-		icon = GFX_goal_BRA_lumberjack
+		icon = GFX_goal_TLA_Zap_worker
 		cost = 35
 		x = -1
 		y = 1
@@ -502,7 +502,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_special_shipment
-		icon = GFX_goal_BRA_energy_weapons
+		icon = GFX_goal_9b_laser
 		cost = 35
 		x = 1
 		y = 1
@@ -632,7 +632,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_chain_breaker
-		icon = GFX_goal_LOI_soviet_tank5
+		icon = GFX_goal_generic_scrap_tank
 		cost = 35
 		x = 1
 		y = 1
@@ -650,7 +650,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_grinder_threads
-		icon = GFX_goal_LOI_soviet_tank1
+		icon = GFX_goal_NPC_loid_tanks
 		cost = 35
 		x = 0
 		y = 1
