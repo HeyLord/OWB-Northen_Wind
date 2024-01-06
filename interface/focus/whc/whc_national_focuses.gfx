@@ -1,0 +1,39 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_goal_WHC_Gunn"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Gunn.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Hammer_and_Sickle"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Hammer_and_Sickle.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Wine_Glass"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Wine_Glass.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Wine_Skull"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Wine_Skull.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_eaw_commie_pone"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_eaw_commie_pone.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Patricia"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Patricia.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Patricia_Nordikon"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Patricia_Nordikon.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Frank"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Frank.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Red_Sun"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Red_Sun.dds"
+	}
+}
+

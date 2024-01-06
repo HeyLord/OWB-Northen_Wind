@@ -1,0 +1,131 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_goal_MTC_BM"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Robot"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Robot.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Brain_Implants"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Brain_Implants.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_Machine"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_Machine.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_Clockwork"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_Clockwork.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_Piggy"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_Piggy.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_Soldier_Plane"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_Soldier_Plane.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_Circus"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_Circus.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_Seat_In_Congress"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_Seat_In_Congress.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_Shooting_MJW_CPH"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_Shooting_MJW_CPH.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_Congress_Offer"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_Congress_Offer.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_Dollar_Capitalist"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_Dollar_Capitalist.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Robot_General"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Robot_General.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Pain_Supression"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Pain_Supression.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Atom"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Atom.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Factory_Robot"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Factory_Robot.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Woman_Launcher"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Woman_Launcher.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Mask"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Mask.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Heart"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Heart.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Smoke_Guy"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Smoke_Guy.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Worth"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Worth.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Corpse_King"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Corpse_King.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Machine"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Machine.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Black_Guy"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Black_Guy.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Building"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Building.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Garbage"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Garbage.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Guy"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Guy.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Head"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Head.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Skull"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Skull.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Metal_Moose"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Metal_Moose.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_West"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_West.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MTC_BM_Minigun_Robot"
+		texturefile = "gfx/interface/goals/unique/MTC/MTC_BM_Minigun_Robot.dds"
+	}
+}
+
