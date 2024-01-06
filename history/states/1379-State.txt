@@ -1,0 +1,44 @@
+state={
+	id=1379
+	name="STATE_1379"
+	provinces={
+		14652 14653 14654 15217 15223 15224 15225 15226 15227
+	}
+	resources = {
+		water = 6
+		energy = 3
+		metal = 6
+	}
+	history = {
+		owner = RMM
+		add_core_of = RMM
+		victory_points = {
+			15226 5
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			15226 = {
+				bunker = 2
+			}
+			15224 = {
+				bunker = 2
+			}
+			15217 = {
+				bunker = 2
+			}
+			14654 = {
+				bunker = 2
+			}
+			16358 = {
+				bunker = 2
+			}
+			13267 = {
+				bunker = 2
+			}
+		}
+	}
+	state_category = pastoral
+	manpower = 3800
+	buildings_max_level_factor=1.000
+}

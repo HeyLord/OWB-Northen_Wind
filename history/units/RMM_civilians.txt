@@ -1,0 +1,28 @@
+﻿division_template = {
+	name = "Forced Civilians"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+##### Starting Army #####
+units = {
+	division = {
+		name = "Freedom Fighters"
+		location = 15226
+		division_template = "Forced Civilians"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Penal Fighters"
+		location = 13267
+		division_template = "Forced Civilians"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}

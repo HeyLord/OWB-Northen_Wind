@@ -1,0 +1,74 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			RMM = {
+				country_event = nf_rmm.2
+			}
+		}
+	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = DMM }
+					FROM = {
+						tag = RMM
+						has_completed_focus = rmm_adm_cross_the_lake
+					}
+				}
+				RMM = {
+					annex_country = {
+						target = DMM
+						transfer_troops = yes
+					}
+					set_country_flag = rmm_escapes
+				}
+				1181 = {
+					add_core_of = RMM
+				}
+				set_capital = {state = 1181}
+				every_state = {
+					limit = {
+						OWNER = {
+							OR = {
+								has_war_with = RMM
+								original_tag = RMM
+							}
+						}
+					}
+					teleport_armies = {
+						to_state = 1181
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = RMM
+						NOT = {
+							state = 1181
+						}
+					}
+					transfer_state_to = BGC
+				}
+				BRA = {
+					country_event = nf_rmm.3
+				}
+			}
+		}
+	}
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = BRA
+					}
+					ROOT = {
+						tag = RMM
+						has_completed_focus = rmm_irc_falseflag_revolution
+					}
+				}
+				complete_national_focus = rmm_irc_victory
+			}
+		}
+	}
+}

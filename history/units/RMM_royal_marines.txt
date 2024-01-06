@@ -1,0 +1,33 @@
+﻿
+division_template = {
+	name = "Royal Marines"
+
+	regiments = {
+		spec_ops = { x = 0 y = 0 }
+		spec_ops = { x = 0 y = 1 }
+		spec_ops = { x = 0 y = 2 }
+		spec_ops = { x = 1 y = 0 }
+		spec_ops = { x = 1 y = 1 }
+		spec_ops = { x = 1 y = 2 }
+		spec_ops = { x = 1 y = 3 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "The Ironguard"
+		location = 16356
+		division_template = "Royal Marines"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "The Maple Leafs"
+		location =16356
+		division_template = "Royal Marines"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+}
+

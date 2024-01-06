@@ -1,0 +1,1981 @@
+###################################################################
+###					Whitecourt Focus Tree						###
+###				planned by Rhacius, coded by SayruZ 			###
+###################################################################
+
+focus_tree = {
+	id = whc_nf
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = WHC
+		}
+	}
+	default = no
+	###############
+	### OPENERS ###
+	###############
+
+	focus = {
+		id = whc_going_underground
+		icon = GFX_goal_generic_chinese_propaganda_1
+		cost = 7
+		x = 15
+		y = 1
+		completion_reward = {
+			country_event = nf_whc.1
+		}
+	}
+	focus = {
+		id = whc_emerging
+		icon = GFX_goal_GDH_secret_vault
+		cost = 7
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_going_underground
+		}
+		relative_position_id = whc_going_underground
+		completion_reward = {
+			country_event = nf_whc.2
+		}
+	}
+	focus = {
+		id = whc_enemies_on_all_sides
+		icon = GFX_goal_MLP_rainbow_portal
+		cost = 7
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_emerging
+		}
+		relative_position_id = whc_emerging
+		completion_reward = {
+			country_event = nf_whc.3
+		}
+	}
+
+	###############
+	### OPENERS ###
+	###############
+
+
+	####LEFT####
+
+	focus = {
+		id = whc_washington_trail
+		icon = GFX_goal_generic_truck_2
+		cost = 35
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = whc_enemies_on_all_sides
+		}
+		relative_position_id = whc_enemies_on_all_sides
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_whitecourt_winery
+		icon = GFX_goal_WHC_Wine_Glass
+		cost = 35
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = whc_washington_trail
+		}
+		relative_position_id = whc_washington_trail
+		completion_reward = {
+			1156 = {
+				add_resource = {
+					type = water
+					amount = 24
+				}
+			}
+			set_temp_variable = { caps_to_add = 300 }
+			add_caps = yes
+		}
+	}
+	focus = {
+		id = whc_prepearing_the_feast
+		icon = GFX_goal_commie_harvest
+		cost = 35
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_washington_trail
+		}
+		relative_position_id = whc_washington_trail
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_special_vintage
+		icon = GFX_goal_LOI_soviet_booze
+		cost = 35
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_whitecourt_winery
+		}
+		prerequisite = {
+			focus = whc_prepearing_the_feast
+		}
+		relative_position_id = whc_whitecourt_winery
+		completion_reward = {
+			custom_effect_tooltip = whc_vintage_tt
+			hidden_effect = {
+				set_technology = {
+					special_vintage = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_no_parasites
+		icon = GFX_goal_CPH_jester_smile
+		cost = 35
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_whitecourt_winery
+		}
+		prerequisite = {
+			focus = whc_prepearing_the_feast
+		}
+		relative_position_id = whc_prepearing_the_feast
+		completion_reward = {
+			add_ideas = whc_eat_the_rich
+		}
+	}
+	focus = {
+		id = whc_feeding_the_people
+		icon = GFX_goal_LOI_soviet_wheat_idealism
+		cost = 35
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = whc_special_vintage
+		}
+		prerequisite = {
+			focus = whc_no_parasites
+		}
+		relative_position_id = whc_no_parasites
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = agriculture_tech
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_worker_union
+		icon = GFX_goal_ZAP_woman
+		cost = 35
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = whc_feeding_the_people
+		}
+		relative_position_id = whc_feeding_the_people
+		completion_reward = {
+			add_ideas = whc_worker_unions
+		}
+	}
+	focus = {
+		id = whc_heavy_industry
+		icon = GFX_goal_LOI_soviet_industry_4
+		cost = 35
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = whc_feeding_the_people
+		}
+		relative_position_id = whc_feeding_the_people
+		completion_reward = {
+			1157 = {
+				add_resource = {
+					type = metal
+					amount = 20
+				}
+				add_resource = {
+					type = energy
+					amount = 15
+				}
+				add_resource = {
+					type = composites
+					amount = 15
+				}
+			}
+		}
+	}
+
+    ####LEFT####
+
+
+	####MIDDLE####
+	focus = {
+		id = whc_ideological_purity
+		icon = GFX_goal_generic_chinese_ushanka
+		cost = 35
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_enemies_on_all_sides
+		}
+		relative_position_id = whc_enemies_on_all_sides
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = whc_passkeepers_arrangments
+		icon = GFX_goal_TIM_patch_landscape_architecture
+		cost = 35
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = whc_ideological_purity
+		}
+		relative_position_id = whc_ideological_purity
+		completion_reward = {
+			army_experience = 75
+			add_opinion_modifier = {
+				target = PAS
+				modifier = whc_civic_duty
+			}
+			give_military_access = PAS
+			PAS = {
+				army_experience = 75
+				give_military_access = WHC
+				custom_effect_tooltip = whc_pass_tt
+				hidden_effect = {
+					load_oob = WHC_passkeepers
+				}
+				add_opinion_modifier = {
+					target = WHC
+					modifier = whc_weird_allies
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_true_communism
+		icon = GFX_goal_ZAP_class_struggle
+		cost = 35
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_ideological_purity
+		}
+		relative_position_id = whc_ideological_purity
+		completion_reward = {
+			add_ideas = whc_foul_beasts_from_another_worlds
+			custom_effect_tooltip = whc_occupiers_tt
+			add_ideas = whc_foul_occupiers
+		}
+	}
+	focus = {
+		id = whc_kamlo_comrades
+		icon = GFX_goal_cph_evil_2
+		cost = 35
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = whc_passkeepers_arrangments
+		}
+		prerequisite = {
+			focus = whc_true_communism
+		}
+		relative_position_id = whc_true_communism
+		completion_reward = {
+			set_country_flag = whc_mortis_arrives
+			custom_effect_tooltip = MORTIS_TT
+			custom_effect_tooltip = whc_kamlo_tt
+			hidden_effect = {
+				load_oob = WHC_kamlo
+			}
+		}
+	}
+	focus = {
+		id = whc_all_roads_lead_to_socialism
+		icon = GFX_goal_generic_industrial_truck
+		cost = 35
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_kamlo_comrades
+		}
+		relative_position_id = whc_kamlo_comrades
+		completion_reward = {
+			add_ideas = whc_all_roads
+		}
+	}
+	focus = {
+		id = whc_council_of_kings
+		icon = GFX_goal_WHC_Gunn
+		cost = 35
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = whc_ideological_purity
+		}
+		relative_position_id = whc_ideological_purity
+		completion_reward = {
+			BRA = {
+				country_event = nf_whc.4
+			}
+		}
+	}
+	focus = {
+		id = whc_kingly_aid
+		icon = GFX_goal_BRA_lumberjack
+		cost = 35
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = whc_council_of_kings
+		}
+		relative_position_id = whc_council_of_kings
+		completion_reward = {
+			add_timed_idea = {
+				days = 300
+				idea = whc_manitoban_investments
+			}
+		}
+	}
+	focus = {
+		id = whc_lil_white_book
+		icon = GFX_goal_generic_chinese_manual
+		cost = 35
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_kingly_aid
+		}
+		relative_position_id = whc_kingly_aid
+		completion_reward = {
+			add_ideas = whc_the_white_book
+		}
+	}
+	focus = {
+		id = whc_brilliant_minds_of_revolution
+		icon = GFX_goal_generic_commie_kid
+		cost = 35
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = whc_all_roads_lead_to_socialism
+			focus = whc_lil_white_book
+		}
+		relative_position_id = whc_all_roads_lead_to_socialism
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = whc_our_reality
+		icon = GFX_goal_generic_chinese_tattered_generic
+		cost = 35
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = whc_all_roads_lead_to_socialism
+			focus = whc_lil_white_book
+		}
+		relative_position_id = whc_all_roads_lead_to_socialism
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_land_doctrine
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = air_tech_category
+			}
+			army_experience = 30
+			air_experience = 30
+		}
+	}
+	focus = {
+		id = whc_boots_on_the_ground
+		icon = GFX_goal_generic_commie_soldier_3
+		cost = 35
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = whc_all_roads_lead_to_socialism
+			focus = whc_lil_white_book
+		}
+		relative_position_id = whc_lil_white_book
+		completion_reward = {
+			add_ideas = whc_boots
+		}
+	}
+	focus = {
+		id = whc_final_attack_order
+		icon = GFX_goal_commie_soldier_2
+		cost = 35
+		x = 1
+		y = 1
+		available = {
+			has_war = yes
+		}
+		prerequisite = {
+			focus = whc_brilliant_minds_of_revolution
+		}
+		prerequisite = {
+			focus = whc_our_reality
+		}
+		relative_position_id = whc_brilliant_minds_of_revolution
+		completion_reward = {
+			add_timed_idea = {
+				idea = whc_final_attack_1
+				days = 100
+			}
+		}
+	}
+	focus = {
+		id = whc_spiritual_defence
+		icon = GFX_goal_commie_soldier
+		cost = 35
+		x = 3
+		y = 1
+		available = {
+			has_war = yes
+		}
+		bypass = {
+			has_completed_focus = whc_new_cadres
+		}
+		prerequisite = {
+			focus = whc_boots_on_the_ground
+		}
+		prerequisite = {
+			focus = whc_our_reality
+		}
+		relative_position_id = whc_brilliant_minds_of_revolution
+		completion_reward = {
+			add_ideas = whc_spirit_defence
+		}
+	}
+	focus = {
+		id = whc_special_shipment
+		icon = GFX_goal_BRA_energy_weapons
+		cost = 35
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = whc_council_of_kings
+		}
+		prerequisite = {
+			focus = whc_every_man_a_gun
+		}
+		relative_position_id = whc_council_of_kings
+		completion_reward = {
+			add_tech_bonus = {
+				ahead_reduction = 3
+				uses = 1
+				category = energy_weaponry_tech_category
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = air_tech_category
+			}
+		}
+	}
+	####MIDDLE####
+
+	###ARMY####
+	focus = {
+		id = whc_arsenal_of_revolution
+		icon = GFX_goal_generic_chinese_propaganda_2
+		cost = 35
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = whc_enemies_on_all_sides
+		}
+		relative_position_id = whc_enemies_on_all_sides
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 3
+			}
+		}
+	}
+	focus = {
+		id = whc_every_man_a_gun
+		icon = GFX_goal_generic_chinese_assault_rifle
+		cost = 35
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_arsenal_of_revolution
+		}
+		relative_position_id = whc_arsenal_of_revolution
+		completion_reward = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 4000 producer = WHC }
+		}
+	}
+	focus = {
+		id = whc_ripper_department
+		icon = GFX_goal_generic_commie_helping
+		cost = 35
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = whc_arsenal_of_revolution
+		}
+		relative_position_id = whc_arsenal_of_revolution
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = support_tech_category
+			}
+			add_equipment_to_stockpile = {
+				amount = 250
+				type = support_equipment
+				producer = ROOT
+			}
+		}
+	}
+	focus = {
+		id = whc_knightly_commisariat
+		icon = GFX_goal_generic_chinese_subjugator
+		cost = 35
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_ripper_department
+		}
+		relative_position_id = whc_ripper_department
+		completion_reward = {
+			add_ideas = whc_commisariat
+		}
+	}
+	focus = {
+		id = whc_full_mobilisation
+		icon = GFX_goal_commie_propaganda_2
+		cost = 35
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = whc_knightly_commisariat
+		}
+		relative_position_id = whc_knightly_commisariat
+		completion_reward = {
+			increase_conscription_law = yes
+			add_timed_idea = {
+				idea = whc_full_mobil
+				days = 180
+			}
+		}
+	}
+	focus = {
+		id = whc_first_revolutionary_guard
+		icon = GFX_goal_generic_chinese_pistol
+		cost = 35
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_full_mobilisation
+		}
+		relative_position_id = whc_full_mobilisation
+		completion_reward = {
+			add_stability = -0.05
+			add_manpower = 2139
+		}
+	}
+	focus = {
+		id = whc_chain_breaker
+		icon = GFX_goal_LOI_soviet_tank5
+		cost = 35
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = whc_knightly_commisariat
+		}
+		relative_position_id = whc_knightly_commisariat
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 1.0
+				category = tank_tech_category
+			}
+		}
+	}
+	focus = {
+		id = whc_grinder_threads
+		icon = GFX_goal_LOI_soviet_tank1
+		cost = 35
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_chain_breaker
+		}
+		relative_position_id = whc_chain_breaker
+		completion_reward = {
+			add_ideas = whc_tanks
+		}
+	}
+	focus = {
+		id = whc_hammer_and_sickel
+		icon = GFX_goal_WHC_Hammer_and_Sickle
+		cost = 35
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = whc_first_revolutionary_guard
+		}
+		prerequisite = {
+			focus = whc_grinder_threads
+		}
+		relative_position_id = whc_knightly_commisariat
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				ahead_reduction = 2
+				category = tank_tech_category
+			}
+			add_tech_bonus = {
+				uses = 2
+				ahead_reduction = 2
+				category = support_anti_tank_tech_category
+			}
+		}
+	}
+	###############
+	### OPENERS ###
+	###############
+
+
+	##############
+	### MAIN #####
+	##############
+
+	focus = {
+		id = whc_red_sun_over_the_paradise
+		icon = GFX_goal_WHC_Red_Sun
+		cost = 7
+		x = 0
+		y = 3
+		available = {
+			COM = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			STC = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			BGR = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			VER = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			IRC = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			VER = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			LOI = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		relative_position_id = whc_our_reality
+		completion_reward = {
+			country_event = nf_whc.9
+		}
+	}
+	focus = {
+		id = whc_successor_choice
+		icon = GFX_goal_PLS_The_Emperor
+		cost = 14
+		x = 0
+		y = 1
+		available = {
+		}
+		prerequisite = {
+			focus = whc_red_sun_over_the_paradise
+		}
+		relative_position_id = whc_red_sun_over_the_paradise
+		completion_reward = {
+			country_event = nf_whc.12
+		}
+	}
+
+	################################################################
+	###################PRINCE COMMUNISM#############################
+	################################################################
+	focus = {
+		id = whc_prince_communism
+		icon = GFX_goal_WHC_Frank
+		cost = 40
+		x = -3
+		y = 1
+		available = {
+		}
+		prerequisite = {
+			focus = whc_successor_choice
+		}
+		mutually_exclusive = {
+			focus = whc_queen_communism
+		}
+		relative_position_id = whc_successor_choice
+		completion_reward = {
+			set_cosmetic_tag = WHC_Hardliner_Coup
+			set_politics = {
+				ruling_party = intellectuals
+				elections_allowed = no
+			}
+			hidden_effect = {
+				set_popularities = {
+					ruler = 20
+					elites = 0
+					intellectuals = 60
+					people = 20
+				}
+			}
+
+		}
+	}
+	focus = {
+		id = whc_capitalist_horrors
+		icon = GFX_goal_TTM_Big_Sister
+		cost =40
+		x = -1
+		y = 1
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		prerequisite = {
+			focus = whc_prince_communism
+		}
+		relative_position_id = whc_prince_communism
+		completion_reward = {
+			custom_effect_tooltip = sta_nordikon_claims_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							region = 164
+						}
+					}
+					add_claim_by = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_wicked_lands
+		icon = GFX_goal_generic_terminal_3
+		cost = 40
+		x = 0
+		y = 1
+		available = {
+			NOR = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = whc_capitalist_horrors
+		}
+		relative_position_id = whc_capitalist_horrors
+		completion_reward = {
+			country_event =  nf_whc.8
+		}
+	}
+	focus = {
+		id = whc_the_only_worthy_book
+		icon = GFX_goal_commie_book
+		cost = 40
+		x = 1
+		y = 1
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		bypass = {
+			BAT = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = whc_prince_communism
+		}
+		relative_position_id = whc_prince_communism
+		completion_reward = {
+			BAT = {
+				WHC = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_nuclear_energy
+		icon = GFX_goal_generic_what_is_plasma_anyway
+		cost = 40
+		x = 0
+		y = 1
+		available = {
+			BAT = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = whc_the_only_worthy_book
+		}
+		relative_position_id = whc_the_only_worthy_book
+		completion_reward = {
+			URA = {
+				WHC = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = whc_a_mere_stepping_stone
+		icon = GFX_goal_generic_pet_rock
+		cost = 40
+		x = 0
+		y = 3
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+			URA = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			NOR = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = whc_wicked_lands
+		}
+		prerequisite = {
+			focus = whc_nuclear_energy
+		}
+		relative_position_id = whc_prince_communism
+		completion_reward = {
+			HVR = {
+				WHC = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_remember_the_anchorage
+		icon = GFX_goal_enc_remember
+		cost = 40
+		x = 0
+		y = 1
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+			HVR = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = whc_a_mere_stepping_stone
+		}
+		relative_position_id = whc_a_mere_stepping_stone
+		completion_reward = {
+			MCA = {
+				WHC = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			STM = {
+				WHC = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_not_a_spaceship_but_will_do
+		icon = GFX_goal_generic_vertibird
+		cost = 40
+		x = 0
+		y = 1
+		available = {
+			MCA = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			STM = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = whc_remember_the_anchorage
+		}
+		relative_position_id = whc_remember_the_anchorage
+		completion_reward = {
+			set_technology = {
+				vertibird_unlock_tech = 1
+				air_tech_level_scientific = 1
+			}
+		}
+	}
+
+	################################################################
+	###################PRINCE COMMUNISM#############################
+	################################################################
+
+
+	##############QUEEN COMMUNISM##################
+	focus = {
+		id = whc_queen_communism
+		icon = GFX_goal_WHC_Patricia
+		cost = 40
+		x = 3
+		y = 1
+		available = {
+		}
+		prerequisite = {
+			focus = whc_successor_choice
+		}
+		mutually_exclusive = {
+			focus = whc_prince_communism
+		}
+		relative_position_id = whc_successor_choice
+		completion_reward = {
+			set_cosmetic_tag = WHC_Lady_Patricia
+			add_popularity = {
+				ideology = people
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = ruler
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = whc_peaceful_ways_of_force
+		icon = GFX_focus_sta_the_great_family
+		cost = 40
+		x = -2
+		y = 1
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		bypass = {
+			STA = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = whc_queen_communism
+		}
+		relative_position_id = whc_queen_communism
+		completion_reward = {
+			STA = {
+				WHC = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_stampede_five_years
+		icon = GFX_goal_commie_harvest_2
+		cost = 40
+		x = 1
+		y = 1
+		available = {
+			STA = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = whc_peaceful_ways_of_force
+		}
+		relative_position_id = whc_peaceful_ways_of_force
+		completion_reward = {
+			effect_tooltip = {
+				every_state = {
+					limit = {
+						is_core_of = STA
+					}
+					add_compliance = 20
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						is_core_of = STA
+					}
+					add_compliance = 20
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_join_manitoba
+		icon = GFX_goal_BRA_guard_agency
+		cost = 40
+		x = 0
+		y = 1
+		available = {
+			borders_kingdom_of_manitoba = yes
+		}
+		prerequisite = {
+			focus = whc_queen_communism
+		}
+		relative_position_id = whc_queen_communism
+		completion_reward = {
+			ask_to_join_kingdom_of_manitoba = yes
+		}
+	}
+	focus = {
+		id = whc_monument_of_exloitation
+		icon = GFX_goal_WHC_Patricia_Nordikon
+		cost = 40
+		x = 2
+		y = 1
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		bypass = {
+			NOR = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = whc_queen_communism
+		}
+		relative_position_id = whc_queen_communism
+		completion_reward = {
+			custom_effect_tooltip = sta_nordikon_claims_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							region = 164
+						}
+					}
+					add_claim_by = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_resources_to_people
+		icon = GFX_goal_TTM_Golden_Fruit
+		cost = 40
+		x = -1
+		y = 1
+		available = {
+			owns_state = 1206
+		}
+		prerequisite = {
+			focus = whc_monument_of_exloitation
+		}
+		relative_position_id = whc_monument_of_exloitation
+		completion_reward = {
+			1206 = {
+				add_resource = {
+					type = metal
+					amount = -22
+				}
+				add_resource = {
+					type = energy
+					amount = -14
+				}
+				add_resource = {
+					type = composites
+					amount = -7
+				}
+				add_resource = {
+					type = circuitry
+					amount = -7
+				}
+				add_resource = {
+					type = advanced
+					amount = -7
+				}
+			}
+			1156 = {
+				add_resource = {
+					type = metal
+					amount = 22
+				}
+				add_resource = {
+					type = energy
+					amount = 14
+				}
+				add_resource = {
+					type = composites
+					amount = 7
+				}
+				add_resource = {
+					type = circuitry
+					amount = 7
+				}
+				add_resource = {
+					type = advanced
+					amount = 7
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_queendom_of_proletariat
+		icon = GFX_goal_WHC_eaw_commie_pone
+		cost = 40
+		x = -1
+		y = 1
+		available = {
+			owns_state = 1263
+		}
+		prerequisite = {
+			focus = whc_resources_to_people
+		}
+		relative_position_id = whc_resources_to_people
+		completion_reward = {
+			set_province_name = {
+				id = 14305
+				name = whc_stalion
+			}
+			set_capital = {
+				state = 1263
+			}
+			1263 = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus = {
+		id = whc_just_a_bunch_of_assholes
+		icon = GFX_goal_CPH_vote_machine
+		cost = 40
+		x = 0
+		y = 1
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		prerequisite = {
+			focus = whc_queendom_of_proletariat
+		}
+		relative_position_id = whc_queendom_of_proletariat
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = DUN
+						tag = STN
+						tag = PLT
+						tag = FRG
+					}
+					NOT = {
+						BRA = {
+							PREV = {
+								all_core_land_owned_by_prev_sphere = yes
+							}
+						}
+					}
+				}
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_avenge_the_king
+		icon = GFX_goal_BRA_generic
+		cost = 40
+		x = 0
+		y = 1
+		available = {
+			ai_has_no_other_wars_or_wargoals = yes
+			BRA = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}
+		}
+		prerequisite = {
+			focus = whc_just_a_bunch_of_assholes
+		}
+		relative_position_id = whc_just_a_bunch_of_assholes
+		completion_reward = {
+			BRA = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = whc_embracing_the_truth
+		icon = GFX_focus_uar_from_the_plough_to_the_stars
+		cost = 40
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = whc_nuclear_energy
+			focus = whc_wicked_lands
+			focus = whc_stampede_five_years
+			focus = whc_resources_to_people
+		}
+		relative_position_id = whc_nuclear_energy
+		completion_reward = {
+			COM = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+			BGR = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+			STC = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+			VER = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+			IRC = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_passkeeper_brothers
+		icon = GFX_goal_LOI_soviet_CPF_forgiving
+		cost = 40
+		x = -1
+		y = 1
+		available = {
+			has_completed_focus = whc_prince_communism
+		}
+		prerequisite = {
+			focus = whc_embracing_the_truth
+		}
+		relative_position_id = whc_embracing_the_truth
+		completion_reward = {
+			create_or_join_red_shield = yes
+			if = {
+				limit = {
+					PAS = {
+						exists = yes
+						is_puppet = no
+					}
+				}
+				PAS = {
+					invite_to_red_shield = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_shield_against_capitalism
+		icon = GFX_goal_LOI_soviet_CPF_richmond
+		cost = 40
+		x = 0
+		y = 1
+		available = {
+			PAS = {
+				is_in_faction_with = WHC
+			}
+		}
+		bypass = {
+			PAS = {
+				exists = no
+			}
+		}
+		prerequisite = {
+			focus = whc_passkeeper_brothers
+		}
+		prerequisite = {
+			focus = whc_remember_the_anchorage
+		}
+		relative_position_id = whc_passkeeper_brothers
+		completion_reward = {
+			PAS = {
+				add_ideas = whc_passkep_shield
+			}
+		}
+	}
+	focus = {
+		id = whc_propaganda
+		icon = GFX_goal_LOI_soviet_the_people
+		cost = 40
+		x = 1
+		y = 1
+		available = {
+			has_completed_focus = whc_queen_communism
+		}
+		prerequisite = {
+			focus = whc_embracing_the_truth
+		}
+		relative_position_id = whc_embracing_the_truth
+		completion_reward = {
+			every_country = {
+				add_opinion_modifier = {
+					target = WHC
+					modifier = whc_spreading_communism
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_light_the_fire
+		icon = GFX_goal_TTM_Fire_2
+		cost = 40
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_propaganda
+		}
+		prerequisite = {
+			focus = whc_just_a_bunch_of_assholes
+		}
+		relative_position_id = whc_propaganda
+		completion_reward = {
+		}
+	}
+	##############
+	### MAIN #####
+	##############
+
+
+
+	############
+	# industry #
+	############
+	focus = {
+		id = whc_spreading_the_message
+		icon = GFX_goal_ZAP_red_book
+		cost = 40
+		x = -9
+		y = 1
+		available = {
+			has_completed_focus = whc_successor_choice
+		}
+		prerequisite = {
+			focus = whc_red_sun_over_the_paradise
+		}
+		relative_position_id = whc_red_sun_over_the_paradise
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = WHC
+					}
+				}
+				add_compliance = 15
+			}
+		}
+	}
+	focus = {
+		id = whc_the_last_supper
+		icon = GFX_goal_BDT_bloody_skull
+		cost = 40
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = whc_spreading_the_message
+		}
+		mutually_exclusive = {
+			focus = whc_comrade
+		}
+		relative_position_id = whc_spreading_the_message
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = oregon_cannibal_widespread_cannibalism
+				add_idea = oregon_cannibal_ritualised_cannibalism
+			}
+		}
+	}
+	focus = {
+		id = whc_prepare_the_second_breakfast
+		icon = GFX_goal_TIM_patch_cooking
+		cost = 40
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = whc_the_last_supper
+		}
+		relative_position_id = whc_the_last_supper
+		completion_reward = {
+			add_timed_idea = {
+				idea = whc_prepearing_the_second_breakfast
+				days = 280
+			}
+		}
+	}
+	focus = {
+		id = whc_children_spies
+		icon = GFX_goal_generic_the_kids_arent_alright
+		cost = 40
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = whc_prepare_the_second_breakfast
+		}
+		relative_position_id = whc_prepare_the_second_breakfast
+		completion_reward = {
+			add_ideas = whc_young_heroes
+		}
+	}
+	focus = {
+		id = whc_finally_second_breakfast
+		icon = GFX_goal_SOK_ear
+		cost = 40
+		x = 0
+		y = 2
+		available = {
+			NOT = {
+				has_idea = whc_prepearing_the_second_breakfast
+			}
+		}
+		prerequisite = {
+			focus = whc_prepare_the_second_breakfast
+		}
+		relative_position_id = whc_prepare_the_second_breakfast
+		completion_reward = {
+			add_manpower = -442
+			swap_ideas = {
+				remove_idea = oregon_cannibal_ritualised_cannibalism
+				add_idea = oregon_cannibal_ritualised_cannibalism_hands_legs_mind
+			}
+		}
+	}
+	focus = {
+		id = whc_share_the_feast
+		icon = GFX_goal_pal_cannibal_followup_vc
+		cost = 40
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_finally_second_breakfast
+		}
+		relative_position_id = whc_finally_second_breakfast
+		completion_reward = {
+			add_manpower = -924
+			swap_ideas = {
+				remove_idea = oregon_cannibal_ritualised_cannibalism_hands_legs_mind
+				add_idea = oregon_cannibal_ritualised_cannibalism_final
+			}
+		}
+	}
+	focus = {
+		id = whc_sell_them_the_rope
+		icon = GFX_goal_CPH_bank_money_boy
+		cost = 40
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = whc_the_last_supper
+		}
+		relative_position_id = whc_the_last_supper
+		completion_reward = {
+			set_temp_variable = { caps_to_add = 200 }
+			add_caps = yes
+		}
+	}
+	focus = {
+		id = whc_breath_new_life
+		icon = GFX_goal_generic_welcome_home
+		cost = 40
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = whc_sell_them_the_rope
+		}
+		prerequisite = {
+			focus = whc_children_spies
+		}
+		relative_position_id = whc_sell_them_the_rope
+		completion_reward = {
+			1156 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_comrade
+		icon = GFX_focus_bgr_generic_foci
+		cost = 40
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = whc_spreading_the_message
+		}
+		mutually_exclusive = {
+			focus = whc_the_last_supper
+		}
+		relative_position_id = whc_spreading_the_message
+		completion_reward = {
+			country_event = nf_whc.13
+		}
+	}
+	focus = {
+		id = whc_metal_comrades
+		icon = GFX_focus_bgr_goals_relcom_army
+		cost = 40
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = whc_comrade
+		}
+		relative_position_id = whc_comrade
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = robotics_tech_category
+			}
+		}
+	}
+	focus = {
+		id = whc_working_with_ai
+		icon = GFX_focus_bgr_goals_relcom
+		cost = 40
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_metal_comrades
+		}
+		relative_position_id = whc_metal_comrades
+		completion_reward = {
+			add_tech_bonus = {
+				ahead_reduction = 2
+				uses = 2
+				category = robotics_tech_category
+			}
+			if = {
+				limit = {
+					has_tech = robotics_tech_level_settler
+				}
+				set_technology = {
+					robotics_tech_level_scientific = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_freedom_through_industry
+		icon = GFX_rob_hammers_blank
+		cost = 40
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = whc_comrade
+		}
+		relative_position_id = whc_comrade
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 6
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = whc_communist_exe
+		icon = GFX_focus_bgr_goals_eyebot
+		cost = 40
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_freedom_through_industry
+		}
+		relative_position_id = whc_freedom_through_industry
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = support_robot_two_legs_equipment_1
+				amount = 500
+				producer = USA
+			}
+		}
+	}
+	focus = {
+		id = whc_some_are_more_metal
+		icon = GFX_focus_canada_generic_funny_pa_1
+		cost = 40
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = whc_working_with_ai
+		}
+		prerequisite = {
+			focus = whc_communist_exe
+		}
+		relative_position_id = whc_working_with_ai
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = whc_big_grass_comrades
+				add_idea = whc_big_grass_comrades_2
+			}
+		}
+	}
+	focus = {
+		id = whc_true_communist_man
+		icon = GFX_goal_LOI_soviet_forward
+		cost = 40
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = whc_breath_new_life
+			focus = whc_some_are_more_metal
+		}
+		relative_position_id = whc_breath_new_life
+		completion_reward = {
+			add_ideas = whc_new_commie_man
+		}
+	}
+	focus = {
+		id = whc_transformation_of_nature
+		icon = GFX_goal_TIM_patch_nature
+		cost = 40
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = whc_true_communist_man
+		}
+		prerequisite = {
+			focus = whc_share_the_feast
+		}
+		relative_position_id = whc_true_communist_man
+		completion_reward = {
+			capital_scope = {
+				add_resource = {
+					type = metal
+					amount = 15
+				}
+				add_resource = {
+					type = energy
+					amount = 15
+				}
+				add_resource = {
+					type = composites
+					amount = 15
+				}
+				add_resource = {
+					type = circuitry
+					amount = 15
+				}
+				add_resource = {
+					type = advanced
+					amount = 15
+				}
+			}
+			set_technology = {
+				exploitation_tech_level_scientific = 1
+			}
+		}
+	}
+
+
+    ###########
+	####ARMY###
+    ###########
+
+	focus = {
+		id = whc_victory_parade
+		icon = GFX_goal_LOI_soviet_soldier
+		cost = 40
+		x = 9
+		y = 1
+		available = {
+			has_completed_focus = whc_successor_choice
+		}
+		prerequisite = {
+			focus = whc_red_sun_over_the_paradise
+		}
+		relative_position_id = whc_red_sun_over_the_paradise
+		completion_reward = {
+			add_ideas = whc_war_experience
+		}
+	}
+	focus = {
+		id = whc_communist_practicality
+		icon = GFX_goal_enc_military_police
+		cost = 40
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = whc_victory_parade
+		}
+		relative_position_id = whc_victory_parade
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3.0
+				uses = 1
+				category = enforcer_tech_category
+			}
+		}
+	}
+	focus = {
+		id = whc_new_cadres
+		icon = GFX_goal_CAR_april_Bring_Prosperity_To_Peasants
+		cost = 40
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = whc_victory_parade
+		}
+		relative_position_id = whc_victory_parade
+		completion_reward = {
+			add_manpower = 713
+			remove_ideas = whc_spirit_defence
+		}
+	}
+	focus = {
+		id = whc_revolution_on_wheels
+		icon = GFX_goal_CES_Industry_TS_Car_Road
+		cost = 40
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_communist_practicality
+		}
+		relative_position_id = whc_communist_practicality
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = vehicle_tech_category
+			}
+		}
+	}
+	focus = {
+		id = whc_contr_under_wheels
+		icon = GFX_goal_LOI_soviet_tank2
+		cost = 40
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = whc_revolution_on_wheels
+		}
+		relative_position_id = whc_revolution_on_wheels
+		completion_reward = {
+			add_ideas = whc_rubber_wheels
+		}
+	}
+	focus = {
+		id = whc_congratulate_our_heroes
+		icon = GFX_goal_LOI_soviet_soldier2
+		cost = 40
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = whc_new_cadres
+			focus = whc_communist_practicality
+		}
+		relative_position_id = whc_victory_parade
+		completion_reward = {
+			country_event = nf_whc.7
+		}
+	}
+	focus = {
+		id = whc_get_enemy_general_1
+		icon = GFX_goal_og_terrorism
+		cost = 40
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = whc_congratulate_our_heroes
+		}
+		relative_position_id = whc_congratulate_our_heroes
+		completion_reward = {
+			custom_effect_tooltip = whc_soltz_tt
+		}
+	}
+	focus = {
+		id = whc_get_enemy_general_2
+		icon = GFX_goal_LOI_soviet_CPF_sucessor
+		cost = 40
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = whc_congratulate_our_heroes
+		}
+		relative_position_id = whc_congratulate_our_heroes
+		completion_reward = {
+			custom_effect_tooltip = BELL_TT
+			custom_effect_tooltip = ELIS_TT
+		}
+	}
+	focus = {
+		id = whc_eternal_enemy_of_revolution
+		icon = GFX_goal_LOI_soviet_soldier_sacred_duty
+		cost = 40
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = whc_get_enemy_general_1
+		}
+		prerequisite = {
+			focus = whc_get_enemy_general_2
+		}
+		relative_position_id = whc_congratulate_our_heroes
+		completion_reward = {
+			add_ideas = whc_eternal_revolution
+		}
+	}
+	focus = {
+		id = whc_revolution_takes_flight
+		icon = GFX_goal_commie_plane
+		cost = 40
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_new_cadres
+		}
+		relative_position_id = whc_new_cadres
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = air_tech_category
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = whc_brave_sons_and_daughters
+		icon = GFX_goal_eur_plane_device
+		cost = 40
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = whc_revolution_takes_flight
+		}
+		relative_position_id = whc_revolution_takes_flight
+		completion_reward = {
+			add_ideas = whc_flying_heroes
+		}
+	}
+	focus = {
+		id = whc_apocalypse_began
+		icon = GFX_goal_generic_chinese_chimera
+		cost = 40
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_contr_under_wheels
+		}
+		prerequisite = {
+			focus = whc_eternal_enemy_of_revolution
+		}
+		mutually_exclusive = {
+			focus = whc_red_skies
+		}
+		relative_position_id = whc_contr_under_wheels
+		completion_reward = {
+			add_tech_bonus = {
+				ahead_reduction = 2
+				uses = 2
+				category = vehicle_tech_category
+			}
+			set_technology = {
+				vehicles_tech_level_scientific = 1
+			}
+		}
+	}
+	focus = {
+		id = whc_red_skies
+		icon = GFX_goal_generic_chinese_xian
+		cost = 40
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = whc_brave_sons_and_daughters
+		}
+		prerequisite = {
+			focus = whc_eternal_enemy_of_revolution
+		}
+		mutually_exclusive = {
+			focus = whc_apocalypse_began
+		}
+		relative_position_id = whc_brave_sons_and_daughters
+		completion_reward = {
+			add_tech_bonus = {
+				ahead_reduction = 2
+				uses = 2
+				category = air_tech_category
+			}
+			set_technology = {
+				air_tech_level_scientific = 1
+			}
+		}
+	}
+
+	###########
+	####ARMY###
+	###########
+}

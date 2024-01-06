@@ -1,0 +1,41 @@
+﻿division_template = {
+	name = "White Collars"
+	template_counter= 208
+
+	regiments = {
+		support_robot = { x = 0 y = 0 }
+		support_robot = { x = 0 y = 1 }
+		support_robot = { x = 0 y = 2 }
+		support_robot = { x = 1 y = 0 }
+		support_robot = { x = 1 y = 1 }
+		support_robot = { x = 1 y = 2 }
+	}
+	support = {
+		cnc_robot = { x = 0 y = 0 }
+	}
+}
+units = {
+	division = {
+		name = "Special Collars"
+		location = 16356
+		division_template = "White Collars"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "Special Collars"
+		location = 16356
+		division_template = "White Collars"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		name = "Special Collars"
+		location = 16356
+		division_template = "White Collars"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.8
+	}
+}

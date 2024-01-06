@@ -1,0 +1,30 @@
+RMM_manitoba_war = {
+	priority = {
+		base = 10000
+	}
+	icon = GFX_decision_cat_burning_flag_canada
+	allowed = {
+		OR = {
+			original_tag = RMM
+			original_tag = BRA
+		}
+	}
+	visible_when_empty = yes
+	visible = {
+		has_global_flag = rmm_manitoba_war_flag
+	}
+}
+RMM_agents_chicago_shipments = {
+	priority = {
+		base = 10000
+	}
+	icon =  GFX_decision_enc_propaganda
+	picture = GFX_decision_cat_rmm_chicago_shipments
+	allowed = {
+		original_tag = RMM
+	}
+	visible_when_empty = yes
+	visible = {
+		has_country_flag = rmm_activate_shipments
+	}
+}

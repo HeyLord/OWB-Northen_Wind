@@ -1,0 +1,6 @@
+opinion_modifiers = {
+
+	whc_civic_duty = { value = 50 }
+	whc_weird_allies = { value = 50 }
+    whc_spreading_communism = { value = -25 }
+}

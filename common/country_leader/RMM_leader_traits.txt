@@ -1,0 +1,143 @@
+leader_traits = {
+
+	rmm_the_admiral = {
+		random = no
+		special_forces_min = 40
+		experience_gain_navy_factor = 0.25
+		army_org_factor = 0.05
+		ai_focus_naval_factor = 0.8
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_iron_chancelor = {
+		random = no
+		experience_gain_army = 0.05
+		war_support_factor = 0.25
+		political_power_factor = 0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_first_servant_of_the_republic = {
+		random = no
+		compliance_gain = 0.02
+		army_core_defence_factor = 0.2
+		army_core_attack_factor = 0.2
+		land_reinforce_rate = 0.08
+		army_morale_factor = 0.2
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_agent_of_chaos = {
+		random = no
+		stability_factor = -0.1
+		intel_network_gain_factor = 0.15
+		operative_slot = 1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_free = {
+		random = no
+		cant_be_justified_on = 1
+		cant_justify_on_countries = 1
+		stability_factor = 1
+		required_garrison_factor = -0.75
+		resistance_growth = -0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+    #Advisors
+	rmm_hidden_in_the_shadows = {
+		random = no
+
+		enemy_operative_detection_chance_factor = 0.1
+		enemy_operative_capture_chance_factor = 0.25
+		agency_upgrade_time = -0.8
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_iron_chancelor_advisor = {
+		random = no
+		army_morale_factor = 0.1
+		training_time_factor = -0.15
+		attrition = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_chicago_finest = {
+		random = no
+		equipment_bonus = {
+			infantry_equipment = {
+				hard_attack = 0.15
+				breakthrough = 0.05
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_mother_to_many = {
+		random = no
+		naval_invasion_penalty = -0.2
+		invasion_preparation = 0.2
+		special_forces_min = 20
+		no_supply_grace = 20
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_flying_fireband = {
+		random = no
+		army_attack_factor = 0.03
+		army_speed_factor = 0.08
+		equipment_bonus = {
+			infantry_equipment = {
+				soft_attack = 0.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_first_revolutionary = {
+		random = no
+		experience_loss_factor = -0.12
+		army_org_factor = 0.05
+		land_reinforce_rate = 0.02
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_anti_monarch = {
+		random = no
+		cas_damage_reduction = 0.2
+		dig_in_speed_factor = 0.1
+		industry_air_damage_factor = -0.4
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_liberty_bomber = {
+		random = no
+		equipment_bonus = {
+			demolitions_equipment = {
+				soft_attack = 0.25
+				breakthrough = 0.05
+				build_cost_ic = -0.15
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

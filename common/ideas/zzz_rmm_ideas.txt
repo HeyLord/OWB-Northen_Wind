@@ -1,0 +1,893 @@
+ideas = {
+	country = {
+		RMM_independance = {
+            picture = economy_trophy
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            targeted_modifier = {
+                tag = BGC
+                defense_bonus_against = 0.05
+                attack_bonus_against = 0.05
+            }
+            modifier = {
+                army_leader_start_planning_level = 2
+            }
+        }
+		rmm_superiority = {
+			picture = generic_boat_1
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				convoy_raiding_efficiency_factor = 0.25
+			}
+			removal_cost = -1
+		}
+		rmm_royal_industries_investment = {
+			picture = generic_boat_1
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_lack_of_resource_penalty_factor = -1.0
+			}
+			removal_cost = -1
+		}
+		rmm_making_blimps_aint_easy = {
+			picture = generic_blimp
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			equipment_bonus = {
+				blimp_equipment = {
+					build_cost_ic = 0.25
+					instant = yes
+				}
+			}
+			removal_cost = -1
+		}
+		rmm_win_or_die = {
+			picture = generic_boat_1
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				consumer_goods_factor = -0.02
+				weekly_manpower = 50
+				war_support_factor = 0.1
+			}
+			removal_cost = -1
+		}
+		rmm_metis_lessons = {
+			picture = tvt_the_people_of_tomorrow
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.03
+				production_speed_infrastructure_factor = 0.1
+				industry_free_repair_factor = 0.2
+			}
+			removal_cost = -1
+		}
+		rmm_metis_lessons_2 = {
+			picture = tvt_the_people_of_tomorrow
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.12
+				production_factory_efficiency_gain_factor = 0.03
+				production_speed_infrastructure_factor = 0.1
+				industry_free_repair_factor = 0.2
+				industrial_capacity_factory = 0.1
+			}
+			removal_cost = -1
+		}
+		rmm_prepared_to_the_fight = {
+			picture = generic_helm_army
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				max_planning_factor = 0.1
+			}
+			removal_cost = -1
+		}
+		rmm_motivated_to_win = {
+			picture = generic_helm_army
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+			}
+			removal_cost = -1
+		}
+		rmm_moose_order = {
+			picture = generic_helm_marine
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+				special_forces_min = 50
+			}
+			removal_cost = -1
+		}
+		rmm_night_operations = {
+			picture = generic_radio_pack
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				cas_damage_reduction = 0.1
+				land_night_attack = 0.15
+			}
+			removal_cost = -1
+		}
+		rmm_partisan_war = {
+			picture = generic_helm_army
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				max_planning_factor = 0.1
+				equipment_capture_factor = 0.1
+				attrition = -0.25
+			}
+			removal_cost = -1
+		}
+		rmm_shield = {
+			picture = generic_helm_army
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				max_planning_factor = 0.1
+				army_defence_factor = 0.15
+				army_org_factor = 0.05
+			}
+			removal_cost = -1
+		}
+		rmm_barricades = {
+			picture = generic_helm_army
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				production_speed_bunker_factor = 0.25
+			}
+			removal_cost = -1
+		}
+		rmm_defence_in_depth = {
+			picture = generic_helm_army
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				army_infantry_defence_factor = 0.1
+				max_dig_in_factor = 0.08
+			}
+			removal_cost = -1
+		}
+		rmm_grave_enemy = {
+			picture = generic_helm_army
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			cancel = {
+                BRA = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+            }
+            targeted_modifier = {
+                tag = BRA
+                defense_bonus_against = 0.05
+                attack_bonus_against = 0.05
+            }
+			targeted_modifier = {
+                tag = BGC
+                defense_bonus_against = 0.1
+                attack_bonus_against = 0.1
+            }
+			targeted_modifier = {
+                tag = DUK
+                defense_bonus_against = 0.1
+                attack_bonus_against = 0.1
+            }
+			targeted_modifier = {
+                tag = DLN
+                defense_bonus_against = 0.1
+                attack_bonus_against = 0.1
+            }
+			removal_cost = -1
+		}
+		rmm_the_common_soldier = {
+			picture = generic_mass_infantry
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				army_infantry_defence_factor = 0.05
+				army_infantry_attack_factor = 0.05
+				conscription_factor = 0.1
+			}
+			removal_cost = -1
+		}
+		rmm_austerity_measures = {
+			picture = generic_swag
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			cancel = {
+                BRA = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.1
+				conversion_cost_civ_to_mil_factor = -0.5
+			}
+			removal_cost = -1
+		}
+		rmm_everything_for_the_victory = {
+			picture = generic_skull
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			cancel = {
+                BRA = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+
+			modifier = {
+				conscription = 0.09
+				industrial_capacity_factory = -0.15
+				stability_factor = -0.15
+				consumer_goods_factor = 0.03
+				production_speed_buildings_factor = -0.1
+			}
+			removal_cost = -1
+		}
+		rmm_field_promotions = {
+			picture = generic_trifold
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			cancel = {
+                BRA = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+
+			modifier = {
+				command_power_gain_mult = 0.25
+				field_officer_promotion_penalty = -0.5
+			}
+			removal_cost = -1
+		}
+		rmm_desperate_defence = {
+			picture = generic_trifold
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			cancel = {
+                BRA = {
+					OR = {
+						exists = no
+						is_puppet = yes
+					}
+				}
+			}
+
+			modifier = {
+				army_core_defence_factor = 0.2
+				max_dig_in_factor = 0.25
+			}
+			removal_cost = -1
+		}
+		rmm_power_vaccum = {
+			picture = generic_trifold
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				stability_factor = -0.08
+				political_power_factor = -0.25
+			}
+			removal_cost = -1
+		}
+		rmm_power_vaccum_buff = {
+			picture = generic_trifold
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				consumer_goods_factor = 0.02
+				political_power_factor = 0.15
+				production_factory_max_efficiency_factor = 0.08
+			}
+			removal_cost = -1
+		}
+		rmm_confiscating_noble_property = {
+			picture = generic_trifold
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				consumer_goods_factor = 0.08
+				industry_free_repair_factor = -0.15
+			}
+			removal_cost = -1
+		}
+		rmm_confiscating_noble_property_buff = {
+			picture = generic_trifold
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.15
+			}
+			removal_cost = -1
+		}
+		rmm_let_the_soldiers_have_some_fun = {
+			picture = generic_trifold
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				resistance_growth = 0.15
+				army_org_factor = -0.12
+				compliance_growth = -0.20
+			}
+			removal_cost = -1
+		}
+		rmm_let_the_soldiers_have_some_fun_buff = {
+			picture = generic_trifold
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				resistance_growth = -0.15
+				monthly_population = -0.1
+			}
+			removal_cost = -1
+		}
+		rmm_soldier_pensions = {
+			picture = generic_trifold
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				conscription = -0.05
+				caps_expense_modifier = 0.45
+			}
+			removal_cost = -1
+		}
+		rmm_soldier_pensions_buff = {
+			picture = generic_trifold
+            allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			modifier = {
+				conscription_factor = 0.12
+				caps_expense_modifier = 0.15
+				training_time_factor = -0.1
+			}
+			removal_cost = -1
+		}
+		rmm_victory_of_revolution = {
+            picture = economy_trophy
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                army_leader_start_planning_level = 2
+				army_attack_factor = 0.15
+				army_org_factor = 0.15
+				army_morale_factor = 0.15
+            }
+        }
+		rmm_transport = {
+            picture = generic_boat_4
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				naval_invasion_capacity = 10
+            }
+        }
+		rmm_coral_offence = {
+            picture = generic_boat_5
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				naval_invasion_prep_speed = 5
+				naval_invasion_penalty = -0.7
+            }
+        }
+		rmm_pride_and_honor = {
+            picture = generic_boat_5
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+            }
+        }
+		rmm_pacification_of_the_dammed = {
+            picture = generic_skull
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				stability_factor = -0.1
+				industry_free_repair_factor = 0.2
+				equipment_capture_factor = 0.1
+            }
+        }
+		rmm_reconstruction_aid = {
+            picture = generic_gold_bars
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.15
+            }
+        }
+		rmm_tools_of_trade = {
+            picture = generic_gold_bars
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				production_factory_max_efficiency_factor = 0.15
+            }
+        }
+		rmm_tools_of_trade_2 = {
+            picture = generic_gold_bars
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_arms_factory_factor = 0.1
+            }
+        }
+		rmm_trial_by_fire = {
+            picture = generic_gold_bars
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				army_org_factor = 0.05
+            }
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.05
+					hard_attack = 0.05
+					instant = yes
+				}
+			}
+        }
+		rmm_winter_is_coming = {
+            picture = generic_gold_bars
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				winter_attrition_factor = -0.25
+				no_supply_grace = 48
+            }
+        }
+		rmm_winnipeg_trade_agreement = {
+            picture = generic_gold_bars
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				consumer_goods_factor = -0.02
+				local_factories = 0.2
+            }
+        }
+		rmm_research_funds = {
+            picture = generic_gold_bars
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				research_speed_factor = 0.05
+				caps_flat_income_modifier = 15
+            }
+        }
+		rmm_steele = {
+            picture = generic_helm_army
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				max_planning_factor = 0.1
+				dig_in_speed_factor = 0.25
+				planning_speed = 0.25
+            }
+        }
+		rmm_mad_baron_air_mastery = {
+            picture = generic_blimp
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				air_accidents_factor = -0.15
+				enemy_army_bonus_air_superiority_factor = -0.05
+            }
+        }
+		rmm_take_back_dawfin = {
+            picture = generic_blimp
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+			cancel = {
+				BRA = {
+					exists = no
+				}
+			}
+            targeted_modifier = {
+                tag = BRA
+                defense_bonus_against = 0.05
+                attack_bonus_against = 0.05
+            }
+        }
+		rmm_republican_recruitment = {
+            picture = generic_gnome
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				conscription = 0.03
+				monthly_population = 0.25
+            }
+        }
+
+		rmm_revolution_betrayed = {
+            picture = generic_political_crisis
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				weekly_manpower = -50
+				max_dig_in_factor = -0.15
+				army_org_factor = -0.05
+				army_morale_factor = -0.1
+				stability_factor = -0.2
+            }
+        }
+		rmm_dead_leadership = {
+            picture = generic_nuclear_aftermath
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				experience_gain_army = -0.5
+				planning_speed = -0.2
+				max_planning_factor = -0.15
+				war_support_factor = -0.2
+            }
+        }
+		rmm_chicago_leadership = {
+            picture = officer_academy
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				experience_gain_army = -0.5
+				army_leader_cost_factor = 1
+            }
+        }
+		rmm_strangers = {
+            picture = generic_blood
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				war_support_weekly = -0.01
+				compliance_growth = -0.25
+            }
+        }
+		rmm_advanced_recon = {
+            picture = generic_recon
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+			equipment_bonus = {
+				recon_company = {
+					recon = 2
+					instant = yes
+				}
+			}
+        }
+		rmm_what_really_matters = {
+            picture = generic_gold_bars
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				production_speed_industrial_complex_factor = -0.25
+				production_speed_arms_factory_factor = -0.25
+				consumer_goods_factor = -0.1
+            }
+        }
+		rmm_the_secretary_is_watching = {
+            picture = generic_satellite_1
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				intel_network_gain_factor = 0.1
+				civilian_intel_to_others = -10
+				army_intel_to_others = -10
+				navy_intel_to_others = -10
+				airforce_intel_to_others = -10
+            }
+        }
+		rmm_barrel_of_the_gun = {
+            picture = ncn_sneering_imperialist
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				land_reinforce_rate = 0.08
+				experience_loss_factor = -0.1
+				army_speed_factor = 0.08
+            }
+        }
+		rmm_american_quality = {
+            picture = generic_fusion_cell
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+			equipment_bonus = {
+				fireteam_support = {
+					soft_attack = 0.15
+					instant = yes
+				}
+				demolitions_support = {
+					soft_attack = 0.15
+					instant = yes
+				}
+				recon_company = {
+					defense = 0.1
+					instant = yes
+				}
+			}
+        }
+		rmm_reckless_killing = {
+            picture = generic_catastrophe
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				army_attack_factor = 0.05
+				attrition = -0.15
+            }
+        }
+		rmm_tanner_resist_1 = {
+            picture = bra_mountie_hat
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				resistance_growth = 0.25
+				resistance_damage_to_garrison = 0.5
+				production_speed_buildings_factor = -0.2
+				industry_repair_factor = -0.2
+            }
+        }
+		rmm_tanner_resist_2 = {
+            picture = bra_mountie_hat
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				resistance_growth = 0.2
+				resistance_damage_to_garrison = 0.3
+				production_speed_buildings_factor = -0.1
+				industry_repair_factor = -0.1
+            }
+        }
+		rmm_tanner_resist_3 = {
+            picture = bra_mountie_hat
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				resistance_growth = 0.1
+				resistance_damage_to_garrison = 0.1
+            }
+        }
+		rmm_canada_defiant_1 = {
+            picture = brk_slave_masters
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				compliance_growth = -0.4
+				industrial_capacity_factory = -0.5
+				production_speed_buildings_factor = -0.3
+				local_resources_factor = -0.2
+            }
+        }
+		rmm_canada_defiant_2 = {
+            picture = brk_slave_masters
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				compliance_growth = -0.2
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.2
+            }
+        }
+		rmm_canada_defiant_3 = {
+            picture = brk_slave_masters
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				industrial_capacity_factory = -0.2
+				production_speed_infrastructure_factor = 0.1
+				local_resources_factor = 0.2
+            }
+        }
+	}
+}

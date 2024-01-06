@@ -1,0 +1,22 @@
+﻿units = {
+	fleet = {
+		name = ""
+		naval_base = 16356
+		task_force = {
+			name = "Waves of Freedom"
+			location = 16356
+			ship = { name = "Swimming Moose" definition = light_ship_unit equipment = { ship_hull_light_1 = { amount = 1 owner = RMM version_name = "River Boat" } } }
+			ship = { name = "Iron Lung" definition = light_ship_unit equipment = { ship_hull_light_1 = { amount = 1 owner = RMM version_name = "River Boat" } } }
+			ship = { name = "Steel Lung" definition = light_ship_unit equipment = { ship_hull_light_1 = { amount = 1 owner = RMM version_name = "River Boat" } } }
+			ship = { name = "Moosing Time" definition = light_ship_unit equipment = { ship_hull_light_1 = { amount = 1 owner = RMM version_name = "River Boat" } } }
+			ship = { name = "Republican Dream" definition = medium_ship_screen_unit equipment = { ship_hull_medium_1 = { amount = 1 owner = RMM version_name = "Destroyer" } } }
+			ship = { name = "Republican Dream" definition = medium_ship_screen_unit equipment = { ship_hull_medium_1 = { amount = 1 owner = RMM version_name = "Destroyer" } } }
+			ship = { name = "Viva Revolution" definition = heavy_ship_unit equipment = { ship_hull_heavy_1 = { amount = 1 owner = RMM version_name = "Heavy Ship" } } }
+			ship = { name = "Proud Moose" definition = heavy_ship_unit equipment = { ship_hull_heavy_1 = { amount = 1 owner = RMM version_name = "Heavy Ship" } } }
+			ship = { name = "Chancellor McClain" definition = heavy_ship_unit equipment = { ship_hull_heavy_1 = { amount = 1 owner = RMM version_name = "Heavy Ship" } } }
+			ship = { name = "Corale Charm" definition = heavy_ship_unit equipment = { ship_hull_heavy_1 = { amount = 2 owner = RMM version_name = "Heavy Ship" } } }
+		}
+	}
+
+
+}

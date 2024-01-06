@@ -1,0 +1,135 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Hat"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Hat.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_PA_Soldier"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_PA_Soldier.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Stuff"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Stuff.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Stuff"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Stuff.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Force_Civ"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Force_Civ.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Coral_Hall"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Coral_Hall.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Goggles"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Goggles.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Crate"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Crate.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Officer"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Officer.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Cigar"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Cigar.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Glasses"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Glasses.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Imperialist"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Imperialist.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Tanner"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Tanner.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Black_Plant"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Black_Plant.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Skull_Hat"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Skull_Hat.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Radio"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Radio.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Vertibird"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Vertibird.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Costume_Guy"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Costume_Guy.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Crown"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Crown.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Vault_Boy_Soldier"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Vault_Boy_Soldier.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Armored_Soldier"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Armored_Soldier.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Vault_Boy_Caps"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Vault_Boy_Caps.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Scientist"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Scientist.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Factory_Skull"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Factory_Skull.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Skull_Pile"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Skull_Pile.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Chain"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Chain.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Manifest_Logo"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Manifest_Logo.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Selling_Canada"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Selling_Canada.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Vault_Boy_Trash"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Vault_Boy_Trash.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Rivers_Leaf"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Rivers_Leaf.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Robot_Book"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Robot_Book.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Fusion_Cell"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Fusion_Cell.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Agents_Vault_Monitor"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Vault_Monitor.dds"
+	}
+}
+

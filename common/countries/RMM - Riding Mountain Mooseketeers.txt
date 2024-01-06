@@ -1,0 +1,3 @@
+graphical_culture = canadarebel_gfx
+graphical_culture_2d = settler_2d
+color = { 224 229 91 }

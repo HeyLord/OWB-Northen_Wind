@@ -1,0 +1,112 @@
+RMM_manitoba_war  = {
+	RMM_war_breaks_out = {
+		priority = 10
+		icon = knife_2
+		allowed = {
+			OR = {
+				original_tag = BRA
+				original_tag = RMM
+			}
+		}
+		available = {
+			hidden_trigger = {
+				RMM = {
+					has_country_flag = rmm_escapes
+				}
+			}
+		}
+		days_mission_timeout = 220
+		war_with_on_timeout = BRA
+		war_with_on_timeout = RMM
+		fire_only_once = yes
+		activation = {
+			has_global_flag = rmm_manitoba_war_flag
+		}
+		#cancel_if_not_visible = yes
+		is_good = no
+		timeout_effect = {
+			if = {
+				limit = {
+					tag = BRA
+				}
+				BRA = {
+					declare_war_on = {
+						target = RMM
+						type = annex_everything
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = RMM
+				}
+				effect_tooltip = {
+					BRA = {
+						declare_war_on = {
+							target = RMM
+							type = annex_everything
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_war_with = DMM
+					}
+					white_peace = DMM
+				}
+			}
+		}
+	}
+}
+RMM_agents_chicago_shipments = {
+	RMM_shipments_chicago = {
+		allowed = { original_tag = RMM }
+		icon = GFX_decision_enclave_weapon_box
+		available = {
+			hidden_trigger = { always = no }
+		}
+		activation = {
+			has_country_flag = rmm_activate_shipments
+		}
+		is_good = no
+		selectable_mission = no
+		days_re_enable = 10
+		days_mission_timeout = 70
+
+		timeout_effect = {
+			country_event = nf_rmm.15
+		}
+	}
+	RMM_weapon_shipments = {
+		icon = GFX_decision_box_open
+		allowed = {
+			tag = RMM
+		}
+		available = {
+		}
+		visible = {
+			has_country_flag = rmm_chicago_weapons
+		}
+		days_remove = 14
+		days_re_enable = 28
+		remove_effect = {
+			if = {
+				NOT = {
+					has_country_flag = rmm_advanced_shipment
+				}
+				add_equipment_to_stockpile = {
+					type = energy_equipment_4
+					amount = 150
+					producer = USA
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = energy_equipment_4
+					amount = 300
+					producer = USA
+				}
+			}
+		}
+    }
+}

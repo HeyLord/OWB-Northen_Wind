@@ -1,0 +1,75 @@
+﻿##### Starting Division Templates #####
+division_template = {
+	name = "Road Patrol"
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Moosketeer's"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+}
+
+##### Starting Army #####
+units = {
+	division = {
+			name = "1st Veterans"
+			location = 15220
+			division_template = "Moosketeer's"
+			start_experience_factor = 1.0
+			start_equipment_factor = 0.7
+		}
+	division = {
+			name = "Dawfin Loyalists"
+			location = 15220
+			division_template = "Moosketeer's"
+			start_experience_factor = 0.5
+			start_equipment_factor = 0.7
+		}
+	division = {
+			name = "Riding Mountain Observers"
+			location = 15226
+			division_template = "Moosketeer's"
+			start_experience_factor = 0.5
+			start_equipment_factor = 0.7
+		}
+	division = {
+			name = "Reykjavik Revolutionaries"
+			location = 13267
+			division_template = "Moosketeer's"
+			start_experience_factor = 0.5
+			start_equipment_factor = 0.7
+		}
+		division = {
+			name = "Winnipegosis's Loyalists"
+			location = 16358
+			division_template = "Moosketeer's"
+			start_experience_factor = 0.5
+			start_equipment_factor = 0.7
+		}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "RMM"
+		}
+		requested_factories = 4
+		progress = 0.75
+		efficiency = 100
+	}
+}

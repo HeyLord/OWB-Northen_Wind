@@ -1,0 +1,27 @@
+﻿division_template = {
+	name = "Rapid Response Division"
+	template_counter= 90
+	regiments = {
+		power_armour = { x = 0 y = 0 }
+		power_armour = { x = 0 y = 1 }
+		power_armour = { x = 0 y = 2 }
+		power_armour = { x = 1 y = 0 }
+		power_armour = { x = 1 y = 1 }
+		power_armour = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "Rapid Response Division"
+		location = 16356
+		division_template = "Rapid Response Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.2
+		force_equipment_variants = {
+            energy_equipment_3 = { owner = "USA" }
+            enclave_power_armour_equipment_1 = { owner = "USA" }
+            explosive_demolitions_equipment_3 = { owner = "USA" }
+        }
+	}
+}

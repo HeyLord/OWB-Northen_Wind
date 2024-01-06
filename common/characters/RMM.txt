@@ -1,0 +1,349 @@
+characters = {
+	RMM_chancellor_mcclane = {
+		name = "Chancellor McClane"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_RMM_mcclane
+				small = GFX_idea_RMM_chancellor_mcclane
+			}
+		}
+		country_leader = {
+			desc = RMM_MCCLANE_DESC
+			ideology = theodemocracy
+			traits = {
+			}
+			expire = "3000.01.01.01"
+			id = -1
+		}
+		country_leader = {
+			desc = RMM_MCCLANE_DESC
+			ideology = benevolent_dictatorship
+			traits = {
+			}
+			expire = "3000.01.01.01"
+			id = -1
+		}
+		field_marshal = {
+			traits = {
+				enduring_trait
+				rooted_trait
+				awareness_trait
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = -1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = RMM_chancellor_army_chief
+			ledger = army
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_iron_chancelor_advisor
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	RMM_coral_hall = {
+		name = RMM_coral_hall_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_coral_hall
+				large = GFX_Portrait_RMM_coral_hall
+			}
+		}
+		country_leader = {
+			ideology = militarist_technocracy
+			traits = {
+				rmm_the_admiral
+			}
+			expire = "3000.01.01.01"
+			id = -1
+		}
+		navy_leader = {
+			traits = {}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+			legacy_id = -1
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = RMM_coral_hall_idea_token
+			ledger = army
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_mother_to_many
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 4
+			}
+		}
+	}
+	RMM_rebecca_davis = {
+		name = RMM_rebecca_davis_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_rebecca_davis
+				large = GFX_Portrait_RMM_rebecca_davis
+			}
+			army = {
+				large = GFX_Portrait_RMM_rebecca_davis
+			}
+		}
+		corps_commander = {
+			traits = {
+				RMM_republican_general
+				agile_trait
+				pain_train_trait
+				charismatic_trait
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = -1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = RMM_rebecca_davis_high_command
+			desc = RMM_rebecca_davis_desc
+			ledger = army
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_flying_fireband
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 6
+			}
+		}
+	}
+	RMM_zayden_preston = {
+		name = RMM_zayden_preston_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_zayden_preston
+				large = GFX_Portrait_RMM_zayden_preston
+			}
+			army = {
+				large = GFX_Portrait_RMM_zayden_preston
+			}
+		}
+		corps_commander = {
+			traits = {
+				RMM_republican_general
+				strong_trait
+				rooted_trait
+				mysterious_stranger_trait
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = RMM_zayden_preston_high_command
+			desc = RMM_zayden_preston_desc
+			ledger = army
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_first_revolutionary
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 6
+			}
+		}
+	}
+	RMM_scarlett_hines = {
+		name = RMM_scarlett_hines_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_scarlet_hines
+				large = GFX_Portrait_RMM_scarlett_hines
+			}
+			army = {
+				large = GFX_Portrait_RMM_scarlett_hines
+			}
+		}
+		corps_commander = {
+			traits = {
+				RMM_patriot_general
+				intelligent_trait
+				perceptive_trait
+				aqua_boy_trait
+				local_leader_trait
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+			legacy_id = -1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = RMM_scarlett_hines_high_command
+			desc = RMM_scarlett_hines_desc
+			ledger = army
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_anti_monarch
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 6
+			}
+		}
+	}
+	RMM_mason_harper = {
+		name = RMM_mason_harper_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_mason_harper
+				large = GFX_Portrait_RMM_mason_harper
+			}
+			army = {
+				large = GFX_Portrait_RMM_mason_harper
+			}
+		}
+		corps_commander = {
+			traits = {
+				charismatic_trait
+				lucky_trait
+				gun_nut_trait
+				bloody_mess_trait
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 1
+			legacy_id = -1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = RMM_mason_harper_high_command
+			desc = RMM_mason_harper_desc
+			ledger = army
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_liberty_bomber
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 6
+			}
+		}
+	}
+	RMM_agent_delta = {
+		name = RMM_DELTA_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_RMM_agent_delta
+			}
+		}
+		country_leader = {
+			ideology = meritocracy
+			traits = {
+				rmm_agent_of_chaos
+			}
+			expire = "3000.01.01.01"
+			id = -1
+		}
+	}
+	RMM_mister_smith = {
+		name = RMM_MISTER_SMITH_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_mr_smith
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = RMM_mister_smith_advisor
+			allowed = {
+				original_tag = RMM
+			}
+			visible = {
+				has_country_flag = rmm_smith_advisor
+			}
+			can_be_fired = no
+			traits = {
+				rmm_hidden_in_the_shadows
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	RMM_no_one = {
+		name = RMM_NO_ONE_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_RMM_no_one
+			}
+		}
+		country_leader = {
+			ideology = commune
+			traits = {
+				rmm_free
+			}
+			expire = "3000.01.01.01"
+			id = -1
+		}
+	}
+	RMM_bugman = {
+		name = RMM_BUGMAN_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_bugman
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = RMM_bugman_army_chief
+			ledger = army
+			allowed = {
+				original_tag = RMM
+			}
+			available = {
+				has_completed_focus = rmm_enp_bug_men
+			}
+			traits = {
+				rmm_chicago_finest
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}

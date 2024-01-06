@@ -1,0 +1,173 @@
+characters = {
+	WHC_PATRICIA = {
+		name = WHC_PATRICIA_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_WHC_leader
+			}
+		}
+		country_leader = {
+			desc = WHC_PATRICIA_DESC
+			ideology = benevolent_dictatorship
+			expire = "3000.01.01"
+			traits = {
+				popular_figurehead
+				reckless
+			}
+		}
+		country_leader = {
+			desc = WHC_PATRICIA_DESC
+			ideology = commune
+			expire = "3000.01.01"
+			traits = {
+				popular_figurehead
+				reckless
+			}
+		}
+	}
+	WHC_mortis_ghost_harkess = {
+		name = WHC_MORTIS_GHOST_HARKESS_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_WHC_mortis_ghost_harkess
+			}
+			army = {
+				large = GFX_Portrait_WHC_mortis_ghost_harkess
+			}
+		}
+		corps_commander = {
+			visible = {
+				has_country_flag = whc_mortis_arrives
+			}
+			traits = {
+				enduring_trait
+				winter_specialist
+			}
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	WHC_frank_kang = {
+		name = WHC_WHC_FRANK_KANG_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_WHC_frank_kang
+			}
+		}
+		country_leader = {
+			desc = WHC_FRANK_KANG_DESC
+			ideology = technocracy
+			expire = "3000.01.01"
+			traits = {
+				propaganda_team
+				radical_reformer
+			}
+		}
+	}
+	WHC_marshall_gordon = {
+		name = WHC_MARSHALL_GORDON_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_WHC_marshall_gordon
+			}
+			army = {
+				large = GFX_Portrait_WHC_marshall_gordon
+			}
+		}
+		field_marshal = {
+			traits = {
+				intelligent_trait
+				winter_specialist
+				tough_leader_trait
+			}
+			skill = 5
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 5
+			legacy_id = -1
+		}
+	}
+	WHC_elis_mikoshi = {
+		name = WHC_ELIS_MIKOSHI_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_LOI_elis_mikoshi
+			}
+			army = {
+				large = GFX_Portrait_LOI_elis_mikoshi
+			}
+		}
+		corps_commander = {
+			traits = {
+				agile_trait
+				inspirational_trait
+			}
+			visible = {
+				has_completed_focus = whc_get_enemy_general_2
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	WHC_natalia_bell = {
+		name = WHC_NATALIA_BELL_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_LOI_natalia_bell
+			}
+			army = {
+				large = GFX_Portrait_LOI_natalia_bell
+			}
+		}
+		corps_commander = {
+			traits = {
+				gun_nut_trait
+				enduring_trait
+				commando_trait
+			}
+			visible = {
+				has_completed_focus = whc_get_enemy_general_2
+			}
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	WHC_alexei_soltz = {
+		name = WHC_SOLTZ_NAME
+		portraits = {
+			army = {
+				small = GFX_idea_WHC_alexei_soltz
+			}
+			civilian = {
+				small = GFX_idea_WHC_alexei_soltz
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = WHC_alexei_soltz_economic_advisor
+			allowed = {
+				original_tag = WHC
+			}
+			available = {
+				has_country_flag = whc_recruited_soltz
+			}
+			traits = {
+				WHC_black_market
+			}
+			cost = 100
+		}
+	}
+}

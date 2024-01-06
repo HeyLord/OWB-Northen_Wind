@@ -1,0 +1,351 @@
+ideas = {
+    country = {
+        whc_security_personel_lost = {
+            picture = generic_helm_security
+            removal_cost = -1
+            modifier = {
+                command_power_gain_mult = -0.25
+                army_leader_cost_factor = 1.0
+            }
+        }
+        whc_essential_resources_lost = {
+            picture = generic_hot_plate
+            removal_cost = -1
+            modifier = {
+                local_resources = -0.4
+            }
+        }
+        whc_followers_behind_the_door = {
+            picture = generic_raids
+            removal_cost = -1
+            modifier = {
+                conscription = -0.03
+            }
+        }
+        whc_eat_the_rich = {
+            picture = generic_blood
+            removal_cost = -1
+            modifier = {
+                supply_consumption_factor = -0.2
+                no_supply_grace = 48
+                stability_factor = -0.1
+                monthly_population = -0.05
+            }
+        }
+        whc_worker_unions = {
+            picture = generic_sickle
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_factory = 0.15
+            }
+        }
+        whc_foul_beasts_from_another_worlds = {
+            picture = generic_devil
+            removal_cost = -1
+            targeted_modifier = {
+                tag = STC
+                attack_bonus_against = 0.1
+            }
+            targeted_modifier = {
+                tag = BGR
+                attack_bonus_against = 0.1
+            }
+            targeted_modifier = {
+                tag = VER
+                attack_bonus_against = 0.1
+            }
+            targeted_modifier = {
+                tag = IRC
+                attack_bonus_against = 0.1
+            }
+            targeted_modifier = {
+                tag = LOI
+                attack_bonus_against = 0.1
+            }
+            targeted_modifier = {
+                tag = COM
+                attack_bonus_against = 0.1
+            }
+        }
+        whc_foul_occupiers = {
+            picture = generic_devil
+            removal_cost = -1
+            cancel = {
+                COM = {
+                    exists = no
+                }
+            }
+            targeted_modifier = {
+                tag = COM
+                attack_bonus_against = 0.25
+            }
+        }
+        whc_all_roads = {
+            picture = generic_vehicle_skid_loader
+            removal_cost = -1
+            modifier = {
+                production_speed_buildings_factor = 0.1
+                production_speed_infrastructure_factor = 0.1
+            }
+        }
+        whc_manitoban_investments = {
+            picture = generic_vehicle_skid_loader
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = -0.15
+                production_speed_buildings_factor = 0.3
+            }
+        }
+        whc_the_white_book = {
+            picture = generic_chinese_spec_training
+            removal_cost = -1
+            modifier = {
+                political_power_factor = -0.15
+                resistance_growth = -0.2
+                compliance_gain = 0.01
+            }
+        }
+        whc_spirit_defence = {
+            picture = generic_chinese_rifle
+            removal_cost = -1
+            cancel = {
+                has_war = no
+            }
+            modifier = {
+                max_dig_in = 10
+                army_core_defence_factor = 0.2
+                dig_in_speed_factor = 0.1
+            }
+        }
+        whc_boots = {
+            picture = TIM_patch_scouting_heritage
+            removal_cost = -1
+            modifier = {
+                army_org_factor = 0.08
+                army_speed_factor = 0.1
+                attrition = -0.2
+            }
+        }
+        whc_commisariat = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.05
+                experience_gain_army_factor = 0.1
+                special_forces_min = 60
+            }
+        }
+        whc_full_mobil = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            modifier = {
+                mobilization_speed = 0.5
+            }
+        }
+        whc_tanks = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            modifier = {
+                breakthrough_factor = 0.2
+            }
+            equipment_bonus = {
+				tank_equipment = {
+					instant = yes
+					hard_attack = 0.5
+				}
+				motorized_equipment = {
+					instant = yes
+					soft_attack = 0.2
+				}
+			}
+        }
+        whc_final_attack_1 = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            cancel = {
+                has_war = no
+            }
+            on_remove = {
+                country_event = nf_whc.5
+            }
+            modifier = {
+                army_attack_factor = 0.2
+                army_org_regain = 0.2
+            }
+        }
+        whc_final_attack_2 = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            cancel = {
+                has_war = no
+            }
+            on_remove = {
+                country_event = nf_whc.6
+            }
+            modifier = {
+                army_attack_factor = 0.1
+                army_org_regain = 0.1
+            }
+        }
+        whc_passkep_shield = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            cancel = {
+                WHC = {
+                    exists = no
+                }
+            }
+            modifier = {
+                army_core_defence_factor = 0.5
+                max_dig_in = 30
+            }
+        }
+        whc_big_grass_comrades = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            modifier = {
+                production_factory_max_efficiency_factor = 0.1
+            }
+            equipment_bonus = {
+                support_robot_equipment = {
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+                combat_robot_equipment = {
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+            }
+        }
+        whc_big_grass_comrades_2 = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            modifier = {
+                army_org_factor = 0.05
+                local_resources = 0.1
+                max_fuel_factor = 0.15
+                production_factory_max_efficiency_factor = 0.1
+            }
+            equipment_bonus = {
+                support_robot_equipment = {
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+                combat_robot_equipment = {
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+            }
+        }
+        whc_new_commie_man = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            modifier = {
+                research_speed_factor = 0.08
+            }
+        }
+        whc_prepearing_the_second_breakfast = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = -0.04
+                conversion_cost_mil_to_civ_factor = -0.3
+                weekly_manpower = -10
+            }
+        }
+        whc_young_heroes = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            modifier = {
+                army_intel_to_others = -20
+                resistance_target_on_our_occupied_states = 0.25
+            }
+        }
+        whc_war_experience = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            modifier = {
+                mobilization_speed = 0.2
+                max_planning_factor = 0.15
+                planning_speed = 0.08
+            }
+        }
+        whc_rubber_wheels = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            equipment_bonus = {
+                motorized_equipment = {
+                    soft_attack = 0.2
+                    hard_attack = 0.2
+                    instant = yes
+                }
+            }
+        }
+        whc_eternal_revolution = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            equipment_bonus = {
+                infantry_equipment = {
+                    hard_attack = 0.2
+                    instant = yes
+                }
+                spec_ops_equipment = {
+                    hard_attack = 0.2
+                    instant = yes
+                }
+                anti_tank_equipment = {
+                    ap_attack = 0.2
+                    instant = yes
+                }
+            }
+        }
+        whc_yj_lands = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            on_remove = {
+                set_technology = {
+                    robot_pacification_bot_tech = 1
+                }
+            }
+            modifier = {
+                consumer_goods_factor = 0.2
+                industrial_capacity_factory = -0.15
+            }
+        }
+        whc_mosquito_lands = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            on_remove = {
+                set_technology = {
+                    plasma_weaponry_1 = 1
+                }
+            }
+            modifier = {
+                stability_factor = -0.25
+                weekly_manpower = -3
+                resistance_growth = 0.25
+            }
+        }
+        whc_wasp_lands = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            on_remove = {
+                set_technology = {
+                    special_forces_tech_level_scientific = 1
+                }
+            }
+            modifier = {
+                political_power_factor = -0.45
+                army_core_defence_factor = -0.25
+            }
+        }
+        whc_flying_heroes = {
+            picture = generic_officer_hat
+            removal_cost = -1
+            modifier = {
+                air_weather_penalty = -0.25
+                air_ace_generation_chance_factor = 0.15
+            }
+        }
+    }
+}

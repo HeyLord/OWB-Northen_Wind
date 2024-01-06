@@ -1,0 +1,29 @@
+﻿division_template = {
+	name = "Steel Fists"
+
+	regiments = {
+		power_armour = { x = 0 y = 0 }
+		power_armour = { x = 0 y = 1 }
+		power_armour = { x = 0 y = 2 }
+		power_armour = { x = 1 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "The Ironguard"
+		location = location = 16356
+		division_template = "Steel Fists"
+		start_experience_factor = 1.0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "The Maple Leafs"
+		location = location = 16356
+		division_template = "Steel Fists"
+		start_experience_factor = 1.0
+		start_equipment_factor = 0.8
+	}
+}
+
