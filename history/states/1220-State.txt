@@ -5,8 +5,8 @@ state={
 		13878 13881 13882 13888 13889 13894 13895 13896 13899
 	}
 	history={
-		owner =  MSQ
-		add_core_of =  MSQ
+		owner = WHC
+		add_core_of = WHC
 		victory_points = {
 			13888 5
 		}
