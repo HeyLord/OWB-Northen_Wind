@@ -1,0 +1,2 @@
+C:\Users\Legate\Documents\Paradox Interactive\Hearts of Iron IV\mod\OWB_North_Wind\interface\focus\whc\whc_national_focuses.gfx
+C:\Users\Legate\Documents\Paradox Interactive\Hearts of Iron IV\mod\OWB_North_Wind\interface\focus\whc\whc_national_focuses_shine.gfx

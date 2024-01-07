@@ -35,5 +35,34 @@ spriteTypes = {
 		name = "GFX_goal_WHC_Red_Sun"
 		texturefile = "gfx/interface/goals/unique/WHC/WHC_Red_Sun.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_WHC_Frank_Penny"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Frank_Penny.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Frank_Checkout"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Frank_Checkout.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Frank_Soldier"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Frank_Soldier.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Frank_Uranium_Rock"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Frank_Uranium_Rock.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Frank_Book"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Frank_Book.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Frank_Vertibird"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Frank_Vertibird.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Frank_PA"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Frank_PA.dds"
+	}
+
 }
 
