@@ -1,0 +1,133 @@
+#!/usr/bin/env ruby
+require 'digest/sha1'
+require 'erb'
+require 'fileutils'
+require 'find'
+require 'optimist'
+require 'pathname'
+require 'yaml'
+
+class Main
+  # Base of the mod; relies on this script being in the `scripts` directory.
+  MOD_ROOT = Pathname.new(__dir__).parent
+
+  # Path to the config file.
+  TEMPLATE_ROOT = MOD_ROOT.join('templates')
+  FACTION_TEMPLATE_ROOT = TEMPLATE_ROOT.join('faction-tracking')
+  CONFIG_ROOT = TEMPLATE_ROOT.join('config')
+
+  # Primary configuration file for faction tracking; this is where factions are
+  # listed, named, and tagged.
+  FACTION_TRACKING_CONFIG_PATH = CONFIG_ROOT.join('factions.yml')
+
+  GENERATED_FILE_WARNING = <<~EOF
+    ######################################
+    ####### GENERATED CODE WARNING #######
+    ######################################
+    # This file is generated code - any
+    # changes made directly to these files
+    # will likely be lost on future
+    # updates. If you need to tweak the
+    # functionality in this file, please
+    # contact wtchappell ('the witch') for
+    # help in improving its functionality.
+    ######################################
+    ####### GENERATED CODE WARNING #######
+    ######################################
+  EOF
+
+  MODELINE = <<~EOF
+    # vim: set ft=pdx tw=79 :
+  EOF
+
+  def initialize
+    opts = Optimist::options do
+      opt(
+        :config_file,
+        "Template config file path",
+        :type => :string,
+        :default => FACTION_TRACKING_CONFIG_PATH.to_s
+      )
+      opt(
+        :output_root,
+        "Root path of output mod",
+        :type => :string,
+        :default => MOD_ROOT.to_s
+      )
+      opt(
+        :prefix,
+        "Optional prefix for output files, for submodding generation",
+        :type => :string
+      )
+    end
+    @config_path = Pathname.new(opts[:config_file])
+    @output_root = Pathname.new(opts[:output_root])
+    @prefix = opts[:prefix]
+  end
+
+  def camel_case(str)
+    str.split(' ').map do |piece|
+      piece =~ /^[A-Z]/ ? piece : piece.capitalize
+    end.join('').gsub(/[[:punct:]]/, '')
+  end
+
+  def text_to_dos(text)
+    text.lines.map do |line|
+      line.chomp("\r\n").chomp("\n")
+    end.join("\r\n") + "\r\n"
+  end
+
+  def factions
+    config = parse_config.to_h
+    config['factions']
+  end
+
+  def parse_config(path = @config_path)
+    YAML.load(File.read(path))
+  end
+
+  def path_difference(path_a, path_b)
+    a_parts = Pathname.new(path_a).each_filename.to_a
+    b_parts = Pathname.new(path_b).each_filename.to_a
+    Pathname.new(File.join(a_parts - b_parts))
+  end
+
+  def snake_case(str)
+    puts str
+    str.downcase.gsub(/[[:punct:]]/, '').split(' ').join('_')
+  end
+
+  BOM = "\xEF\xBB\xBF".force_encoding('utf-8')
+  def template!
+    Find.find(FACTION_TEMPLATE_ROOT) do |path|
+      puts "EXAMINING #{path}"
+      template_path = Pathname.new(path)
+      next if template_path.directory?
+      next if template_path.to_s =~ /.nogen$/
+      template = template_path.read
+      new_path = templated_filename(template_path)
+      FileUtils.mkdir_p(new_path.parent)
+      File.open(new_path, 'wb') do |f|
+        if new_path.to_s =~ /\/events\// || new_path.to_s.end_with?('.yml')
+          f.write(BOM)
+        end
+        f.write(text_to_dos(GENERATED_FILE_WARNING))
+        f.write(text_to_dos(ERB.new(template, trim_mode: '-').result(binding)))
+        #if new_path.to_s.end_with?('.txt')
+        #  f.write(text_to_dos(MODELINE))
+        #end
+      end
+    end
+  end
+
+  def templated_filename(template_path)
+    if @prefix
+      template_path = template_path.parent.join("#{@prefix}-#{template_path.basename}")
+    end
+    relative_path = path_difference(template_path, FACTION_TEMPLATE_ROOT)
+    @output_root.join(relative_path)
+  end
+end
+
+Main.new.template!
+# vim: set ft=ruby ts=2 sw=2 tw=79 :

@@ -1,0 +1,715 @@
+######################################
+####### GENERATED CODE WARNING #######
+######################################
+# This file is generated code - any
+# changes made directly to these files
+# will likely be lost on future
+# updates. If you need to tweak the
+# functionality in this file, please
+# contact wtchappell ('the witch') for
+# help in improving its functionality.
+######################################
+####### GENERATED CODE WARNING #######
+######################################
+opinion_modifiers = {
+	refused_entry_to_nova_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_nova_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_chosen_ones = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_chosen_ones = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_lanius_horde = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_lanius_horde = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_big_mt = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_big_mt = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_boneyard_brotherhood = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_boneyard_brotherhood = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_united_front = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_united_front = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_western_brotherhood_of_steel = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_western_brotherhood_of_steel = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_caesars_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_caesars_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_children_of_mexico = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_children_of_mexico = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_children_of_the_gate = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_children_of_the_gate = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_daikatana = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_daikatana = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_daughters_of_hecate = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_daughters_of_hecate = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_denver_defense_network = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_denver_defense_network = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_earth_and_sky = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_earth_and_sky = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_empire_of_salt = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_empire_of_salt = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_equestria = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_equestria = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_faithful = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_faithful = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_fantasma_cartel = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_fantasma_cartel = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_glass_league = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_glass_league = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_great_federation = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_great_federation = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_great_plains_federation = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_great_plains_federation = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_jungle_pact = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_jungle_pact = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_kaisers_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_kaisers_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_masters_new_army = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_masters_new_army = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_mesoamerican_alliance = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_mesoamerican_alliance = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_the_fire_council = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_the_fire_council = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_mojave_alliance = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_mojave_alliance = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_mormon_alliance = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_mormon_alliance = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_nevada_enclave = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_nevada_enclave = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_nevada_pact = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_nevada_pact = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_northern_league = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_northern_league = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_northern_mojave_pact = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_northern_mojave_pact = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_phoenix_federation = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_phoenix_federation = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_rio_pact = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_rio_pact = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_senators_little_helpers = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_senators_little_helpers = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_great_confederation = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_great_confederation = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_texan_economic_union = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_texan_economic_union = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_unbroken_coast = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_unbroken_coast = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_western_enclave = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_western_enclave = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_order_of_st_joseph = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_order_of_st_joseph = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_breach_ferals = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_breach_ferals = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_white_sands_compact = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_white_sands_compact = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_cartel_faction = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_cartel_faction = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_cascadia_pirates = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_cascadia_pirates = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_transcascadia_republic = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_transcascadia_republic = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_new_california = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_new_california = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_the_second_coalition = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_the_second_coalition = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_imperium_mexicanum = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_imperium_mexicanum = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_mexican_league = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_mexican_league = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_midnight_union = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_midnight_union = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_big_circle = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_big_circle = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_dharma_way = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_dharma_way = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_californian_hegemony = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_californian_hegemony = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_northern_congress = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_northern_congress = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_road_warriors = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_road_warriors = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_synergy_alliance = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_synergy_alliance = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_vulpes_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_vulpes_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_aurelius_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_aurelius_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_lanius_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_lanius_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_hades_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_hades_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_lucius_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_lucius_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_malpais_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_malpais_legion = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_northern_union = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_northern_union = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_united_wallers = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_united_wallers = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_montana_enclave = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_montana_enclave = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_northern_winds = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_northern_winds = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_allied_states = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_allied_states = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_fifth_world = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_fifth_world = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_kingdom_of_manitoba = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_kingdom_of_manitoba = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_red_shield = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_red_shield = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+}

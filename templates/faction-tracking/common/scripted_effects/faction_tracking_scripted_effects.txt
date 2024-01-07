@@ -1,0 +1,537 @@
+<% factions.each do |faction_id, config| -%>
+<% faction_tag = config['tag'] -%>
+create_or_join_<%= faction_id %> = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_<%= faction_id %> (scripted_effect) entered"
+	}
+	if = {
+		limit = {
+			<%= faction_id %>_exists = no
+		}
+		leave_current_faction = yes
+		create_faction = <%= faction_id %>
+		mark_as_<%= faction_id %>_member = yes
+		set_variable = { GLOBAL.<%= faction_id %>_leader = THIS }
+	}
+	else = {
+		join_<%= faction_id %> = yes
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_<%= faction_id %> (scripted_effect) exited"
+	}
+}
+
+d_join_<%= faction_id %> = {
+	log = "[GetDateText]: Adding [This.GetNameDef] to <%= faction_id %>..."
+	create_or_join_<%= faction_id %> = yes
+}
+
+ask_to_join_<%= faction_id %> = {
+	custom_effect_tooltip = ask_to_join_<%= faction_id %>_tt
+	hidden_effect = {
+		var:GLOBAL.<%= faction_id %>_leader = {
+			country_event = {
+				id = <%= faction_id %>_faction_events.1
+			}
+		}
+	}
+}
+
+invite_to_<%= faction_id %> = {
+	custom_effect_tooltip = invite_to_<%= faction_id %>_tt
+	hidden_effect = {
+		country_event = {
+			id = <%= faction_id %>_faction_events.5
+		}
+	}
+}
+
+join_<%= faction_id %> = {
+	custom_effect_tooltip = join_<%= faction_id %>_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_<%= faction_id %> (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_<%= faction_id %>_member = no }
+			leave_current_faction = yes
+			var:GLOBAL.<%= faction_id %>_leader = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_<%= faction_id %> - adding to faction via [This.GetName]... (scripted_effect)"
+				}
+				add_to_faction = PREV
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_<%= faction_id %> - added to faction via [This.GetName]... (scripted_effect)"
+				}
+			}
+			mark_as_<%= faction_id %>_member = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_<%= faction_id %> (scripted_effect) exited"
+		}
+	}
+}
+
+leave_<%= faction_id %> = {
+	custom_effect_tooltip = leave_<%= faction_id %>_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_<%= faction_id %> (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_<%= faction_id %>_member = yes }
+			unmark_as_<%= faction_id %>_member = yes
+			leave_faction = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_<%= faction_id %> (scripted_effect) exited"
+		}
+	}
+}
+
+mark_as_<%= faction_id %>_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_<%= faction_id %>_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_<%= faction_id %>_member = no }
+		unmark_from_current_faction = yes
+		set_variable = { current_faction = <%= faction_tag %> }
+		add_to_array = { GLOBAL.<%= faction_id %>_members = THIS }
+		add_<%= faction_id %>_ally_strategies = yes
+		#add_<%= faction_id %>_faction_effects = yes
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_<%= faction_id %>_member = no
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_<%= faction_id %>_member - also marking [This.GetName]... (scripted_effect)"
+			}
+			leave_current_faction = yes
+			mark_as_<%= faction_id %>_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_<%= faction_id %>_member - done also marking [This.GetName]. (scripted_effect)"
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_<%= faction_id %>_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+unmark_as_<%= faction_id %>_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_<%= faction_id %>_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_<%= faction_id %>_member = yes }
+		remove_<%= faction_id %>_ally_strategies = yes
+		#remove_<%= faction_id %>_faction_effects = yes
+		clear_variable = current_faction
+		remove_from_array = { GLOBAL.<%= faction_id %>_members = THIS }
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_<%= faction_id %>_member = yes
+			}
+			unmark_as_<%= faction_id %>_member = yes
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_<%= faction_id %>_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+add_<%= faction_id %>_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_<%= faction_id %>_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = {
+			is_<%= faction_id %>_member = yes
+			NOT = { tag = PREV }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: add_<%= faction_id %>_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = -200
+		}
+		PREV = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: add_<%= faction_id %>_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = -200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_<%= faction_id %>_ally_strategies (scripted_effect) exited"
+	}
+}
+
+remove_<%= faction_id %>_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_<%= faction_id %>_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = { is_<%= faction_id %>_member = yes }
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = 200
+		}
+		PREV = {
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = 200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_<%= faction_id %>_ally_strategies (scripted_effect) exited"
+	}
+}
+
+<% end %>
+
+join_from_faction = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] join_from_faction [From.GetName] (scripted_effect) entered"
+	}
+	leave_current_faction = yes
+<% faction_id = factions.keys.first -%>
+<% faction_config = factions[faction_id] -%>
+	if = {
+		limit = { FROM = { is_<%= faction_id %>_member = yes } }
+		join_<%= faction_id %> = yes
+	}
+<% factions.keys[1..-1].each do |faction_id| -%>
+<% faction_config = factions[faction_id] -%>
+	else_if = {
+		limit = { FROM = { is_<%= faction_id %>_member = yes } }
+		join_<%= faction_id %> = yes
+	}
+<% end -%>
+	else = {
+		custom_effect_tooltip = join_from_faction_tt
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] join_from_faction [From.GetName] (scripted_effect) exited"
+	}
+}
+
+invite_to_from_faction = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] invite_to_from_faction [From.GetName] (scripted_effect) entered"
+	}
+<% faction_id = factions.keys.first -%>
+<% faction_config = factions[faction_id] -%>
+	if = {
+		limit = { FROM = { is_<%= faction_id %>_member = yes } }
+		invite_to_<%= faction_id %> = yes
+	}
+<% factions.keys[1..-1].each do |faction_id| -%>
+<% faction_config = factions[faction_id] -%>
+	else_if = {
+		limit = { FROM = { is_<%= faction_id %>_member = yes } }
+		invite_to_<%= faction_id %> = yes
+	}
+<% end -%>
+	else = {
+		custom_effect_tooltip = invite_to_from_faction_tt
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] invite_to_from_faction [From.GetName] (scripted_effect) exited"
+	}
+}
+
+join_prev_faction = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] join_prev_faction [From.GetName] (scripted_effect) entered"
+	}
+	leave_current_faction = yes
+<% faction_id = factions.keys.first -%>
+<% faction_config = factions[faction_id] -%>
+	if = {
+		limit = { PREV = { is_<%= faction_id %>_member = yes } }
+		join_<%= faction_id %> = yes
+	}
+<% factions.keys[1..-1].each do |faction_id| -%>
+<% faction_config = factions[faction_id] -%>
+	else_if = {
+		limit = { PREV = { is_<%= faction_id %>_member = yes } }
+		join_<%= faction_id %> = yes
+	}
+<% end -%>
+	else = {
+		custom_effect_tooltip = join_prev_faction_tt
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] join_prev_faction [From.GetName] (scripted_effect) exited"
+	}
+}
+
+invite_to_prev_faction = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] invite_to_prev_faction [From.GetName] (scripted_effect) entered"
+	}
+<% faction_id = factions.keys.first -%>
+<% faction_config = factions[faction_id] -%>
+	if = {
+		limit = { PREV = { is_<%= faction_id %>_member = yes } }
+		invite_to_<%= faction_id %> = yes
+	}
+<% factions.keys[1..-1].each do |faction_id| -%>
+<% faction_config = factions[faction_id] -%>
+	else_if = {
+		limit = { PREV = { is_<%= faction_id %>_member = yes } }
+		invite_to_<%= faction_id %> = yes
+	}
+<% end -%>
+	else = {
+		custom_effect_tooltip = invite_to_prev_faction_tt
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] invite_to_prev_faction [From.GetName] (scripted_effect) exited"
+	}
+}
+
+join_root_faction = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] join_root_faction [From.GetName] (scripted_effect) entered"
+	}
+	leave_current_faction = yes
+<% faction_id = factions.keys.first -%>
+<% faction_config = factions[faction_id] -%>
+	if = {
+		limit = { ROOT = { is_<%= faction_id %>_member = yes } }
+		join_<%= faction_id %> = yes
+	}
+<% factions.keys[1..-1].each do |faction_id| -%>
+<% faction_config = factions[faction_id] -%>
+	else_if = {
+		limit = { ROOT = { is_<%= faction_id %>_member = yes } }
+		join_<%= faction_id %> = yes
+	}
+<% end -%>
+	else = {
+		custom_effect_tooltip = join_root_faction_tt
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] join_root_faction [From.GetName] (scripted_effect) exited"
+	}
+}
+
+invite_to_root_faction = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] invite_to_root_faction [From.GetName] (scripted_effect) entered"
+	}
+<% faction_id = factions.keys.first -%>
+<% faction_config = factions[faction_id] -%>
+	if = {
+		limit = { ROOT = { is_<%= faction_id %>_member = yes } }
+		invite_to_<%= faction_id %> = yes
+	}
+<% factions.keys[1..-1].each do |faction_id| -%>
+<% faction_config = factions[faction_id] -%>
+	else_if = {
+		limit = { ROOT = { is_<%= faction_id %>_member = yes } }
+		invite_to_<%= faction_id %> = yes
+	}
+<% end -%>
+	else = {
+		custom_effect_tooltip = invite_to_root_faction_tt
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] invite_to_root_faction [From.GetName] (scripted_effect) exited"
+	}
+}
+
+leave_current_faction = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] leave_current_faction (scripted_effect) entered"
+	}
+<% faction_id = factions.keys.first -%>
+<% faction_config = factions[faction_id] -%>
+	if = {
+		limit = { is_<%= faction_id %>_member = yes }
+		leave_<%= faction_id %> = yes
+	}
+<% factions.keys[1..-1].each do |faction_id| -%>
+<% faction_config = factions[faction_id] -%>
+	else_if = {
+		limit = { is_<%= faction_id %>_member = yes }
+		leave_<%= faction_id %> = yes
+	}
+<% end -%>
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] leave_current_faction (scripted_effect) exited"
+	}
+}
+
+d_leave_faction = {
+	log = "[GetDateText]: Removing [This.GetName] from current faction..."
+	leave_current_faction = yes
+}
+
+become_puppet = {
+	become_puppet_of_prev = yes
+}
+
+become_puppet_of_prev = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] become_puppet of [Prev.GetName] (scripted_effect) entered"
+	}
+	leave_current_faction = yes
+	PREV = { puppet = PREV }
+	hidden_effect = {
+<% faction_id = factions.keys.first -%>
+<% faction_config = factions[faction_id] -%>
+		if = {
+			limit = { PREV = { is_<%= faction_id %>_member = yes } }
+			mark_as_<%= faction_id %>_member = yes
+		}
+<% factions.keys[1..-1].each do |faction_id| -%>
+<% faction_config = factions[faction_id] -%>
+		else_if = {
+			limit = { PREV = { is_<%= faction_id %>_member = yes } }
+			mark_as_<%= faction_id %>_member = yes
+		}
+<% end -%>
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] become_puppet of [Prev.GetName] (scripted_effect) exited"
+	}
+}
+
+unmark_from_current_faction = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_from_current_faction [Prev.GetName] (scripted_effect) entered"
+	}
+<% faction_id = factions.keys.first -%>
+<% faction_config = factions[faction_id] -%>
+	if = {
+		limit = { ROOT = { is_<%= faction_id %>_member = yes } }
+		unmark_as_<%= faction_id %>_member = yes
+	}
+<% factions.keys[1..-1].each do |faction_id| -%>
+<% faction_config = factions[faction_id] -%>
+	else_if = {
+		limit = { ROOT = { is_<%= faction_id %>_member = yes } }
+		unmark_as_<%= faction_id %>_member = yes
+	}
+<% end -%>
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_from_current_faction [Prev.GetName] (scripted_effect) exited"
+	}
+
+}
+# vim: set ft=pdx ts=2 sw=2 tw=79 :

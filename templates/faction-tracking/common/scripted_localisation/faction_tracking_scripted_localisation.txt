@@ -1,0 +1,40 @@
+defined_text = {
+	name = GetFactionName
+<% factions.each do |faction_id, config| -%>
+	text = {
+		trigger = { is_<%= faction_id %>_member = yes }
+		localization_key = <%= faction_id %>
+	}
+<% end -%>
+	text = {
+		localization_key = "None"
+	}
+}
+
+defined_text = {
+	name = GetCanAskToJoinFactionTT
+<% factions.each do |faction_id, config| -%>
+	text = {
+		trigger = { FROM = { is_<%= faction_id %>_member = yes } }
+		localization_key = can_ask_to_join_faction_<%= faction_id %>_tt
+	}
+<% end -%>
+	text = {
+		localization_key = "None"
+	}
+}
+
+defined_text = {
+	name = GetCanOfferToJoinFactionTT
+<% factions.each do |faction_id, config| -%>
+	text = {
+		trigger = {
+			is_<%= faction_id %>_member = yes
+		}
+		localization_key = can_offer_to_join_faction_<%= faction_id %>_tt
+	}
+<% end -%>
+	text = {
+		localization_key = "None"
+	}
+}

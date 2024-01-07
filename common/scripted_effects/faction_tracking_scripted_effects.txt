@@ -19187,6 +19187,570 @@ remove_fifth_world_ally_strategies = {
 	}
 }
 
+create_or_join_kingdom_of_manitoba = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_kingdom_of_manitoba (scripted_effect) entered"
+	}
+	if = {
+		limit = {
+			kingdom_of_manitoba_exists = no
+		}
+		leave_current_faction = yes
+		create_faction = kingdom_of_manitoba
+		mark_as_kingdom_of_manitoba_member = yes
+		set_variable = { GLOBAL.kingdom_of_manitoba_leader = THIS }
+	}
+	else = {
+		join_kingdom_of_manitoba = yes
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_kingdom_of_manitoba (scripted_effect) exited"
+	}
+}
+
+d_join_kingdom_of_manitoba = {
+	log = "[GetDateText]: Adding [This.GetNameDef] to kingdom_of_manitoba..."
+	create_or_join_kingdom_of_manitoba = yes
+}
+
+ask_to_join_kingdom_of_manitoba = {
+	custom_effect_tooltip = ask_to_join_kingdom_of_manitoba_tt
+	hidden_effect = {
+		var:GLOBAL.kingdom_of_manitoba_leader = {
+			country_event = {
+				id = kingdom_of_manitoba_faction_events.1
+			}
+		}
+	}
+}
+
+invite_to_kingdom_of_manitoba = {
+	custom_effect_tooltip = invite_to_kingdom_of_manitoba_tt
+	hidden_effect = {
+		country_event = {
+			id = kingdom_of_manitoba_faction_events.5
+		}
+	}
+}
+
+join_kingdom_of_manitoba = {
+	custom_effect_tooltip = join_kingdom_of_manitoba_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_kingdom_of_manitoba (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_kingdom_of_manitoba_member = no }
+			leave_current_faction = yes
+			var:GLOBAL.kingdom_of_manitoba_leader = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_kingdom_of_manitoba - adding to faction via [This.GetName]... (scripted_effect)"
+				}
+				add_to_faction = PREV
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_kingdom_of_manitoba - added to faction via [This.GetName]... (scripted_effect)"
+				}
+			}
+			mark_as_kingdom_of_manitoba_member = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_kingdom_of_manitoba (scripted_effect) exited"
+		}
+	}
+}
+
+leave_kingdom_of_manitoba = {
+	custom_effect_tooltip = leave_kingdom_of_manitoba_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_kingdom_of_manitoba (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_kingdom_of_manitoba_member = yes }
+			unmark_as_kingdom_of_manitoba_member = yes
+			leave_faction = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_kingdom_of_manitoba (scripted_effect) exited"
+		}
+	}
+}
+
+mark_as_kingdom_of_manitoba_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_kingdom_of_manitoba_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_kingdom_of_manitoba_member = no }
+		unmark_from_current_faction = yes
+		set_variable = { current_faction = BRA }
+		add_to_array = { GLOBAL.kingdom_of_manitoba_members = THIS }
+		add_kingdom_of_manitoba_ally_strategies = yes
+		#add_kingdom_of_manitoba_faction_effects = yes
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_kingdom_of_manitoba_member = no
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_kingdom_of_manitoba_member - also marking [This.GetName]... (scripted_effect)"
+			}
+			leave_current_faction = yes
+			mark_as_kingdom_of_manitoba_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_kingdom_of_manitoba_member - done also marking [This.GetName]. (scripted_effect)"
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_kingdom_of_manitoba_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+unmark_as_kingdom_of_manitoba_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_kingdom_of_manitoba_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_kingdom_of_manitoba_member = yes }
+		remove_kingdom_of_manitoba_ally_strategies = yes
+		#remove_kingdom_of_manitoba_faction_effects = yes
+		clear_variable = current_faction
+		remove_from_array = { GLOBAL.kingdom_of_manitoba_members = THIS }
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_kingdom_of_manitoba_member = yes
+			}
+			unmark_as_kingdom_of_manitoba_member = yes
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_kingdom_of_manitoba_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+add_kingdom_of_manitoba_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_kingdom_of_manitoba_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = {
+			is_kingdom_of_manitoba_member = yes
+			NOT = { tag = PREV }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: add_kingdom_of_manitoba_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = -200
+		}
+		PREV = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: add_kingdom_of_manitoba_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = -200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_kingdom_of_manitoba_ally_strategies (scripted_effect) exited"
+	}
+}
+
+remove_kingdom_of_manitoba_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_kingdom_of_manitoba_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = { is_kingdom_of_manitoba_member = yes }
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = 200
+		}
+		PREV = {
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = 200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_kingdom_of_manitoba_ally_strategies (scripted_effect) exited"
+	}
+}
+
+create_or_join_red_shield = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_red_shield (scripted_effect) entered"
+	}
+	if = {
+		limit = {
+			red_shield_exists = no
+		}
+		leave_current_faction = yes
+		create_faction = red_shield
+		mark_as_red_shield_member = yes
+		set_variable = { GLOBAL.red_shield_leader = THIS }
+	}
+	else = {
+		join_red_shield = yes
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_red_shield (scripted_effect) exited"
+	}
+}
+
+d_join_red_shield = {
+	log = "[GetDateText]: Adding [This.GetNameDef] to red_shield..."
+	create_or_join_red_shield = yes
+}
+
+ask_to_join_red_shield = {
+	custom_effect_tooltip = ask_to_join_red_shield_tt
+	hidden_effect = {
+		var:GLOBAL.red_shield_leader = {
+			country_event = {
+				id = red_shield_faction_events.1
+			}
+		}
+	}
+}
+
+invite_to_red_shield = {
+	custom_effect_tooltip = invite_to_red_shield_tt
+	hidden_effect = {
+		country_event = {
+			id = red_shield_faction_events.5
+		}
+	}
+}
+
+join_red_shield = {
+	custom_effect_tooltip = join_red_shield_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_red_shield (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_red_shield_member = no }
+			leave_current_faction = yes
+			var:GLOBAL.red_shield_leader = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_red_shield - adding to faction via [This.GetName]... (scripted_effect)"
+				}
+				add_to_faction = PREV
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_red_shield - added to faction via [This.GetName]... (scripted_effect)"
+				}
+			}
+			mark_as_red_shield_member = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_red_shield (scripted_effect) exited"
+		}
+	}
+}
+
+leave_red_shield = {
+	custom_effect_tooltip = leave_red_shield_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_red_shield (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_red_shield_member = yes }
+			unmark_as_red_shield_member = yes
+			leave_faction = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_red_shield (scripted_effect) exited"
+		}
+	}
+}
+
+mark_as_red_shield_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_red_shield_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_red_shield_member = no }
+		unmark_from_current_faction = yes
+		set_variable = { current_faction = WHC }
+		add_to_array = { GLOBAL.red_shield_members = THIS }
+		add_red_shield_ally_strategies = yes
+		#add_red_shield_faction_effects = yes
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_red_shield_member = no
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_red_shield_member - also marking [This.GetName]... (scripted_effect)"
+			}
+			leave_current_faction = yes
+			mark_as_red_shield_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_red_shield_member - done also marking [This.GetName]. (scripted_effect)"
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_red_shield_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+unmark_as_red_shield_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_red_shield_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_red_shield_member = yes }
+		remove_red_shield_ally_strategies = yes
+		#remove_red_shield_faction_effects = yes
+		clear_variable = current_faction
+		remove_from_array = { GLOBAL.red_shield_members = THIS }
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_red_shield_member = yes
+			}
+			unmark_as_red_shield_member = yes
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_red_shield_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+add_red_shield_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_red_shield_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = {
+			is_red_shield_member = yes
+			NOT = { tag = PREV }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: add_red_shield_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = -200
+		}
+		PREV = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: add_red_shield_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = -200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_red_shield_ally_strategies (scripted_effect) exited"
+	}
+}
+
+remove_red_shield_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_red_shield_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = { is_red_shield_member = yes }
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = 200
+		}
+		PREV = {
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = 200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_red_shield_ally_strategies (scripted_effect) exited"
+	}
+}
+
 
 
 join_from_faction = {
@@ -19466,6 +20030,14 @@ join_from_faction = {
 	else_if = {
 		limit = { FROM = { is_fifth_world_member = yes } }
 		join_fifth_world = yes
+	}
+	else_if = {
+		limit = { FROM = { is_kingdom_of_manitoba_member = yes } }
+		join_kingdom_of_manitoba = yes
+	}
+	else_if = {
+		limit = { FROM = { is_red_shield_member = yes } }
+		join_red_shield = yes
 	}
 	else = {
 		custom_effect_tooltip = join_from_faction_tt
@@ -19752,6 +20324,14 @@ invite_to_from_faction = {
 	else_if = {
 		limit = { FROM = { is_fifth_world_member = yes } }
 		invite_to_fifth_world = yes
+	}
+	else_if = {
+		limit = { FROM = { is_kingdom_of_manitoba_member = yes } }
+		invite_to_kingdom_of_manitoba = yes
+	}
+	else_if = {
+		limit = { FROM = { is_red_shield_member = yes } }
+		invite_to_red_shield = yes
 	}
 	else = {
 		custom_effect_tooltip = invite_to_from_faction_tt
@@ -20040,6 +20620,14 @@ join_prev_faction = {
 		limit = { PREV = { is_fifth_world_member = yes } }
 		join_fifth_world = yes
 	}
+	else_if = {
+		limit = { PREV = { is_kingdom_of_manitoba_member = yes } }
+		join_kingdom_of_manitoba = yes
+	}
+	else_if = {
+		limit = { PREV = { is_red_shield_member = yes } }
+		join_red_shield = yes
+	}
 	else = {
 		custom_effect_tooltip = join_prev_faction_tt
 	}
@@ -20325,6 +20913,14 @@ invite_to_prev_faction = {
 	else_if = {
 		limit = { PREV = { is_fifth_world_member = yes } }
 		invite_to_fifth_world = yes
+	}
+	else_if = {
+		limit = { PREV = { is_kingdom_of_manitoba_member = yes } }
+		invite_to_kingdom_of_manitoba = yes
+	}
+	else_if = {
+		limit = { PREV = { is_red_shield_member = yes } }
+		invite_to_red_shield = yes
 	}
 	else = {
 		custom_effect_tooltip = invite_to_prev_faction_tt
@@ -20613,6 +21209,14 @@ join_root_faction = {
 		limit = { ROOT = { is_fifth_world_member = yes } }
 		join_fifth_world = yes
 	}
+	else_if = {
+		limit = { ROOT = { is_kingdom_of_manitoba_member = yes } }
+		join_kingdom_of_manitoba = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_red_shield_member = yes } }
+		join_red_shield = yes
+	}
 	else = {
 		custom_effect_tooltip = join_root_faction_tt
 	}
@@ -20899,6 +21503,14 @@ invite_to_root_faction = {
 		limit = { ROOT = { is_fifth_world_member = yes } }
 		invite_to_fifth_world = yes
 	}
+	else_if = {
+		limit = { ROOT = { is_kingdom_of_manitoba_member = yes } }
+		invite_to_kingdom_of_manitoba = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_red_shield_member = yes } }
+		invite_to_red_shield = yes
+	}
 	else = {
 		custom_effect_tooltip = invite_to_root_faction_tt
 	}
@@ -21184,6 +21796,14 @@ leave_current_faction = {
 	else_if = {
 		limit = { is_fifth_world_member = yes }
 		leave_fifth_world = yes
+	}
+	else_if = {
+		limit = { is_kingdom_of_manitoba_member = yes }
+		leave_kingdom_of_manitoba = yes
+	}
+	else_if = {
+		limit = { is_red_shield_member = yes }
+		leave_red_shield = yes
 	}
 	if = {
 		limit = { has_global_flag = debug_logs }
@@ -21480,6 +22100,14 @@ become_puppet_of_prev = {
 			limit = { PREV = { is_fifth_world_member = yes } }
 			mark_as_fifth_world_member = yes
 		}
+		else_if = {
+			limit = { PREV = { is_kingdom_of_manitoba_member = yes } }
+			mark_as_kingdom_of_manitoba_member = yes
+		}
+		else_if = {
+			limit = { PREV = { is_red_shield_member = yes } }
+			mark_as_red_shield_member = yes
+		}
 	}
 	if = {
 		limit = { has_global_flag = debug_logs }
@@ -21763,6 +22391,14 @@ unmark_from_current_faction = {
 	else_if = {
 		limit = { ROOT = { is_fifth_world_member = yes } }
 		unmark_as_fifth_world_member = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_kingdom_of_manitoba_member = yes } }
+		unmark_as_kingdom_of_manitoba_member = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_red_shield_member = yes } }
+		unmark_as_red_shield_member = yes
 	}
 	if = {
 		limit = { has_global_flag = debug_logs }

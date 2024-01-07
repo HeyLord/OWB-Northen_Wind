@@ -1,0 +1,14 @@
+opinion_modifiers = {
+	<%- factions.each do |faction_id, config| -%>
+	refused_entry_to_<%= faction_id %> = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_<%= faction_id %> = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+  <%- end -%>
+}

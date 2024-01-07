@@ -1,0 +1,11 @@
+leader_traits = {
+	<%- factions.each do |faction_id, config| -%>
+	dislikes_<%= faction_id %> = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	<%- end -%>
+}
+# vim: set ft=pdx ts=2 sw=2 tw=79 :

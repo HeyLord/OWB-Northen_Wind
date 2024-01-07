@@ -1,0 +1,199 @@
+<% factions.each do |faction_id, config| -%>
+<% faction_tag = config['tag'] -%>
+# <%= faction_id %>
+is_<%= faction_id %>_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_<%= faction_id %>_member_tt
+		is_in_array = {
+			array = GLOBAL.<%= faction_id %>_members
+			value = THIS
+		}
+	}
+}
+
+is_not_<%= faction_id %>_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_<%= faction_id %>_member_tt
+		NOT = { is_<%= faction_id %>_member = yes }
+	}
+}
+
+is_<%= faction_id %>_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_<%= faction_id %>_leader_tt
+		is_<%= faction_id %>_member = yes
+		is_faction_leader = yes
+	}
+}
+
+is_not_<%= faction_id %>_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_<%= faction_id %>_leader_tt
+		NOT = { is_<%= faction_id %>_leader = yes }
+	}
+}
+
+<%= faction_id %>_exists = {
+	custom_trigger_tooltip = {
+		tooltip = <%= faction_id %>_exists_tt
+		has_variable = GLOBAL.<%= faction_id %>_leader
+	}
+}
+
+does_<%= faction_id %>_exist = {
+	<%= faction_id %>_exists = yes
+}
+
+<%= faction_id %>_does_not_exist = {
+	custom_trigger_tooltip = {
+		tooltip = <%= faction_id %>_does_not_exist_tt
+		NOT = { <%= faction_id %>_exists = yes }
+	}
+}
+
+does_<%= faction_id %>_not_exist = {
+	<%= faction_id %>_does_not_exist = yes
+}
+
+has_border_war_with_<%= faction_id %> = {
+	custom_trigger_tooltip = {
+		tooltip = has_border_war_with_<%= faction_id %>_tt
+		any_country = {
+			is_<%= faction_id %>_member = yes
+			has_border_war_with = PREV
+		}
+	}
+}
+
+has_war_with_<%= faction_id %> = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_with_<%= faction_id %>_tt
+		any_enemy_country = {
+			is_<%= faction_id %>_member = yes
+		}
+	}
+}
+
+at_peace_with_<%= faction_id %> = {
+	custom_trigger_tooltip = {
+		tooltip = at_peace_with_<%= faction_id %>_tt
+		NOT = {
+			any_country = {
+				is_<%= faction_id %>_member = yes
+				OR = {
+					has_war_with = PREV
+					has_border_war_with = PREV
+				}
+			}
+		}
+	}
+}
+
+borders_<%= faction_id %> = {
+	custom_trigger_tooltip = {
+		tooltip = borders_<%= faction_id %>_tt
+		any_neighbor_country = {
+			is_<%= faction_id %>_member = yes
+		}
+	}
+}
+
+borders_<%= faction_id %>_preline = {
+	custom_trigger_tooltip = {
+		tooltip = borders_<%= faction_id %>_preline_tt
+		any_neighbor_country = {
+			is_<%= faction_id %>_member = yes
+		}
+	}
+}
+
+does_not_border_<%= faction_id %> = {
+	custom_trigger_tooltip = {
+		tooltip = does_not_border_<%= faction_id %>_tt
+		borders_<%= faction_id %> = no
+	}
+}
+
+can_join_<%= faction_id %> = {
+	can_join_<%= faction_id %>_generic = yes
+	can_join_<%= faction_id %>_specific = yes
+}
+
+can_join_<%= faction_id %>_generic = {
+	# You must not be at war with the faction.
+	at_peace_with_<%= faction_id %> = yes
+
+	# Must have mutually positive relations.
+	has_mutually_positive_opinion_with_<%= faction_id %> = yes
+
+	# The leader must not hate you or vice-versa.
+	NOT = { has_country_leader_with_trait = isolationist }
+	NOT = { has_country_leader_with_trait = dislikes_<%= faction_id %> }
+
+	if = {
+		limit = {
+			var:GLOBAL.<%= faction_id %>_leader = {
+				is_brotherhood_nation = yes
+			}
+		}
+		NOT = { has_country_leader_with_trait = dislikes_brotherhood_of_steel }
+	}
+	else_if = {
+		limit = {
+			var:GLOBAL.<%= faction_id %>_leader = {
+				has_country_leader_with_trait = dislikes_brotherhood_of_steel
+			}
+		}
+		is_not_brotherhood_nation = yes
+	}
+}
+
+has_mutually_positive_opinion_with_<%= faction_id %> = {
+	custom_trigger_tooltip = {
+		tooltip = has_mutually_positive_opinion_with_<%= faction_id %>_tt
+		any_other_country = {
+			is_<%= faction_id %>_leader = yes
+			has_mutually_positive_opinion_with_prev = yes
+		}
+	}
+}
+
+<% end -%>
+
+can_join_prev_faction = {
+<% faction_id = factions.keys.first -%>
+<% faction_config = factions[faction_id] -%>
+	if = {
+		limit = { PREV = { is_<%= faction_id %>_member = yes } }
+		can_join_<%= faction_id %> = yes
+	}
+<% factions.keys[1..-1].each do |faction_id| -%>
+<% faction_config = factions[faction_id] -%>
+	else_if = {
+		limit = { PREV = { is_<%= faction_id %>_member = yes } }
+		can_join_<%= faction_id %> = yes
+	}
+<% end -%>
+	else = {
+		always = yes
+	}
+}
+
+can_join_root_faction = {
+<% faction_id = factions.keys.first -%>
+<% faction_config = factions[faction_id] -%>
+	if = {
+		limit = { ROOT = { is_<%= faction_id %>_member = yes } }
+		can_join_<%= faction_id %> = yes
+	}
+<% factions.keys[1..-1].each do |faction_id| -%>
+<% faction_config = factions[faction_id] -%>
+	else_if = {
+		limit = { ROOT = { is_<%= faction_id %>_member = yes } }
+		can_join_<%= faction_id %> = yes
+	}
+<% end -%>
+	else = {
+		always = yes
+	}
+}

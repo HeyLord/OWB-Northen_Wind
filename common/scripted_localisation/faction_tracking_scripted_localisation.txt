@@ -1,0 +1,1013 @@
+######################################
+####### GENERATED CODE WARNING #######
+######################################
+# This file is generated code - any
+# changes made directly to these files
+# will likely be lost on future
+# updates. If you need to tweak the
+# functionality in this file, please
+# contact wtchappell ('the witch') for
+# help in improving its functionality.
+######################################
+####### GENERATED CODE WARNING #######
+######################################
+defined_text = {
+	name = GetFactionName
+	text = {
+		trigger = { is_nova_legion_member = yes }
+		localization_key = nova_legion
+	}
+	text = {
+		trigger = { is_chosen_ones_member = yes }
+		localization_key = chosen_ones
+	}
+	text = {
+		trigger = { is_lanius_horde_member = yes }
+		localization_key = lanius_horde
+	}
+	text = {
+		trigger = { is_big_mt_member = yes }
+		localization_key = big_mt
+	}
+	text = {
+		trigger = { is_boneyard_brotherhood_member = yes }
+		localization_key = boneyard_brotherhood
+	}
+	text = {
+		trigger = { is_united_front_member = yes }
+		localization_key = united_front
+	}
+	text = {
+		trigger = { is_western_brotherhood_of_steel_member = yes }
+		localization_key = western_brotherhood_of_steel
+	}
+	text = {
+		trigger = { is_caesars_legion_member = yes }
+		localization_key = caesars_legion
+	}
+	text = {
+		trigger = { is_children_of_mexico_member = yes }
+		localization_key = children_of_mexico
+	}
+	text = {
+		trigger = { is_children_of_the_gate_member = yes }
+		localization_key = children_of_the_gate
+	}
+	text = {
+		trigger = { is_daikatana_member = yes }
+		localization_key = daikatana
+	}
+	text = {
+		trigger = { is_daughters_of_hecate_member = yes }
+		localization_key = daughters_of_hecate
+	}
+	text = {
+		trigger = { is_denver_defense_network_member = yes }
+		localization_key = denver_defense_network
+	}
+	text = {
+		trigger = { is_earth_and_sky_member = yes }
+		localization_key = earth_and_sky
+	}
+	text = {
+		trigger = { is_empire_of_salt_member = yes }
+		localization_key = empire_of_salt
+	}
+	text = {
+		trigger = { is_equestria_member = yes }
+		localization_key = equestria
+	}
+	text = {
+		trigger = { is_faithful_member = yes }
+		localization_key = faithful
+	}
+	text = {
+		trigger = { is_fantasma_cartel_member = yes }
+		localization_key = fantasma_cartel
+	}
+	text = {
+		trigger = { is_glass_league_member = yes }
+		localization_key = glass_league
+	}
+	text = {
+		trigger = { is_great_federation_member = yes }
+		localization_key = great_federation
+	}
+	text = {
+		trigger = { is_great_plains_federation_member = yes }
+		localization_key = great_plains_federation
+	}
+	text = {
+		trigger = { is_jungle_pact_member = yes }
+		localization_key = jungle_pact
+	}
+	text = {
+		trigger = { is_kaisers_legion_member = yes }
+		localization_key = kaisers_legion
+	}
+	text = {
+		trigger = { is_masters_new_army_member = yes }
+		localization_key = masters_new_army
+	}
+	text = {
+		trigger = { is_mesoamerican_alliance_member = yes }
+		localization_key = mesoamerican_alliance
+	}
+	text = {
+		trigger = { is_the_fire_council_member = yes }
+		localization_key = the_fire_council
+	}
+	text = {
+		trigger = { is_mojave_alliance_member = yes }
+		localization_key = mojave_alliance
+	}
+	text = {
+		trigger = { is_mormon_alliance_member = yes }
+		localization_key = mormon_alliance
+	}
+	text = {
+		trigger = { is_nevada_enclave_member = yes }
+		localization_key = nevada_enclave
+	}
+	text = {
+		trigger = { is_nevada_pact_member = yes }
+		localization_key = nevada_pact
+	}
+	text = {
+		trigger = { is_northern_league_member = yes }
+		localization_key = northern_league
+	}
+	text = {
+		trigger = { is_northern_mojave_pact_member = yes }
+		localization_key = northern_mojave_pact
+	}
+	text = {
+		trigger = { is_phoenix_federation_member = yes }
+		localization_key = phoenix_federation
+	}
+	text = {
+		trigger = { is_rio_pact_member = yes }
+		localization_key = rio_pact
+	}
+	text = {
+		trigger = { is_senators_little_helpers_member = yes }
+		localization_key = senators_little_helpers
+	}
+	text = {
+		trigger = { is_great_confederation_member = yes }
+		localization_key = great_confederation
+	}
+	text = {
+		trigger = { is_texan_economic_union_member = yes }
+		localization_key = texan_economic_union
+	}
+	text = {
+		trigger = { is_unbroken_coast_member = yes }
+		localization_key = unbroken_coast
+	}
+	text = {
+		trigger = { is_western_enclave_member = yes }
+		localization_key = western_enclave
+	}
+	text = {
+		trigger = { is_order_of_st_joseph_member = yes }
+		localization_key = order_of_st_joseph
+	}
+	text = {
+		trigger = { is_breach_ferals_member = yes }
+		localization_key = breach_ferals
+	}
+	text = {
+		trigger = { is_white_sands_compact_member = yes }
+		localization_key = white_sands_compact
+	}
+	text = {
+		trigger = { is_cartel_faction_member = yes }
+		localization_key = cartel_faction
+	}
+	text = {
+		trigger = { is_cascadia_pirates_member = yes }
+		localization_key = cascadia_pirates
+	}
+	text = {
+		trigger = { is_transcascadia_republic_member = yes }
+		localization_key = transcascadia_republic
+	}
+	text = {
+		trigger = { is_new_california_member = yes }
+		localization_key = new_california
+	}
+	text = {
+		trigger = { is_the_second_coalition_member = yes }
+		localization_key = the_second_coalition
+	}
+	text = {
+		trigger = { is_imperium_mexicanum_member = yes }
+		localization_key = imperium_mexicanum
+	}
+	text = {
+		trigger = { is_mexican_league_member = yes }
+		localization_key = mexican_league
+	}
+	text = {
+		trigger = { is_midnight_union_member = yes }
+		localization_key = midnight_union
+	}
+	text = {
+		trigger = { is_big_circle_member = yes }
+		localization_key = big_circle
+	}
+	text = {
+		trigger = { is_dharma_way_member = yes }
+		localization_key = dharma_way
+	}
+	text = {
+		trigger = { is_californian_hegemony_member = yes }
+		localization_key = californian_hegemony
+	}
+	text = {
+		trigger = { is_northern_congress_member = yes }
+		localization_key = northern_congress
+	}
+	text = {
+		trigger = { is_road_warriors_member = yes }
+		localization_key = road_warriors
+	}
+	text = {
+		trigger = { is_synergy_alliance_member = yes }
+		localization_key = synergy_alliance
+	}
+	text = {
+		trigger = { is_vulpes_legion_member = yes }
+		localization_key = vulpes_legion
+	}
+	text = {
+		trigger = { is_aurelius_legion_member = yes }
+		localization_key = aurelius_legion
+	}
+	text = {
+		trigger = { is_lanius_legion_member = yes }
+		localization_key = lanius_legion
+	}
+	text = {
+		trigger = { is_hades_legion_member = yes }
+		localization_key = hades_legion
+	}
+	text = {
+		trigger = { is_lucius_legion_member = yes }
+		localization_key = lucius_legion
+	}
+	text = {
+		trigger = { is_malpais_legion_member = yes }
+		localization_key = malpais_legion
+	}
+	text = {
+		trigger = { is_northern_union_member = yes }
+		localization_key = northern_union
+	}
+	text = {
+		trigger = { is_united_wallers_member = yes }
+		localization_key = united_wallers
+	}
+	text = {
+		trigger = { is_montana_enclave_member = yes }
+		localization_key = montana_enclave
+	}
+	text = {
+		trigger = { is_northern_winds_member = yes }
+		localization_key = northern_winds
+	}
+	text = {
+		trigger = { is_allied_states_member = yes }
+		localization_key = allied_states
+	}
+	text = {
+		trigger = { is_fifth_world_member = yes }
+		localization_key = fifth_world
+	}
+	text = {
+		trigger = { is_kingdom_of_manitoba_member = yes }
+		localization_key = kingdom_of_manitoba
+	}
+	text = {
+		trigger = { is_red_shield_member = yes }
+		localization_key = red_shield
+	}
+	text = {
+		localization_key = "None"
+	}
+}
+
+defined_text = {
+	name = GetCanAskToJoinFactionTT
+	text = {
+		trigger = { FROM = { is_nova_legion_member = yes } }
+		localization_key = can_ask_to_join_faction_nova_legion_tt
+	}
+	text = {
+		trigger = { FROM = { is_chosen_ones_member = yes } }
+		localization_key = can_ask_to_join_faction_chosen_ones_tt
+	}
+	text = {
+		trigger = { FROM = { is_lanius_horde_member = yes } }
+		localization_key = can_ask_to_join_faction_lanius_horde_tt
+	}
+	text = {
+		trigger = { FROM = { is_big_mt_member = yes } }
+		localization_key = can_ask_to_join_faction_big_mt_tt
+	}
+	text = {
+		trigger = { FROM = { is_boneyard_brotherhood_member = yes } }
+		localization_key = can_ask_to_join_faction_boneyard_brotherhood_tt
+	}
+	text = {
+		trigger = { FROM = { is_united_front_member = yes } }
+		localization_key = can_ask_to_join_faction_united_front_tt
+	}
+	text = {
+		trigger = { FROM = { is_western_brotherhood_of_steel_member = yes } }
+		localization_key = can_ask_to_join_faction_western_brotherhood_of_steel_tt
+	}
+	text = {
+		trigger = { FROM = { is_caesars_legion_member = yes } }
+		localization_key = can_ask_to_join_faction_caesars_legion_tt
+	}
+	text = {
+		trigger = { FROM = { is_children_of_mexico_member = yes } }
+		localization_key = can_ask_to_join_faction_children_of_mexico_tt
+	}
+	text = {
+		trigger = { FROM = { is_children_of_the_gate_member = yes } }
+		localization_key = can_ask_to_join_faction_children_of_the_gate_tt
+	}
+	text = {
+		trigger = { FROM = { is_daikatana_member = yes } }
+		localization_key = can_ask_to_join_faction_daikatana_tt
+	}
+	text = {
+		trigger = { FROM = { is_daughters_of_hecate_member = yes } }
+		localization_key = can_ask_to_join_faction_daughters_of_hecate_tt
+	}
+	text = {
+		trigger = { FROM = { is_denver_defense_network_member = yes } }
+		localization_key = can_ask_to_join_faction_denver_defense_network_tt
+	}
+	text = {
+		trigger = { FROM = { is_earth_and_sky_member = yes } }
+		localization_key = can_ask_to_join_faction_earth_and_sky_tt
+	}
+	text = {
+		trigger = { FROM = { is_empire_of_salt_member = yes } }
+		localization_key = can_ask_to_join_faction_empire_of_salt_tt
+	}
+	text = {
+		trigger = { FROM = { is_equestria_member = yes } }
+		localization_key = can_ask_to_join_faction_equestria_tt
+	}
+	text = {
+		trigger = { FROM = { is_faithful_member = yes } }
+		localization_key = can_ask_to_join_faction_faithful_tt
+	}
+	text = {
+		trigger = { FROM = { is_fantasma_cartel_member = yes } }
+		localization_key = can_ask_to_join_faction_fantasma_cartel_tt
+	}
+	text = {
+		trigger = { FROM = { is_glass_league_member = yes } }
+		localization_key = can_ask_to_join_faction_glass_league_tt
+	}
+	text = {
+		trigger = { FROM = { is_great_federation_member = yes } }
+		localization_key = can_ask_to_join_faction_great_federation_tt
+	}
+	text = {
+		trigger = { FROM = { is_great_plains_federation_member = yes } }
+		localization_key = can_ask_to_join_faction_great_plains_federation_tt
+	}
+	text = {
+		trigger = { FROM = { is_jungle_pact_member = yes } }
+		localization_key = can_ask_to_join_faction_jungle_pact_tt
+	}
+	text = {
+		trigger = { FROM = { is_kaisers_legion_member = yes } }
+		localization_key = can_ask_to_join_faction_kaisers_legion_tt
+	}
+	text = {
+		trigger = { FROM = { is_masters_new_army_member = yes } }
+		localization_key = can_ask_to_join_faction_masters_new_army_tt
+	}
+	text = {
+		trigger = { FROM = { is_mesoamerican_alliance_member = yes } }
+		localization_key = can_ask_to_join_faction_mesoamerican_alliance_tt
+	}
+	text = {
+		trigger = { FROM = { is_the_fire_council_member = yes } }
+		localization_key = can_ask_to_join_faction_the_fire_council_tt
+	}
+	text = {
+		trigger = { FROM = { is_mojave_alliance_member = yes } }
+		localization_key = can_ask_to_join_faction_mojave_alliance_tt
+	}
+	text = {
+		trigger = { FROM = { is_mormon_alliance_member = yes } }
+		localization_key = can_ask_to_join_faction_mormon_alliance_tt
+	}
+	text = {
+		trigger = { FROM = { is_nevada_enclave_member = yes } }
+		localization_key = can_ask_to_join_faction_nevada_enclave_tt
+	}
+	text = {
+		trigger = { FROM = { is_nevada_pact_member = yes } }
+		localization_key = can_ask_to_join_faction_nevada_pact_tt
+	}
+	text = {
+		trigger = { FROM = { is_northern_league_member = yes } }
+		localization_key = can_ask_to_join_faction_northern_league_tt
+	}
+	text = {
+		trigger = { FROM = { is_northern_mojave_pact_member = yes } }
+		localization_key = can_ask_to_join_faction_northern_mojave_pact_tt
+	}
+	text = {
+		trigger = { FROM = { is_phoenix_federation_member = yes } }
+		localization_key = can_ask_to_join_faction_phoenix_federation_tt
+	}
+	text = {
+		trigger = { FROM = { is_rio_pact_member = yes } }
+		localization_key = can_ask_to_join_faction_rio_pact_tt
+	}
+	text = {
+		trigger = { FROM = { is_senators_little_helpers_member = yes } }
+		localization_key = can_ask_to_join_faction_senators_little_helpers_tt
+	}
+	text = {
+		trigger = { FROM = { is_great_confederation_member = yes } }
+		localization_key = can_ask_to_join_faction_great_confederation_tt
+	}
+	text = {
+		trigger = { FROM = { is_texan_economic_union_member = yes } }
+		localization_key = can_ask_to_join_faction_texan_economic_union_tt
+	}
+	text = {
+		trigger = { FROM = { is_unbroken_coast_member = yes } }
+		localization_key = can_ask_to_join_faction_unbroken_coast_tt
+	}
+	text = {
+		trigger = { FROM = { is_western_enclave_member = yes } }
+		localization_key = can_ask_to_join_faction_western_enclave_tt
+	}
+	text = {
+		trigger = { FROM = { is_order_of_st_joseph_member = yes } }
+		localization_key = can_ask_to_join_faction_order_of_st_joseph_tt
+	}
+	text = {
+		trigger = { FROM = { is_breach_ferals_member = yes } }
+		localization_key = can_ask_to_join_faction_breach_ferals_tt
+	}
+	text = {
+		trigger = { FROM = { is_white_sands_compact_member = yes } }
+		localization_key = can_ask_to_join_faction_white_sands_compact_tt
+	}
+	text = {
+		trigger = { FROM = { is_cartel_faction_member = yes } }
+		localization_key = can_ask_to_join_faction_cartel_faction_tt
+	}
+	text = {
+		trigger = { FROM = { is_cascadia_pirates_member = yes } }
+		localization_key = can_ask_to_join_faction_cascadia_pirates_tt
+	}
+	text = {
+		trigger = { FROM = { is_transcascadia_republic_member = yes } }
+		localization_key = can_ask_to_join_faction_transcascadia_republic_tt
+	}
+	text = {
+		trigger = { FROM = { is_new_california_member = yes } }
+		localization_key = can_ask_to_join_faction_new_california_tt
+	}
+	text = {
+		trigger = { FROM = { is_the_second_coalition_member = yes } }
+		localization_key = can_ask_to_join_faction_the_second_coalition_tt
+	}
+	text = {
+		trigger = { FROM = { is_imperium_mexicanum_member = yes } }
+		localization_key = can_ask_to_join_faction_imperium_mexicanum_tt
+	}
+	text = {
+		trigger = { FROM = { is_mexican_league_member = yes } }
+		localization_key = can_ask_to_join_faction_mexican_league_tt
+	}
+	text = {
+		trigger = { FROM = { is_midnight_union_member = yes } }
+		localization_key = can_ask_to_join_faction_midnight_union_tt
+	}
+	text = {
+		trigger = { FROM = { is_big_circle_member = yes } }
+		localization_key = can_ask_to_join_faction_big_circle_tt
+	}
+	text = {
+		trigger = { FROM = { is_dharma_way_member = yes } }
+		localization_key = can_ask_to_join_faction_dharma_way_tt
+	}
+	text = {
+		trigger = { FROM = { is_californian_hegemony_member = yes } }
+		localization_key = can_ask_to_join_faction_californian_hegemony_tt
+	}
+	text = {
+		trigger = { FROM = { is_northern_congress_member = yes } }
+		localization_key = can_ask_to_join_faction_northern_congress_tt
+	}
+	text = {
+		trigger = { FROM = { is_road_warriors_member = yes } }
+		localization_key = can_ask_to_join_faction_road_warriors_tt
+	}
+	text = {
+		trigger = { FROM = { is_synergy_alliance_member = yes } }
+		localization_key = can_ask_to_join_faction_synergy_alliance_tt
+	}
+	text = {
+		trigger = { FROM = { is_vulpes_legion_member = yes } }
+		localization_key = can_ask_to_join_faction_vulpes_legion_tt
+	}
+	text = {
+		trigger = { FROM = { is_aurelius_legion_member = yes } }
+		localization_key = can_ask_to_join_faction_aurelius_legion_tt
+	}
+	text = {
+		trigger = { FROM = { is_lanius_legion_member = yes } }
+		localization_key = can_ask_to_join_faction_lanius_legion_tt
+	}
+	text = {
+		trigger = { FROM = { is_hades_legion_member = yes } }
+		localization_key = can_ask_to_join_faction_hades_legion_tt
+	}
+	text = {
+		trigger = { FROM = { is_lucius_legion_member = yes } }
+		localization_key = can_ask_to_join_faction_lucius_legion_tt
+	}
+	text = {
+		trigger = { FROM = { is_malpais_legion_member = yes } }
+		localization_key = can_ask_to_join_faction_malpais_legion_tt
+	}
+	text = {
+		trigger = { FROM = { is_northern_union_member = yes } }
+		localization_key = can_ask_to_join_faction_northern_union_tt
+	}
+	text = {
+		trigger = { FROM = { is_united_wallers_member = yes } }
+		localization_key = can_ask_to_join_faction_united_wallers_tt
+	}
+	text = {
+		trigger = { FROM = { is_montana_enclave_member = yes } }
+		localization_key = can_ask_to_join_faction_montana_enclave_tt
+	}
+	text = {
+		trigger = { FROM = { is_northern_winds_member = yes } }
+		localization_key = can_ask_to_join_faction_northern_winds_tt
+	}
+	text = {
+		trigger = { FROM = { is_allied_states_member = yes } }
+		localization_key = can_ask_to_join_faction_allied_states_tt
+	}
+	text = {
+		trigger = { FROM = { is_fifth_world_member = yes } }
+		localization_key = can_ask_to_join_faction_fifth_world_tt
+	}
+	text = {
+		trigger = { FROM = { is_kingdom_of_manitoba_member = yes } }
+		localization_key = can_ask_to_join_faction_kingdom_of_manitoba_tt
+	}
+	text = {
+		trigger = { FROM = { is_red_shield_member = yes } }
+		localization_key = can_ask_to_join_faction_red_shield_tt
+	}
+	text = {
+		localization_key = "None"
+	}
+}
+
+defined_text = {
+	name = GetCanOfferToJoinFactionTT
+	text = {
+		trigger = {
+			is_nova_legion_member = yes
+		}
+		localization_key = can_offer_to_join_faction_nova_legion_tt
+	}
+	text = {
+		trigger = {
+			is_chosen_ones_member = yes
+		}
+		localization_key = can_offer_to_join_faction_chosen_ones_tt
+	}
+	text = {
+		trigger = {
+			is_lanius_horde_member = yes
+		}
+		localization_key = can_offer_to_join_faction_lanius_horde_tt
+	}
+	text = {
+		trigger = {
+			is_big_mt_member = yes
+		}
+		localization_key = can_offer_to_join_faction_big_mt_tt
+	}
+	text = {
+		trigger = {
+			is_boneyard_brotherhood_member = yes
+		}
+		localization_key = can_offer_to_join_faction_boneyard_brotherhood_tt
+	}
+	text = {
+		trigger = {
+			is_united_front_member = yes
+		}
+		localization_key = can_offer_to_join_faction_united_front_tt
+	}
+	text = {
+		trigger = {
+			is_western_brotherhood_of_steel_member = yes
+		}
+		localization_key = can_offer_to_join_faction_western_brotherhood_of_steel_tt
+	}
+	text = {
+		trigger = {
+			is_caesars_legion_member = yes
+		}
+		localization_key = can_offer_to_join_faction_caesars_legion_tt
+	}
+	text = {
+		trigger = {
+			is_children_of_mexico_member = yes
+		}
+		localization_key = can_offer_to_join_faction_children_of_mexico_tt
+	}
+	text = {
+		trigger = {
+			is_children_of_the_gate_member = yes
+		}
+		localization_key = can_offer_to_join_faction_children_of_the_gate_tt
+	}
+	text = {
+		trigger = {
+			is_daikatana_member = yes
+		}
+		localization_key = can_offer_to_join_faction_daikatana_tt
+	}
+	text = {
+		trigger = {
+			is_daughters_of_hecate_member = yes
+		}
+		localization_key = can_offer_to_join_faction_daughters_of_hecate_tt
+	}
+	text = {
+		trigger = {
+			is_denver_defense_network_member = yes
+		}
+		localization_key = can_offer_to_join_faction_denver_defense_network_tt
+	}
+	text = {
+		trigger = {
+			is_earth_and_sky_member = yes
+		}
+		localization_key = can_offer_to_join_faction_earth_and_sky_tt
+	}
+	text = {
+		trigger = {
+			is_empire_of_salt_member = yes
+		}
+		localization_key = can_offer_to_join_faction_empire_of_salt_tt
+	}
+	text = {
+		trigger = {
+			is_equestria_member = yes
+		}
+		localization_key = can_offer_to_join_faction_equestria_tt
+	}
+	text = {
+		trigger = {
+			is_faithful_member = yes
+		}
+		localization_key = can_offer_to_join_faction_faithful_tt
+	}
+	text = {
+		trigger = {
+			is_fantasma_cartel_member = yes
+		}
+		localization_key = can_offer_to_join_faction_fantasma_cartel_tt
+	}
+	text = {
+		trigger = {
+			is_glass_league_member = yes
+		}
+		localization_key = can_offer_to_join_faction_glass_league_tt
+	}
+	text = {
+		trigger = {
+			is_great_federation_member = yes
+		}
+		localization_key = can_offer_to_join_faction_great_federation_tt
+	}
+	text = {
+		trigger = {
+			is_great_plains_federation_member = yes
+		}
+		localization_key = can_offer_to_join_faction_great_plains_federation_tt
+	}
+	text = {
+		trigger = {
+			is_jungle_pact_member = yes
+		}
+		localization_key = can_offer_to_join_faction_jungle_pact_tt
+	}
+	text = {
+		trigger = {
+			is_kaisers_legion_member = yes
+		}
+		localization_key = can_offer_to_join_faction_kaisers_legion_tt
+	}
+	text = {
+		trigger = {
+			is_masters_new_army_member = yes
+		}
+		localization_key = can_offer_to_join_faction_masters_new_army_tt
+	}
+	text = {
+		trigger = {
+			is_mesoamerican_alliance_member = yes
+		}
+		localization_key = can_offer_to_join_faction_mesoamerican_alliance_tt
+	}
+	text = {
+		trigger = {
+			is_the_fire_council_member = yes
+		}
+		localization_key = can_offer_to_join_faction_the_fire_council_tt
+	}
+	text = {
+		trigger = {
+			is_mojave_alliance_member = yes
+		}
+		localization_key = can_offer_to_join_faction_mojave_alliance_tt
+	}
+	text = {
+		trigger = {
+			is_mormon_alliance_member = yes
+		}
+		localization_key = can_offer_to_join_faction_mormon_alliance_tt
+	}
+	text = {
+		trigger = {
+			is_nevada_enclave_member = yes
+		}
+		localization_key = can_offer_to_join_faction_nevada_enclave_tt
+	}
+	text = {
+		trigger = {
+			is_nevada_pact_member = yes
+		}
+		localization_key = can_offer_to_join_faction_nevada_pact_tt
+	}
+	text = {
+		trigger = {
+			is_northern_league_member = yes
+		}
+		localization_key = can_offer_to_join_faction_northern_league_tt
+	}
+	text = {
+		trigger = {
+			is_northern_mojave_pact_member = yes
+		}
+		localization_key = can_offer_to_join_faction_northern_mojave_pact_tt
+	}
+	text = {
+		trigger = {
+			is_phoenix_federation_member = yes
+		}
+		localization_key = can_offer_to_join_faction_phoenix_federation_tt
+	}
+	text = {
+		trigger = {
+			is_rio_pact_member = yes
+		}
+		localization_key = can_offer_to_join_faction_rio_pact_tt
+	}
+	text = {
+		trigger = {
+			is_senators_little_helpers_member = yes
+		}
+		localization_key = can_offer_to_join_faction_senators_little_helpers_tt
+	}
+	text = {
+		trigger = {
+			is_great_confederation_member = yes
+		}
+		localization_key = can_offer_to_join_faction_great_confederation_tt
+	}
+	text = {
+		trigger = {
+			is_texan_economic_union_member = yes
+		}
+		localization_key = can_offer_to_join_faction_texan_economic_union_tt
+	}
+	text = {
+		trigger = {
+			is_unbroken_coast_member = yes
+		}
+		localization_key = can_offer_to_join_faction_unbroken_coast_tt
+	}
+	text = {
+		trigger = {
+			is_western_enclave_member = yes
+		}
+		localization_key = can_offer_to_join_faction_western_enclave_tt
+	}
+	text = {
+		trigger = {
+			is_order_of_st_joseph_member = yes
+		}
+		localization_key = can_offer_to_join_faction_order_of_st_joseph_tt
+	}
+	text = {
+		trigger = {
+			is_breach_ferals_member = yes
+		}
+		localization_key = can_offer_to_join_faction_breach_ferals_tt
+	}
+	text = {
+		trigger = {
+			is_white_sands_compact_member = yes
+		}
+		localization_key = can_offer_to_join_faction_white_sands_compact_tt
+	}
+	text = {
+		trigger = {
+			is_cartel_faction_member = yes
+		}
+		localization_key = can_offer_to_join_faction_cartel_faction_tt
+	}
+	text = {
+		trigger = {
+			is_cascadia_pirates_member = yes
+		}
+		localization_key = can_offer_to_join_faction_cascadia_pirates_tt
+	}
+	text = {
+		trigger = {
+			is_transcascadia_republic_member = yes
+		}
+		localization_key = can_offer_to_join_faction_transcascadia_republic_tt
+	}
+	text = {
+		trigger = {
+			is_new_california_member = yes
+		}
+		localization_key = can_offer_to_join_faction_new_california_tt
+	}
+	text = {
+		trigger = {
+			is_the_second_coalition_member = yes
+		}
+		localization_key = can_offer_to_join_faction_the_second_coalition_tt
+	}
+	text = {
+		trigger = {
+			is_imperium_mexicanum_member = yes
+		}
+		localization_key = can_offer_to_join_faction_imperium_mexicanum_tt
+	}
+	text = {
+		trigger = {
+			is_mexican_league_member = yes
+		}
+		localization_key = can_offer_to_join_faction_mexican_league_tt
+	}
+	text = {
+		trigger = {
+			is_midnight_union_member = yes
+		}
+		localization_key = can_offer_to_join_faction_midnight_union_tt
+	}
+	text = {
+		trigger = {
+			is_big_circle_member = yes
+		}
+		localization_key = can_offer_to_join_faction_big_circle_tt
+	}
+	text = {
+		trigger = {
+			is_dharma_way_member = yes
+		}
+		localization_key = can_offer_to_join_faction_dharma_way_tt
+	}
+	text = {
+		trigger = {
+			is_californian_hegemony_member = yes
+		}
+		localization_key = can_offer_to_join_faction_californian_hegemony_tt
+	}
+	text = {
+		trigger = {
+			is_northern_congress_member = yes
+		}
+		localization_key = can_offer_to_join_faction_northern_congress_tt
+	}
+	text = {
+		trigger = {
+			is_road_warriors_member = yes
+		}
+		localization_key = can_offer_to_join_faction_road_warriors_tt
+	}
+	text = {
+		trigger = {
+			is_synergy_alliance_member = yes
+		}
+		localization_key = can_offer_to_join_faction_synergy_alliance_tt
+	}
+	text = {
+		trigger = {
+			is_vulpes_legion_member = yes
+		}
+		localization_key = can_offer_to_join_faction_vulpes_legion_tt
+	}
+	text = {
+		trigger = {
+			is_aurelius_legion_member = yes
+		}
+		localization_key = can_offer_to_join_faction_aurelius_legion_tt
+	}
+	text = {
+		trigger = {
+			is_lanius_legion_member = yes
+		}
+		localization_key = can_offer_to_join_faction_lanius_legion_tt
+	}
+	text = {
+		trigger = {
+			is_hades_legion_member = yes
+		}
+		localization_key = can_offer_to_join_faction_hades_legion_tt
+	}
+	text = {
+		trigger = {
+			is_lucius_legion_member = yes
+		}
+		localization_key = can_offer_to_join_faction_lucius_legion_tt
+	}
+	text = {
+		trigger = {
+			is_malpais_legion_member = yes
+		}
+		localization_key = can_offer_to_join_faction_malpais_legion_tt
+	}
+	text = {
+		trigger = {
+			is_northern_union_member = yes
+		}
+		localization_key = can_offer_to_join_faction_northern_union_tt
+	}
+	text = {
+		trigger = {
+			is_united_wallers_member = yes
+		}
+		localization_key = can_offer_to_join_faction_united_wallers_tt
+	}
+	text = {
+		trigger = {
+			is_montana_enclave_member = yes
+		}
+		localization_key = can_offer_to_join_faction_montana_enclave_tt
+	}
+	text = {
+		trigger = {
+			is_northern_winds_member = yes
+		}
+		localization_key = can_offer_to_join_faction_northern_winds_tt
+	}
+	text = {
+		trigger = {
+			is_allied_states_member = yes
+		}
+		localization_key = can_offer_to_join_faction_allied_states_tt
+	}
+	text = {
+		trigger = {
+			is_fifth_world_member = yes
+		}
+		localization_key = can_offer_to_join_faction_fifth_world_tt
+	}
+	text = {
+		trigger = {
+			is_kingdom_of_manitoba_member = yes
+		}
+		localization_key = can_offer_to_join_faction_kingdom_of_manitoba_tt
+	}
+	text = {
+		trigger = {
+			is_red_shield_member = yes
+		}
+		localization_key = can_offer_to_join_faction_red_shield_tt
+	}
+	text = {
+		localization_key = "None"
+	}
+}

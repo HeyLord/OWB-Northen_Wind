@@ -1,0 +1,281 @@
+factions:
+  nova_legion:
+    name: "Nova Legion"
+    def_name: "the Nova Legion"
+    tag: "TTM"
+  chosen_ones:
+    name: "Chosen Ones"
+    def_name: "the Chosen Ones"
+    tag: "ARR"
+  lanius_horde:
+    name: "Lanius's Horde"
+    def_name: "Lanius's Horde"
+    tag: "LAC"
+  big_mt:
+    name: "Big MT"
+    def_name: "the Big MT"
+    tag: "TNK"
+  boneyard_brotherhood:
+    name: "Boneyard Brotherhood"
+    def_name: "the Boneyard Brotherhood"
+    tag: "BON"
+  united_front:
+    name: "United Front"
+    def_name: "the United Front"
+    tag: "HXL"
+  western_brotherhood_of_steel:
+    name: "Western Brotherhood of Steel"
+    def_name: "the Western Brotherhood of Steel"
+    tag: "BOS"
+  caesars_legion:
+    name: "Caesar's Legion"
+    def_name: "Caesar's Legion"
+    tag: "CES"
+  children_of_mexico:
+    name: "Niños de Mexico"
+    def_name: "los Niños de Mexico"
+    tag: "ARM"
+  children_of_the_gate:
+    name: "Children of the Gate"
+    def_name: "the Children of the Gate"
+    tag: "HEA"
+  daikatana:
+    name: "Daikatana"
+    def_name: "Daikatana"
+    tag: "YKZ"
+  daughters_of_hecate:
+    name: "Daughters of Hecate"
+    def_name: "the Daughters of Hecate"
+    tag: "ORO"
+  denver_defense_network:
+    name: "Denver Defense Network"
+    def_name: "the Denver Defense Network"
+    tag: "HAN"
+  earth_and_sky:
+    name: "Earth and Sky"
+    def_name: "the Earth and Sky"
+    tag: "SKY"
+  empire_of_salt:
+    name: "Empire of Salt"
+    def_name: "the Empire of Salt"
+    tag: "EHT"
+  equestria:
+    name: "Equestria"
+    def_name: "Equestria"
+    tag: "DEA"
+  faithful:
+    name: "Faithful"
+    def_name: "the Faithful"
+    tag: "MUR"
+  fantasma_cartel:
+    name: "Fantasma Cartel"
+    def_name: "the Fantasma Cartel"
+    tag: "BVC"
+  glass_league:
+    name: "Glass League"
+    def_name: "the Glass League"
+    tag: "HAM"
+  great_federation:
+    name: "Great Federation"
+    def_name: "the Great Federation"
+    tag: "FFI"
+  great_plains_federation:
+    name: "Great Plains Federation"
+    def_name: "the Great Plains Federation"
+    tag: "CMD"
+  jungle_pact:
+    name: "Jungle Pact"
+    def_name: "the Jungle Pact"
+    tag: "TDT"
+  kaisers_legion:
+    name: "Kaiser's Legion"
+    def_name: "Kaiser's Legion"
+    tag: "TWI"
+  masters_new_army:
+    name: "Master's New Army"
+    def_name: "the Master's New Army"
+    tag: "TRL"
+  mesoamerican_alliance:
+    name: "Mesoamerican Alliance"
+    def_name: "the Mesoamerican Alliance"
+    tag: "ITZ"
+  the_fire_council:
+    name: "Fire Council"
+    def_name: "the Fire Council"
+    tag: "FRC"
+  mojave_alliance:
+    name: "Mojave Alliance"
+    def_name: "the Mojave Alliance"
+    tag: "MOJ"
+  mormon_alliance:
+    name: "Mormon Alliance"
+    def_name: "the Mormon Alliance"
+    tag: "NCN"
+  nevada_enclave:
+    name: "Nevada Enclave"
+    def_name: "the Nevada Enclave"
+    tag: "NEW"
+  nevada_pact:
+    name: "Nevada Pact"
+    def_name: "the Nevada Pact"
+    tag: "DES"
+  northern_league:
+    name: "Northern League"
+    def_name: "the Northern League"
+    tag: "WBH"
+  northern_mojave_pact:
+    name: "Northern Mojave Pact"
+    def_name: "the Northern Mojave Pact"
+    tag: "KHA"
+  phoenix_federation:
+    name: "Phoenix Federation"
+    def_name: "the Phoenix Federation"
+    tag: "PHR"
+  rio_pact:
+    name: "Rio Pact"
+    def_name: "the Rio Pact"
+    tag: "RRG"
+  senators_little_helpers:
+    name: "Senator's Little Helpers"
+    def_name: "the Senator's Little Helpers"
+    tag: "NPE"
+  great_confederation:
+    name: "Great Confederation"
+    def_name: "the Great Confederation"
+    tag: "TAR"
+  texan_economic_union:
+    name: "Texan Economic Union"
+    def_name: "the Texan Economic Union"
+    tag: "TBH"
+  unbroken_coast:
+    name: "Unbroken Coast"
+    def_name: "the Unbroken Coast"
+    tag: "VIC"
+  western_enclave:
+    name: "Western Enclave"
+    def_name: "the Western Enclave"
+    tag: "ENC"
+  order_of_st_joseph:
+    name: "Order of St. Joseph"
+    def_name: "the Order of Saint Joseph"
+    tag: "OST"
+  breach_ferals:
+    name: "Breach Ferals"
+    def_name: "Breach Ferals"
+    tag: "BRE"
+  white_sands_compact:
+    name: "White Sands Compact"
+    def_name: "the White Sands Compact"
+    tag: "RSR"
+  cartel_faction:
+    name: "Gran Cartel"
+    def_name: "the Grand Cartel"
+    tag: "SIN"
+  cascadia_pirates:
+    name: "Realm of the Cascadia Pirates"
+    def_name: "the Realm of the Cascadia Pirates"
+    tag: "HAI"
+  transcascadia_republic:
+    name: "Transcascadia Republic"
+    def_name: "the Transcascadia Republic"
+    tag: "HAI"
+  new_california:
+    name: "NCR"
+    def_name: "the NCR"
+    tag: "NCR"
+  the_second_coalition:
+    name: "The Second Coalition"
+    def_name: "The Second Coalition"
+    tag: "WPG"
+  imperium_mexicanum:
+    name: "Imperium Mexicanum"
+    def_name: "Imperium Mexicanum"
+    tag: "PLS"
+  mexican_league:
+    name: "Mexican League"
+    def_name: "Mexican League"
+    tag: "PLS"
+  midnight_union:
+    name: "Midnight Union"
+    def_name: "Midnight Union"
+    tag: "ROT"
+  big_circle:
+    name: "Big Circle"
+    def_name: "Big Circle"
+    tag: "RBD"
+  dharma_way:
+    name: "Dharma's Way"
+    def_name: "Dharma's Way"
+    tag: "BON"
+  californian_hegemony:
+    name: "Californian Hegemony"
+    def_name: "the Californian Hegemony"
+    tag: "NCR"
+  northern_congress:
+    name: "Northern Congress"
+    def_name: "the Northern Congress"
+    tag: "MTC"
+  road_warriors:
+    name: "Road Warriors"
+    def_name: "the Road Warriors"
+    tag: "EHT"
+  synergy_alliance:
+    name: "Synergy Alliance"
+    def_name: "the Synergy Alliance"
+    tag: "CLK"
+  vulpes_legion:
+    name: "Vulpes' Legion"
+    def_name: "the Vulpes' Legion"
+    tag: "VLP"
+  aurelius_legion:
+    name: "Aurelius' Legion"
+    def_name: "the Aurelius' Legion"
+    tag: "AUR"
+  lanius_legion:
+    name: "Lanius' Legion"
+    def_name: "the Lanius' Legion"
+    tag: "LAN"
+  hades_legion:
+    name: "Legion of Hades"
+    def_name: "the Legion of Hades"
+    tag: "CAU"
+  lucius_legion:
+    name: "Sons of Caesar"
+    def_name: "the Sons of Caesar"
+    tag: "LUC"
+  malpais_legion:
+    name: "Malpais' Cohort"
+    def_name: "the Malpais' Cohort"
+    tag: "MAL"
+  northern_union:
+    name: "Northern Union"
+    def_name: "the Northern Union"
+    tag: "TOC"
+  united_wallers:
+    name: "United Wallers of Nebraska"
+    def_name: "the United Wallers of Nebraska"
+    tag: "TLR"
+  montana_enclave:
+    name: "Montana Enclave"
+    def_name: "the Montana Enclave"
+    tag: "MCA"
+  northern_winds:
+    name: "Northern Winds"
+    def_name: "the Northern Winds"
+    tag: "STM"
+  allied_states:
+    name: "Allied States"
+    def_name: "the Allied States"
+    tag: "MCA"
+  fifth_world:
+    name: "Fifth World"
+    def_name: "the Fifth World"
+    tag: "NAV"
+  kingdom_of_manitoba:
+    name: "Kingdom of Manitoba"
+    def_name: "the Kingdom of Manitoba"
+    tag: "BRA"
+  red_shield:
+    name: "Red Shield"
+    def_name: "the Red Shield"
+    tag: "WHC"

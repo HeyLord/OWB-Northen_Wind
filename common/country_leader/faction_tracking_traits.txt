@@ -1,0 +1,436 @@
+######################################
+####### GENERATED CODE WARNING #######
+######################################
+# This file is generated code - any
+# changes made directly to these files
+# will likely be lost on future
+# updates. If you need to tweak the
+# functionality in this file, please
+# contact wtchappell ('the witch') for
+# help in improving its functionality.
+######################################
+####### GENERATED CODE WARNING #######
+######################################
+leader_traits = {
+	dislikes_nova_legion = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_chosen_ones = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_lanius_horde = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_big_mt = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_boneyard_brotherhood = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_united_front = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_western_brotherhood_of_steel = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_caesars_legion = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_children_of_mexico = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_children_of_the_gate = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_daikatana = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_daughters_of_hecate = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_denver_defense_network = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_earth_and_sky = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_empire_of_salt = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_equestria = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_faithful = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_fantasma_cartel = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_glass_league = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_great_federation = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_great_plains_federation = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_jungle_pact = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_kaisers_legion = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_masters_new_army = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_mesoamerican_alliance = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_the_fire_council = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_mojave_alliance = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_mormon_alliance = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_nevada_enclave = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_nevada_pact = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_northern_league = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_northern_mojave_pact = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_phoenix_federation = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_rio_pact = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_senators_little_helpers = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_great_confederation = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_texan_economic_union = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_unbroken_coast = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_western_enclave = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_order_of_st_joseph = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_breach_ferals = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_white_sands_compact = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_cartel_faction = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_cascadia_pirates = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_transcascadia_republic = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_new_california = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_the_second_coalition = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_imperium_mexicanum = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_mexican_league = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_midnight_union = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_big_circle = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_dharma_way = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_californian_hegemony = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_northern_congress = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_road_warriors = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_synergy_alliance = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_vulpes_legion = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_aurelius_legion = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_lanius_legion = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_hades_legion = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_lucius_legion = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_malpais_legion = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_northern_union = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_united_wallers = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_montana_enclave = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_northern_winds = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_allied_states = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_fifth_world = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_kingdom_of_manitoba = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_red_shield = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+# vim: set ft=pdx ts=2 sw=2 tw=79 :

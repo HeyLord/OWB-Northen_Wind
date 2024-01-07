@@ -1,0 +1,166 @@
+<% factions.each do |faction_id, config| -%>
+on_actions = {
+	# FROM is the country invited
+	on_offer_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] <%= faction_id %> (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_<%= faction_id %>_member = yes
+				}
+				FROM = {
+					mark_as_<%= faction_id %>_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] <%= faction_id %> (on_action) exited"
+			}
+		}
+	}
+
+	# FROM is faction leader on join faction requests
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] <%= faction_id %> (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_<%= faction_id %>_member = yes
+				}
+				FROM = {
+					mark_as_<%= faction_id %>_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] <%= faction_id %> (on_action) exited"
+			}
+		}
+	}
+
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - <%= faction_id %> (on_action) examined"
+			}
+			if = {
+				limit = { is_<%= faction_id %>_member = yes }
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - <%= faction_id %> (on_action) entered"
+				}
+				unmark_as_<%= faction_id %>_member = yes
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - <%= faction_id %> (on_action) exited"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - <%= faction_id %> (on_action) finished exam"
+			}
+		}
+	}
+
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into <%= faction_id %> (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_<%= faction_id %>_member = yes } }
+				mark_as_<%= faction_id %>_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into <%= faction_id %> (on_action) exited"
+			}
+		}
+	}
+
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_on_puppet [FROM.GetName] from <%= faction_id %> (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_<%= faction_id %>_member = yes } }
+				mark_as_<%= faction_id %>_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_puppet [FROM.GetName] from <%= faction_id %> (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is the new faction leader FROM is the old faction leader
+	# This does not work with the other code, so it should never be called
+	on_assume_faction_leadership = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from <%= faction_id %> (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_<%= faction_id %>_member = yes
+					FROM = { is_<%= faction_id %>_member = yes }
+				}
+				set_variable = { GLOBAL.last_<%= faction_id %>_leader = FROM }
+				set_variable = { GLOBAL.<%= faction_id %>_leader = ROOT }
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] NOT IN SAME FACTION!"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from <%= faction_id %> (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_release_as_free = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - <%= faction_id %> (on_action) examined"
+			}
+			unmark_as_<%= faction_id %>_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - <%= faction_id %> (on_action) finished exam"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_liberate = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - <%= faction_id %> (on_action) examined"
+			}
+			unmark_as_<%= faction_id %>_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - <%= faction_id %> (on_action) finished exam"
+			}
+		}
+	}
+}
+<% end -%>
+# vim: set ft=pdx ts=2 sw=2 tw=79 :
