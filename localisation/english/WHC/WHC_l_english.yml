@@ -2,11 +2,11 @@
   ### Focus
 
   whc_going_underground:0 "We Dream of a Red Sun in the Sky"
-  whc_going_underground_desc:0 ""
+  whc_going_underground_desc:0 "The King of Communism, a name bestowed upon him by his loyal followers, as well as a name first given to him in a dream, awoke with a start. He had another one. And this one may be the last before the world, as tumultous as it had been for the past decade and a half, would come to an end."
   whc_emerging:0 "Beyond the Vault"
-  whc_emerging_desc:0 ""
+  whc_emerging_desc:0 "After many, many years of watching what was once a clean and pristine Bunker turn into a rusted and aged living space, however, the People decided that it was finally time to open the doors."
   whc_enemies_on_all_sides:0 "The Obvious Answer"
-  whc_enemies_on_all_sides_desc:0 ""
+  whc_enemies_on_all_sides_desc:0 "Although the original King was no longer there to guide them, the new Monarch of White Court would ensure that their people would survive. There was only one reasonable explanation, learned by the Monarch and many of the Whitecourtians in their decades of living underground. Parallel dimensions exist, and they are not friendly."
 
   whc_washington_trail:0 "The Washington Trail"
   whc_washington_trail_desc:0 "Washington continues to be our most important trading partner, even if it means we must tolerate their non-socialist ways for now."
@@ -162,7 +162,7 @@
 
 
   whc_victory_parade:0 "The Struggle Is Never Over!"
-  whc_victory_parade_desc:0 ""
+  whc_victory_parade_desc:0 "Don't relax comrades! Although we have won one of the most difficult conflicts for us, the fight for this reality is still ahead of us!"
   whc_communist_practicality:0 "Communist Practicality"
   whc_communist_practicality_desc:0 "We, as the only true communists, should set an example in being practical as well as far-sighted."
   whc_new_cadres:0 "New Cadres"
@@ -176,9 +176,9 @@
   whc_brave_sons_and_daughters:0 "Brave Sons and Daughters"
   whc_brave_sons_and_daughters_desc:0 "Our brave sons and daughters have taken up the helm and are cutting through the sky, carrying us to victory."
   whc_apocalypse_began:0 "When the Apocalypse Began"
-  whc_apocalypse_began_desc:0 ""
+  whc_apocalypse_began_desc:0 "When the Apocalypse began we survived it in a vault, thanks to visions of King Communism. But we will begin a new Apocalypse - the end of the capitalist world."
   whc_red_skies:0 "Red Sky"
-  whc_red_skies_desc:0 ""
+  whc_red_skies_desc:0 "The masses stand up to be the owners\n\nThe sun in the sky is red\n\nIn our hearts is the sun King Communism\n\nHe leads us to move forward!"
 
   whc_congratulate_our_heroes:0 "Congratulate Our Heroes"
   whc_congratulate_our_heroes_desc:0 "The death of the King Communism has certainly saddened us greatly. However, this does not mean that we should be sad. Today we reward the heroes who have triumphed and managed to wrest Whitecourt from the clutches of the enemy!"
@@ -219,3 +219,17 @@
   WHC_Hardliner_Coup_ruler:0 "Bright Kingdom of Communism"
   WHC_Hardliner_Coup_ruler_ADJ:0 "People's Royal"
   WHC_Hardliner_Coup_ruler_DEF:0 "Bright Kingdom of Communism"
+
+  WHC_Communist_Empire_elites:0 "Interdimensional Communist Empire"
+  WHC_Communist_Empire_elites_ADJ:0 "People's Royal"
+  WHC_Communist_Empire_elites_DEF:0 "Interdimensional Communist Empire"
+  WHC_Communist_Empire_intellectuals:0 "Interdimensional Communist Empire"
+  WHC_Communist_Empire_intellectuals_ADJ:0 "People's Royal"
+  WHC_Communist_Empire_intellectuals_DEF:0 "Interdimensional Communist Empire"
+  WHC_Communist_Empire_people:0 "Interdimensional Communist Empire"
+  WHC_Communist_Empire_people_ADJ:0 "People's Royal"
+  WHC_Communist_Empire_people_DEF:0 "Interdimensional Communist Empire"
+  WHC_Communist_Empire_ruler:0 "Interdimensional Communist Empire"
+  WHC_Communist_Empire_ruler_ADJ:0 "People's Royal"
+  WHC_Communist_Empire_ruler_DEF:0 "Interdimensional Communist Empire"
+

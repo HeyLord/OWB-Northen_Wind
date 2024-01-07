@@ -372,13 +372,13 @@ country_event = {
 	id = nf_whc.8
 	title = nf_whc.8.t
 	desc = nf_whc.8.d
-	picture = GFX_event_sub_generic_wasteland_5
+	picture = GFX_event_whc_penny_lusaly
 
 	is_triggered_only = yes
 
 	option = { #Get good robot
 		name = nf_whc.8.a
-		custom_effect_tooltip = whc_yj_tt
+		custom_effect_tooltip = whc_robotics_tt
 		add_timed_idea = {
 			idea = whc_yj_lands
 			days = 420
@@ -386,7 +386,7 @@ country_event = {
 	}
 	option = { #Get specops
 		name = nf_whc.8.b
-		custom_effect_tooltip = whc_wasp_tt
+		custom_effect_tooltip = whc_specops_tt
 		add_timed_idea = {
 			idea = whc_wasp_lands
 			days = 420
@@ -394,7 +394,7 @@ country_event = {
 	}
 	option = { #Get plasma
 		name = nf_whc.8.c
-		custom_effect_tooltip = whc_msq_tt
+		custom_effect_tooltip = whc_plasma_tt
 		add_timed_idea = {
 			idea = whc_mosquito_lands
 			days = 420
@@ -490,6 +490,31 @@ country_event = {
 			BGR_ALKOM = {
 				set_nationality = WHC
 			}
+		}
+	}
+}
+#Birth of the new empire
+country_event = {
+	id = nf_whc.14
+	title = nf_whc.14.t
+	desc = nf_whc.14.d
+	picture = GFX_event_art_wassily_kandinsky_1
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.14.a
+		set_cosmetic_tag = WHC_Communist_Empire
+		add_ideas = whc_free_the_world
+		every_state = {
+			limit = {
+				NOT = {
+					OWNER = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			add_claim_by = ROOT
 		}
 	}
 }

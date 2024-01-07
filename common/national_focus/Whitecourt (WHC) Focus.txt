@@ -951,6 +951,12 @@ focus_tree = {
 				vertibird_unlock_tech = 1
 				air_tech_level_scientific = 1
 			}
+			hidden_effect = {
+				country_event = {
+					id = nf_whc.14
+					days = 14
+				}
+			}
 		}
 	}
 
@@ -1389,6 +1395,7 @@ focus_tree = {
 		}
 		relative_position_id = whc_propaganda
 		completion_reward = {
+			add_ideas = whc_fire_of_the_revolution
 		}
 	}
 	##############

@@ -63,7 +63,7 @@ ideas = {
             }
         }
         whc_foul_occupiers = {
-            picture = generic_devil
+            picture = on_fire_1
             removal_cost = -1
             cancel = {
                 COM = {
@@ -131,14 +131,14 @@ ideas = {
             }
         }
         whc_full_mobil = {
-            picture = generic_officer_hat
+            picture = generic_helm_army
             removal_cost = -1
             modifier = {
                 mobilization_speed = 0.5
             }
         }
         whc_tanks = {
-            picture = generic_officer_hat
+            picture = generic_vehicle_great_war_tank
             removal_cost = -1
             modifier = {
                 breakthrough_factor = 0.2
@@ -155,7 +155,7 @@ ideas = {
 			}
         }
         whc_final_attack_1 = {
-            picture = generic_officer_hat
+            picture = generic_catastrophe
             removal_cost = -1
             cancel = {
                 has_war = no
@@ -169,7 +169,7 @@ ideas = {
             }
         }
         whc_final_attack_2 = {
-            picture = generic_officer_hat
+            picture = generic_catastrophe
             removal_cost = -1
             cancel = {
                 has_war = no
@@ -183,7 +183,7 @@ ideas = {
             }
         }
         whc_passkep_shield = {
-            picture = generic_officer_hat
+            picture = generic_bos_idea_surface_outposts
             removal_cost = -1
             cancel = {
                 WHC = {
@@ -196,7 +196,7 @@ ideas = {
             }
         }
         whc_big_grass_comrades = {
-            picture = generic_officer_hat
+            picture = TIM_patch_robotics
             removal_cost = -1
             modifier = {
                 production_factory_max_efficiency_factor = 0.1
@@ -213,7 +213,7 @@ ideas = {
             }
         }
         whc_big_grass_comrades_2 = {
-            picture = generic_officer_hat
+            picture = TIM_patch_robotics
             removal_cost = -1
             modifier = {
                 army_org_factor = 0.05
@@ -233,14 +233,14 @@ ideas = {
             }
         }
         whc_new_commie_man = {
-            picture = generic_officer_hat
+            picture = TIM_patch_scuplture
             removal_cost = -1
             modifier = {
                 research_speed_factor = 0.08
             }
         }
         whc_prepearing_the_second_breakfast = {
-            picture = generic_officer_hat
+            picture = generic_skull
             removal_cost = -1
             modifier = {
                 consumer_goods_factor = -0.04
@@ -249,7 +249,7 @@ ideas = {
             }
         }
         whc_young_heroes = {
-            picture = generic_officer_hat
+            picture = chinese_pin
             removal_cost = -1
             modifier = {
                 army_intel_to_others = -20
@@ -257,7 +257,7 @@ ideas = {
             }
         }
         whc_war_experience = {
-            picture = generic_officer_hat
+            picture = yangtze_hat
             removal_cost = -1
             modifier = {
                 mobilization_speed = 0.2
@@ -266,7 +266,7 @@ ideas = {
             }
         }
         whc_rubber_wheels = {
-            picture = generic_officer_hat
+            picture = generic_vehicle_winterized_army_truck
             removal_cost = -1
             equipment_bonus = {
                 motorized_equipment = {
@@ -277,7 +277,7 @@ ideas = {
             }
         }
         whc_eternal_revolution = {
-            picture = generic_officer_hat
+            picture = generic_vehicle_winterized_army_truck
             removal_cost = -1
             equipment_bonus = {
                 infantry_equipment = {
@@ -295,7 +295,7 @@ ideas = {
             }
         }
         whc_yj_lands = {
-            picture = generic_officer_hat
+            picture = han_everythings_for_sale_idea
             removal_cost = -1
             on_remove = {
                 set_technology = {
@@ -307,8 +307,21 @@ ideas = {
                 industrial_capacity_factory = -0.15
             }
         }
+        whc_wasp_lands = {
+            picture = han_everythings_for_sale_idea
+            removal_cost = -1
+            on_remove = {
+                set_technology = {
+                    special_forces_tech_level_scientific = 1
+                }
+            }
+            modifier = {
+                weekly_manpower = -3
+                army_core_defence_factor = -0.25
+            }
+        }
         whc_mosquito_lands = {
-            picture = generic_officer_hat
+            picture = han_everythings_for_sale_idea
             removal_cost = -1
             on_remove = {
                 set_technology = {
@@ -317,29 +330,33 @@ ideas = {
             }
             modifier = {
                 stability_factor = -0.25
-                weekly_manpower = -3
                 resistance_growth = 0.25
             }
         }
-        whc_wasp_lands = {
-            picture = generic_officer_hat
-            removal_cost = -1
-            on_remove = {
-                set_technology = {
-                    special_forces_tech_level_scientific = 1
-                }
-            }
-            modifier = {
-                political_power_factor = -0.45
-                army_core_defence_factor = -0.25
-            }
-        }
         whc_flying_heroes = {
-            picture = generic_officer_hat
+            picture = generic_vehicle_vertibird_fo4
             removal_cost = -1
             modifier = {
                 air_weather_penalty = -0.25
                 air_ace_generation_chance_factor = 0.15
+            }
+        }
+        whc_free_the_world = {
+            picture = KHA_directional_disputes
+            removal_cost = -1
+            modifier = {
+                justify_war_goal_time = -1.0
+                offensive_war_stability_factor = 1.0
+            }
+        }
+        whc_fire_of_the_revolution = {
+            picture = pls_eagle
+            removal_cost = -1
+            modifier = {
+                #justify_war_goal_time = -0.5
+                send_volunteer_size = 8
+                send_volunteers_tension = -1
+                air_volunteer_cap = 100
             }
         }
     }

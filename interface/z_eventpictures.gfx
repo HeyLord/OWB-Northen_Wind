@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_event_whc_penny_lusaly"
+		texturefile = "gfx/event_pictures/event_whc_penny_lusaly.dds"
+	}
+
+}

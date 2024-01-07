@@ -27,12 +27,14 @@
   whc_war_experience:0 "The Fight For Our Reality"
   whc_rubber_wheels:0 "Rubber Wheels of Revolution"
   whc_eternal_revolution:0 "Against The Eternal Enemy"
-  whc_yj_lands:0 "§9Investigate Capilistic Robotics§!"
-  whc_wasp_lands:0 "§8The Drones§!"
-  whc_mosquito_lands:0 "§RProgress Has A Cost§!"
+  whc_yj_lands:0 "§8Build Up the Machines§!"
+  whc_wasp_lands:0 "§8Wardens of White on the Loose§!"
+  whc_mosquito_lands:0 "§8Angry Employers§!"
   whc_flying_heroes:0 "Flying Heroes"
   whc_king_without_a_crown:0 "The King Without a Crown"
   whc_king_without_a_crown_desc:0 "In the good old days, the kingdom had a lot more land under control. But those pesky interdimensional creatures kicked us out to the very backwaters we're in now, and Whitecourt is now under the control of those false communist robots!\nBut we'll get it back under control sooner or later, for the sake of the king and the people!"
+  whc_free_the_world:0 "Saviours of the World"
+  whc_fire_of_the_revolution:0 "§OFire of the Revolution§!"
 
   #Tech
   special_vintage:0 "Special Vintage"
