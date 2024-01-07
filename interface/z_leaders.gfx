@@ -52,4 +52,9 @@ spriteTypes = {
 		texturefile = "gfx/leaders/WHC/portrait_whc_marshall_gordon.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_WHC_alexei_soltz"
+		textureFile = "gfx/interface/ideas/advisors/whc_alexei_soltz.dds"
+	}
+
 }
