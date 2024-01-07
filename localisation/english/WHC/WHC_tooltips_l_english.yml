@@ -17,7 +17,7 @@
   BELL_TT:0 "§Y$WHC_NATALIA_BELL_NAME$§! becomes a Unit Leader.\n§LLevel§!: §Y4§!\n§RAttack Skill§!: §Y2§!\n§GDefense Skill§!: §Y4§!\n§PPlanning Skill§!: §Y3§!\n§MLogistics Skill§!: §Y3§!\n§gTraits§!: §tEnduring§!, §tGun Nut§!, §tCommando§!\n\n"
   ELIS_TT:0 "§Y$WHC_ELIS_MIKOSHI_NAME$§! becomes a Unit Leader.\n§LLevel§!: §Y3§!\n§RAttack Skill§!: §Y3§!\n§GDefense Skill§!: §Y2§!\n§PPlanning Skill§!: §Y3§!\n§MLogistics Skill§!: §Y1§!\n§gTraits§!: §tAgile§!, §tInspirational!\n\n"
 
-  whc_stalion:0 "Staliongrad"
+  whc_stalion:0 "Stalliongrad"
   whc_spreading_communism:0 "§RSpreading Communism§!"
 
   whc_capital:0 "The Castle of the King and the People"

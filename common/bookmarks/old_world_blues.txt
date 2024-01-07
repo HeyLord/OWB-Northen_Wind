@@ -921,7 +921,7 @@ bookmarks = {
 		# Majors
 		"WHC" = {
 			history = "WHC_OWB_DESC"
-			minor = yes
+			minor = no
 			ideology = intellectuals
 			ideas = {
 				WHC_centralized_authority
@@ -1176,9 +1176,9 @@ bookmarks = {
 		#		mtc_our_home_upon_the_river
 		#	}
 		#}
-		#"---" = {
-		#	history = "OTHER_OWB_DESC"
-		#}
+		"---" = {
+			history = "OTHER_OWB_DESC"
+		}
 	}
 }
 

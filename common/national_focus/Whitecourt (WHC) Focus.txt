@@ -1088,17 +1088,12 @@ focus_tree = {
 		prerequisite = {
 			focus = whc_queen_communism
 		}
+		will_lead_to_war_with = NOR
 		relative_position_id = whc_queen_communism
 		completion_reward = {
-			custom_effect_tooltip = sta_nordikon_claims_tt
-			hidden_effect = {
-				every_state = {
-					limit = {
-						OR = {
-							region = 164
-						}
-					}
-					add_claim_by = ROOT
+			NOR = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
 				}
 			}
 		}
@@ -1120,45 +1115,45 @@ focus_tree = {
 			1206 = {
 				add_resource = {
 					type = metal
-					amount = -22
+					amount = -18
 				}
 				add_resource = {
 					type = energy
-					amount = -14
+					amount = -12
 				}
 				add_resource = {
 					type = composites
-					amount = -7
+					amount = -6
 				}
 				add_resource = {
 					type = circuitry
-					amount = -7
+					amount = -6
 				}
 				add_resource = {
 					type = advanced
-					amount = -7
+					amount = -6
 				}
 			}
 			1156 = {
 				add_resource = {
 					type = metal
-					amount = 22
+					amount = 18
 				}
 				add_resource = {
 					type = energy
-					amount = 14
+					amount = 12
 				}
 				add_resource = {
 					type = composites
-					amount = 7
+					amount = 6
 				}
 				add_resource = {
 					type = circuitry
-					amount = 7
+					amount = 6
 				}
 				add_resource = {
 					type = advanced
-					amount = 7
+					amount = 6
 				}
 			}
 		}
