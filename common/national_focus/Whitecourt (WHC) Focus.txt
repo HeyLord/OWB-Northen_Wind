@@ -786,6 +786,7 @@ focus_tree = {
 		prerequisite = {
 			focus = whc_prince_communism
 		}
+		will_lead_to_war_with = NOR
 		relative_position_id = whc_prince_communism
 		completion_reward = {
 			NOR = {
@@ -854,6 +855,7 @@ focus_tree = {
 		prerequisite = {
 			focus = whc_the_only_worthy_book
 		}
+		will_lead_to_war_with = URA
 		relative_position_id = whc_the_only_worthy_book
 		completion_reward = {
 			URA = {
@@ -885,6 +887,7 @@ focus_tree = {
 		prerequisite = {
 			focus = whc_nuclear_energy
 		}
+		will_lead_to_war_with = HVR
 		relative_position_id = whc_prince_communism
 		completion_reward = {
 			HVR = {
@@ -909,6 +912,8 @@ focus_tree = {
 		prerequisite = {
 			focus = whc_a_mere_stepping_stone
 		}
+		will_lead_to_war_with = STM
+		will_lead_to_war_with = MCA
 		relative_position_id = whc_a_mere_stepping_stone
 		completion_reward = {
 			MCA = {
@@ -984,7 +989,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_peaceful_ways_of_force
-		icon = GFX_focus_sta_the_great_family
+		icon = GFX_goal_WHC_Patricia_Trumpet
 		cost = 40
 		x = -2
 		y = 1
@@ -999,6 +1004,7 @@ focus_tree = {
 		prerequisite = {
 			focus = whc_queen_communism
 		}
+		will_lead_to_war_with = STA
 		relative_position_id = whc_queen_communism
 		completion_reward = {
 			STA = {
@@ -1010,7 +1016,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_stampede_five_years
-		icon = GFX_goal_commie_harvest_2
+		icon = GFX_goal_WHC_Patricia_Woman_Worker
 		cost = 40
 		x = 1
 		y = 1
@@ -1056,7 +1062,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_join_manitoba
-		icon = GFX_goal_BRA_guard_agency
+		icon = GFX_goal_WHC_Patricia_Manitoba_Crown
 		cost = 40
 		x = 0
 		y = 1
@@ -1073,7 +1079,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_monument_of_exloitation
-		icon = GFX_goal_WHC_Patricia_Nordikon
+		icon = GFX_goal_WHC_Patricia_MM
 		cost = 40
 		x = 2
 		y = 1
@@ -1100,7 +1106,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_resources_to_people
-		icon = GFX_goal_TTM_Golden_Fruit
+		icon = GFX_goal_WHC_Patricia_Hammer
 		cost = 40
 		x = -1
 		y = 1
@@ -1186,7 +1192,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_just_a_bunch_of_assholes
-		icon = GFX_goal_CPH_vote_machine
+		icon = GFX_goal_WHC_Patricia_Hammer_2
 		cost = 40
 		x = 0
 		y = 1
@@ -1196,6 +1202,9 @@ focus_tree = {
 		prerequisite = {
 			focus = whc_queendom_of_proletariat
 		}
+		will_lead_to_war_with = DUN
+		will_lead_to_war_with = STN
+		will_lead_to_war_with = PLT
 		relative_position_id = whc_queendom_of_proletariat
 		completion_reward = {
 			every_country = {
@@ -1204,7 +1213,6 @@ focus_tree = {
 						tag = DUN
 						tag = STN
 						tag = PLT
-						tag = FRG
 					}
 					NOT = {
 						BRA = {
@@ -1222,7 +1230,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_avenge_the_king
-		icon = GFX_goal_BRA_generic
+		icon = GFX_goal_WHC_Patricia_Soldier
 		cost = 40
 		x = 0
 		y = 1
@@ -1290,7 +1298,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_passkeeper_brothers
-		icon = GFX_goal_LOI_soviet_CPF_forgiving
+		icon = GFX_goal_WHC_Frank_Passkepeers_Dude
 		cost = 40
 		x = -1
 		y = 1
@@ -1318,7 +1326,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_shield_against_capitalism
-		icon = GFX_goal_LOI_soviet_CPF_richmond
+		icon = GFX_goal_WHC_Frank_Shield
 		cost = 40
 		x = 0
 		y = 1
@@ -1347,7 +1355,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_propaganda
-		icon = GFX_goal_LOI_soviet_the_people
+		icon = GFX_goal_WHC_Patricia_Child
 		cost = 40
 		x = 1
 		y = 1
@@ -1369,7 +1377,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_light_the_fire
-		icon = GFX_goal_TTM_Fire_2
+		icon = GFX_goal_WHC_Patricia_Megaphone_Woman
 		cost = 40
 		x = 0
 		y = 1
@@ -1752,7 +1760,7 @@ focus_tree = {
 
 	focus = {
 		id = whc_victory_parade
-		icon = GFX_goal_LOI_soviet_soldier
+		icon = GFX_goal_generic_commie_soldier_3
 		cost = 40
 		x = 9
 		y = 1
@@ -1820,7 +1828,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_contr_under_wheels
-		icon = GFX_goal_LOI_soviet_tank2
+		icon = GFX_goal_TLA_Zap_car
 		cost = 40
 		x = 0
 		y = 2
@@ -1834,7 +1842,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_congratulate_our_heroes
-		icon = GFX_goal_LOI_soviet_soldier2
+		icon = GFX_goal_generic_medal
 		cost = 40
 		x = 0
 		y = 2
@@ -1849,7 +1857,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_get_enemy_general_1
-		icon = GFX_goal_og_terrorism
+		icon = GFX_goal_generic_beret_skull
 		cost = 40
 		x = -1
 		y = 1
@@ -1863,7 +1871,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_get_enemy_general_2
-		icon = GFX_goal_LOI_soviet_CPF_sucessor
+		icon = GFX_goal_TLA_Max_soldier
 		cost = 40
 		x = 1
 		y = 1
@@ -1878,7 +1886,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_eternal_enemy_of_revolution
-		icon = GFX_goal_LOI_soviet_soldier_sacred_duty
+		icon = GFX_focus_canada_soldier
 		cost = 40
 		x = 0
 		y = 2

@@ -63,6 +63,50 @@ spriteTypes = {
 		name = "GFX_goal_WHC_Frank_PA"
 		texturefile = "gfx/interface/goals/unique/WHC/WHC_Frank_PA.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_WHC_Patricia_Manitoba_Crown"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Patricia_Manitoba_Crown.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Patricia_MM"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Patricia_MM.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Patricia_Hammer"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Patricia_Hammer.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Patricia_Woman_Worker"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Patricia_Woman_Worker.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Patricia_Trumpet"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Patricia_Trumpet.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Patricia_Hammer_2"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Patricia_Hammer_2.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Patricia_Soldier"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Patricia_Soldier.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Patricia_Megaphone_Woman"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Patricia_Megaphone_Woman.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Patricia_Child"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Patricia_Child.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Frank_Shield"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Frank_Shield.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WHC_Frank_Passkepeers_Dude"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Frank_Passkepeers_Dude.dds"
+	}
 
 }
 
