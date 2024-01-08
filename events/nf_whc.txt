@@ -30,7 +30,7 @@ country_event = {
 	id = nf_whc.2
 	title = nf_whc.2.t
 	desc = nf_whc.2.d
-	picture = GFX_event_sub_generic_wasteland_5
+	picture = GFX_event_whc_snowy_canada
 
 	is_triggered_only = yes
 
@@ -268,7 +268,7 @@ country_event = {
 	id = nf_whc.4
 	title = nf_whc.4.t
 	desc = nf_whc.4.d
-	picture = GFX_event_sub_generic_wasteland_5
+	picture = GFX_event_whc_snowy_canada
 
 	is_triggered_only = yes
 
@@ -287,7 +287,7 @@ country_event = {
 	id = nf_whc.5
 	title = nf_whc.5.t
 	desc = nf_whc.5.d
-	picture = GFX_event_sub_generic_wasteland_5
+	picture = GFX_event_BRK_snowmobile_troops
 
 	is_triggered_only = yes
 
@@ -314,7 +314,7 @@ country_event = {
 	id = nf_whc.6
 	title = nf_whc.6.t
 	desc = nf_whc.6.d
-	picture = GFX_event_sub_generic_wasteland_5
+	picture = GFX_event_BRK_village_raid
 
 	is_triggered_only = yes
 
@@ -338,7 +338,7 @@ country_event = {
 	id = nf_whc.7
 	title = nf_whc.7.t
 	desc = nf_whc.7.d
-	picture = GFX_event_sub_generic_wasteland_5
+	picture = GFX_event_sub_generic_war_room
 
 	is_triggered_only = yes
 
@@ -433,7 +433,7 @@ country_event = {
 	id = nf_whc.10
 	title = nf_whc.10.t
 	desc = nf_whc.10.d
-	picture = GFX_event_sub_generic_wasteland_5
+	picture = GFX_event_art_francis_picabia_1
 
 	is_triggered_only = yes
 
@@ -447,7 +447,7 @@ country_event = {
 	id = nf_whc.11
 	title = nf_whc.11.t
 	desc = nf_whc.11.d
-	picture = GFX_event_sub_generic_wasteland_5
+	picture = GFX_event_art_francis_picabia_1
 
 	is_triggered_only = yes
 
@@ -461,7 +461,7 @@ country_event = {
 	id = nf_whc.12
 	title = nf_whc.12.t
 	desc = nf_whc.12.d
-	picture = GFX_event_sub_generic_wasteland_5
+	picture = GFX_event_art_joan_miro_1
 
 	is_triggered_only = yes
 

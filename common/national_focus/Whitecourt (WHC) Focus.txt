@@ -980,6 +980,10 @@ focus_tree = {
 		relative_position_id = whc_successor_choice
 		completion_reward = {
 			set_cosmetic_tag = WHC_Lady_Patricia
+			set_character_name = {
+				character = WHC_PATRICIA
+				name = whc_queen_name
+			}
 			add_popularity = {
 				ideology = people
 				popularity = 0.1
