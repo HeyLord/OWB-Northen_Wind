@@ -1641,6 +1641,11 @@ focus_tree = {
 					robotics_tech_level_scientific = 1
 				}
 			}
+			else = {
+				set_technology = {
+					robotics_tech_level_settler = 1
+				}
+			}
 		}
 	}
 	focus = {
