@@ -67,6 +67,15 @@ spriteTypes = {
 		name = "GFX_Portrait_WHC_knight"
 		texturefile = "gfx/leaders/WHC/whc_portrait_knight.dds"
 	}
+	spriteType = {
+		name = "GFX_Portrait_WHC_elis_mikoshi"
+		texturefile = "gfx/leaders/WHC/portrait_whc_elis_mikoshi.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_WHC_natalia_bell"
+		texturefile = "gfx/leaders/WHC/portrait_whc_natalia_bell.dds"
+	}
+
 
 
 	spriteType = {

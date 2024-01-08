@@ -96,10 +96,10 @@ characters = {
 		name = WHC_ELIS_MIKOSHI_NAME
 		portraits = {
 			civilian = {
-				large = GFX_Portrait_LOI_elis_mikoshi
+				large = GFX_Portrait_WHC_elis_mikoshi
 			}
 			army = {
-				large = GFX_Portrait_LOI_elis_mikoshi
+				large = GFX_Portrait_WHC_elis_mikoshi
 			}
 		}
 		corps_commander = {
@@ -122,10 +122,10 @@ characters = {
 		name = WHC_NATALIA_BELL_NAME
 		portraits = {
 			civilian = {
-				large = GFX_Portrait_LOI_natalia_bell
+				large = GFX_Portrait_WHC_natalia_bell
 			}
 			army = {
-				large = GFX_Portrait_LOI_natalia_bell
+				large = GFX_Portrait_WHC_natalia_bell
 			}
 		}
 		corps_commander = {
