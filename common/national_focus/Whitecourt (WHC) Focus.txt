@@ -1876,6 +1876,8 @@ focus_tree = {
 		relative_position_id = whc_congratulate_our_heroes
 		completion_reward = {
 			custom_effect_tooltip = whc_soltz_tt
+			show_ideas_tooltip = WHC_alexei_soltz_economic_advisor
+			set_country_flag = whc_recruited_soltz
 		}
 	}
 	focus = {

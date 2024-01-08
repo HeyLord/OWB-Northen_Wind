@@ -4,5 +4,10 @@ spriteTypes = {
         name = "GFX_idea_WHC_broken_crown"
         texturefile = "gfx/interface/ideas/whc_broken_crown.dds"
     }
+	spriteType = {
+        name = "GFX_idea_whc_leaf_crown"
+        texturefile = "gfx/interface/ideas/whc_leaf_crown.dds"
+    }
+
 }
 

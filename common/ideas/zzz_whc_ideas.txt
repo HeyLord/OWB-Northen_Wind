@@ -1,5 +1,16 @@
 ideas = {
     country = {
+        whc_king_communism_diplomacy = {
+            picture = whc_leaf_crown
+            removal_cost = -1
+            targeted_modifier = {
+                tag = BRA
+                trade_cost_for_target_factor = -0.1
+            }
+            modifier = {
+                political_power_factor = 0.05
+            }
+        }
         whc_king_without_a_crown = {
             picture = WHC_broken_crown
             removal_cost = -1

@@ -464,6 +464,7 @@ country_event = {
 	option = {
 		name = nf_whc.11.a
 		add_stability = -0.15
+		remove_ideas = whc_king_communism_diplomacy
 		set_country_flag = whc_king_dead
 	}
 }
