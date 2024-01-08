@@ -111,6 +111,10 @@ recruit_character = WHC_marshall_gordon
 recruit_character = WHC_natalia_bell
 recruit_character = WHC_elis_mikoshi
 recruit_character = WHC_alexei_soltz
+recruit_character = WHC_the_hooded_one
+recruit_character = WHC_comissar_snowman
+recruit_character = WHC_snow_white
+recruit_character = WHC_black_knight
 
 set_province_name = {
 	id = 13970

@@ -51,6 +51,23 @@ spriteTypes = {
 		name = "GFX_Portrait_WHC_marshall_gordon"
 		texturefile = "gfx/leaders/WHC/portrait_whc_marshall_gordon.dds"
 	}
+	spriteType = {
+		name = "GFX_Portrait_WHC_portrait_snowman"
+		texturefile = "gfx/leaders/WHC/whc_portrait_snowman.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_WHC_hooded_one"
+		texturefile = "gfx/leaders/WHC/portrait_whc_hooded_one.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_WHC_snow_white"
+		texturefile = "gfx/leaders/WHC/portrait_whc_snow_white.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_WHC_knight"
+		texturefile = "gfx/leaders/WHC/whc_portrait_knight.dds"
+	}
+
 
 	spriteType = {
 		name = "GFX_idea_WHC_alexei_soltz"

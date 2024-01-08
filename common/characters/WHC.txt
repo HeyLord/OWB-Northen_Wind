@@ -170,4 +170,100 @@ characters = {
 			cost = 100
 		}
 	}
+	WHC_comissar_snowman = {
+		name = WHC_COMISSAR_SNOWMAN_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_WHC_portrait_snowman
+			}
+			army = {
+				large = GFX_Portrait_WHC_portrait_snowman
+			}
+		}
+		corps_commander = {
+			traits = {
+				lucky_trait
+				idiot_savant_trait
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+	}
+	WHC_the_hooded_one = {
+		name = WHC_HOODED_ONE_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_WHC_hooded_one
+			}
+			army = {
+				large = GFX_Portrait_WHC_hooded_one
+			}
+		}
+		corps_commander = {
+			traits = {
+				mysterious_stranger_trait
+				animal_friend_trait
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+	WHC_snow_white = {
+		name = WHC_SNOW_WHITE_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_WHC_snow_white
+			}
+			army = {
+				large = GFX_Portrait_WHC_snow_white
+			}
+		}
+		corps_commander = {
+			traits = {
+				charismatic_trait
+				life_giver_trait
+				aqua_boy_trait
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = -1
+		}
+	}
+	WHC_black_knight = {
+		name = WHC_KNIGHT_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_WHC_knight
+			}
+			army = {
+				large = GFX_Portrait_WHC_knight
+			}
+		}
+		corps_commander = {
+			traits = {
+				charismatic_trait
+				perceptive_trait
+				survivalist_trait
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+
+
 }
