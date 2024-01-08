@@ -510,7 +510,7 @@ country_event = {
 	id = nf_whc.14
 	title = nf_whc.14.t
 	desc = nf_whc.14.d
-	picture = GFX_event_art_wassily_kandinsky_1
+	picture = GFX_event_whc_red_portal
 
 	is_triggered_only = yes
 
@@ -529,9 +529,13 @@ country_event = {
 			}
 			add_claim_by = ROOT
 		}
+		set_character_name = {
+			character = WHC_frank_kang
+			name = whc_king_name
+		}
 	}
 }
-#Birth of the new empire
+#Queen
 country_event = {
 	id = nf_whc.15
 	title = nf_whc.15.t

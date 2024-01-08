@@ -950,7 +950,16 @@ focus_tree = {
 		completion_reward = {
 			set_technology = {
 				vertibird_unlock_tech = 1
-				air_tech_level_scientific = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_tech = air_tech_level_scientific
+					}
+				}
+				set_technology = {
+					air_tech_level_scientific = 1
+				}
 			}
 			country_event = {
 				id = nf_whc.14
@@ -2023,8 +2032,15 @@ focus_tree = {
 				uses = 2
 				category = air_tech_category
 			}
-			set_technology = {
-				air_tech_level_scientific = 1
+			if = {
+				limit = {
+					NOT = {
+						has_tech = air_tech_level_scientific
+					}
+				}
+				set_technology = {
+					air_tech_level_scientific = 1
+				}
 			}
 		}
 	}

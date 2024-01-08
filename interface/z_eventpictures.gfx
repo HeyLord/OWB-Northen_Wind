@@ -8,5 +8,9 @@ spriteTypes = {
 		name = "GFX_event_whc_snowy_canada"
 		texturefile = "gfx/event_pictures/event_whc_snowy_canada.dds"
 	}
+	spriteType = {
+		name = "GFX_event_whc_red_portal"
+		texturefile = "gfx/event_pictures/event_whc_red_portal.dds"
+	}
 
 }
