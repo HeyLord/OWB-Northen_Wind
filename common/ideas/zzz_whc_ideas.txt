@@ -30,7 +30,7 @@ ideas = {
             picture = generic_hot_plate
             removal_cost = -1
             modifier = {
-                local_resources = -0.4
+                local_resources_factor = -0.4
             }
         }
         whc_followers_behind_the_door = {
