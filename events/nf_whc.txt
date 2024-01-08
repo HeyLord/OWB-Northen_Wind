@@ -444,6 +444,12 @@ country_event = {
 	option = {
 		name = nf_whc.10.a
 		add_stability = -0.01
+		WHC = {
+			country_event = {
+				id = nf_whc.11
+				days = 6
+			}
+		}
 	}
 }
 #King Communism is dead (WHC)
@@ -458,6 +464,7 @@ country_event = {
 	option = {
 		name = nf_whc.11.a
 		add_stability = -0.15
+		set_country_flag = whc_king_dead
 	}
 }
 #Chose successor
