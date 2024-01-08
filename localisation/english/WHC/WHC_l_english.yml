@@ -233,3 +233,16 @@
   WHC_Communist_Empire_ruler_ADJ:0 "People's Royal"
   WHC_Communist_Empire_ruler_DEF:0 "Interdimensional Communist Empire"
 
+  WHC_equestria_elites:0 "Equestrian Proletariat"
+  WHC_equestria_elites_ADJ:0 "Equestrian"
+  WHC_equestria_elites_DEF:0 "Equestrian Proletariat"
+  WHC_equestria_intellectuals:0 "Equestrian Proletariat"
+  WHC_equestria_intellectuals_ADJ:0 "Equestrian"
+  WHC_equestria_intellectuals_DEF:0 "Equestrian Proletariat"
+  WHC_equestria_people:0 "Equestrian Proletariat"
+  WHC_equestria_people_ADJ:0 "Equestrian"
+  WHC_equestria_people_DEF:0 "Equestrian Proletariat"
+  WHC_equestria_ruler:0 "Equestrian Proletariat"
+  WHC_equestria_ruler_ADJ:0 "Equestrian"
+  WHC_equestria_ruler_DEF:0 "Equestrian Proletariat"
+

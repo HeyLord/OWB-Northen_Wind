@@ -1083,6 +1083,15 @@ focus_tree = {
 		relative_position_id = whc_queen_communism
 		completion_reward = {
 			ask_to_join_kingdom_of_manitoba = yes
+			if = {
+				limit = {
+					BRA = {
+						exists = yes
+						is_subject = no
+					}
+				}
+				country_event = nf_whc.15
+			}
 		}
 	}
 	focus = {
@@ -1260,6 +1269,17 @@ focus_tree = {
 				ROOT = {
 					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
 				}
+			}
+			if = {
+				limit = {
+					BRA = {
+						OR = {
+							exists = no
+							is_subject = yes
+						}
+					}
+				}
+				country_event = nf_whc.15
 			}
 		}
 	}

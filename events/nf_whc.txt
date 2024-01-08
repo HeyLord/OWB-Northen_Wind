@@ -524,9 +524,58 @@ country_event = {
 					OWNER = {
 						is_in_faction_with = ROOT
 					}
+					is_owned_by = ROOT
 				}
 			}
 			add_claim_by = ROOT
+		}
+	}
+}
+#Birth of the new empire
+country_event = {
+	id = nf_whc.15
+	title = nf_whc.15.t
+	desc = nf_whc.15.d
+	picture = GFX_event_art_wassily_kandinsky_1
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_whc.15.a
+		set_cosmetic_tag = WHC_equestria
+		set_technology = {
+			spec_ops_horses_tech = 1
+		}
+		custom_effect_tooltip = whc_north_tt
+		hidden_effect = {
+			every_state = {
+				limit = {
+					NOT = {
+						OR = {
+							OWNER = {
+								OR = {
+									is_in_faction_with = ROOT
+									is_subject_of = ROOT
+								}
+
+							}
+						}
+						is_owned_by = ROOT
+					}
+					OR = {
+						region = 170
+						region = 158
+						region = 166
+						region = 172
+						region = 173
+						region = 175
+						region = 160
+						region = 108
+						region = 151
+					}
+				}
+				add_claim_by = ROOT
+			}
 		}
 	}
 }

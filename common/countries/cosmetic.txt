@@ -2023,3 +2023,7 @@ WHC_Communist_Empire = {
 	color = rgb { 196 10 10 }
 	color_ui = rgb { 196 10 10 }
 }
+WHC_equestria = {
+	color = rgb { 249 26 93 }
+	color_ui = rgb { 249 26 93 }
+}

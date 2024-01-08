@@ -24,9 +24,9 @@
   nf_whc.4.a:0 "("You have the help of the Kingdom. Please, accept our finest weapon, may it serve you well.")"
 
   nf_whc.5.t:0 "Final Order Result"
-  nf_whc.5.d:0 ""
-  nf_whc.5.a:0 "We need more time top beat the beasts!"
-  nf_whc.5.d:0 "Hooray to the People and the King!"
+  nf_whc.5.d:0 "Therefore it is necessary to eliminate talk that we have the capability endlessly to retreat, that we have a lot of territory, that our country is great and rich, that there is a large population, and that bread always will be abundant. Such talk is false and parasitic, it weakens us and benefits the enemy, if we do not stop retreating we will be without bread, without fuel, without metal, without raw material, without factories and plants, without railways.\n\nThis leads to the conclusion, it is time to finish retreating. Not one step back! Such should now be our main slogan."
+  nf_whc.5.a:0 "We need more time to beat the beasts!"
+  nf_whc.5.b:0 "Hooray to the People and the King!"
 
   nf_whc.6.t:0 "Final Offence Result"
   nf_whc.6.d:0 ""
@@ -69,6 +69,10 @@
   nf_whc.14.t:0 "The Birth of an Empire"
   nf_whc.14.d:0 ""
   nf_whc.14.a:0 ""
+
+  nf_whc.15.t:0 "Friendship Is..."
+  nf_whc.15.d:0 "Queen Patricia proudly looked at the lands that had finally been freed from exploitation in the name of Communism. There had been much to go through, many to lose... But the Queen was not discouraged, she realized that the price for revolution is never low.\nShe wasn’t discouraged for one more reason, she thought of the friends she had made along the way.\n\nOf the Couple in charge of the Great Stampede, who had been pardoned by the Queen's favor and with whom they had developed the land, exceeding the five-year plan in the process.\n\nOf William Tanner of Manitoba, in whose person she found an excellent companion for hunting trips. On one such hunt, he had even saved Patricia from a deathclaw!\n\nBut Patricia realized that the end was far off, the battle for the revolution was not over, it was just beginning.\n\n§3"Threats will always try to progress, stop communism! and thus, a perpetual state of War against capitalism is needed..."§!"
+  nf_whc.15.a:0 "§3"We truly are Equestria at War"§!"
 
 
 

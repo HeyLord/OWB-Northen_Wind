@@ -12,6 +12,7 @@
   whc_plasma_tt:0 "§8Cool plasma guns? Another great choice! However, you'll have to snatch them from the corpses of our former workers who looted the entire arsenal. Good luck with that!§!\n\n"
   whc_recruited_soltz:0 "§tSoltz has agreed to work with us§!"
   whc_soltz_tt:0 "§tAlexei Soltz becomes available as an economic advisor.§!"
+  whc_north_tt:0 "\n§3Americans also should have a taste of revolution! Get claims on Dakota and Montana.§!"
 
   MORTIS_TT:0 "§Y$WHC_MORTIS_GHOST_HARKESS_NAME$§! becomes a Unit Leader.\n§LLevel§!: §Y5§!\n§RAttack Skill§!: §Y4§!\n§GDefense Skill§!: §Y4§!\n§PPlanning Skill§!: §Y4§!\n§MLogistics Skill§!: §Y2§!\n§gTraits§!: §tWinter Specialist§!, §tEnduring§!\n\n"
   BELL_TT:0 "§Y$WHC_NATALIA_BELL_NAME$§! becomes a Unit Leader.\n§LLevel§!: §Y4§!\n§RAttack Skill§!: §Y2§!\n§GDefense Skill§!: §Y4§!\n§PPlanning Skill§!: §Y3§!\n§MLogistics Skill§!: §Y3§!\n§gTraits§!: §tEnduring§!, §tGun Nut§!, §tCommando§!\n\n"

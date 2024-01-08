@@ -87,7 +87,7 @@ ideas = {
             }
         }
         whc_all_roads = {
-            picture = generic_vehicle_skid_loader
+            picture = commie_document
             removal_cost = -1
             modifier = {
                 production_speed_buildings_factor = 0.1
@@ -95,7 +95,7 @@ ideas = {
             }
         }
         whc_manitoban_investments = {
-            picture = generic_vehicle_skid_loader
+            picture = commie_nikolai_charm
             removal_cost = -1
             modifier = {
                 consumer_goods_factor = -0.15
@@ -268,7 +268,7 @@ ideas = {
             }
         }
         whc_war_experience = {
-            picture = yangtze_hat
+            picture = red_snowflake
             removal_cost = -1
             modifier = {
                 mobilization_speed = 0.2
