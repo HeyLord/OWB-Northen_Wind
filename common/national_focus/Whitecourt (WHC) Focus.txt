@@ -951,11 +951,8 @@ focus_tree = {
 				vertibird_unlock_tech = 1
 				air_tech_level_scientific = 1
 			}
-			hidden_effect = {
-				country_event = {
-					id = nf_whc.14
-					days = 14
-				}
+			country_event = {
+				id = nf_whc.14
 			}
 		}
 	}
@@ -1265,7 +1262,7 @@ focus_tree = {
 
 	focus = {
 		id = whc_embracing_the_truth
-		icon = GFX_focus_uar_from_the_plough_to_the_stars
+		icon = GFX_goal_WHC_Book_Reading
 		cost = 40
 		x = 2
 		y = 1

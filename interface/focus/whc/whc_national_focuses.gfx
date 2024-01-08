@@ -107,6 +107,10 @@ spriteTypes = {
 		name = "GFX_goal_WHC_Frank_Passkepeers_Dude"
 		texturefile = "gfx/interface/goals/unique/WHC/WHC_Frank_Passkepeers_Dude.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_WHC_Book_Reading"
+		texturefile = "gfx/interface/goals/unique/WHC/WHC_Book_Reading.dds"
+	}
 
 }
 
