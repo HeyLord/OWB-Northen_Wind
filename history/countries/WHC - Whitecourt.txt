@@ -132,4 +132,5 @@ add_ideas = {
 	oregon_cannibal_widespread_cannibalism
 	whc_king_without_a_crown
 	whc_king_communism_diplomacy
+	communist_autarky
 }
