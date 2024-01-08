@@ -413,6 +413,10 @@ country_event = {
 	option = {
 		name = nf_whc.9.a
 		add_stability = 0.1
+		1156 = {
+			remove_claim_by = ROOT
+			add_core_of = ROOT
+		}
 		set_capital = {
 			state = 1156
 		}
