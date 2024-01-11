@@ -17,11 +17,11 @@ country_event = { #Moose decides to go alone
 			RMM = {
 				RMM_rebecca_davis = {
 					set_nationality = WPG
-					remove_unit_leader_trait = RMM_republican_general
+					#remove_unit_leader_trait = RMM_republican_general
 				}
 				RMM_zayden_preston = {
 					set_nationality = WPG
-					remove_unit_leader_trait = RMM_republican_general
+					#remove_unit_leader_trait = RMM_republican_general
 				}
 			}
 		}
@@ -95,6 +95,11 @@ country_event = {
 			retire_character = RMM_rebecca_davis
 			retire_character = RMM_zayden_preston
 			retire_character = RMM_scarlett_hines
+			retire_character = RMM_barbara_nimmer
+			retire_character = RMM_paul_hunjadi
+			retire_character = RMM_polly_graham
+			retire_character = RMM_honey_erz
+			retire_character = RMM_roland_baal
 		}
 	}
 }

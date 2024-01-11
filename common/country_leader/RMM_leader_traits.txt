@@ -239,9 +239,6 @@ leader_traits = {
 		stability_factor = -0.1
 		political_power_factor = -0.25
 		experience_gain_air_factor = 0.25
-		research_bonus = {
-			air_tech_category = 0.25
-		}
 
 		ai_will_do = {
 			factor = 1

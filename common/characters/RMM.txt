@@ -522,6 +522,9 @@ characters = {
 			traits = {
 				rmm_great_prophet
 			}
+			research_bonus = {
+				air_tech_category = 0.25
+			}
 			cost = 100
 			ai_will_do = {
 				factor = 10
