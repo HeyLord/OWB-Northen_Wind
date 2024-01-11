@@ -34,6 +34,42 @@ spriteTypes = {
 		texturefile = "gfx/leaders/RMM/portrait_rmm_no_one.dds"
 	}
 
+	#Advisors
+
+	#RMM
+    spriteType = {
+		name = "GFX_idea_RMM_mr_smith"
+		texturefile = "gfx/interface/ideas/advisors/RMM_mr_smith.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_chancellor_mcclane"
+		texturefile = "gfx/interface/ideas/advisors/RMM_chancellor_mcclane.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_bugman"
+		texturefile = "gfx/interface/ideas/advisors/RMM_bugman.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_coral_hall"
+		texturefile = "gfx/interface/ideas/advisors/RMM_coral_hall.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_rebecca_davis"
+		texturefile = "gfx/interface/ideas/advisors/RMM_rebecca_davis.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_zayden_preston"
+		texturefile = "gfx/interface/ideas/advisors/RMM_zayden_preston.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_scarlet_hines"
+		texturefile = "gfx/interface/ideas/advisors/RMM_scarlet_hines.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_mason_harper"
+		texturefile = "gfx/interface/ideas/advisors/RMM_mason_harper.dds"
+	}
+
 	#WHC
 	spriteType = {
 		name = "GFX_Portrait_WHC_leader"

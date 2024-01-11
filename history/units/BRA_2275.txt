@@ -1,0 +1,176 @@
+﻿##### Starting Division Templates #####
+division_template = {
+	name = "Levy"
+	template_counter = 177
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 2 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Men at Arms"
+	template_counter = 203
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		anti_tank_company = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Mounties"
+	template_counter = 74
+	regiments = {
+		spec_ops = { x = 0 y = 0 }
+		spec_ops = { x = 0 y = 1 }
+		spec_ops = { x = 1 y = 0 }
+		spec_ops = { x = 1 y = 1 }
+		spec_ops = { x = 2 y = 0 }
+	}
+	support = {
+		dog_company = { x = 0 y = 0 }
+        recon_company = { x = 1 y = 0 }
+        anti_tank_company = { x = 2 y = 0 }
+	}
+}
+
+##### Starting Army #####
+units = {
+	# Special Forces
+	division = {
+		name = "Gunn's Personal Guard"
+		location = 16381
+		division_template = "Mounties"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Duck Mountain Mountaineers"
+		location = 14854
+		division_template = "Mounties"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Boggy Creek Rangers"
+		location = 14857
+		division_template = "Mounties"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+
+	# Infantry
+	division = {
+		name = "Coalition War Veterans"
+		location = 14849
+		division_template = "Men at Arms"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Rock Ridge Veterans"
+		location = 14651
+		division_template = "Men at Arms"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Reforester Reserves"
+		location = 14847
+		division_template = "Men at Arms"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Anger's Company"
+		location = 14664
+		division_template = "Men at Arms"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Fox's Company"
+		location = 15241
+		division_template = "Men at Arms"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+
+	# Militia
+	division = {
+		name = "Sioux Valley Levy"
+		location = 14670
+		division_template = "Levy"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Baragar Levy"
+		location = 14668
+		division_template = "Levy"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Strathclair Levy"
+		location = 15247
+		division_template = "Levy"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Kneepaw Levy"
+		location = 15253
+		division_template = "Levy"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Solsgirth Levy"
+		location = 15242
+		division_template = "Levy"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "BRA"
+		}
+		requested_factories = 3
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = anti_tank_equipment_1
+			creator = "BRA"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "BRA"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+}

@@ -10,10 +10,8 @@ state={
 		metal = 6
 	}
 	history = {
-		owner = BRA
-		add_core_of = BRA
-		#owner = RMM
-		#add_core_of = RMM
+		owner = RMM
+		add_core_of = RMM
 		victory_points = {
 			15226 5
 		}

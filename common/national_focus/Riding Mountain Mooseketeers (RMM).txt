@@ -186,7 +186,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_austerity_measures
-        icon = GFX_goal_og_guns
+        icon = GFX_goal_generic_cart
         cost = 30
         x = 4
         y = 1
@@ -352,7 +352,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_desperate_defence
-        icon = GFX_goal_as_bunker_blues
+        icon = GFX_goal_generic_bunker_1
         cost = 30
         x = 0
         y = 1
@@ -639,7 +639,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_fort_cap_hell
-        icon = GFX_goal_CPH_revenge
+        icon = GFX_goal_arr_maxsec_prison_build
         cost = 60
         x = 0
         y = 1
@@ -747,7 +747,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_finish_up
-        icon = GFX_goal_og_police
+        icon = GFX_goal_generic_scyscrapers_postwar
         cost = 40
         x = 1
         y = 1
@@ -878,7 +878,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_advanced_guns
-        icon = GFX_goal_BRA_energy_weapons
+        icon = GFX_goal_generic_laser_rifle_2
         cost = 40
         x = 2
         y = 1
@@ -987,7 +987,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_stampede
-        icon = GFX_goal_STA_generic
+        icon = GFX_goal_generic_radioactive_horse
         cost = 40
         x = 0
         y = 2
@@ -1090,7 +1090,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_northern_lights
-        icon = GFX_goal_og_second_government
+        icon = GFX_goal_CAR_april_Municipal_Councils
         cost = 40
         x = 2
         y = 1
@@ -1186,7 +1186,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_partisan
-        icon = GFX_goal_rg_uni_yellow
+        icon = GFX_focus_canada_soldier
         cost = 30
         x = -2
         y = 1
@@ -1208,7 +1208,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_shield
-        icon = GFX_goal_rg_mil_e_1
+        icon = GFX_goal_generic_focus_magazine_aat_sniper
         cost = 30
         x = 2
         y = 1
@@ -2713,7 +2713,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_steele_tactics
-        icon = GFX_goal_canada_eloi_steele
+        icon = GFX_goal_generic_advanced_firearms_focus
         cost = 35
         x = -1
         y = 1
@@ -2786,7 +2786,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_republican_recruitment
-        icon = GFX_goal_canada_rod
+        icon = GFX_goal_generic_free_states_soldier
         cost = 35
         x = 0
         y = 1

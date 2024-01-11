@@ -6,10 +6,8 @@ state={
 		16347 16348 16350 16351 16354 16356 16358 16359
 	}
 	history = {
-		owner = BRA
-		add_core_of = BRA
-		#owner = RMM
-		#add_core_of = RMM
+		owner = RMM
+		add_core_of = RMM
 		add_claim_by = BGC
 		victory_points = {
 			16347 5

@@ -9,10 +9,8 @@ state={
 		composites = 12
 	}
 	history = {
-		owner = BRA
-		add_core_of = BRA
-		#owner = RMM
-		#add_core_of = RMM
+		owner = RMM
+		add_core_of = RMM
 		victory_points = {
 			15220 15
 		}

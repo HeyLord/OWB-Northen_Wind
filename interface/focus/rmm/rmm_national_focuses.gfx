@@ -131,5 +131,14 @@ spriteTypes = {
 		name = "GFX_goal_RMM_Agents_Vault_Monitor"
 		texturefile = "gfx/interface/goals/unique/RMM/RMM_Agents_Vault_Monitor.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_BRA_Tanner"
+		texturefile = "gfx/interface/goals/unique/RMM/BRA_Tanner.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_WPG_Air_Baron"
+		texturefile = "gfx/interface/goals/unique/RMM/WPG_Air_Baron.dds"
+	}
+
 }
 
