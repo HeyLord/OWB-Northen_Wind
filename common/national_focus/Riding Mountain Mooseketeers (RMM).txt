@@ -740,7 +740,7 @@ focus_tree = {
         relative_position_id = rmm_irc_brandon
         completion_reward = {
             swap_ideas = {
-                remove_idea = RMM_independance
+                remove_idea = RMM_independance_new
                 add_idea = rmm_victory_of_revolution
             }
         }
@@ -1462,18 +1462,6 @@ focus_tree = {
             }
             every_character = {
                 set_nationality = WPG
-            }
-            if = {
-                limit = {
-                    WPG = {
-                        NOT = {
-                            has_completed_focus = wpg_form_second_coalition
-                        }
-                    }
-                }
-                WPG = {
-                    complete_national_focus = wpg_lucky_draw
-                }
             }
         }
     }
@@ -2446,6 +2434,7 @@ focus_tree = {
         relative_position_id = rmm_adm_allies
 
         completion_reward = {
+            navy_experience = 100
         }
     }
     focus = {
@@ -2496,6 +2485,9 @@ focus_tree = {
             1380 = {
                 OWNER = {
                     is_the_second_coalition_member = yes
+                    NOT = {
+                        tag = ROOT
+                    }
                 }
             }
         }
@@ -2509,12 +2501,22 @@ focus_tree = {
         relative_position_id = rmm_adm_allies
 
         completion_reward = {
-            every_country = {
+            if = {
                 limit = {
-                    owns_state = 1380
-                    is_the_second_coalition_member = yes
+                    NOT = {
+                        owns_state = 1380
+                    }
                 }
-                country_event = nf_rmm.10
+                every_country = {
+                    limit = {
+                        owns_state = 1380
+                        is_the_second_coalition_member = yes
+                    }
+                    country_event = nf_rmm.10
+                }
+            }
+            else = {
+                custom_effect_tooltip = rmm_dawfin_tt
             }
         }
     }
@@ -2731,7 +2733,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_proper_baron
-        icon = GFX_goal_canada_mad_baron
+        icon = GFX_goal_WPG_Air_Baron
         cost = 35
         x = 1
         y = 1

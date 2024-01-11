@@ -15,6 +15,7 @@
   RMM_anarchy_tt:0 "§RThe lifelessness is absolute,\nA darkness so profound;\nNo one can lend assistance,\nNo aid shall be found.§!"
   rmm_shipment_tt:0 "§OUnlocks a decision to ask Chicago for an advanced energy weaponry.§!"
   rmm_shipment_2_tt:0 "§OSatisfied with our efforts, the §gSecratary§! will increase the amount of weapons Chicago can send to us!§!"
+  rmm_dawfin_tt:0 "§2We have Dawfin under our control currently.§!"
 
 
   nf_rmm.15.a_tt:0 "We will send water to Chicago."
@@ -30,3 +31,5 @@
   RMM_agents_chicago_shipments:0 "§OCommunications With the Chicago§!"
   RMM_agents_chicago_shipments_desc:0 "     "
   RMM_shipments_chicago:0 "§OShipments to Chicago§!"
+
+  RMM_independance_new:0 "Independence"

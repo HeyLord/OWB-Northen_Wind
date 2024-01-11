@@ -136,6 +136,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/unique/RMM/BRA_Tanner.dds"
 	}
 	spriteType = {
+		name = "GFX_goal_BRA_brandon_stars"
+		texturefile = "gfx/interface/goals/unique/RMM/BRA_brandon_stars.dds"
+	}
+	spriteType = {
 		name = "GFX_goal_WPG_Air_Baron"
 		texturefile = "gfx/interface/goals/unique/RMM/WPG_Air_Baron.dds"
 	}

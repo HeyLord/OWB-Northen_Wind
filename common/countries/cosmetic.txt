@@ -2027,3 +2027,21 @@ WHC_equestria = {
 	color = rgb { 249 26 93 }
 	color_ui = rgb { 249 26 93 }
 }
+
+### RMM
+RMM_dawfin = {
+	color = rgb { 0 42 255 }
+	color_ui = rgb { 0 42 255 }
+}
+RMM_CRA = {
+	color = rgb { 162 112 13 }
+	color_ui = rgb { 162 112 13 }
+}
+RMM_CRA_final = {
+	color = rgb { 162 112 13 }
+	color_ui = rgb { 162 112 13 }
+}
+RMM_Anarchy = {
+	color = rgb { 38 33 33 }
+	color_ui = rgb { 38 33 33 }
+}

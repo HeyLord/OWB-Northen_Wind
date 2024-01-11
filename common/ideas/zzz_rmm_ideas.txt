@@ -1,6 +1,6 @@
 ideas = {
 	country = {
-		RMM_independance = {
+		RMM_independance_new = {
             picture = economy_trophy
             removal_cost = -1
             allowed = {

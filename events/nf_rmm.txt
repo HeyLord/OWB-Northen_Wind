@@ -45,7 +45,10 @@ country_event = {
 }
 #Manitoba gets an event about Moose escaping
 country_event = {
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_rmm.3" }
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event nf_rmm.3"
+		set_country_flag = bra_rmm_escapes
+	}
 	id = nf_rmm.3
 	title = nf_rmm.3.t
 	desc = nf_rmm.3.d
@@ -55,7 +58,6 @@ country_event = {
 
 	option = {
 		name = nf_rmm.3.a
-		set_country_flag = bra_rmm_escapes
 	}
 }
 #Agents kill everyone

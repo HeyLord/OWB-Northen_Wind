@@ -127,7 +127,7 @@ set_popularities = {
 	ruler = 0
 }
 add_ideas = {
-	RMM_independance
+	RMM_independance_new
 }
 
 create_equipment_variant = {

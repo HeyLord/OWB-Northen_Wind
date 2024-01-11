@@ -1,0 +1,8 @@
+rmm_chicago_colony = {
+	icon = GFX_idea_generic_fucked_economy
+	country_resource_energy = rmm_resource_energy
+	country_resource_metal = rmm_resource_metal
+	country_resource_circuitry = rmm_resource_circuitry
+	country_resource_water = rmm_resource_water
+	country_resource_advanced = rmm_resource_advanced
+}
