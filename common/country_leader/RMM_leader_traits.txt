@@ -265,4 +265,13 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	rmm_the_spy = {
+		random = no
+		army_attack_factor = 0.1
+		experience_loss_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

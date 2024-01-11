@@ -23,6 +23,8 @@
   RMM_polly_graham_name:0 "Polly Graham"
   RMM_zarathustra_name:0 "Zarathustra"
   RMM_roland_baal_name:0 "Roland Baal"
+  RMM_agent_gamma_name:0 "Agent Gamma"
+  RMM_agent_gamma_desc:0 "While walking through the wasteland one night, the supermutant Poge accidentally stumbled upon men in black suits. Realizing that they were probably members of a secret organization he had always dreamed of joining, he killed the group, cut out one of the corpses' faces and put it on himself like a mask.\n\nPoge was proud of himself when he arrived at the secret Agent base, although he caught a lot of frightened looks, but his ingenious disguise had worked and not a single agent had said a word to him. Later they started to address him as Agent Gamma, and Poge finally felt that he was part of something great."
 
 
   ###Traits
@@ -54,6 +56,7 @@
   rmm_bleeding_patriot:0 "Bleeding Patriot"
   rmm_great_prophet:0 "Great Prophet"
   rmm_metis_liason:0 "Metis Liaison"
+  rmm_the_spy:0 "I Am The Spy"
 
 
   rmm_chicago_colony:0 "Canada Exploitation"

@@ -553,6 +553,32 @@ characters = {
 			}
 		}
 	}
+	RMM_agent_gamma = {
+		name = RMM_agent_gamma_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_agent_gamma
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = RMM_agent_gamma_army_chief
+			allowed = {
+				original_tag = RMM
+			}
+			visible = {
+				has_completed_focus = rmm_enp_cowards_and_traitors
+			}
+			traits = {
+				rmm_the_spy
+			}
+			desc = RMM_agent_gamma_desc
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
 
 
 

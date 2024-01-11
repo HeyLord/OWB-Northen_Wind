@@ -113,6 +113,10 @@ spriteTypes = {
 		name = "GFX_idea_RMM_roland_baal"
 		texturefile = "gfx/interface/ideas/advisors/RMM_roland_baal.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_RMM_agent_gamma"
+		texturefile = "gfx/interface/ideas/advisors/RMM_agent_gamma.dds"
+	}
 
 
 	#WHC
