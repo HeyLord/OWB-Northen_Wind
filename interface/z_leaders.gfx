@@ -69,6 +69,51 @@ spriteTypes = {
 		name = "GFX_idea_RMM_mason_harper"
 		texturefile = "gfx/interface/ideas/advisors/RMM_mason_harper.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_RMM_iron_vanguard"
+		texturefile = "gfx/interface/ideas/advisors/RMM_iron_vanguard.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_cole_montgomery"
+		texturefile = "gfx/interface/ideas/advisors/RMM_cole_montgomery.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_paul_hunjadi"
+		texturefile = "gfx/interface/ideas/advisors/RMM_paul_hunjadi.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_barbara_nimmer"
+		texturefile = "gfx/interface/ideas/advisors/RMM_barbara_nimmer.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_kalifa_rohm"
+		texturefile = "gfx/interface/ideas/advisors/RMM_kalifa_rohm.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_honey_erz"
+		texturefile = "gfx/interface/ideas/advisors/RMM_honey_erz.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_werner_von_blau"
+		texturefile = "gfx/interface/ideas/advisors/RMM_werner_von_blau.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_simo_quinola"
+		texturefile = "gfx/interface/ideas/advisors/RMM_simo_quinola.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_polly_graham"
+		texturefile = "gfx/interface/ideas/advisors/RMM_polly_graham.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_zarathustra"
+		texturefile = "gfx/interface/ideas/advisors/RMM_zarathustra.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RMM_roland_baal"
+		texturefile = "gfx/interface/ideas/advisors/RMM_roland_baal.dds"
+	}
+
 
 	#WHC
 	spriteType = {

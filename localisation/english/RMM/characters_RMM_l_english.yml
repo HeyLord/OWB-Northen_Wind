@@ -11,6 +11,18 @@
   RMM_MISTER_SMITH_NAME:0 "Mr. Smith"
   RMM_NO_ONE_NAME:0 "Lawless Wasteland"
   RMM_BUGMAN_NAME:0 "Bugman"
+  RMM_IRON_NAME:0 "Iron Vanguard"
+  RMM_iron_desc:0 "Pathetic by even the lowest of Enclave expectations, this former member of the Metal Mouth gang was "hired" when, during his capture, he promised to bring us members of his band in exchange for his own freedom. But fearing the wrath of the gang after his deed, he begged to join us, for which he received the ironic nickname of "Misinformation Spreader" from Agent Sigma."
+  RMM_SIMO_NAME:0 "Simo Quinola"
+  RMM_paul_hunjadi_name:0 "Paul Hunjadi"
+  RMM_cole_montgomery_name:0 "Cole Montgomery"
+  RMM_barbara_nimmer_name:0 "Barbara Nimmer"
+  RMM_kalifa_rohm_name:0 "Kalifa Rohm"
+  RMM_honey_erz_name:0 "Honey Erz"
+  RMM_werner_von_blau_name:0 "Werner von Blau"
+  RMM_polly_graham_name:0 "Polly Graham"
+  RMM_zarathustra_name:0 "Zarathustra"
+  RMM_roland_baal_name:0 "Roland Baal"
 
 
   ###Traits
@@ -30,6 +42,18 @@
 	rmm_first_revolutionary:0 "First Revolutionary"
   rmm_anti_monarch:0 "Staunch Anti Monarchist"
   rmm_liberty_bomber:0 "Liberty Bomber"
+
+  rmm_misinformation:0 "Misinformation Spreader"
+  rmm_economic_jumpstart:0 "Economic Jumpstart"
+  rmm_bohemian_wannabe:0 "Bohemian Wannabe"
+  rmm_trade_monopolist:0 "Trade Monopolist"
+  rmm_dock_doc:0 "Dock Doc"
+  rmm_rat_tail:0 "Rat Tail"
+  rmm_revolut_spirit:0 "Revolutionary Spirit"
+  rmm_intoxicated_pirate:0 "Intoxicated Pirate"
+  rmm_bleeding_patriot:0 "Bleeding Patriot"
+  rmm_great_prophet:0 "Great Prophet"
+  rmm_metis_liason:0 "Metis Liaison"
 
 
   rmm_chicago_colony:0 "Canada Exploitation"

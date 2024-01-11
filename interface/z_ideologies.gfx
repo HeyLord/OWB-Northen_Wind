@@ -1,0 +1,21 @@
+spriteTypes = {
+
+	#####STRATHCOMMUNE#####
+	spriteType = {
+		name = "GFX_ideology_RMM_people_group"
+		texturefile = "gfx/interface/ideologies/RMM/RMM_people.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_RMM_ruler_group"
+		texturefile = "gfx/interface/ideologies/RMM/RMM_people.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_RMM_intellectuals_group"
+		texturefile = "gfx/interface/ideologies/RMM/RMM_intellectuals.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_RMM_elites_group"
+		texturefile = "gfx/interface/ideologies/RMM/RMM_elites.dds"
+	}
+
+}

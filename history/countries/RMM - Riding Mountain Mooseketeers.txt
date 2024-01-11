@@ -119,6 +119,18 @@ recruit_character = RMM_agent_delta
 recruit_character = RMM_mister_smith
 recruit_character = RMM_no_one
 recruit_character = RMM_bugman
+recruit_character = RMM_iron_vanguard
+recruit_character = RMM_simo_quinola
+recruit_character = RMM_paul_hunjadi
+recruit_character = RMM_cole_montgomery
+recruit_character = RMM_barbara_nimmer
+recruit_character = RMM_kalifa_rohm
+recruit_character = RMM_honey_erz
+recruit_character = RMM_werner_von_blau
+recruit_character = RMM_polly_graham
+recruit_character = RMM_zarathustra
+recruit_character = RMM_roland_baal
+
 
 set_popularities = {
 	people = 60

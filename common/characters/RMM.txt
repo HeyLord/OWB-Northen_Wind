@@ -304,6 +304,263 @@ characters = {
 			}
 		}
 	}
+	RMM_iron_vanguard = {
+		name = RMM_IRON_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_iron_vanguard
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = RMM_iron_vanguard_advisor
+			allowed = {
+				original_tag = RMM
+			}
+			visible = {
+				has_completed_focus = rmm_enp_cowards_and_traitors
+			}
+			traits = {
+				rmm_misinformation
+			}
+			desc = RMM_iron_desc
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	RMM_simo_quinola = {
+		name = RMM_SIMO_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_simo_quinola
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = RMM_simo_quinola_economic_advisor
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_economic_jumpstart
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	RMM_paul_hunjadi = {
+		name = RMM_paul_hunjadi_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_paul_hunjadi
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = RMM_paul_hunjadi_economic_advisor
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_bohemian_wannabe
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	RMM_cole_montgomery = {
+		name = RMM_cole_montgomery_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_cole_montgomery
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = RMM_cole_montgomery_economic_advisor
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_trade_monopolist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	RMM_barbara_nimmer = {
+		name = RMM_barbara_nimmer_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_barbara_nimmer
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = RMM_barbara_nimmer_economic_advisor
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_dock_doc
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	RMM_kalifa_rohm = {
+		name = RMM_kalifa_rohm_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_kalifa_rohm
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = RMM_kalifa_rohm_economic_advisor
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_rat_tail
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	RMM_honey_erz = {
+		name = RMM_honey_erz_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_honey_erz
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = RMM_honey_erz_cultural_advisor
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_revolut_spirit
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	RMM_werner_von_blau = {
+		name = RMM_werner_von_blau_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_werner_von_blau
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = RMM_werner_von_blau_cultural_advisor
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_intoxicated_pirate
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	RMM_polly_graham = {
+		name = RMM_polly_graham_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_polly_graham
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = RMM_polly_graham_cultural_advisor
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_bleeding_patriot
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	RMM_zarathustra = {
+		name = RMM_zarathustra_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_zarathustra
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = RMM_zarathustra_cultural_advisor
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_great_prophet
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	RMM_roland_baal = {
+		name = RMM_roland_baal_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_RMM_roland_baal
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = RMM_roland_baal_cultural_advisor
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				rmm_metis_liason
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
 	RMM_no_one = {
 		name = RMM_NO_ONE_NAME
 		portraits = {

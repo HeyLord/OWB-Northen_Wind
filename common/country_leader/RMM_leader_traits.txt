@@ -139,5 +139,133 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	rmm_misinformation = {
+		random = no
+		encryption_factor = 0.15
+		political_power_factor = 0.05
 
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_economic_jumpstart = {
+		random = no
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		country_resource_energy = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_bohemian_wannabe = {
+		random = no
+		production_speed_arms_factory_factor = 0.1
+		industrial_capacity_factory = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_trade_monopolist = {
+		random = no
+		production_factory_max_efficiency_factor = 0.05
+		trade_opinion_factor = 0.2
+		caps_flat_income_modifier = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_dock_doc = {
+		random = no
+		industrial_capacity_dockyard = 0.1
+		industry_free_repair_factor = 0.1
+		industry_repair_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_rat_tail = {
+		random = no
+		equipment_capture_factor = 0.05
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+			support_equipment = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_revolut_spirit = {
+		random = no
+		war_support_factor = 0.15
+		resistance_damage_to_garrison = -0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_intoxicated_pirate = {
+		random = no
+		convoy_raiding_efficiency_factor = 0.2
+		land_reinforce_rate = 0.05
+		org_loss_when_moving = -0.1
+		army_org_regain = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_bleeding_patriot = {
+		random = no
+		consumer_goods_factor = -0.03
+		stability_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_great_prophet = {
+		random = no
+		stability_factor = -0.1
+		political_power_factor = -0.25
+		experience_gain_air_factor = 0.25
+		research_bonus = {
+			air_tech_category = 0.25
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rmm_metis_liason = {
+		random = no
+		production_factory_efficiency_gain_factor = 0.03
+		industrial_capacity_factory = 0.05
+		equipment_bonus = {
+			support_robot = {
+				soft_attack = 0.15
+				hard_attack = 0.15
+				instant = yes
+			}
+			combat_robot_equipment = {
+				soft_attack = 0.15
+				hard_attack = 0.15
+				instant = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

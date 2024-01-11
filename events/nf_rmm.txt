@@ -305,7 +305,7 @@ country_event = {
 	id = nf_rmm.13
 	title = nf_rmm.13.t
 	desc = nf_rmm.13.d
-	picture = GFX_event_sub_generic_coast
+	picture = GFX_event_rmm_the_secretary
 
 	is_triggered_only = yes
 
