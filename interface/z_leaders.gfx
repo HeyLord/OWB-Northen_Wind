@@ -168,4 +168,15 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/advisors/whc_alexei_soltz.dds"
 	}
 
+
+	#RMM
+	spriteType = {
+		name = "GFX_trait_RMM_republican_general"
+		textureFile = "gfx/interface/traits/RMM_republican_general.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_RMM_patriot_general"
+		textureFile = "gfx/interface/traits/RMM_patriot_general.dds"
+	}
+
 }
