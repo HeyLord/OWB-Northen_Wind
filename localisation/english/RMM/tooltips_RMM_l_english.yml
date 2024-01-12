@@ -4,18 +4,19 @@
   rmm_river_volunteers_2_tt:0 "§22 power armor divisions of @WPG Three River volunteers will arrive to help!§!"
   rmm_metis_tt:0 "§23 robot divisions will roll to us from the @MTC Metis Congress§!"
   rmm_cores_tt:0 "§2We'll get cores on all states we've completed previous focuses for!§!"
-  rmm_sailors_tt:0 "§2What will you do to 1 division of Drunken Sailros? It's up to you§!"
-  rmm_river_volunteers_3_tt:0 "§21 division of @WPG Three River volunteers will arrive to help with the Admiral plan!§!"
-  rmm_marines_tt:0 "§2Get 2 spec ops divisions of our best Marines!§!"
-  rmm_old_tt:0 "§2The group of "The Old Ones", who apparently were protecting the plant, will join our "cruise" too.§!"
+  rmm_sailors_tt:0 "§0What will you do to 1 division of Drunken Sailros? It's up to you§!"
+  rmm_river_volunteers_3_tt:0 "§01 division of @WPG Three River volunteers will arrive to help with the Admiral plan!§!"
+  rmm_marines_tt:0 "§0Get 2 spec ops divisions of our best Marines!§!"
+  rmm_old_tt:0 "§0The group of "The Old Ones", who were protecting the power plant, will join our "cruise" too.§!"
   rmm_plasma_clots_tt:0 "§RThe only thing left of Mooseketeers leaders are the clots of §Gplasma§! on the floor§!"
-  rmm_pa_div_tt:0 "§OThe Secretary was gracious enough to send us one PA division, that was positioned nearby§!"
+  rmm_pa_div_tt:0 "§OI have some usefull contacts thanfully, one PA division, that was positioned nearby, will arrive to help.§!"
   rmm_penal_civs_tt:0 "§OWe'll get 2 infantry divisions, §twhether you want to fight or not is not our problem.§!§!"
   rmm_agency_tt:0 "§O"Canadian Civil Intelligence Agency" will be created§!"
   RMM_anarchy_tt:0 "§RThe lifelessness is absolute,\nA darkness so profound;\nNo one can lend assistance,\nNo aid shall be found.§!"
   rmm_shipment_tt:0 "§OUnlocks a decision to ask Chicago for an advanced energy weaponry.§!"
   rmm_shipment_2_tt:0 "§OSatisfied with our efforts, the §gSecratary§! will increase the amount of weapons Chicago can send to us!§!"
-  rmm_dawfin_tt:0 "§2We have Dawfin under our control currently.§!"
+  rmm_dawfin_tt:0 "§0We have Dawfin under our control currently.§!"
+  rmm_race_against_time_tt:0 "§0We are in the race against time now, we must defeat the Dammed and evacute successfuly, or §Rwe will suffer even greater§! if Manitoba attacks us before this.§!"
 
 
   nf_rmm.15.a_tt:0 "We will send water to Chicago."
@@ -33,3 +34,5 @@
   RMM_shipments_chicago:0 "§OShipments to Chicago§!"
 
   RMM_independance_new:0 "Independence"
+
+  RMM_OWB_DESC:0 ""

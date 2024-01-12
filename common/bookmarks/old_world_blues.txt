@@ -934,6 +934,19 @@ bookmarks = {
 				whc_no_parasites
 			}
 		}
+		"RMM" = {
+			history = "RMM_OWB_DESC"
+			minor = no
+			ideology = people
+			ideas = {
+				RMM_independance_new
+			}
+			focuses = {
+				rmm_irc_chancellor
+				rmm_adm_admiralty
+				rmm_enp_cowards_and_traitors
+			}
+		}
 		"MCA" = {
 			minor = no
 			history = "MCA_OWB_DESC"
@@ -1007,21 +1020,6 @@ bookmarks = {
 				mnc_triumph_in_montana_fucking_stupid_line_arrrgh
 			}
 		}
-		"STR" = {
-			minor = no
-			history = "STR_OWB_DESC"
-			ideology = people
-			ideas = {
-				akicita
-				str_horse_masters2
-				STR_standing_rock_hegemony
-			}
-			focuses = {
-				STR_seven_fires
-				STR_montanas
-				STR_manitoba
-			}
-		}
 		"WPG" = {
 			minor = no
 			history = "WPG_OWB_DESC"
@@ -1064,6 +1062,21 @@ bookmarks = {
 		#		VTS_the_robo_brain_coup
 		#	}
 		#}
+		"STR" = {
+			minor = yes
+			history = "STR_OWB_DESC"
+			ideology = people
+			ideas = {
+				akicita
+				str_horse_masters2
+				STR_standing_rock_hegemony
+			}
+			focuses = {
+				STR_seven_fires
+				STR_montanas
+				STR_manitoba
+			}
+		}
 		"BGR" = {
 			history = "BGR_OWB_DESC"
 			minor = yes
@@ -1090,20 +1103,6 @@ bookmarks = {
 				pro_out_of_the_mine
 				pro_rockets_red_glare
 				pro_atomic_mining_techniques
-			}
-		}
-		"SIE" = {
-			history = "SIE_OWB_DESC"
-			minor = yes
-			ideology = people
-			ideas = {
-				sie_mole_miner_bonus
-				sie_arapaho_idea_2
-			}
-			focuses = {
-				sie_safety_in_wyoming
-				sie_the_federation
-				sie_wyoming_once_again
 			}
 		}
 		"TCA" = {

@@ -219,6 +219,7 @@ country_event = {
 				people = 20
 			}
 		}
+		custom_effect_tooltip = rmm_race_against_time_tt
 	}
 }
 #Give back our cores pls uwu

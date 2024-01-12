@@ -2434,6 +2434,11 @@ focus_tree = {
         relative_position_id = rmm_adm_allies
 
         completion_reward = {
+            add_tech_bonus = {
+                uses = 2
+                bonus = 1.0
+                category = naval_tech_category
+            }
             navy_experience = 100
         }
     }
@@ -2812,7 +2817,7 @@ focus_tree = {
     focus = {
         id = rmm_enp_cowards_and_traitors
         icon = GFX_goal_RMM_Agents_Hat
-        cost = 30
+        cost = 14
         x = 55
         y = 5
         cancelable = no
