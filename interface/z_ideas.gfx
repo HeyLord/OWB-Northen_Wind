@@ -8,6 +8,9 @@ spriteTypes = {
         name = "GFX_idea_whc_leaf_crown"
         texturefile = "gfx/interface/ideas/whc_leaf_crown.dds"
     }
-
+    spriteType = {
+        name = "GFX_idea_bra_mountie_hat"
+        texturefile = "gfx/interface/ideas/bra_mountie_hat.dds"
+    }
 }
 

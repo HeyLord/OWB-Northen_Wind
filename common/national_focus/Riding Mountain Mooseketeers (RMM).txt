@@ -3189,10 +3189,15 @@ focus_tree = {
         relative_position_id = rmm_enp_reinforcements
 
         completion_reward = {
-            set_country_flag = rmm_activate_shipments
+            custom_effect_tooltip = rmm_resources_tt
             swap_ideas = {
                 remove_idea = rmm_canada_defiant_1
                 add_idea = rmm_canada_defiant_2
+            }
+            hidden_effect = {
+                set_country_flag = rmm_activate_shipments
+                add_dynamic_modifier = { modifier = rmm_chicago_colony }
+                activate_mission = RMM_shipments_chicago
             }
         }
     }

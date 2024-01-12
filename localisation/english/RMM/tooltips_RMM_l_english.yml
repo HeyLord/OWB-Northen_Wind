@@ -17,6 +17,7 @@
   rmm_shipment_2_tt:0 "§OSatisfied with our efforts, the §gSecratary§! will increase the amount of weapons Chicago can send to us!§!"
   rmm_dawfin_tt:0 "§0We have Dawfin under our control currently.§!"
   rmm_race_against_time_tt:0 "§0We are in the race against time now, we must defeat the Dammed and evacute successfuly, or §Rwe will suffer even greater§! if Manitoba attacks us before this.§!"
+  rmm_resources_tt:0 "§OWe will be required to send resources to Chicago every 70 days,§! §Rfailure will not be tolerated.§!\n\n"
 
 
   nf_rmm.15.a_tt:0 "We will send water to Chicago."

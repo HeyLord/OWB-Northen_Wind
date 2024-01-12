@@ -382,7 +382,6 @@ country_event = {
 		add_ideas = rmm_canada_defiant_1
 		remove_ideas = rmm_revolution_betrayed
 		add_country_leader_trait = cruel_tyrant
-		add_dynamic_modifier = { modifier = rmm_chicago_colony }
 	}
 }
 #Chicago shipments
@@ -404,52 +403,50 @@ country_event = {
         }
         set_temp_variable = { temp_water_rmm = resource@water }
 		divide_temp_variable = { temp_water_rmm = 5 }
-        round_temp_variable = temp_water_mca
+        round_temp_variable = temp_water_rmm
         subtract_from_variable = { rmm_resource_water = temp_water_rmm }
         custom_effect_tooltip = nf_rmm.15.a_tt
         force_update_dynamic_modifier = yes
+		activate_mission = RMM_shipments_chicago
     }
     option = {
 		name = nf_rmm.15.b
         trigger = {
             check_variable = { resource@metal > 10}
 			NOT = {
-				check_variable = { rmm_resource_energy < -20 }
+				check_variable = { rmm_resource_metal < -20 }
 			}
         }
         set_temp_variable = { temp_metal_rmm = resource@metal }
-		divide_temp_variable = { temp_metal_mca = 8 }
-        round_temp_variable = temp_metal_mca
-        subtract_from_variable = { rmm_resource_metal = temp_metal_mca }
+		divide_temp_variable = { rmm_resource_metal = 8 }
+        round_temp_variable = temp_metal_rmm
+        subtract_from_variable = { rmm_resource_metal = temp_metal_rmm }
         custom_effect_tooltip = nf_rmm.15.b_tt
         force_update_dynamic_modifier = yes
-
-
+		activate_mission = RMM_shipments_chicago
 	}
     option = {
 		name = nf_rmm.15.c
         trigger = {
             check_variable = { resource@energy > 10}
 			NOT = {
-				check_variable = { rmm_resource_metal < -20 }
+				check_variable = { rmm_resource_energy < -20 }
 			}
         }
         set_temp_variable = { temp_energy_rmm = resource@energy }
 		divide_temp_variable = { temp_energy_mca = 5 }
-        round_temp_variable = temp_energy_mca
+        round_temp_variable = temp_energy_rmm
         subtract_from_variable = { rmm_resource_energy = temp_energy_rmm }
         custom_effect_tooltip = nf_rmm.15.c_tt
         force_update_dynamic_modifier = yes
-
+		activate_mission = RMM_shipments_chicago
 	}
     option = {
 		name = nf_rmm.15.e
         trigger = {
-			OR = {
-				check_variable = { rmm_resource_water < -25 }
-				check_variable = { rmm_resource_energy < -20 }
-				check_variable = { rmm_resource_metal < -20 }
-			}
+			check_variable = { rmm_resource_water < -25 }
+			check_variable = { rmm_resource_energy < -20 }
+			check_variable = { rmm_resource_metal < -20 }
         }
 		custom_effect_tooltip = nf_rmm.15.e_tt
 		hidden_effect = {
