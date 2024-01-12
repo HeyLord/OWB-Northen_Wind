@@ -1762,8 +1762,6 @@ focus_tree = {
 		y = 1
 		prerequisite = {
 			focus = whc_true_communist_man
-		}
-		prerequisite = {
 			focus = whc_share_the_feast
 		}
 		relative_position_id = whc_true_communist_man
