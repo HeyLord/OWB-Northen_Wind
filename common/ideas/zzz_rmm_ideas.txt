@@ -875,5 +875,24 @@ ideas = {
 				local_resources_factor = 0.2
             }
         }
+		TRR_help_moose = {
+			picture = generic_helm_army
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				RMM = {
+					has_war = no
+				}
+			}
+			modifier = {
+				#send_volunteer_size = 4
+                send_volunteers_tension = -1
+				diplomacy_distance_factor = 0.3
+			}
+		}
 	}
 }

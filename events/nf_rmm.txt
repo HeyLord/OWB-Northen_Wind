@@ -500,5 +500,17 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = nf_rmm.18
+	title = nf_rmm.18.t
+	desc = nf_rmm.18.d
+	picture = GFX_event_canada_fallout_purge
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = nf_rmm.18.a
+		add_ideas = TRR_help_moose
+	}
+}
 
 

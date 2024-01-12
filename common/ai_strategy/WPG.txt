@@ -6,11 +6,11 @@ WPG_help_moose = {
 		country_exists = RMM
 	}
 	abort_when_not_enabled = yes
-	#ai_strategy = {
-	#	type = send_volunteers_desire
-	#	id = "RMM"
-	#	value = 900
-	#}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "RMM"
+		value = 900
+	}
 	ai_strategy = {
 		type = send_lend_lease_desire
 		id = "RMM"
