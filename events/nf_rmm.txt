@@ -512,5 +512,48 @@ country_event = {
 		add_ideas = TRR_help_moose
 	}
 }
+#Langenburg uprising 1
+country_event = {
+	id = nf_rmm.19
+	title = nf_rmm.19.t
+	desc = nf_rmm.19.d
+	picture = GFX_event_canada_fallout_purge
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = nf_rmm.19.a
+		leave_faction = yes
+		retire_character = DLN_duchess_sophie
+		set_politics = {
+			ruling_party = elites
+			elections_allowed = no
+		}
+		BRA = {
+			end_puppet = DLN
+			country_event = {
+				id = nf_rmm.20
+				days = 7
+			}
+		}
+	}
+}
+#Langenburg uprising 2
+country_event = {
+	id = nf_rmm.20
+	title = nf_rmm.19.t
+	desc = nf_rmm.19.d
+	picture = GFX_event_canada_fallout_purge
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = nf_rmm.19.a
+		BRA = {
+            declare_war_on = {
+                target = DLN
+                type = annex_everything
+            }
+		}
+	}
+}
 
 

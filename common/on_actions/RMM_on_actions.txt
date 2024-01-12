@@ -4,6 +4,12 @@ on_actions = {
 			RMM = {
 				country_event = nf_rmm.2
 			}
+			DLN = {
+				country_event = {
+					id = nf_rmm.19
+					days = 300
+				}
+			}
 		}
 	}
 	on_capitulation = {
