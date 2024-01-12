@@ -47,14 +47,14 @@ units = {
 		}
 	division = {
 			name = "Reykjavik Revolutionaries"
-			location = 13267
+			location = 15228
 			division_template = "Moosketeer's"
 			start_experience_factor = 0.5
 			start_equipment_factor = 0.7
 		}
 		division = {
 			name = "Winnipegosis's Loyalists"
-			location = 16358
+			location = 15227
 			division_template = "Moosketeer's"
 			start_experience_factor = 0.5
 			start_equipment_factor = 0.7
