@@ -17,11 +17,11 @@ country_event = { #Moose decides to go alone
 			RMM = {
 				RMM_rebecca_davis = {
 					set_nationality = WPG
-					#remove_unit_leader_trait = RMM_republican_general
+					remove_unit_leader_trait = RMM_republican_general
 				}
 				RMM_zayden_preston = {
 					set_nationality = WPG
-					#remove_unit_leader_trait = RMM_republican_general
+					remove_unit_leader_trait = RMM_republican_general
 				}
 			}
 		}
@@ -119,6 +119,44 @@ country_event = {
 			id = nf_rmm.6
 			days = 7
 		}
+		if = {
+			limit = {
+				has_idea = rmm_shield
+			}
+			remove_ideas = rmm_shield
+		}
+		if = {
+			limit = {
+				has_idea = rmm_defence_in_depth
+			}
+			remove_ideas = rmm_defence_in_depth
+		}
+		if = {
+			limit = {
+				has_idea = rmm_barricades
+			}
+			remove_ideas = rmm_barricades
+		}
+		if = {
+			limit = {
+				has_idea = rmm_partisan_war
+			}
+			remove_ideas = rmm_partisan_war
+		}
+
+		if = {
+			limit = {
+				DLN = {
+					exists = yes
+				}
+			}
+			DLN = {
+                ROOT = {
+                    grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+                }
+            }
+		}
+		add_state_claim = 1358
 	}
 }
 #Trials on nobility
