@@ -1706,7 +1706,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_loading_the_ships
-        icon = GFX_goal_CAF_naval_presence
+        icon = GFX_goal_RMM_Admiral_Soldier_Loading
         cost = 30
         x = -4
         y = 1
@@ -1761,7 +1761,7 @@ focus_tree = {
     }
      focus = {
         id = rmm_adm_livelyhood_on_board
-        icon = GFX_goal_CAF_naval_trade
+        icon = GFX_goal_RMM_Admiral_Mermaid
         cost = 30
         x = 0
         y = 1
@@ -1796,7 +1796,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_call_upon_republic
-        icon = GFX_focus_canada_bottle_ship
+        icon = GFX_goal_RMM_Admiral_Ship_Bottle
         cost = 30
         x = -2
         y = 1
@@ -1840,7 +1840,7 @@ focus_tree = {
     }
      focus = {
         id = rmm_adm_request_transport
-        icon = GFX_goal_generic_wooden_ship
+        icon = GFX_goal_RMM_Admiral_Radio
         cost = 30
         x = 0
         y = 1
@@ -1878,7 +1878,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_call_upon_admiralty
-        icon = GFX_goal_hai_transamur_pirate_thinking
+        icon = GFX_goal_RMM_Admiral_Old_Guy
         cost = 30
         x = 0
         y = 1
@@ -1916,7 +1916,7 @@ focus_tree = {
     }
      focus = {
         id = rmm_adm_naval_invasion_prep
-        icon = GFX_goal_hai_transamur_pirate_ship
+        icon = GFX_goal_RMM_Admiral_Guy_Horn
         cost = 30
         x = 0
         y = 1
@@ -1946,7 +1946,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_marines
-        icon = GFX_goal_ITZ_merodeadores_as_marines
+        icon = GFX_goal_RMM_Admiral_Buff_Marine
         cost = 30
         x = 2
         y = 1
@@ -1977,7 +1977,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_royal_marines
-        icon = GFX_goal_generic_helm_marine
+        icon = GFX_goal_RMM_Admiral_Popeye
         cost = 30
         x = 0
         y = 1
@@ -2008,7 +2008,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_mobilize_the_people
-        icon = GFX_goal_army_mobilize
+        icon = GFX_goal_RMM_Admiral_Woman
         cost = 30
         x = 4
         y = 1
@@ -2040,7 +2040,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_ammunition_plant
-        icon = GFX_goal_generic_ammo_box
+        icon = GFX_goal_RMM_Admiral_Ammo
         cost = 30
         x = 0
         y = 1
@@ -2076,7 +2076,7 @@ focus_tree = {
 
     focus = {
         id = rmm_adm_cross_the_lake
-        icon = GFX_goal_PLS_Ship
+        icon = GFX_goal_RMM_Admiral_Firing_Canon
         cost = 30
         x = 0
         y = 1

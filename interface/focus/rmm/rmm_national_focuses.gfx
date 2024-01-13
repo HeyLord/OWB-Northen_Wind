@@ -143,6 +143,50 @@ spriteTypes = {
 		name = "GFX_goal_WPG_Air_Baron"
 		texturefile = "gfx/interface/goals/unique/RMM/WPG_Air_Baron.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Old_Guy"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Old_Guy.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Ship_Bottle"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Ship_Bottle.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Mermaid"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Mermaid.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Buff_Marine"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Buff_Marine.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Firing_Canon"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Firing_Canon.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Soldier_Loading"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Soldier_Loading.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Woman"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Woman.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Popeye"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Popeye.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Radio"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Radio.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Ammo"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Ammo.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Guy_Horn"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Guy_Horn.dds"
+	}
 
 }
 
