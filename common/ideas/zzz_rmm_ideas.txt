@@ -399,7 +399,7 @@ ideas = {
             }
         }
 		rmm_transport = {
-            picture = generic_boat_4
+            picture = generic_coast_guard
             removal_cost = -1
             allowed = {
                 always = no
@@ -412,7 +412,7 @@ ideas = {
             }
         }
 		rmm_coral_offence = {
-            picture = generic_boat_5
+            picture = brk_master_of_sea
             removal_cost = -1
             allowed = {
                 always = no
@@ -426,7 +426,7 @@ ideas = {
             }
         }
 		rmm_pride_and_honor = {
-            picture = generic_boat_5
+            picture = bel_bellingham_for_battle
             removal_cost = -1
             allowed = {
                 always = no

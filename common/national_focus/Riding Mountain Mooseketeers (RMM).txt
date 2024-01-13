@@ -2106,7 +2106,7 @@ focus_tree = {
 
     focus = {
         id = rmm_adm_liberators
-        icon = GFX_goal_generic_focus_magazine_robcofun_wastelad
+        icon = GFX_goal_RMM_Admiral_Liberators_Smoking
         cost = 45
         x = -2
         y = 1
@@ -2173,7 +2173,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_coming_together
-        icon = GFX_goal_pal_the_league
+        icon = GFX_goal_RMM_Admiral_Liberators_Worker
         cost = 45
         x = -1
         y = 1
@@ -2201,7 +2201,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_healing_the_land
-        icon = GFX_goal_TTM_Plains
+        icon = GFX_goal_RMM_Admiral_Liberators_Nature
         cost = 45
         x = 1
         y = 1
@@ -2225,7 +2225,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_joined_settlements
-        icon = GFX_goal_CAR_april_Municipal_Councils
+        icon = GFX_goal_RMM_Admiral_Liberators_Watching
         cost = 45
         x = 1
         y = 1
@@ -2256,7 +2256,7 @@ focus_tree = {
 
     focus = {
         id = rmm_adm_new_managment
-        icon = GFX_goal_TTM_Slayer
+        icon = GFX_goal_RMM_Admiral_Red_Skull
         cost = 45
         x = 2
         y = 1
@@ -2337,7 +2337,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_new_home
-        icon = GFX_goal_CAR_april_Begin_Industrialization
+        icon = GFX_goal_RMM_Admiral_Red_Flag
         cost = 45
         x = -1
         y = 1
@@ -2357,7 +2357,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_pacify_the_region
-        icon = GFX_goal_cph_bloody_soldier
+        icon = GFX_goal_RMM_Admiral_Red_Lamp
         cost = 45
         x = 1
         y = 1
@@ -2375,7 +2375,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_put_them_to_work
-        icon = GFX_goal_CES_Industry_Whip_Man
+        icon = GFX_goal_RMM_Admiral_Red_Chained
         cost = 45
         x = 1
         y = 1

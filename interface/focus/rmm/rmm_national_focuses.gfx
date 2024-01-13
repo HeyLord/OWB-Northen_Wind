@@ -187,6 +187,38 @@ spriteTypes = {
 		name = "GFX_goal_RMM_Admiral_Guy_Horn"
 		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Guy_Horn.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Red_Skull"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Red_Skull.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Red_Flag"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Red_Flag.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Red_Lamp"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Red_Lamp.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Red_Chained"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Red_Chained.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Liberators_Smoking"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Liberators_Smoking.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Liberators_Watching"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Liberators_Watching.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Liberators_Worker"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Liberators_Worker.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Liberators_Nature"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Liberators_Nature.dds"
+	}
 
 }
 
