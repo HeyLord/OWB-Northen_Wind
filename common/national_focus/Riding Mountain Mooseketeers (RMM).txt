@@ -3130,7 +3130,7 @@ focus_tree = {
 					instant_build = yes
 				}
             }
-            add_manpower = 4563
+            add_manpower = 3563
         }
     }
     focus = {
@@ -3139,6 +3139,9 @@ focus_tree = {
         cost = 60
         x = 1
         y = 1
+        available = {
+            has_completed_focus = rmm_enp_reinforcements
+        }
         prerequisite = {
             focus = rmm_enp_linked_with_one_chain
         }
@@ -3152,7 +3155,7 @@ focus_tree = {
 					instant_build = yes
 				}
             }
-            add_manpower = 3834
+            add_manpower = 2834
         }
     }
     focus = {
@@ -3216,11 +3219,6 @@ focus_tree = {
             swap_ideas = {
                 remove_idea = rmm_tanner_resist_1
                 add_idea = rmm_tanner_resist_2
-            }
-            HBC = {
-                ROOT = {
-                    grant_wargoals_on_core_states_of_prev_force_ai_war = yes
-                }
             }
             RRR = {
                 ROOT = {
@@ -3354,21 +3352,15 @@ focus_tree = {
             every_country = {
                 limit = {
                     OR = {
-                        tag = DLN
-                        tag = DUK
-                        tag = BGC
-                        tag = CPH
                         tag = DUN
-                        tag = STN
                         tag = PLT
-                        tag = FRG
-                        tag = PAP
-                        tag = BKB
-                        tag = DMM
-                        tag = NUN
-                        tag = RRR
+                        tag = STN
+                        tag = DUN
+                        tag = BAT
+                        tag = IRC
                         tag = TPA
-                        tag = HBC
+                        tag = STA
+                        tag = DMM
                     }
                     all_core_land_owned_by_prev_sphere = no
                 }
