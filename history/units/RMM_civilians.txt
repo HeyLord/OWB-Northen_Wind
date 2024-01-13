@@ -20,7 +20,7 @@ units = {
 	}
 	division = {
 		name = "Penal Fighters"
-		location = 13267
+		location = 14652
 		division_template = "Forced Civilians"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.8
