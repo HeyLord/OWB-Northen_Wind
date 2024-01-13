@@ -76,7 +76,7 @@ RMM_agents_chicago_shipments = {
 		is_good = no
 		selectable_mission = no
 		days_re_enable = 10
-		days_mission_timeout = 70
+		days_mission_timeout = 60
 
 		timeout_effect = {
 			country_event = nf_rmm.15
