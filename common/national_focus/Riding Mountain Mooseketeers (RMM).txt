@@ -3236,9 +3236,6 @@ focus_tree = {
         x = -1
         y = 1
         available = {
-            HBC = {
-                all_core_land_owned_by_prev_sphere = yes
-            }
             RRR = {
                 all_core_land_owned_by_prev_sphere = yes
             }

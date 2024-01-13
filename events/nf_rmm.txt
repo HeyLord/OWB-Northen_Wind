@@ -371,7 +371,7 @@ country_event = {
 	id = nf_rmm.14
 	title = nf_rmm.14.t
 	desc = nf_rmm.14.d
-	picture = GFX_event_sub_generic_coast
+	picture = GFX_event_rmm_the_secretary
 
 	is_triggered_only = yes
 
@@ -463,7 +463,7 @@ country_event = {
 	id = nf_rmm.16
 	title = nf_rmm.16.t
 	desc = nf_rmm.16.d
-	picture = GFX_event_sub_generic_coast
+	picture = GFX_event_rmm_the_secretary
 
 	is_triggered_only = yes
 
@@ -491,7 +491,7 @@ country_event = {
 	id = nf_rmm.17
 	title = nf_rmm.17.t
 	desc = nf_rmm.17.d
-	picture = GFX_event_sub_generic_coast
+	picture = GFX_event_rmm_black_leaf
 
 	is_triggered_only = yes
 

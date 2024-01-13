@@ -16,5 +16,9 @@ spriteTypes = {
 		name = "GFX_event_rmm_the_secretary"
 		texturefile = "gfx/event_pictures/event_rmm_the_secretary.dds"
 	}
+	spriteType = {
+		name = "GFX_event_rmm_black_leaf"
+		texturefile = "gfx/event_pictures/event_rmm_black_leaf.dds"
+	}
 
 }

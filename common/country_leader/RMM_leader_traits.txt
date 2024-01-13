@@ -41,11 +41,11 @@ leader_traits = {
 	}
 	rmm_free = {
 		random = no
-		cant_be_justified_on = 1
 		cant_justify_on_countries = 1
 		stability_factor = 1
 		required_garrison_factor = -0.75
 		resistance_growth = -0.25
+		esistance_growth_on_our_occupied_states = 1.0
 		ai_will_do = {
 			factor = 1
 		}
