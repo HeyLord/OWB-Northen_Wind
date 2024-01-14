@@ -277,6 +277,20 @@ characters = {
 			expire = "3000.01.01.01"
 			id = -1
 		}
+		field_marshal = {
+			traits = {
+				lucky_trait
+			}
+			visible = {
+				has_completed_focus = rmm_enp_cowards_and_traitors
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
 	}
 	RMM_mister_smith = {
 		name = RMM_MISTER_SMITH_NAME
@@ -610,8 +624,10 @@ characters = {
 		name = RMM_BUGMAN_NAME
 		portraits = {
 			civilian = {
+				large = GFX_Portrait_RMM_bugman
 				small = GFX_idea_RMM_bugman
 			}
+
 		}
 		advisor = {
 			slot = army_chief
@@ -631,5 +647,21 @@ characters = {
 				factor = 10
 			}
 		}
+		corps_commander = {
+			traits = {
+				pain_train_trait
+				strong_back_trait
+			}
+			visible = {
+				has_completed_focus = rmm_enp_bug_men
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = -1
+		}
 	}
+
 }

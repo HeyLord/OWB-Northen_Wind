@@ -33,6 +33,11 @@ spriteTypes = {
 		name = "GFX_Portrait_RMM_no_one"
 		texturefile = "gfx/leaders/RMM/portrait_rmm_no_one.dds"
 	}
+	spriteType = {
+		name = "GFX_Portrait_RMM_bugman"
+		texturefile = "gfx/leaders/RMM/portrait_rmm_bugman.dds"
+	}
+
 
 	#Advisors
 
