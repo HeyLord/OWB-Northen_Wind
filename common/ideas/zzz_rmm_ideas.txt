@@ -894,5 +894,68 @@ ideas = {
 				diplomacy_distance_factor = 0.3
 			}
 		}
+		rmm_work_to_earn = {
+            picture = generic_trowl
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				stability_factor = -0.05
+				local_resources_factor = 0.15
+            }
+        }
+		rmm_work_to_earn_2 = {
+            picture = generic_trowl
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				stability_factor = -0.08
+				local_resources_factor = 0.15
+				supply_consumption_factor = -0.1
+            }
+        }
+		rmm_shady_deals = {
+            picture = generic_box_1
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				consumer_goods_factor = 0.03
+				monthly_population = 0.1
+            }
+        }
+		rmm_metis_expertise = {
+            picture = generic_box_1
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+				industrial_capacity_factory = 0.1
+            }
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+					build_cost_ic = 0.05
+					instant = yes
+				}
+			}
+        }
 	}
 }

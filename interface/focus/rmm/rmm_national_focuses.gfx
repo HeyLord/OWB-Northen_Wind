@@ -219,6 +219,38 @@ spriteTypes = {
 		name = "GFX_goal_RMM_Admiral_Liberators_Nature"
 		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Liberators_Nature.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Shores"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Shores.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Ally_Bag"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Ally_Bag.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Ally_Scientist"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Ally_Scientist.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Ally_Monopoly"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Ally_Monopoly.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Ally_Bag_Papers"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Ally_Bag_Papers.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Ally_Steele"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Ally_Steele.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Ally_Dog"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Ally_Dog.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Ally_Woman"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Ally_Woman.dds"
+	}
 
 }
 

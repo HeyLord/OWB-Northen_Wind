@@ -2101,6 +2101,7 @@ focus_tree = {
                     grant_wargoals_on_core_states_of_prev_force_ai_war = yes
                 }
             }
+            custom_effect_tooltip = rmm_timer_tt
         }
     }
 
@@ -2391,7 +2392,7 @@ focus_tree = {
         relative_position_id = rmm_adm_new_home
 
         completion_reward = {
-            add_stability = -0.05
+            add_ideas = rmm_work_to_earn
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
@@ -2400,8 +2401,38 @@ focus_tree = {
         }
     }
     focus = {
+        id = rmm_adm_initiative
+        icon = GFX_goal_RMM_Admiral_Shores
+        cost = 35
+        x = -1
+        y = 1
+        available = {
+            ARB = {
+                exists = yes
+            }
+            NOT = {
+                has_completed_focus = rmm_adm_allies
+            }
+            date > 2277.01.01
+        }
+
+        prerequisite = {
+            focus = rmm_adm_put_them_to_work
+            focus = rmm_adm_joined_settlements
+        }
+        relative_position_id = rmm_adm_joined_settlements
+
+        completion_reward = {
+            ARB = {
+                ROOT = {
+                    grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+                }
+            }
+        }
+    }
+    focus = {
         id = rmm_adm_allies
-        icon = GFX_focus_focus_wpg_steel_democracy
+        icon = GFX_goal_RMM_Admiral_Shores
         cost = 35
         x = 2
         y = 1
@@ -2417,6 +2448,35 @@ focus_tree = {
 
         completion_reward = {
             ask_to_join_the_second_coalition = yes
+        }
+    }
+    focus = {
+        id = rmm_adm_mistery_meat
+        icon = GFX_goal_RMM_Admiral_Shores
+        cost = 35
+        x = 1
+        y = 1
+        available = {
+        }
+
+        prerequisite = {
+            focus = rmm_adm_put_them_to_work
+            focus = rmm_adm_joined_settlements
+        }
+        relative_position_id = rmm_adm_put_them_to_work
+
+        completion_reward = {
+            custom_effect_tooltip = rmm_liber_f_tt
+            effect_tooltip = {
+                add_ideas = rmm_shady_deals
+            }
+            custom_effect_tooltip = rmm_manag_f_tt
+            effect_tooltip = {
+                swap_ideas = {
+                    remove_idea = rmm_work_to_earn
+                    add_idea = rmm_work_to_earn_2
+                }
+            }
         }
     }
     focus = {
@@ -2444,7 +2504,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_reconstruction_aid
-        icon = GFX_goal_generic_structure_wood
+        icon = GFX_goal_RMM_Admiral_Ally_Bag
         cost = 35
         x = 0
         y = 1
@@ -2529,7 +2589,7 @@ focus_tree = {
         id = rmm_adm_expand_coral_riff
         icon = GFX_goal_BRK_port_royal
         cost = 35
-        x = -2
+        x = -4
         y = 1
         available = {
         }
@@ -2657,11 +2717,157 @@ focus_tree = {
             }
         }
     }
+
+    focus = {
+        id = rmm_adm_forgotten_part_of_history
+        icon = GFX_goal_RMM_Admiral_Ally_Scientist
+        cost = 35
+        x = 0
+        y = 1
+        available = {
+            IRC = {
+                exists = yes
+            }
+        }
+
+        prerequisite = {
+            focus = rmm_adm_reconstruction_aid
+        }
+        relative_position_id = rmm_adm_reconstruction_aid
+
+        completion_reward = {
+            IRC = {
+                country_event = nf_rmm.21
+            }
+        }
+    }
+    focus = {
+        id = rmm_adm_access_to_energy
+        icon = GFX_goal_RMM_Admiral_Ally_Scientist
+        cost = 35
+        x = -1
+        y = 1
+        available = {
+            has_country_flag = rmm_irc_agreed
+        }
+
+        prerequisite = {
+            focus = rmm_adm_forgotten_part_of_history
+        }
+        relative_position_id = rmm_adm_forgotten_part_of_history
+
+        completion_reward = {
+            give_resource_rights = {
+                receiver = IRC
+                state = 1178
+            }
+        }
+    }
+    focus = {
+        id = rmm_adm_end_the_horror
+        icon = GFX_goal_RMM_Admiral_Ally_Scientist
+        cost = 35
+        x = -1
+        y = 1
+        prerequisite = {
+            focus = rmm_adm_access_to_energy
+        }
+        will_lead_to_war_with = TPA
+        relative_position_id = rmm_adm_access_to_energy
+
+        completion_reward = {
+            TPA = {
+                IRC = {
+                    grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+                }
+                ROOT = {
+                    grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+                }
+            }
+        }
+    }
+    focus = {
+        id = rmm_adm_armored_marines
+        icon = GFX_goal_RMM_Admiral_Ally_Scientist
+        cost = 35
+        x = 1
+        y = 1
+        prerequisite = {
+            focus = rmm_adm_access_to_energy
+        }
+        relative_position_id = rmm_adm_access_to_energy
+
+        completion_reward = {
+            set_technology = {
+                spec_ops_equipment_tech_5 = 1
+            }
+        }
+    }
+    focus = {
+        id = rmm_adm_shining_light_of_republic
+        icon = GFX_goal_RMM_Admiral_Ally_Scientist
+        cost = 35
+        x = 1
+        y = 1
+        available = {
+            TPA = {
+                OR = {
+                    exists = no
+                    is_puppet = yes
+                }
+            }
+        }
+        prerequisite = {
+            focus = rmm_adm_end_the_horror
+        }
+        prerequisite = {
+            focus = rmm_adm_armored_marines
+        }
+        relative_position_id = rmm_adm_end_the_horror
+
+        completion_reward = {
+            IRC = {
+                invite_to_the_second_coalition = yes
+            }
+        }
+    }
+
+    focus = {
+        id = rmm_adm_respect_their_choice
+        icon = GFX_goal_RMM_Admiral_Ally_Scientist
+        cost = 35
+        x = 1
+        y = 1
+        available = {
+            has_country_flag = rmm_irc_disagreed
+        }
+
+        prerequisite = {
+            focus = rmm_adm_forgotten_part_of_history
+        }
+        relative_position_id = rmm_adm_forgotten_part_of_history
+
+        completion_reward = {
+            add_opinion_modifier = {
+                target = IRC
+                modifier = rmm_respect_choice
+            }
+            IRC = {
+                add_opinion_modifier = {
+					target = RMM
+					modifier = rmm_respected_choice
+				}
+            }
+        }
+    }
+
+
+    ####Rivers stuff
     focus = {
         id = rmm_adm_coalition_research
-        icon = GFX_goal_generic_vault_research
+        icon = GFX_goal_RMM_Admiral_Ally_Scientist
         cost = 35
-        x = 2
+        x = 4
         y = 1
         available = {
         }
@@ -2678,7 +2884,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_winnipeg_trade
-        icon = GFX_goal_generic_vim_girl
+        icon = GFX_goal_RMM_Admiral_Ally_Bag_Papers
         cost = 35
         x = 2
         y = 1
@@ -2702,7 +2908,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_research_funds
-        icon = GFX_goal_pal_the_test
+        icon = GFX_goal_RMM_Admiral_Ally_Monopoly
         cost = 35
         x = 0
         y = 1
@@ -2720,9 +2926,9 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_steele_tactics
-        icon = GFX_goal_generic_advanced_firearms_focus
+        icon = GFX_goal_RMM_Admiral_Ally_Steele
         cost = 35
-        x = -1
+        x = -2
         y = 1
         available = {
         }
@@ -2737,10 +2943,31 @@ focus_tree = {
         }
     }
     focus = {
+        id = rmm_adm_metis_expertise
+        icon = GFX_goal_MTC_BM
+        cost = 35
+        x = 0
+        y = 1
+        available = {
+            MTC = {
+                is_the_second_coalition_member = yes
+            }
+        }
+
+        prerequisite = {
+            focus = rmm_adm_research_funds
+        }
+        relative_position_id = rmm_adm_research_funds
+
+        completion_reward = {
+            add_ideas = rmm_metis_expertise
+        }
+    }
+    focus = {
         id = rmm_adm_proper_baron
         icon = GFX_goal_WPG_Air_Baron
         cost = 35
-        x = 1
+        x = 2
         y = 1
         available = {
         }
@@ -2761,9 +2988,9 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_rock_bridge_monument
-        icon = GFX_goal_generic_swords
+        icon = GFX_goal_RMM_Admiral_Ally_Dog
         cost = 35
-        x = 1
+        x = 2
         y = 1
         available = {
         }
@@ -2771,6 +2998,7 @@ focus_tree = {
         prerequisite = {
             focus = rmm_adm_steele_tactics
             focus = rmm_adm_proper_baron
+            focus = rmm_adm_metis_expertise
         }
         relative_position_id = rmm_adm_steele_tactics
 
@@ -2793,7 +3021,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_republican_recruitment
-        icon = GFX_goal_generic_free_states_soldier
+        icon = GFX_goal_RMM_Admiral_Ally_Woman
         cost = 35
         x = 0
         y = 1
@@ -3049,6 +3277,7 @@ focus_tree = {
         completion_reward = {
             add_stability = -0.1
             custom_effect_tooltip = rmm_pa_div_tt
+            custom_effect_tooltip = BUGMAN_TT
             hidden_effect = {
                 set_technology = {
                     stripped_pa_tech = 1

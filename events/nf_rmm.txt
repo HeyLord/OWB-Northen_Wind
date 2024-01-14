@@ -575,13 +575,13 @@ country_event = {
 #Langenburg uprising 2
 country_event = {
 	id = nf_rmm.20
-	title = nf_rmm.19.t
-	desc = nf_rmm.19.d
+	title = nf_rmm.20.t
+	desc = nf_rmm.20.d
 	picture = GFX_event_canada_fallout_purge
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = nf_rmm.19.a
+		name = nf_rmm.20.a
 		BRA = {
             declare_war_on = {
                 target = DLN
@@ -590,5 +590,77 @@ country_event = {
 		}
 	}
 }
+#Cooperation with Confederation offer
+country_event = {
+	id = nf_rmm.21
+	title = nf_rmm.21.t
+	desc = nf_rmm.21.d
+	picture = GFX_event_canada_fallout_purge
+	fire_only_once = yes
+	is_triggered_only = yes
 
+	#Agree
+	option = {
+		name = nf_rmm.21.a
+		ai_chance = {
+			factor = 1
+		}
+		give_military_access = RMM
+		RMM = {
+			give_military_access = IRC
+		}
+		RMM = {
+			country_event = {
+				id = nf_rmm.211
+				days = 1
+			}
+		}
+	}
 
+	#Disagree
+	option = {
+		name = nf_rmm.21.b
+		ai_chance = {
+			factor = 0
+		}
+		set_truce = {
+			target = RMM
+			days = 400
+		}
+		RMM = {
+			country_event = {
+				id = nf_rmm.212
+				days = 1
+			}
+		}
+	}
+}
+
+#Cooperation with Confederation offer (yes)
+country_event = {
+	id = nf_rmm.211
+	title = nf_rmm.211.t
+	desc = nf_rmm.211.d
+	picture = GFX_event_canada_fallout_purge
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.211.a
+		set_country_flag = rmm_irc_agreed
+	}
+}
+#Cooperation with Confederation offer (no)
+country_event = {
+	id = nf_rmm.212
+	title = nf_rmm.212.t
+	desc = nf_rmm.212.d
+	picture = GFX_event_canada_fallout_purge
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.212.a
+		set_country_flag =  rmm_irc_disagreed
+	}
+}

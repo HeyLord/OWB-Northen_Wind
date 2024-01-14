@@ -18,6 +18,9 @@
   rmm_dawfin_tt:0 "§0We have Dawfin under our control currently.§!"
   rmm_race_against_time_tt:0 "§0We are in the race against time now, we must defeat the Dammed and evacute successfuly, or §Rwe will suffer even greater§! if Manitoba attacks us before this.§!"
   rmm_resources_tt:0 "§OWe will be required to send resources to Chicago every 60 days,§! §Rfailure will not be tolerated.§!\n\n"
+  rmm_timer_tt:0 "\n§0We have to defeat the Dammed before the timer runs out or we'll have to fight Manitoba unprepared!§!"
+  rmm_liber_f_tt:0 "§0If we completed §2"The Liberators"§! focus, we'll get the following effect:§!"
+  rmm_manag_f_tt:0 "\n§0If we completed §t"Under New Managment"§! focus, we'll get the following effect:§!"
 
 
   nf_rmm.15.a_tt:0 "We will send water to Chicago."
@@ -26,8 +29,15 @@
   nf_rmm.15.e_tt:0 "§RPrepare for the consequences§!"
 
   NUTCRACKER_TT:0 "\n§Y$MTC_NUTCRACKER_NAME$§! becomes a Unit Leader.\n§LLevel§!: §Y3§!\n§RAttack Skill§!: §Y3§!\n§GDefense Skill§!: §1§!\n§PPlanning Skill§!: §Y1§!\n§MLogistics Skill§!: §Y3§!\n§gTraits§!: §tDesert Fox§!\n\n"
+  BUGMAN_TT:0 "\n§Y$RMM_BUGMAN_NAME$§! becomes a Unit Leader.\n§LLevel§!: §Y4§!\n§RAttack Skill§!: §Y3§!\n§GDefense Skill§!: §Y2§!\n§PPlanning Skill§!: §Y3§!\n§MLogistics Skill§!: §Y1§!\n§gTraits§!: §tPain Train§!, §tStrong Back§!\n\n"
 
   rmm_cuts_ties:0 "§RMooseketeers cut ties with us!§!"
+
+  rmm_respect_choice:0 "Respect Their Choice"
+  rmm_respected_choice:0 "Respected Our Choice"
+
+  rmm_irc_agreed:0 "§0Iron Confederation §Gagreed to ally us§!§!"
+  rmm_irc_disagreed:0 "§0Iron Confederation §gdecided to stay neutral§!§!"
 
   #Decisions
   RMM_agents_chicago_shipments:0 "§OCommunications With the Chicago§!"
@@ -41,3 +51,7 @@
   RMM_republican_general:0 "Republican General"
   RMM_patriot_general:0 "Patriot General"
   TRR_help_moose:0 "Aid the Revoultuion"
+  rmm_work_to_earn:0 "§RWork To Earn the Right to Work§!"
+  rmm_shady_deals:0 "§gShady Deals§!"
+  rmm_work_to_earn_2:0 "§RWork To Earn the Right to Work§!"
+  rmm_metis_expertise:0 "§gMetis Engineering§!"
