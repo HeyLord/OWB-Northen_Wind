@@ -251,6 +251,74 @@ spriteTypes = {
 		name = "GFX_goal_RMM_Admiral_Ally_Woman"
 		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Ally_Woman.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_IRC_Leader"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_IRC_Leader.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_IRC_Marine"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_IRC_Marine.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_IRC_Dam"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_IRC_Dam.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_IRC_Teepee"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_IRC_Teepee.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_IRC_Destiny"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_IRC_Destiny.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_IRC_Fire"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_IRC_Fire.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Ally_Metis"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Ally_Metis.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Left_Coral"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Left_Coral.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Left_Shell"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Left_Shell.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Left_Hammerhead"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Left_Hammerhead.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Left_Shark"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Left_Shark.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Left_Ice_Shark"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Left_Ice_Shark.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Left_Suit_Shark"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Left_Suit_Shark.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Liberators_Sailor"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Liberators_Sailor.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Red_Fud"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Red_Fud.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Left_Child"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Left_Child.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Admiral_Ally_Muscle"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Ally_Muscle.dds"
+	}
 
 }
 

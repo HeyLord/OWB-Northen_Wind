@@ -2402,7 +2402,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_initiative
-        icon = GFX_goal_RMM_Admiral_Shores
+        icon = GFX_goal_RMM_Admiral_Liberators_Sailor
         cost = 35
         x = -1
         y = 1
@@ -2452,7 +2452,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_mistery_meat
-        icon = GFX_goal_RMM_Admiral_Shores
+        icon = GFX_goal_RMM_Admiral_Red_Fud
         cost = 35
         x = 1
         y = 1
@@ -2481,7 +2481,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_privateers
-        icon = GFX_goal_BRK_naval_raiders
+        icon = GFX_goal_RMM_Admiral_Left_Child
         cost = 35
         x = -2
         y = 1
@@ -2542,7 +2542,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_homecoming
-        icon = GFX_goal_generic_welcome_home
+        icon = GFX_goal_RMM_Admiral_Ally_Muscle
         cost = 35
         x = 2
         y = 1
@@ -2587,7 +2587,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_expand_coral_riff
-        icon = GFX_goal_BRK_port_royal
+        icon = GFX_goal_RMM_Admiral_Left_Coral
         cost = 35
         x = -4
         y = 1
@@ -2613,7 +2613,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_tools_of_the_trade
-        icon = GFX_goal_PLS_Gai_Expand_Port
+        icon = GFX_goal_RMM_Admiral_Left_Shell
         cost = 35
         x = -2
         y = 1
@@ -2631,7 +2631,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_fires_of_industry
-        icon = GFX_goal_ITZ_streamline_military_industry
+        icon = GFX_goal_RMM_Admiral_Left_Hammerhead
         cost = 35
         x = 0
         y = 1
@@ -2660,7 +2660,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_trial_by_fire_army
-        icon = GFX_goal_ATE_army_reforms
+        icon = GFX_goal_RMM_Admiral_Left_Shark
         cost = 35
         x = 0
         y = 1
@@ -2678,7 +2678,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_prepare_for_winter
-        icon = GFX_goal_NPC_batford_brigade
+        icon = GFX_goal_RMM_Admiral_Left_Ice_Shark
         cost = 35
         x = 0
         y = 1
@@ -2696,7 +2696,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_good_guns
-        icon = GFX_goal_generic_advanced_ammo
+        icon = GFX_goal_RMM_Admiral_Left_Suit_Shark
         cost = 35
         x = 1
         y = 1
@@ -2720,7 +2720,7 @@ focus_tree = {
 
     focus = {
         id = rmm_adm_forgotten_part_of_history
-        icon = GFX_goal_RMM_Admiral_Ally_Scientist
+        icon = GFX_goal_RMM_Admiral_IRC_Leader
         cost = 35
         x = 0
         y = 1
@@ -2743,7 +2743,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_access_to_energy
-        icon = GFX_goal_RMM_Admiral_Ally_Scientist
+        icon = GFX_goal_RMM_Admiral_IRC_Dam
         cost = 35
         x = -1
         y = 1
@@ -2765,7 +2765,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_end_the_horror
-        icon = GFX_goal_RMM_Admiral_Ally_Scientist
+        icon = GFX_goal_RMM_Admiral_IRC_Destiny
         cost = 35
         x = -1
         y = 1
@@ -2788,7 +2788,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_armored_marines
-        icon = GFX_goal_RMM_Admiral_Ally_Scientist
+        icon = GFX_goal_RMM_Admiral_IRC_Marine
         cost = 35
         x = 1
         y = 1
@@ -2805,7 +2805,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_shining_light_of_republic
-        icon = GFX_goal_RMM_Admiral_Ally_Scientist
+        icon = GFX_goal_RMM_Admiral_IRC_Fire
         cost = 35
         x = 1
         y = 1
@@ -2834,7 +2834,7 @@ focus_tree = {
 
     focus = {
         id = rmm_adm_respect_their_choice
-        icon = GFX_goal_RMM_Admiral_Ally_Scientist
+        icon = GFX_goal_RMM_Admiral_IRC_Teepee
         cost = 35
         x = 1
         y = 1
@@ -2944,7 +2944,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_adm_metis_expertise
-        icon = GFX_goal_MTC_BM
+        icon = GFX_goal_RMM_Admiral_Ally_Metis
         cost = 35
         x = 0
         y = 1
