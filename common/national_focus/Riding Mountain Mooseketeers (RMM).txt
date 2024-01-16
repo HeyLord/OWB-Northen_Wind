@@ -11,7 +11,7 @@ focus_tree = {
 
     focus = {
         id = rmm_irc_chancellor
-        icon = GFX_goal_MTC_BM_Metal_Moose
+        icon = GFX_goal_RMM_Chancellor
         cost = 14
         x = 20
         y = 5
@@ -51,7 +51,7 @@ focus_tree = {
 
     focus = {
         id = rmm_irc_falseflag_revolution
-        icon = GFX_goal_PLS_Rip_Contract
+        icon = GFX_goal_RMM_Chancellor_Flag
         cost = 30
         x = -11
         y = 1
@@ -82,7 +82,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_enemy_before_us
-        icon = GFX_focus_bra_god_save_the_king
+        icon = GFX_goal_RMM_Chancellor_Hat_Guy
         cost = 30
         x = -2
         y = 1
@@ -99,7 +99,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_not_much_but_honest
-        icon = GFX_goal_TLA_LQ_guns
+        icon = GFX_goal_RMM_Chancellor_Planning
         cost = 30
         x = 0
         y = 1
@@ -128,7 +128,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_manitoba_immigrant
-        icon = GFX_goal_bobble_head_science
+        icon = GFX_goal_RMM_Chancellor_Thinking
         cost = 30
         x = -1
         y = 1
@@ -145,7 +145,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_protect_dawfin
-        icon = GFX_goal_PLS_Military_Bunker
+        icon = GFX_goal_RMM_Chancellor_Goodbye
         cost = 30
         x = 1
         y = 1
@@ -169,7 +169,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_common_soldier
-        icon = GFX_goal_TLA_Max_soldier
+        icon = GFX_goal_RMM_Chancellor_Soldier
         cost = 30
         x = 1
         y = 1
@@ -186,7 +186,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_austerity_measures
-        icon = GFX_goal_generic_cart
+        icon = GFX_goal_RMM_Chancellor_Crying_Child
         cost = 30
         x = 4
         y = 1
@@ -203,7 +203,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_total_war
-        icon = GFX_goal_PLS_Torch_2
+        icon = GFX_goal_RMM_Chancellor_Guy
         cost = 30
         x = 2
         y = 1
@@ -315,7 +315,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_every_man_woman_and_child
-        icon = GFX_goal_PLS_Vulcan_Forge
+        icon = GFX_goal_RMM_Chancellor_Megaphone
         cost = 30
         x = 0
         y = 1
@@ -332,7 +332,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_field_promotion
-        icon = GFX_goal_uoa_medal
+        icon = GFX_goal_RMM_Chancellor_Paper_Look
         cost = 30
         x = 0
         y = 1
@@ -352,7 +352,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_desperate_defence
-        icon = GFX_goal_generic_bunker_1
+        icon = GFX_goal_RMM_Chancellor_Soldier_2
         cost = 30
         x = 0
         y = 1
@@ -375,7 +375,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_victory
-        icon = GFX_goal_KSR_flagstaff_retirement
+        icon = GFX_goal_RMM_Chancellor_Goliath
         cost = 30
         x = 2
         y = 1

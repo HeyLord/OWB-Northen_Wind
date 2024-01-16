@@ -319,6 +319,58 @@ spriteTypes = {
 		name = "GFX_goal_RMM_Admiral_Ally_Muscle"
 		texturefile = "gfx/interface/goals/unique/RMM/RMM_Admiral_Ally_Muscle.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Flag"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Flag.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Soldier"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Soldier.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Thinking"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Thinking.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Crying_Child"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Crying_Child.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Paper_Look"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Paper_Look.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Hat_Guy"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Hat_Guy.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Planning"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Planning.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Goliath"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Goliath.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Megaphone"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Megaphone.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Soldier_2"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Soldier_2.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Guy"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Guy.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Goodbye"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Goodbye.dds"
+	}
 
 }
 
