@@ -53,7 +53,7 @@ on_actions = {
 							state = 1181
 						}
 					}
-					transfer_state_to = BGC
+					transfer_state_to = BRA
 				}
 				BRA = {
 					country_event = nf_rmm.3
