@@ -2409,7 +2409,7 @@ focus_tree = {
             NOT = {
                 has_completed_focus = rmm_adm_allies
             }
-            date > 2277.01.01
+            date > 2276.01.01
         }
 
         prerequisite = {
