@@ -57,7 +57,10 @@ set_technology = {
 	standard_weaponry_tech = 1
 	melee_weaponry_tech_1 = 1
 	support_weaponry = 1
+	fireteam_weaponry_tech = 1
+	demolitions_weaponry_tech = 1
 	spec_ops_equipment_tech_1 = 1
+	basic_supply_transport_tech = 1
 }
 
 if = {
