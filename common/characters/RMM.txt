@@ -593,7 +593,33 @@ characters = {
 			}
 		}
 	}
-
+	RMM_mike_ael = {
+		name = RMM_mike_ael_name
+		portraits = {
+			army = {
+				small = GFX_idea_RMM_mike_ael
+			}
+		}
+		advisor = {
+			slot = research_advisor
+			idea_token = RMM_mike_ael_research_advisor
+			desc = RMM_mike_ael_desc
+			ledger = army
+			allowed = {
+				original_tag = RMM
+			}
+			traits = {
+				military_theorist
+			}
+			research_bonus = {
+				cat_land_doctrine = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
 
 
 
