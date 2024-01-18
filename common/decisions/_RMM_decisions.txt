@@ -62,6 +62,18 @@ RMM_manitoba_war  = {
 			}
 		}
 	}
+	RMM_story = {
+		icon = GFX_decision_bullets
+		allowed = {
+			tag = RMM
+		}
+		available = {
+		}
+		fire_only_once = yes
+		complete_effect = {
+			country_event = nf_rmm.22
+		}
+    }
 }
 RMM_agents_chicago_shipments = {
 	RMM_shipments_chicago = {

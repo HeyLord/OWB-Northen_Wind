@@ -21,12 +21,15 @@
   rmm_timer_tt:0 "\n§0We have to defeat the Dammed before the timer runs out or we'll have to fight Manitoba unprepared!§!"
   rmm_liber_f_tt:0 "§0If we completed §2"The Liberators"§! focus, we'll get the following effect:§!"
   rmm_manag_f_tt:0 "\n§0If we completed §t"Under New Managment"§! focus, we'll get the following effect:§!"
+  rmm_timer_2_tt:0 "§2The Kingdom will §Ratttack§! us in §R220 days§!! You can check the timer in the decisions tab.§!"
 
 
   nf_rmm.15.a_tt:0 "We will send water to Chicago."
   nf_rmm.15.b_tt:0 "We will send ore to Chicago."
   nf_rmm.15.c_tt:0 "We will send energy to Chicago."
   nf_rmm.15.e_tt:0 "§RPrepare for the consequences§!"
+
+  RMM_story:0 "The Story of Mooseketeers"
 
   NUTCRACKER_TT:0 "\n§Y$MTC_NUTCRACKER_NAME$§! becomes a Unit Leader.\n§LLevel§!: §Y3§!\n§RAttack Skill§!: §Y3§!\n§GDefense Skill§!: §1§!\n§PPlanning Skill§!: §Y1§!\n§MLogistics Skill§!: §Y3§!\n§gTraits§!: §tDesert Fox§!\n\n"
   BUGMAN_TT:0 "\n§Y$RMM_BUGMAN_NAME$§! becomes a Unit Leader.\n§LLevel§!: §Y4§!\n§RAttack Skill§!: §Y3§!\n§GDefense Skill§!: §Y2§!\n§PPlanning Skill§!: §Y3§!\n§MLogistics Skill§!: §Y1§!\n§gTraits§!: §tPain Train§!, §tStrong Back§!\n\n"

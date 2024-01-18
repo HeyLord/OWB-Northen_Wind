@@ -135,6 +135,7 @@ recruit_character = RMM_polly_graham
 recruit_character = RMM_zarathustra
 recruit_character = RMM_roland_baal
 recruit_character = RMM_agent_gamma
+recruit_character = RMM_mike_ael
 
 
 set_popularities = {

@@ -40,7 +40,10 @@ country_event = {
 	option = {
 		name = nf_rmm.2.a
 		set_global_flag = rmm_manitoba_war_flag
-		activate_mission = RMM_war_breaks_out
+		custom_effect_tooltip = rmm_timer_2_tt
+		hidden_effect = {
+			activate_mission = RMM_war_breaks_out
+		}
 	}
 }
 #Manitoba gets an event about Moose escaping
@@ -662,5 +665,49 @@ country_event = {
 	option = {
 		name = nf_rmm.212.a
 		set_country_flag =  rmm_irc_disagreed
+	}
+}
+
+#Story event 1
+country_event = {
+	id = nf_rmm.22
+	title = nf_rmm.22.t
+	desc = nf_rmm.22.d
+	picture =  GFX_event_sub_generic_dock
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.22.a
+		country_event = nf_rmm.23
+	}
+}
+
+#Story event 2
+country_event = {
+	id = nf_rmm.23
+	title = nf_rmm.23.t
+	desc = nf_rmm.23.d
+	picture = GFX_event_sub_generic_marsh
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.23.a
+		country_event = nf_rmm.24
+	}
+}
+
+#Story event 3
+country_event = {
+	id = nf_rmm.24
+	title = nf_rmm.24.t
+	desc = nf_rmm.24.d
+	picture = GFX_event_sub_generic_fortress
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_rmm.24.a
 	}
 }

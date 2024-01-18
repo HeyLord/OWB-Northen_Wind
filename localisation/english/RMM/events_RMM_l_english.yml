@@ -4,7 +4,7 @@
   nf_rmm.1.a:0 "Let the Kingdom deal with them then."
 
   nf_rmm.2.t:0 "The Revolution Is Not Yet Over"
-  nf_rmm.2.d:0 "Chancellor McClane was in a state of extreme tension today, and anyone who was in the assembly hall with him could see it. But what the senator did not have in him was fear, he had a look of determination on his face in addition to tension.\n\n§2"Greetings ladies and gentlemen, do you remember how we came to be here? It's hard to forget. We, former members of the Manitoba Navy, rebelled against the tyranny of the kingdom, the tyranny of King Brandon I. And we won that battle! But that's the problem, we won that battle, but the war wiht Manitoba never stopped.\n\nI doubt anyone seriously thought Manitoba would leave us alone. Our enemies have weakened, but every day they are regaining their lost strength, looking for an opportunity to bring us under their wing, back into tyranny.\n\nThe enemy is strong. That cannot be denied. But neither can our resolve! We have already defeated the Kingdom, and when they attack, we will defeat them again. But don't forget the most important thing, we are not alone. The Republic of Three Rivers will help us in our battle for revolution.\n\nThe Republican dream will live on!"§!"
+  nf_rmm.2.d:0 "Chancellor McClain nonchalant as always stepped up to the podium in the assembly hall and began his speech.\n\n§2"May I congratulate you, my dear Moosketeers, on surviving another year together as we prepare for the inevitable war with Manitoba\n\nYou all remember how we ended up here in this beautiful town of Dawfin, which is now completely free of any nobility thanks to our efforts. How many lives were sacrificed to get here. And how you all followed me when I refused to evacuate, organising a republican government in exile here and for your faith in me I am grateful.\n\nWe also have guests and volunteers among us from the Three Rivers Republic, whom they generously provided to us despite my refusal to their evacuation offer. Appreciate it, although I have a few thoughts to say about their truce with Manitoba. However, saying such things in front of guests would be rude.\n\nSo! This year will be a challenging one, ladies and gentlemen, as the rotten kingdom licks its wounds and wants the Royal Dockyards back, and we stand in their way. We will not be broken, gentlemen! One for all and all for one!"§!"
   nf_rmm.2.a:0 "So little time, so much stuff to do."
 
   nf_rmm.3.t:0 "An Unexpected Escape"
@@ -38,7 +38,7 @@
   nf_rmm.9.d:0 ""
   nf_rmm.9.a:0 ""
 
-  nf_rmm.10.t:0 "Moosekeeters Ask for Their Righful Territories"
+  nf_rmm.10.t:0 "Mooseketeers Ask for Their Righful Territories"
   nf_rmm.10.d:0 ""
   nf_rmm.10.a:0 "Who we are to ignore this request?"
   nf_rmm.10.b:0 "Let's act like dicks for a change."
@@ -78,3 +78,36 @@
   nf_rmm.18.t:0 "Manitoba's Last Free Men"
   nf_rmm.18.d:0 ""
   nf_rmm.18.a:0 "Together Against the Tyrants!"
+
+  nf_rmm.19.t:0 "Leaving the Kingdom"
+  nf_rmm.19.d:0 "Something something Mikael"
+  nf_rmm.19.a:0 "Wow"
+
+  nf_rmm.20.t:0 "The Uprising"
+  nf_rmm.20.d:0 ""
+  nf_rmm.20.a:0 ""
+
+  nf_rmm.21.t:0 "Admiral Offers Cooperation"
+  nf_rmm.21.d:0 ""
+  nf_rmm.21.a:0 ""
+  nf_rmm.21.b:0 ""
+
+  nf_rmm.211.t:0 "Confederation Agrees to Cooperate"
+  nf_rmm.211.d:0 ""
+  nf_rmm.211.a:0 ""
+
+  nf_rmm.212.t:0 "Confederation Wishes to Stay Neutral"
+  nf_rmm.212.d:0 ""
+  nf_rmm.212.a:0 ""
+
+  nf_rmm.22.t:0 "Royal Vice Admiral"
+  nf_rmm.22.d:0 "The position of Vice Admiral had always been considered a cushy position for nobles without talent, which you could give to anyone. But then McClane became the next Vice Admiral, he had served in the navy for many years and had always criticized its deplorable state and now at last he had the opportunity to sort things out himself.\n\nIn the short period of his appointment, he began to propose numerous reforms, only a few of which were able to pass through the nobility, who were constantly putting him in the wheels. Still, those reforms that were able to pass made a noticeable improvement in the state of the fleet, and new recruits wished to join it when they heard that a competent man was finally at the helm.\n\nBut at one point more and more of McClane's proposed reforms were blocked by the nobility, and his dislike of the nobility, which he had acquired through years of being constantly ignored for promotion and appointed to the most unenviable positions because his family belonged to the petty nobility, only continued to grow."
+  nf_rmm.22.a:0 "And then McClane made his choice."
+
+  nf_rmm.23.t:0 "McClane and His Army"
+  nf_rmm.23.d:0 "It's easy to see why he switched sides as soon as the social conflict simmering beneath the kingdom's soil finally erupted into war. However, simple disenfranchisement does not explain away the more radical viewpoints he has adopted for himself since, perhaps he had always held these uncompromising beliefs or perhaps it simply gave him an excuse to continue the fight against his former superiors. \n\nWhen McClane heard of the rebellion in Winnipeg, he saw it as his chance to end the hated nobility once and for all. He called on his men to fight, and they all agreed, being loyalty not to the kingdom, but to McClane himself. And gathering his army, the "Moosketeers" went into battle.\n\nAfter delivering the Republic at a decisive victory at Black Ridge, McClane did not simply return to port to be hailed a hero and instead pushed deep into the enemy’s heartland, driving his men beyond the point of physical exhaustion before successfully capturing the key city of Dawfin and the Royal dockyards.\n\nInstead of hastening, what they believed to be the glorious victory of the Republic, McClane and his men suddenly found themselves confronted with the reality of peace."
+  nf_rmm.23.a:0 ""Peace? But all nobles are still alive!""
+
+  nf_rmm.24.t:0 ""Mooseketeers""
+  nf_rmm.24.d:0 "Enraged at this apparent compromise, this outright betrayal of the Republics libertarian ideals and the willing acceptance of the continued servitude of the remaining Kingdom, McClane refused the offer of the Traitor Republic to leave his positions to join them, and set up his own emergency government of the true republicans in exile.\n\nWhile he did not encourage his men to leave he did subsequently grant any who wished to return the right to leave his service, emphasizing the personal freedom of each and every individual was the only thing that lead and kept them by his side. A few, mainly the old, accepted the offer, but many stayed, inspired by revolutionary fervor, becoming the Mooseketeers and continuing the fight for what they believe to be true liberty."
+  nf_rmm.24.a:0 ""One for all and all for one!""
