@@ -399,7 +399,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_gutter
-        icon = GFX_goal_propaganda_capitalist_2
+        icon = GFX_goal_RMM_Chancellor_Skull
         cost = 40
         x = -2
         y = 1
@@ -417,12 +417,17 @@ focus_tree = {
         relative_position_id = rmm_irc_victory
 
         completion_reward = {
-            add_ideas = rmm_confiscating_noble_property
+            add_war_support = 0.05
+            add_ideas = rmm_power_vaccum
+            1105 = {
+                set_temp_variable = { pop_add = -5124 }
+                add_state_population = yes
+            }
         }
     }
     focus = {
         id = rmm_irc_judgement
-        icon = GFX_goal_LAC_lanius_glory
+        icon = GFX_goal_RMM_Chancellor_Themis
         cost = 40
         x = 2
         y = 1
@@ -438,17 +443,12 @@ focus_tree = {
         relative_position_id = rmm_irc_victory
 
         completion_reward = {
-            add_war_support = 0.05
-            add_ideas = rmm_power_vaccum
-            1105 = {
-                set_temp_variable = { pop_add = -5124 }
-                add_state_population = yes
-            }
+            add_ideas = rmm_confiscating_noble_property
         }
     }
     focus = {
         id = rmm_irc_vengeance
-        icon = GFX_goal_cannibal_meat_foot
+        icon = GFX_goal_RMM_Chancellor_Cry
         cost = 40
         x = 0
         y = 1
@@ -480,7 +480,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_glorious_days
-        icon = GFX_goal_generic_medal
+        icon = GFX_goal_RMM_Chancellor_Old_Soldier
         cost = 40
         x = 0
         y = 1
@@ -504,7 +504,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_world_may_be_ugly
-        icon = GFX_goal_generic_focus_magazine_backwood_get_off_my_lawn
+        icon = GFX_goal_RMM_Chancellor_Iron_Fist
         cost = 40
         x = 0
         y = 1
@@ -522,10 +522,6 @@ focus_tree = {
         relative_position_id = rmm_irc_vengeance
 
         completion_reward = {
-            add_popularity = {
-                ideology = ruler
-                popularity = 0.1
-            }
             set_politics = {
                 ruling_party = ruler
                 elections_allowed = no
@@ -542,7 +538,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_do_what_must
-        icon = GFX_goal_pal_vault_city
+        icon = GFX_goal_RMM_Chancellor_Smoking
         cost = 40
         x = 0
         y = 1
@@ -567,7 +563,7 @@ focus_tree = {
     }
      focus = {
         id = rmm_irc_langenburg
-        icon = GFX_goal_HEA_focus_cleric_generals
+        icon = GFX_goal_RMM_Chancellor_Knight
         cost = 60
         x = -2
         y = 1
@@ -591,7 +587,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_boggy_creek
-        icon = GFX_goal_HEA_focus_innocence_lost
+        icon = GFX_goal_RMM_Chancellor_Skull_2
         cost = 60
         x = 2
         y = 1
@@ -615,7 +611,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_porcupine
-        icon = GFX_goal_BRA_Tanner
+        icon = GFX_goal_RMM_Chancellor_Mountie
         cost = 60
         x = 6
         y = 1
@@ -639,7 +635,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_fort_cap_hell
-        icon = GFX_goal_arr_maxsec_prison_build
+        icon = GFX_goal_RMM_Chancellor_Window_Watching
         cost = 60
         x = 0
         y = 1
@@ -663,7 +659,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_brandon
-        icon = GFX_goal_BRA_brandon_stars
+        icon = GFX_goal_RMM_Chancellor_House
         cost = 60
         x = 0
         y = 1
@@ -688,7 +684,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_east_blightwood
-        icon = GFX_goal_BDT_bloody_skull
+        icon = GFX_goal_RMM_Chancellor_Blood_Moon
         cost = 60
         x = 0
         y = 1
@@ -712,7 +708,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_manitoba_tech
-        icon = GFX_goal_pal_drop_out_question
+        icon = GFX_goal_RMM_Chancellor_Scholar
         cost = 40
         x = -1
         y = 1
@@ -728,7 +724,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_victory_revolution
-        icon = GFX_goal_generic_zippo_girl
+        icon = GFX_goal_RMM_Chancellor_Woman
         cost = 40
         x = 1
         y = 1
@@ -747,7 +743,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_finish_up
-        icon = GFX_goal_generic_scyscrapers_postwar
+        icon = GFX_goal_RMM_Chancellor_Book
         cost = 40
         x = 1
         y = 1
@@ -806,7 +802,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_electorate
-        icon = GFX_goal_CPH_vote_machine
+        icon = GFX_goal_RMM_Chancellor_Two_Guys
         cost = 40
         x = -3
         y = 1
@@ -851,7 +847,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_rivers
-        icon = GFX_focus_wpg_vigilance_through_hardship
+        icon = GFX_goal_RMM_Chancellor_Flower_Skull
         cost = 40
         x = 3
         y = 1
@@ -878,7 +874,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_advanced_guns
-        icon = GFX_goal_generic_laser_rifle_2
+        icon = GFX_goal_RMM_Chancellor_Musket
         cost = 40
         x = 2
         y = 1
@@ -917,7 +913,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_advanced_air
-        icon = GFX_focus_canada_helmet
+        icon = GFX_goal_RMM_Chancellor_Birb
         cost = 40
         x = 5
         y = 1
@@ -957,7 +953,7 @@ focus_tree = {
 
     focus = {
         id = rmm_irc_metis
-        icon = GFX_goal_MTC_BM_Building
+        icon = GFX_goal_RMM_Chancellor_Heart
         cost = 40
         x = 1
         y = 1
@@ -987,7 +983,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_stampede
-        icon = GFX_goal_generic_radioactive_horse
+        icon = GFX_goal_RMM_Chancellor_Horse
         cost = 40
         x = 0
         y = 2
@@ -1036,7 +1032,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_go_south
-        icon = GFX_goal_generic_focus_magazine_aat_sniper
+        icon = GFX_goal_RMM_Chancellor_Death
         cost = 40
         x = 2
         y = 1
@@ -1090,7 +1086,7 @@ focus_tree = {
     }
     focus = {
         id = rmm_irc_northern_lights
-        icon = GFX_goal_CAR_april_Municipal_Councils
+        icon = GFX_goal_RMM_Chancellor_Light
         cost = 40
         x = 2
         y = 1
@@ -2413,7 +2409,7 @@ focus_tree = {
             NOT = {
                 has_completed_focus = rmm_adm_allies
             }
-            date > 2277.01.01
+            date > 2276.01.01
         }
 
         prerequisite = {

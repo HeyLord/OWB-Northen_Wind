@@ -371,6 +371,98 @@ spriteTypes = {
 		name = "GFX_goal_RMM_Chancellor_Goodbye"
 		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Goodbye.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Skull"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Skull.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Themis"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Themis.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Cry"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Cry.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Old_Soldier"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Old_Soldier.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Iron_Fist"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Iron_Fist.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Smoking"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Smoking.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Mountie"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Mountie.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Knight"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Knight.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Skull_2"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Skull_2.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Window_Watching"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Window_Watching.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Blood_Moon"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Blood_Moon.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_House"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_House.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Scholar"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Scholar.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Woman"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Woman.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Book"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Book.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Two_Guys"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Two_Guys.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Flower_Skull"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Flower_Skull.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Horse"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Horse.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Musket"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Musket.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Birb"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Birb.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Death"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Death.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Heart"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Heart.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_RMM_Chancellor_Light"
+		texturefile = "gfx/interface/goals/unique/RMM/RMM_Chancellor_Light.dds"
+	}
 
 }
 
