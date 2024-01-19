@@ -21,6 +21,10 @@ units = {
 		division_template = "White Collars"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
+		force_equipment_variants = {
+            support_robot_scrap_equipment = { owner = "USA" }
+            cnc_robot_equipment_1 = { owner = "USA" }
+        }
 	}
 
 	division = {
@@ -29,6 +33,10 @@ units = {
 		division_template = "White Collars"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
+		force_equipment_variants = {
+            support_robot_scrap_equipment = { owner = "USA" }
+            cnc_robot_equipment_1 = { owner = "USA" }
+        }
 	}
 
 	division = {
@@ -37,5 +45,9 @@ units = {
 		division_template = "White Collars"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.8
+		force_equipment_variants = {
+            support_robot_scrap_equipment = { owner = "USA" }
+            cnc_robot_equipment_1 = { owner = "USA" }
+        }
 	}
 }
