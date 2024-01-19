@@ -183,8 +183,8 @@
   #RMM
   RMM_people_party:0 "Mooseketeers"
   RMM_people_party_long:0 "The Mooseketeers"
-  RMM_elites_party:0 "Naval Admiralty"
-  RMM_elites_party_long:0 "The Naval Admiralty"
+  RMM_elites_party:0 "Admiral's Council"
+  RMM_elites_party_long:0 "The Admiral's Council"
   RMM_intellectuals_party:0 "Agents"
   RMM_intellectuals_party_long:0 "The Agents"
   RMM_ruler_party:0 "Iron Chancellor"

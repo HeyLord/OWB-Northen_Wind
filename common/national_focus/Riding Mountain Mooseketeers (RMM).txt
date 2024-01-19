@@ -819,9 +819,6 @@ focus_tree = {
             PLT = {
                 all_core_land_owned_by_prev_sphere = yes
             }
-            FRG = {
-                all_core_land_owned_by_prev_sphere = yes
-            }
         }
         prerequisite = {
             focus = rmm_irc_finish_up
@@ -835,7 +832,6 @@ focus_tree = {
                         tag = DUN
                         tag = STN
                         tag = PLT
-                        tag = FRG
                     }
                     all_core_land_owned_by_prev_sphere = no
                 }
@@ -893,9 +889,6 @@ focus_tree = {
                     PLT = {
                         all_core_land_owned_by_prev_sphere = yes
                     }
-                    FRG = {
-                        all_core_land_owned_by_prev_sphere = yes
-                    }
                 }
             }
         }
@@ -918,24 +911,8 @@ focus_tree = {
         x = 5
         y = 1
         available = {
-            OR = {
-                WPG = {
-                    all_core_land_owned_by_prev_sphere = yes
-                }
-                AND = {
-                    DUN = {
-                        all_core_land_owned_by_prev_sphere = yes
-                    }
-                    STN = {
-                        all_core_land_owned_by_prev_sphere = yes
-                    }
-                    PLT = {
-                        all_core_land_owned_by_prev_sphere = yes
-                    }
-                    FRG = {
-                        all_core_land_owned_by_prev_sphere = yes
-                    }
-                }
+            WPG = {
+                all_core_land_owned_by_prev_sphere = yes
             }
         }
         prerequisite = {
@@ -1003,9 +980,6 @@ focus_tree = {
                     PLT = {
                         all_core_land_owned_by_prev_sphere = yes
                     }
-                    FRG = {
-                        all_core_land_owned_by_prev_sphere = yes
-                    }
                 }
             }
         }
@@ -1050,9 +1024,6 @@ focus_tree = {
                         all_core_land_owned_by_prev_sphere = yes
                     }
                     PLT = {
-                        all_core_land_owned_by_prev_sphere = yes
-                    }
-                    FRG = {
                         all_core_land_owned_by_prev_sphere = yes
                     }
                 }

@@ -108,8 +108,10 @@ RMM_agents_chicago_shipments = {
 		days_re_enable = 28
 		remove_effect = {
 			if = {
-				NOT = {
-					has_country_flag = rmm_advanced_shipment
+				limit = {
+					NOT = {
+						has_country_flag = rmm_advanced_shipment
+					}
 				}
 				add_equipment_to_stockpile = {
 					type = energy_equipment_4

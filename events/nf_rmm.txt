@@ -69,7 +69,7 @@ country_event = {
 	id = nf_rmm.4
 	title = nf_rmm.4.t
 	desc = nf_rmm.4.d
-	picture = GFX_event_generic_civil_unrest
+	picture = GFX_event_rmm_grenade
 
 	is_triggered_only = yes
 
@@ -168,7 +168,7 @@ country_event = {
 	id = nf_rmm.6
 	title = nf_rmm.6.t
 	desc = nf_rmm.6.d
-	picture = GFX_event_sub_generic_coast
+	picture = GFX_event_rmm_guillotine
 
 	is_triggered_only = yes
 
@@ -181,7 +181,7 @@ country_event = {
 		}
 	}
 	option = { #Kill
-		name = nf_rmm.6.a
+		name = nf_rmm.6.b
 		complete_national_focus = rmm_irc_judgement
 		country_event = {
 			id = nf_rmm.7
@@ -195,7 +195,7 @@ country_event = {
 	id = nf_rmm.7
 	title = nf_rmm.7.t
 	desc = nf_rmm.7.d
-	picture = GFX_event_sub_generic_coast
+	picture = GFX_event_sub_generic_ruins_divide
 
 	is_triggered_only = yes
 
@@ -208,7 +208,7 @@ country_event = {
 		}
 	}
 	option = { #Pensions
-		name = nf_rmm.7.a
+		name = nf_rmm.7.b
 		complete_national_focus = rmm_irc_glorious_days
 		country_event = {
 			id = nf_rmm.8
@@ -222,7 +222,7 @@ country_event = {
 	id = nf_rmm.8
 	title = nf_rmm.8.t
 	desc = nf_rmm.8.d
-	picture = GFX_event_sub_generic_coast
+	picture = GFX_event_sub_generic_dock
 
 	is_triggered_only = yes
 
@@ -231,7 +231,7 @@ country_event = {
 		complete_national_focus = rmm_irc_world_may_be_ugly
 	}
 	option = { #Democracy
-		name = nf_rmm.8.a
+		name = nf_rmm.8.b
 		complete_national_focus = rmm_irc_do_what_must
 	}
 }
@@ -241,7 +241,7 @@ country_event = {
 	id = nf_rmm.9
 	title = nf_rmm.9.t
 	desc = nf_rmm.9.d
-	picture = GFX_event_sub_generic_coast
+	picture = GFX_event_sub_generic_sailship
 
 	is_triggered_only = yes
 
@@ -466,7 +466,7 @@ country_event = {
 	id = nf_rmm.16
 	title = nf_rmm.16.t
 	desc = nf_rmm.16.d
-	picture = GFX_event_rmm_the_secretary
+	picture = GFX_event_erb_vertibird_crash_snow
 
 	is_triggered_only = yes
 
