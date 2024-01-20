@@ -764,7 +764,7 @@ focus_tree = {
             }
             if = {
                 limit = {
-                    has_completed_focus = rmm_irc_gutter
+                    has_completed_focus = rmm_irc_judgement
                 }
                 swap_ideas = {
                     remove_idea = rmm_confiscating_noble_property
@@ -773,7 +773,7 @@ focus_tree = {
             }
             if = {
                 limit = {
-                    has_completed_focus = rmm_irc_judgement
+                    has_completed_focus = rmm_irc_gutter
                 }
                 swap_ideas = {
                     remove_idea = rmm_power_vaccum
