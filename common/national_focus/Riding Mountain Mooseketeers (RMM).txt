@@ -1422,6 +1422,8 @@ focus_tree = {
         completion_reward = {
             WPG = {
                 change_tag_from = ROOT
+            }
+            WPG = {
                 annex_country = {
                     target = RMM
                     transfer_troops = yes
