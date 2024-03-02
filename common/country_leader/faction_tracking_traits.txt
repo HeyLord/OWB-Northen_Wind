@@ -390,6 +390,24 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	dislikes_bloody_electorals = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_canadian_watchdogs = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_kingdom_of_manitoba = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	dislikes_united_wallers = {
 		random = no
 		ai_will_do = {
@@ -420,13 +438,25 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	dislikes_kingdom_of_manitoba = {
+	dislikes_red_shield = {
 		random = no
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	dislikes_red_shield = {
+	dislikes_wardens_of_white = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_miscounts = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dislikes_royal_accord = {
 		random = no
 		ai_will_do = {
 			factor = 1

@@ -98,7 +98,7 @@ set_country_flag = is_canadian_peoples_front_nation
 set_country_flag = grand_doctrine_ai
 set_country_flag = grand_infantry_doctrine_ai
 
-recruit_character = WHC_George_Ramsey
+#recruit_character = WHC_George_Ramsey
 set_politics = {
 	ruling_party = ruler
 	elections_allowed = no

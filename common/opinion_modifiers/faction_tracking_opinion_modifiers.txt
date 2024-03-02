@@ -642,6 +642,36 @@ opinion_modifiers = {
 		decay = 4
 		value = -12
 	}
+	refused_entry_to_bloody_electorals = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_bloody_electorals = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_canadian_watchdogs = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_canadian_watchdogs = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_kingdom_of_manitoba = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_kingdom_of_manitoba = {
+		months = 3
+		decay = 4
+		value = -12
+	}
 	refused_entry_to_united_wallers = {
 		months = 3
 		decay = 4
@@ -692,22 +722,42 @@ opinion_modifiers = {
 		decay = 4
 		value = -12
 	}
-	refused_entry_to_kingdom_of_manitoba = {
-		months = 3
-		decay = 4
-		value = -12
-	}
-	rejected_invitation_to_kingdom_of_manitoba = {
-		months = 3
-		decay = 4
-		value = -12
-	}
 	refused_entry_to_red_shield = {
 		months = 3
 		decay = 4
 		value = -12
 	}
 	rejected_invitation_to_red_shield = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_wardens_of_white = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_wardens_of_white = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_miscounts = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_miscounts = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	refused_entry_to_royal_accord = {
+		months = 3
+		decay = 4
+		value = -12
+	}
+	rejected_invitation_to_royal_accord = {
 		months = 3
 		decay = 4
 		value = -12

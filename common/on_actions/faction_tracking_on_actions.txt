@@ -10286,6 +10286,495 @@ on_actions = {
 		effect = {
 			if = {
 				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] bloody_electorals (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_bloody_electorals_member = yes
+				}
+				FROM = {
+					mark_as_bloody_electorals_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] bloody_electorals (on_action) exited"
+			}
+		}
+	}
+
+	# FROM is faction leader on join faction requests
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] bloody_electorals (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_bloody_electorals_member = yes
+				}
+				FROM = {
+					mark_as_bloody_electorals_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] bloody_electorals (on_action) exited"
+			}
+		}
+	}
+
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - bloody_electorals (on_action) examined"
+			}
+			if = {
+				limit = { is_bloody_electorals_member = yes }
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - bloody_electorals (on_action) entered"
+				}
+				unmark_as_bloody_electorals_member = yes
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - bloody_electorals (on_action) exited"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - bloody_electorals (on_action) finished exam"
+			}
+		}
+	}
+
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into bloody_electorals (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_bloody_electorals_member = yes } }
+				mark_as_bloody_electorals_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into bloody_electorals (on_action) exited"
+			}
+		}
+	}
+
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_on_puppet [FROM.GetName] from bloody_electorals (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_bloody_electorals_member = yes } }
+				mark_as_bloody_electorals_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_puppet [FROM.GetName] from bloody_electorals (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is the new faction leader FROM is the old faction leader
+	# This does not work with the other code, so it should never be called
+	on_assume_faction_leadership = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from bloody_electorals (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_bloody_electorals_member = yes
+					FROM = { is_bloody_electorals_member = yes }
+				}
+				set_variable = { GLOBAL.last_bloody_electorals_leader = FROM }
+				set_variable = { GLOBAL.bloody_electorals_leader = ROOT }
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] NOT IN SAME FACTION!"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from bloody_electorals (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_release_as_free = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - bloody_electorals (on_action) examined"
+			}
+			unmark_as_bloody_electorals_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - bloody_electorals (on_action) finished exam"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_liberate = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - bloody_electorals (on_action) examined"
+			}
+			unmark_as_bloody_electorals_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - bloody_electorals (on_action) finished exam"
+			}
+		}
+	}
+}
+on_actions = {
+	# FROM is the country invited
+	on_offer_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] canadian_watchdogs (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_canadian_watchdogs_member = yes
+				}
+				FROM = {
+					mark_as_canadian_watchdogs_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] canadian_watchdogs (on_action) exited"
+			}
+		}
+	}
+
+	# FROM is faction leader on join faction requests
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] canadian_watchdogs (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_canadian_watchdogs_member = yes
+				}
+				FROM = {
+					mark_as_canadian_watchdogs_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] canadian_watchdogs (on_action) exited"
+			}
+		}
+	}
+
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - canadian_watchdogs (on_action) examined"
+			}
+			if = {
+				limit = { is_canadian_watchdogs_member = yes }
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - canadian_watchdogs (on_action) entered"
+				}
+				unmark_as_canadian_watchdogs_member = yes
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - canadian_watchdogs (on_action) exited"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - canadian_watchdogs (on_action) finished exam"
+			}
+		}
+	}
+
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into canadian_watchdogs (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_canadian_watchdogs_member = yes } }
+				mark_as_canadian_watchdogs_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into canadian_watchdogs (on_action) exited"
+			}
+		}
+	}
+
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_on_puppet [FROM.GetName] from canadian_watchdogs (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_canadian_watchdogs_member = yes } }
+				mark_as_canadian_watchdogs_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_puppet [FROM.GetName] from canadian_watchdogs (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is the new faction leader FROM is the old faction leader
+	# This does not work with the other code, so it should never be called
+	on_assume_faction_leadership = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from canadian_watchdogs (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_canadian_watchdogs_member = yes
+					FROM = { is_canadian_watchdogs_member = yes }
+				}
+				set_variable = { GLOBAL.last_canadian_watchdogs_leader = FROM }
+				set_variable = { GLOBAL.canadian_watchdogs_leader = ROOT }
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] NOT IN SAME FACTION!"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from canadian_watchdogs (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_release_as_free = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - canadian_watchdogs (on_action) examined"
+			}
+			unmark_as_canadian_watchdogs_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - canadian_watchdogs (on_action) finished exam"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_liberate = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - canadian_watchdogs (on_action) examined"
+			}
+			unmark_as_canadian_watchdogs_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - canadian_watchdogs (on_action) finished exam"
+			}
+		}
+	}
+}
+on_actions = {
+	# FROM is the country invited
+	on_offer_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] kingdom_of_manitoba (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_kingdom_of_manitoba_member = yes
+				}
+				FROM = {
+					mark_as_kingdom_of_manitoba_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] kingdom_of_manitoba (on_action) exited"
+			}
+		}
+	}
+
+	# FROM is faction leader on join faction requests
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] kingdom_of_manitoba (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_kingdom_of_manitoba_member = yes
+				}
+				FROM = {
+					mark_as_kingdom_of_manitoba_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] kingdom_of_manitoba (on_action) exited"
+			}
+		}
+	}
+
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - kingdom_of_manitoba (on_action) examined"
+			}
+			if = {
+				limit = { is_kingdom_of_manitoba_member = yes }
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - kingdom_of_manitoba (on_action) entered"
+				}
+				unmark_as_kingdom_of_manitoba_member = yes
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - kingdom_of_manitoba (on_action) exited"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - kingdom_of_manitoba (on_action) finished exam"
+			}
+		}
+	}
+
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into kingdom_of_manitoba (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_kingdom_of_manitoba_member = yes } }
+				mark_as_kingdom_of_manitoba_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into kingdom_of_manitoba (on_action) exited"
+			}
+		}
+	}
+
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_on_puppet [FROM.GetName] from kingdom_of_manitoba (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_kingdom_of_manitoba_member = yes } }
+				mark_as_kingdom_of_manitoba_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_puppet [FROM.GetName] from kingdom_of_manitoba (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is the new faction leader FROM is the old faction leader
+	# This does not work with the other code, so it should never be called
+	on_assume_faction_leadership = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from kingdom_of_manitoba (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_kingdom_of_manitoba_member = yes
+					FROM = { is_kingdom_of_manitoba_member = yes }
+				}
+				set_variable = { GLOBAL.last_kingdom_of_manitoba_leader = FROM }
+				set_variable = { GLOBAL.kingdom_of_manitoba_leader = ROOT }
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] NOT IN SAME FACTION!"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from kingdom_of_manitoba (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_release_as_free = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - kingdom_of_manitoba (on_action) examined"
+			}
+			unmark_as_kingdom_of_manitoba_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - kingdom_of_manitoba (on_action) finished exam"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_liberate = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - kingdom_of_manitoba (on_action) examined"
+			}
+			unmark_as_kingdom_of_manitoba_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - kingdom_of_manitoba (on_action) finished exam"
+			}
+		}
+	}
+}
+on_actions = {
+	# FROM is the country invited
+	on_offer_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] united_wallers (on_action) entered"
 			}
 			if = {
@@ -11101,169 +11590,6 @@ on_actions = {
 		effect = {
 			if = {
 				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] kingdom_of_manitoba (on_action) entered"
-			}
-			if = {
-				limit = {
-					is_kingdom_of_manitoba_member = yes
-				}
-				FROM = {
-					mark_as_kingdom_of_manitoba_member = yes
-				}
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] kingdom_of_manitoba (on_action) exited"
-			}
-		}
-	}
-
-	# FROM is faction leader on join faction requests
-	on_join_faction = {
-		effect = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] kingdom_of_manitoba (on_action) entered"
-			}
-			if = {
-				limit = {
-					is_kingdom_of_manitoba_member = yes
-				}
-				FROM = {
-					mark_as_kingdom_of_manitoba_member = yes
-				}
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] kingdom_of_manitoba (on_action) exited"
-			}
-		}
-	}
-
-	on_leave_faction = {
-		effect = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - kingdom_of_manitoba (on_action) examined"
-			}
-			if = {
-				limit = { is_kingdom_of_manitoba_member = yes }
-				if = {
-					limit = { has_global_flag = debug_logs }
-					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - kingdom_of_manitoba (on_action) entered"
-				}
-				unmark_as_kingdom_of_manitoba_member = yes
-				if = {
-					limit = { has_global_flag = debug_logs }
-					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - kingdom_of_manitoba (on_action) exited"
-				}
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - kingdom_of_manitoba (on_action) finished exam"
-			}
-		}
-	}
-
-	on_puppet = {
-		effect = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into kingdom_of_manitoba (on_action) entered"
-			}
-			if = {
-				limit = { FROM = { is_kingdom_of_manitoba_member = yes } }
-				mark_as_kingdom_of_manitoba_member = yes
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into kingdom_of_manitoba (on_action) exited"
-			}
-		}
-	}
-
-	on_release_as_puppet = {
-		effect = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_release_on_puppet [FROM.GetName] from kingdom_of_manitoba (on_action) entered"
-			}
-			if = {
-				limit = { FROM = { is_kingdom_of_manitoba_member = yes } }
-				mark_as_kingdom_of_manitoba_member = yes
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_release_as_puppet [FROM.GetName] from kingdom_of_manitoba (on_action) exited"
-			}
-		}
-	}
-
-	# ROOT is the new faction leader FROM is the old faction leader
-	# This does not work with the other code, so it should never be called
-	on_assume_faction_leadership = {
-		effect = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from kingdom_of_manitoba (on_action) entered"
-			}
-			if = {
-				limit = {
-					is_kingdom_of_manitoba_member = yes
-					FROM = { is_kingdom_of_manitoba_member = yes }
-				}
-				set_variable = { GLOBAL.last_kingdom_of_manitoba_leader = FROM }
-				set_variable = { GLOBAL.kingdom_of_manitoba_leader = ROOT }
-			}
-			else = {
-				if = {
-					limit = { has_global_flag = debug_logs }
-					log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] NOT IN SAME FACTION!"
-				}
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from kingdom_of_manitoba (on_action) exited"
-			}
-		}
-	}
-
-	# ROOT is free nation FROM is releaser
-	on_release_as_free = {
-		effect = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - kingdom_of_manitoba (on_action) examined"
-			}
-			unmark_as_kingdom_of_manitoba_member = yes
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - kingdom_of_manitoba (on_action) finished exam"
-			}
-		}
-	}
-
-	# ROOT is free nation FROM is releaser
-	on_liberate = {
-		effect = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_liberate - kingdom_of_manitoba (on_action) examined"
-			}
-			unmark_as_kingdom_of_manitoba_member = yes
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [ROOT.GetName] on_liberate - kingdom_of_manitoba (on_action) finished exam"
-			}
-		}
-	}
-}
-on_actions = {
-	# FROM is the country invited
-	on_offer_join_faction = {
-		effect = {
-			if = {
-				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] red_shield (on_action) entered"
 			}
 			if = {
@@ -11417,6 +11743,495 @@ on_actions = {
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [ROOT.GetName] on_liberate - red_shield (on_action) finished exam"
+			}
+		}
+	}
+}
+on_actions = {
+	# FROM is the country invited
+	on_offer_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] wardens_of_white (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_wardens_of_white_member = yes
+				}
+				FROM = {
+					mark_as_wardens_of_white_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] wardens_of_white (on_action) exited"
+			}
+		}
+	}
+
+	# FROM is faction leader on join faction requests
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] wardens_of_white (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_wardens_of_white_member = yes
+				}
+				FROM = {
+					mark_as_wardens_of_white_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] wardens_of_white (on_action) exited"
+			}
+		}
+	}
+
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - wardens_of_white (on_action) examined"
+			}
+			if = {
+				limit = { is_wardens_of_white_member = yes }
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - wardens_of_white (on_action) entered"
+				}
+				unmark_as_wardens_of_white_member = yes
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - wardens_of_white (on_action) exited"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - wardens_of_white (on_action) finished exam"
+			}
+		}
+	}
+
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into wardens_of_white (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_wardens_of_white_member = yes } }
+				mark_as_wardens_of_white_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into wardens_of_white (on_action) exited"
+			}
+		}
+	}
+
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_on_puppet [FROM.GetName] from wardens_of_white (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_wardens_of_white_member = yes } }
+				mark_as_wardens_of_white_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_puppet [FROM.GetName] from wardens_of_white (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is the new faction leader FROM is the old faction leader
+	# This does not work with the other code, so it should never be called
+	on_assume_faction_leadership = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from wardens_of_white (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_wardens_of_white_member = yes
+					FROM = { is_wardens_of_white_member = yes }
+				}
+				set_variable = { GLOBAL.last_wardens_of_white_leader = FROM }
+				set_variable = { GLOBAL.wardens_of_white_leader = ROOT }
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] NOT IN SAME FACTION!"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from wardens_of_white (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_release_as_free = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - wardens_of_white (on_action) examined"
+			}
+			unmark_as_wardens_of_white_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - wardens_of_white (on_action) finished exam"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_liberate = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - wardens_of_white (on_action) examined"
+			}
+			unmark_as_wardens_of_white_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - wardens_of_white (on_action) finished exam"
+			}
+		}
+	}
+}
+on_actions = {
+	# FROM is the country invited
+	on_offer_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] miscounts (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_miscounts_member = yes
+				}
+				FROM = {
+					mark_as_miscounts_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] miscounts (on_action) exited"
+			}
+		}
+	}
+
+	# FROM is faction leader on join faction requests
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] miscounts (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_miscounts_member = yes
+				}
+				FROM = {
+					mark_as_miscounts_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] miscounts (on_action) exited"
+			}
+		}
+	}
+
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - miscounts (on_action) examined"
+			}
+			if = {
+				limit = { is_miscounts_member = yes }
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - miscounts (on_action) entered"
+				}
+				unmark_as_miscounts_member = yes
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - miscounts (on_action) exited"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - miscounts (on_action) finished exam"
+			}
+		}
+	}
+
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into miscounts (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_miscounts_member = yes } }
+				mark_as_miscounts_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into miscounts (on_action) exited"
+			}
+		}
+	}
+
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_on_puppet [FROM.GetName] from miscounts (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_miscounts_member = yes } }
+				mark_as_miscounts_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_puppet [FROM.GetName] from miscounts (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is the new faction leader FROM is the old faction leader
+	# This does not work with the other code, so it should never be called
+	on_assume_faction_leadership = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from miscounts (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_miscounts_member = yes
+					FROM = { is_miscounts_member = yes }
+				}
+				set_variable = { GLOBAL.last_miscounts_leader = FROM }
+				set_variable = { GLOBAL.miscounts_leader = ROOT }
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] NOT IN SAME FACTION!"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from miscounts (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_release_as_free = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - miscounts (on_action) examined"
+			}
+			unmark_as_miscounts_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - miscounts (on_action) finished exam"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_liberate = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - miscounts (on_action) examined"
+			}
+			unmark_as_miscounts_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - miscounts (on_action) finished exam"
+			}
+		}
+	}
+}
+on_actions = {
+	# FROM is the country invited
+	on_offer_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] royal_accord (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_royal_accord_member = yes
+				}
+				FROM = {
+					mark_as_royal_accord_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_offer_join_faction to [FROM.GetName] royal_accord (on_action) exited"
+			}
+		}
+	}
+
+	# FROM is faction leader on join faction requests
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] royal_accord (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_royal_accord_member = yes
+				}
+				FROM = {
+					mark_as_royal_accord_member = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_join_faction to [FROM.GetName] royal_accord (on_action) exited"
+			}
+		}
+	}
+
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - royal_accord (on_action) examined"
+			}
+			if = {
+				limit = { is_royal_accord_member = yes }
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - royal_accord (on_action) entered"
+				}
+				unmark_as_royal_accord_member = yes
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_leave_faction - royal_accord (on_action) exited"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_leave_faction - royal_accord (on_action) finished exam"
+			}
+		}
+	}
+
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into royal_accord (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_royal_accord_member = yes } }
+				mark_as_royal_accord_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_puppet [FROM.GetName] into royal_accord (on_action) exited"
+			}
+		}
+	}
+
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_on_puppet [FROM.GetName] from royal_accord (on_action) entered"
+			}
+			if = {
+				limit = { FROM = { is_royal_accord_member = yes } }
+				mark_as_royal_accord_member = yes
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_puppet [FROM.GetName] from royal_accord (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is the new faction leader FROM is the old faction leader
+	# This does not work with the other code, so it should never be called
+	on_assume_faction_leadership = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from royal_accord (on_action) entered"
+			}
+			if = {
+				limit = {
+					is_royal_accord_member = yes
+					FROM = { is_royal_accord_member = yes }
+				}
+				set_variable = { GLOBAL.last_royal_accord_leader = FROM }
+				set_variable = { GLOBAL.royal_accord_leader = ROOT }
+			}
+			else = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] NOT IN SAME FACTION!"
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_assume_faction_leadership [FROM.GetName] from royal_accord (on_action) exited"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_release_as_free = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - royal_accord (on_action) examined"
+			}
+			unmark_as_royal_accord_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_release_as_free - royal_accord (on_action) finished exam"
+			}
+		}
+	}
+
+	# ROOT is free nation FROM is releaser
+	on_liberate = {
+		effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - royal_accord (on_action) examined"
+			}
+			unmark_as_royal_accord_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [ROOT.GetName] on_liberate - royal_accord (on_action) finished exam"
 			}
 		}
 	}

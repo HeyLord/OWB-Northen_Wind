@@ -1,0 +1,111 @@
+CPF_seven_front_war = {
+	CPF_war_breaks_out = {
+		priority = 200
+		icon = generic_ignite_civil_war
+		allowed = {
+			OR = {
+				tag = STC
+				tag = COM
+				tag = LOI
+				tag = BGR
+				tag = WHC
+			}
+		}
+		available = { hidden_trigger = { always = no } }
+		days_mission_timeout = 250
+		war_with_on_timeout = STC
+		war_with_on_timeout = COM
+		war_with_on_timeout = LOI
+		war_with_on_timeout = BGR
+		war_with_on_timeout = WHC
+		fire_only_once = yes
+#		activation = {
+#			has_global_flag = strath_marches
+#		}
+		#cancel_if_not_visible = yes
+		is_good = no
+		timeout_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = STC
+						tag = COM
+						tag = LOI
+						tag = BGR
+						tag = WHC
+					}
+					NOT = { has_global_flag = stc_six_front_war_began }
+				}
+				news_event = nf_strath.13
+			}
+		}
+	}
+#	CPF_raid_the_border = {
+#		icon = generic_ignite_civil_war
+#		allowed = {
+#			original_tag = STC
+#		}
+#		activation = {
+#			has_country_flag = STC_retaliates
+#		}
+#		available = {
+#			hidden_trigger = { always = no }
+#		}
+#		cancel_trigger = {
+#
+#		}
+#		is_good = no # so it shows up red
+#		days_mission_timeout = 30
+#		priority = 10
+#		available = {
+#			NOT = { has_war_with = LOI }
+#			1118 = {
+#				is_fully_controlled_by = STC
+#			}
+#			1141 = {
+#				is_owned_and_controlled_by = LOI
+#			}
+#		}
+#		visible = {
+#			1118 = {
+#				is_fully_controlled_by = STC
+#			}
+#			LOI = {
+#				exists = yes
+#				NOT = {
+#					is_subject_of = STC
+#					is_in_faction_with = STC
+#					has_border_war_with = STC
+#				}
+#			}
+#		}
+#		highlight_states = {
+#			highlight_state_targets = {
+#                state = 1141
+#            }
+#		}
+#		selectable_mission = no
+#		fire_only_once = yes
+#		timeout_effect = {
+#			start_border_war = {
+#				change_state_after_war = no
+#				attacker = {
+#					state = 1124
+#					num_provinces = 3
+#					on_win = nf_strath.9
+#					on_lose = nf_strath.10
+#					on_cancel = nf_strath.11
+#				}
+#
+#				defender = {
+#					state = 1141
+#					num_provinces = 2
+#					on_win = nf_strath.12
+#					on_lose = nf_strath.13
+#					# on_cancel = nf_strath.14	# Undefined event. TODO: this really should have something short whipped up for it @tran
+#				}
+#			}
+#		}
+#	}
+
+}

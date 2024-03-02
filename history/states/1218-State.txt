@@ -3,26 +3,35 @@ state={
 	id=1218
 	name="STATE_1218"
 	resources={
-		metal=6.000
+		metal=7.000
+		water = 2.000
 	}
 
 	history={
-		owner =  WHC
-		add_core_of =  WHC
+		owner = WHC
+		add_core_of = COM
+		add_core_of = WHC
 		victory_points = {
 			13995 5
 		}
+		victory_points = {
+			13788 5
+		}
+		victory_points = {
+			13792 5
+		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 1
 
 		}
 
 	}
 
 	provinces={
-		13959 13962 13963 13964 13973 13977 13994 13995 13996 13997
+		13788 13790 13792 13793 13797 13798 13959 13973 13977 13995
 	}
-	state_category = pastoral
-	manpower = 3100
+	manpower=711
 	buildings_max_level_factor=1.000
+	state_category=shanty
+	local_supplies=0.000
 }

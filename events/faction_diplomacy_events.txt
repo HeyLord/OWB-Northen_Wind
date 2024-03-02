@@ -11855,6 +11855,570 @@ country_event = {
 		}
 	}
 }
+add_namespace = bloody_electorals_faction_events
+
+country_event = {
+	id = bloody_electorals_faction_events.1
+	title = bloody_electorals_faction_events.1.t
+	desc = bloody_electorals_faction_events.1.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Allow them to join.
+	option = {
+		name = bloody_electorals_faction_events.1.a
+
+		# For now, AI will always accept new members.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] bloody_electorals_faction_events.1.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		FROM = {
+			news_event = { id = bloody_electorals_faction_events.2 }
+			join_bloody_electorals = yes
+			hidden_effect = {
+				every_other_country = {
+					news_event = { id = bloody_electorals_faction_events.4 }
+				}
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] bloody_electorals_faction_events.1.a (event_option) exited"
+		}
+	}
+
+	# Decline their request.
+	option = {
+		name = bloody_electorals_faction_events.1.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] bloody_electorals_faction_events.1.b (event_option) entered"
+		}
+		FROM = {
+			news_event = { id = bloody_electorals_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] bloody_electorals_faction_events.1.b (event_option) exited"
+		}
+	}
+}
+
+# Welcome aboard!
+news_event = {
+	id = bloody_electorals_faction_events.2
+	title = bloody_electorals_faction_events.2.t
+	desc = bloody_electorals_faction_events.2.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = bloody_electorals_faction_events.2.a
+	}
+}
+
+# No thanks, we'll pass.
+news_event = {
+	id = bloody_electorals_faction_events.3
+	title = bloody_electorals_faction_events.3.t
+	desc = bloody_electorals_faction_events.3.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = bloody_electorals_faction_events.3.a
+	}
+}
+
+# Hey everybody, come meet my new friend!
+news_event = {
+	id = bloody_electorals_faction_events.4
+	title = bloody_electorals_faction_events.4.t
+	desc = bloody_electorals_faction_events.4.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = bloody_electorals_faction_events.4.a
+	}
+}
+
+country_event = {
+	id = bloody_electorals_faction_events.5
+	title = bloody_electorals_faction_events.5.t
+	desc = bloody_electorals_faction_events.5.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Sure, we'll join.
+	option = {
+		name = bloody_electorals_faction_events.5.a
+
+		# For now, AI will always join.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] bloody_electorals_faction_events.5.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		join_from_faction = yes
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] bloody_electorals_faction_events.5.a (event_option) exited"
+		}
+	}
+
+	# We work alone.
+	option = {
+		name = bloody_electorals_faction_events.5.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] bloody_electorals_faction_events.5.b (event_option) entered"
+		}
+		if = {
+			limit = {
+				NOT = { has_opinion_modifier = rejected_invitation_to_bloody_electorals }
+			}
+			every_country = {
+				limit = { is_bloody_electorals_member = yes }
+				hidden_effect = {
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = rejected_invitation_to_bloody_electorals
+					}
+				}
+				add_opinion_modifier = {
+					target = PREV
+					modifier = rejected_invitation_to_bloody_electorals
+				}
+			}
+		}
+		FROM = {
+			news_event = { id = bloody_electorals_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] bloody_electorals_faction_events.5.b (event_option) exited"
+		}
+	}
+}
+add_namespace = canadian_watchdogs_faction_events
+
+country_event = {
+	id = canadian_watchdogs_faction_events.1
+	title = canadian_watchdogs_faction_events.1.t
+	desc = canadian_watchdogs_faction_events.1.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Allow them to join.
+	option = {
+		name = canadian_watchdogs_faction_events.1.a
+
+		# For now, AI will always accept new members.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] canadian_watchdogs_faction_events.1.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		FROM = {
+			news_event = { id = canadian_watchdogs_faction_events.2 }
+			join_canadian_watchdogs = yes
+			hidden_effect = {
+				every_other_country = {
+					news_event = { id = canadian_watchdogs_faction_events.4 }
+				}
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] canadian_watchdogs_faction_events.1.a (event_option) exited"
+		}
+	}
+
+	# Decline their request.
+	option = {
+		name = canadian_watchdogs_faction_events.1.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] canadian_watchdogs_faction_events.1.b (event_option) entered"
+		}
+		FROM = {
+			news_event = { id = canadian_watchdogs_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] canadian_watchdogs_faction_events.1.b (event_option) exited"
+		}
+	}
+}
+
+# Welcome aboard!
+news_event = {
+	id = canadian_watchdogs_faction_events.2
+	title = canadian_watchdogs_faction_events.2.t
+	desc = canadian_watchdogs_faction_events.2.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = canadian_watchdogs_faction_events.2.a
+	}
+}
+
+# No thanks, we'll pass.
+news_event = {
+	id = canadian_watchdogs_faction_events.3
+	title = canadian_watchdogs_faction_events.3.t
+	desc = canadian_watchdogs_faction_events.3.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = canadian_watchdogs_faction_events.3.a
+	}
+}
+
+# Hey everybody, come meet my new friend!
+news_event = {
+	id = canadian_watchdogs_faction_events.4
+	title = canadian_watchdogs_faction_events.4.t
+	desc = canadian_watchdogs_faction_events.4.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = canadian_watchdogs_faction_events.4.a
+	}
+}
+
+country_event = {
+	id = canadian_watchdogs_faction_events.5
+	title = canadian_watchdogs_faction_events.5.t
+	desc = canadian_watchdogs_faction_events.5.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Sure, we'll join.
+	option = {
+		name = canadian_watchdogs_faction_events.5.a
+
+		# For now, AI will always join.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] canadian_watchdogs_faction_events.5.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		join_from_faction = yes
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] canadian_watchdogs_faction_events.5.a (event_option) exited"
+		}
+	}
+
+	# We work alone.
+	option = {
+		name = canadian_watchdogs_faction_events.5.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] canadian_watchdogs_faction_events.5.b (event_option) entered"
+		}
+		if = {
+			limit = {
+				NOT = { has_opinion_modifier = rejected_invitation_to_canadian_watchdogs }
+			}
+			every_country = {
+				limit = { is_canadian_watchdogs_member = yes }
+				hidden_effect = {
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = rejected_invitation_to_canadian_watchdogs
+					}
+				}
+				add_opinion_modifier = {
+					target = PREV
+					modifier = rejected_invitation_to_canadian_watchdogs
+				}
+			}
+		}
+		FROM = {
+			news_event = { id = canadian_watchdogs_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] canadian_watchdogs_faction_events.5.b (event_option) exited"
+		}
+	}
+}
+add_namespace = kingdom_of_manitoba_faction_events
+
+country_event = {
+	id = kingdom_of_manitoba_faction_events.1
+	title = kingdom_of_manitoba_faction_events.1.t
+	desc = kingdom_of_manitoba_faction_events.1.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Allow them to join.
+	option = {
+		name = kingdom_of_manitoba_faction_events.1.a
+
+		# For now, AI will always accept new members.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.1.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		FROM = {
+			news_event = { id = kingdom_of_manitoba_faction_events.2 }
+			join_kingdom_of_manitoba = yes
+			hidden_effect = {
+				every_other_country = {
+					news_event = { id = kingdom_of_manitoba_faction_events.4 }
+				}
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.1.a (event_option) exited"
+		}
+	}
+
+	# Decline their request.
+	option = {
+		name = kingdom_of_manitoba_faction_events.1.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.1.b (event_option) entered"
+		}
+		FROM = {
+			news_event = { id = kingdom_of_manitoba_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.1.b (event_option) exited"
+		}
+	}
+}
+
+# Welcome aboard!
+news_event = {
+	id = kingdom_of_manitoba_faction_events.2
+	title = kingdom_of_manitoba_faction_events.2.t
+	desc = kingdom_of_manitoba_faction_events.2.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = kingdom_of_manitoba_faction_events.2.a
+	}
+}
+
+# No thanks, we'll pass.
+news_event = {
+	id = kingdom_of_manitoba_faction_events.3
+	title = kingdom_of_manitoba_faction_events.3.t
+	desc = kingdom_of_manitoba_faction_events.3.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = kingdom_of_manitoba_faction_events.3.a
+	}
+}
+
+# Hey everybody, come meet my new friend!
+news_event = {
+	id = kingdom_of_manitoba_faction_events.4
+	title = kingdom_of_manitoba_faction_events.4.t
+	desc = kingdom_of_manitoba_faction_events.4.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = kingdom_of_manitoba_faction_events.4.a
+	}
+}
+
+country_event = {
+	id = kingdom_of_manitoba_faction_events.5
+	title = kingdom_of_manitoba_faction_events.5.t
+	desc = kingdom_of_manitoba_faction_events.5.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Sure, we'll join.
+	option = {
+		name = kingdom_of_manitoba_faction_events.5.a
+
+		# For now, AI will always join.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.5.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		join_from_faction = yes
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.5.a (event_option) exited"
+		}
+	}
+
+	# We work alone.
+	option = {
+		name = kingdom_of_manitoba_faction_events.5.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.5.b (event_option) entered"
+		}
+		if = {
+			limit = {
+				NOT = { has_opinion_modifier = rejected_invitation_to_kingdom_of_manitoba }
+			}
+			every_country = {
+				limit = { is_kingdom_of_manitoba_member = yes }
+				hidden_effect = {
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = rejected_invitation_to_kingdom_of_manitoba
+					}
+				}
+				add_opinion_modifier = {
+					target = PREV
+					modifier = rejected_invitation_to_kingdom_of_manitoba
+				}
+			}
+		}
+		FROM = {
+			news_event = { id = kingdom_of_manitoba_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.5.b (event_option) exited"
+		}
+	}
+}
 add_namespace = united_wallers_faction_events
 
 country_event = {
@@ -12795,194 +13359,6 @@ country_event = {
 		}
 	}
 }
-add_namespace = kingdom_of_manitoba_faction_events
-
-country_event = {
-	id = kingdom_of_manitoba_faction_events.1
-	title = kingdom_of_manitoba_faction_events.1.t
-	desc = kingdom_of_manitoba_faction_events.1.d
-	picture = GFX_report_event_fascist_speech
-
-	is_triggered_only = yes
-
-	# Allow them to join.
-	option = {
-		name = kingdom_of_manitoba_faction_events.1.a
-
-		# For now, AI will always accept new members.
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 1
-				always = yes
-			}
-		}
-
-		if = {
-			limit = { has_global_flag = debug_logs }
-			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.1.a (event_option) entered"
-		}
-
-		# And here's where they'll actually join.
-		FROM = {
-			news_event = { id = kingdom_of_manitoba_faction_events.2 }
-			join_kingdom_of_manitoba = yes
-			hidden_effect = {
-				every_other_country = {
-					news_event = { id = kingdom_of_manitoba_faction_events.4 }
-				}
-			}
-		}
-
-		if = {
-			limit = { has_global_flag = debug_logs }
-			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.1.a (event_option) exited"
-		}
-	}
-
-	# Decline their request.
-	option = {
-		name = kingdom_of_manitoba_faction_events.1.b
-
-		ai_chance = {
-			factor = 0
-			modifier = {
-				factor = 0
-				always = yes
-			}
-		}
-
-		if = {
-			limit = { has_global_flag = debug_logs }
-			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.1.b (event_option) entered"
-		}
-		FROM = {
-			news_event = { id = kingdom_of_manitoba_faction_events.3 }
-		}
-		if = {
-			limit = { has_global_flag = debug_logs }
-			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.1.b (event_option) exited"
-		}
-	}
-}
-
-# Welcome aboard!
-news_event = {
-	id = kingdom_of_manitoba_faction_events.2
-	title = kingdom_of_manitoba_faction_events.2.t
-	desc = kingdom_of_manitoba_faction_events.2.d
-	picture = GFX_report_event_fascist_speech
-
-	is_triggered_only = yes
-	option = {
-		name = kingdom_of_manitoba_faction_events.2.a
-	}
-}
-
-# No thanks, we'll pass.
-news_event = {
-	id = kingdom_of_manitoba_faction_events.3
-	title = kingdom_of_manitoba_faction_events.3.t
-	desc = kingdom_of_manitoba_faction_events.3.d
-	picture = GFX_report_event_fascist_speech
-
-	is_triggered_only = yes
-	option = {
-		name = kingdom_of_manitoba_faction_events.3.a
-	}
-}
-
-# Hey everybody, come meet my new friend!
-news_event = {
-	id = kingdom_of_manitoba_faction_events.4
-	title = kingdom_of_manitoba_faction_events.4.t
-	desc = kingdom_of_manitoba_faction_events.4.d
-	picture = GFX_report_event_fascist_speech
-
-	is_triggered_only = yes
-	option = {
-		name = kingdom_of_manitoba_faction_events.4.a
-	}
-}
-
-country_event = {
-	id = kingdom_of_manitoba_faction_events.5
-	title = kingdom_of_manitoba_faction_events.5.t
-	desc = kingdom_of_manitoba_faction_events.5.d
-	picture = GFX_report_event_fascist_speech
-
-	is_triggered_only = yes
-
-	# Sure, we'll join.
-	option = {
-		name = kingdom_of_manitoba_faction_events.5.a
-
-		# For now, AI will always join.
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 1
-				always = yes
-			}
-		}
-
-		if = {
-			limit = { has_global_flag = debug_logs }
-			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.5.a (event_option) entered"
-		}
-
-		# And here's where they'll actually join.
-		join_from_faction = yes
-
-		if = {
-			limit = { has_global_flag = debug_logs }
-			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.5.a (event_option) exited"
-		}
-	}
-
-	# We work alone.
-	option = {
-		name = kingdom_of_manitoba_faction_events.5.b
-
-		ai_chance = {
-			factor = 0
-			modifier = {
-				factor = 0
-				always = yes
-			}
-		}
-
-		if = {
-			limit = { has_global_flag = debug_logs }
-			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.5.b (event_option) entered"
-		}
-		if = {
-			limit = {
-				NOT = { has_opinion_modifier = rejected_invitation_to_kingdom_of_manitoba }
-			}
-			every_country = {
-				limit = { is_kingdom_of_manitoba_member = yes }
-				hidden_effect = {
-					remove_opinion_modifier = {
-						target = PREV
-						modifier = rejected_invitation_to_kingdom_of_manitoba
-					}
-				}
-				add_opinion_modifier = {
-					target = PREV
-					modifier = rejected_invitation_to_kingdom_of_manitoba
-				}
-			}
-		}
-		FROM = {
-			news_event = { id = kingdom_of_manitoba_faction_events.3 }
-		}
-		if = {
-			limit = { has_global_flag = debug_logs }
-			log = "[GetDateText]: [This.GetName], [From.GetName] kingdom_of_manitoba_faction_events.5.b (event_option) exited"
-		}
-	}
-}
 add_namespace = red_shield_faction_events
 
 country_event = {
@@ -13168,6 +13544,570 @@ country_event = {
 		if = {
 			limit = { has_global_flag = debug_logs }
 			log = "[GetDateText]: [This.GetName], [From.GetName] red_shield_faction_events.5.b (event_option) exited"
+		}
+	}
+}
+add_namespace = wardens_of_white_faction_events
+
+country_event = {
+	id = wardens_of_white_faction_events.1
+	title = wardens_of_white_faction_events.1.t
+	desc = wardens_of_white_faction_events.1.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Allow them to join.
+	option = {
+		name = wardens_of_white_faction_events.1.a
+
+		# For now, AI will always accept new members.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] wardens_of_white_faction_events.1.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		FROM = {
+			news_event = { id = wardens_of_white_faction_events.2 }
+			join_wardens_of_white = yes
+			hidden_effect = {
+				every_other_country = {
+					news_event = { id = wardens_of_white_faction_events.4 }
+				}
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] wardens_of_white_faction_events.1.a (event_option) exited"
+		}
+	}
+
+	# Decline their request.
+	option = {
+		name = wardens_of_white_faction_events.1.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] wardens_of_white_faction_events.1.b (event_option) entered"
+		}
+		FROM = {
+			news_event = { id = wardens_of_white_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] wardens_of_white_faction_events.1.b (event_option) exited"
+		}
+	}
+}
+
+# Welcome aboard!
+news_event = {
+	id = wardens_of_white_faction_events.2
+	title = wardens_of_white_faction_events.2.t
+	desc = wardens_of_white_faction_events.2.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = wardens_of_white_faction_events.2.a
+	}
+}
+
+# No thanks, we'll pass.
+news_event = {
+	id = wardens_of_white_faction_events.3
+	title = wardens_of_white_faction_events.3.t
+	desc = wardens_of_white_faction_events.3.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = wardens_of_white_faction_events.3.a
+	}
+}
+
+# Hey everybody, come meet my new friend!
+news_event = {
+	id = wardens_of_white_faction_events.4
+	title = wardens_of_white_faction_events.4.t
+	desc = wardens_of_white_faction_events.4.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = wardens_of_white_faction_events.4.a
+	}
+}
+
+country_event = {
+	id = wardens_of_white_faction_events.5
+	title = wardens_of_white_faction_events.5.t
+	desc = wardens_of_white_faction_events.5.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Sure, we'll join.
+	option = {
+		name = wardens_of_white_faction_events.5.a
+
+		# For now, AI will always join.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] wardens_of_white_faction_events.5.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		join_from_faction = yes
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] wardens_of_white_faction_events.5.a (event_option) exited"
+		}
+	}
+
+	# We work alone.
+	option = {
+		name = wardens_of_white_faction_events.5.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] wardens_of_white_faction_events.5.b (event_option) entered"
+		}
+		if = {
+			limit = {
+				NOT = { has_opinion_modifier = rejected_invitation_to_wardens_of_white }
+			}
+			every_country = {
+				limit = { is_wardens_of_white_member = yes }
+				hidden_effect = {
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = rejected_invitation_to_wardens_of_white
+					}
+				}
+				add_opinion_modifier = {
+					target = PREV
+					modifier = rejected_invitation_to_wardens_of_white
+				}
+			}
+		}
+		FROM = {
+			news_event = { id = wardens_of_white_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] wardens_of_white_faction_events.5.b (event_option) exited"
+		}
+	}
+}
+add_namespace = miscounts_faction_events
+
+country_event = {
+	id = miscounts_faction_events.1
+	title = miscounts_faction_events.1.t
+	desc = miscounts_faction_events.1.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Allow them to join.
+	option = {
+		name = miscounts_faction_events.1.a
+
+		# For now, AI will always accept new members.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] miscounts_faction_events.1.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		FROM = {
+			news_event = { id = miscounts_faction_events.2 }
+			join_miscounts = yes
+			hidden_effect = {
+				every_other_country = {
+					news_event = { id = miscounts_faction_events.4 }
+				}
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] miscounts_faction_events.1.a (event_option) exited"
+		}
+	}
+
+	# Decline their request.
+	option = {
+		name = miscounts_faction_events.1.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] miscounts_faction_events.1.b (event_option) entered"
+		}
+		FROM = {
+			news_event = { id = miscounts_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] miscounts_faction_events.1.b (event_option) exited"
+		}
+	}
+}
+
+# Welcome aboard!
+news_event = {
+	id = miscounts_faction_events.2
+	title = miscounts_faction_events.2.t
+	desc = miscounts_faction_events.2.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = miscounts_faction_events.2.a
+	}
+}
+
+# No thanks, we'll pass.
+news_event = {
+	id = miscounts_faction_events.3
+	title = miscounts_faction_events.3.t
+	desc = miscounts_faction_events.3.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = miscounts_faction_events.3.a
+	}
+}
+
+# Hey everybody, come meet my new friend!
+news_event = {
+	id = miscounts_faction_events.4
+	title = miscounts_faction_events.4.t
+	desc = miscounts_faction_events.4.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = miscounts_faction_events.4.a
+	}
+}
+
+country_event = {
+	id = miscounts_faction_events.5
+	title = miscounts_faction_events.5.t
+	desc = miscounts_faction_events.5.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Sure, we'll join.
+	option = {
+		name = miscounts_faction_events.5.a
+
+		# For now, AI will always join.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] miscounts_faction_events.5.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		join_from_faction = yes
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] miscounts_faction_events.5.a (event_option) exited"
+		}
+	}
+
+	# We work alone.
+	option = {
+		name = miscounts_faction_events.5.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] miscounts_faction_events.5.b (event_option) entered"
+		}
+		if = {
+			limit = {
+				NOT = { has_opinion_modifier = rejected_invitation_to_miscounts }
+			}
+			every_country = {
+				limit = { is_miscounts_member = yes }
+				hidden_effect = {
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = rejected_invitation_to_miscounts
+					}
+				}
+				add_opinion_modifier = {
+					target = PREV
+					modifier = rejected_invitation_to_miscounts
+				}
+			}
+		}
+		FROM = {
+			news_event = { id = miscounts_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] miscounts_faction_events.5.b (event_option) exited"
+		}
+	}
+}
+add_namespace = royal_accord_faction_events
+
+country_event = {
+	id = royal_accord_faction_events.1
+	title = royal_accord_faction_events.1.t
+	desc = royal_accord_faction_events.1.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Allow them to join.
+	option = {
+		name = royal_accord_faction_events.1.a
+
+		# For now, AI will always accept new members.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] royal_accord_faction_events.1.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		FROM = {
+			news_event = { id = royal_accord_faction_events.2 }
+			join_royal_accord = yes
+			hidden_effect = {
+				every_other_country = {
+					news_event = { id = royal_accord_faction_events.4 }
+				}
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] royal_accord_faction_events.1.a (event_option) exited"
+		}
+	}
+
+	# Decline their request.
+	option = {
+		name = royal_accord_faction_events.1.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] royal_accord_faction_events.1.b (event_option) entered"
+		}
+		FROM = {
+			news_event = { id = royal_accord_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] royal_accord_faction_events.1.b (event_option) exited"
+		}
+	}
+}
+
+# Welcome aboard!
+news_event = {
+	id = royal_accord_faction_events.2
+	title = royal_accord_faction_events.2.t
+	desc = royal_accord_faction_events.2.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = royal_accord_faction_events.2.a
+	}
+}
+
+# No thanks, we'll pass.
+news_event = {
+	id = royal_accord_faction_events.3
+	title = royal_accord_faction_events.3.t
+	desc = royal_accord_faction_events.3.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = royal_accord_faction_events.3.a
+	}
+}
+
+# Hey everybody, come meet my new friend!
+news_event = {
+	id = royal_accord_faction_events.4
+	title = royal_accord_faction_events.4.t
+	desc = royal_accord_faction_events.4.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+	option = {
+		name = royal_accord_faction_events.4.a
+	}
+}
+
+country_event = {
+	id = royal_accord_faction_events.5
+	title = royal_accord_faction_events.5.t
+	desc = royal_accord_faction_events.5.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	# Sure, we'll join.
+	option = {
+		name = royal_accord_faction_events.5.a
+
+		# For now, AI will always join.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] royal_accord_faction_events.5.a (event_option) entered"
+		}
+
+		# And here's where they'll actually join.
+		join_from_faction = yes
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] royal_accord_faction_events.5.a (event_option) exited"
+		}
+	}
+
+	# We work alone.
+	option = {
+		name = royal_accord_faction_events.5.b
+
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] royal_accord_faction_events.5.b (event_option) entered"
+		}
+		if = {
+			limit = {
+				NOT = { has_opinion_modifier = rejected_invitation_to_royal_accord }
+			}
+			every_country = {
+				limit = { is_royal_accord_member = yes }
+				hidden_effect = {
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = rejected_invitation_to_royal_accord
+					}
+				}
+				add_opinion_modifier = {
+					target = PREV
+					modifier = rejected_invitation_to_royal_accord
+				}
+			}
+		}
+		FROM = {
+			news_event = { id = royal_accord_faction_events.3 }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName], [From.GetName] royal_accord_faction_events.5.b (event_option) exited"
 		}
 	}
 }

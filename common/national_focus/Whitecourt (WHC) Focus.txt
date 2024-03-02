@@ -153,11 +153,10 @@ focus_tree = {
 		}
 		relative_position_id = whc_whitecourt_winery
 		completion_reward = {
-			custom_effect_tooltip = whc_vintage_tt
-			hidden_effect = {
-				set_technology = {
-					special_vintage = 1
-				}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 300
+				producer = ROOT
 			}
 		}
 	}
@@ -787,10 +786,10 @@ focus_tree = {
 		prerequisite = {
 			focus = whc_prince_communism
 		}
-		will_lead_to_war_with = NOR
+		will_lead_to_war_with = MDM
 		relative_position_id = whc_prince_communism
 		completion_reward = {
-			NOR = {
+			MDM = {
 				WHC = {
 					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
 				}
@@ -804,7 +803,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		available = {
-			NOR = {
+			MDM = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
 		}
@@ -878,7 +877,7 @@ focus_tree = {
 			URA = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
-			NOR = {
+			MDM = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
 		}
@@ -1113,17 +1112,17 @@ focus_tree = {
 			ai_has_no_other_wars_or_wargoals = yes
 		}
 		bypass = {
-			NOR = {
+			MDM = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
 		}
 		prerequisite = {
 			focus = whc_queen_communism
 		}
-		will_lead_to_war_with = NOR
+		will_lead_to_war_with = MDM
 		relative_position_id = whc_queen_communism
 		completion_reward = {
-			NOR = {
+			MDM = {
 				ROOT = {
 					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
 				}
@@ -1801,7 +1800,7 @@ focus_tree = {
 
 	focus = {
 		id = whc_victory_parade
-		icon = GFX_goal_generic_commie_soldier_3
+		icon = GFX_goal_LOI_soviet_onward
 		cost = 40
 		x = 9
 		y = 1
@@ -1818,7 +1817,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_communist_practicality
-		icon = GFX_goal_enc_military_police
+		icon = GFX_goal_loi_solomon_convert_fast4
 		cost = 40
 		x = -2
 		y = 1
@@ -1836,7 +1835,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_new_cadres
-		icon = GFX_goal_CAR_april_Bring_Prosperity_To_Peasants
+		icon = GFX_focus_stc_blossom_controlled_elections
 		cost = 40
 		x = 2
 		y = 1
@@ -1851,7 +1850,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_revolution_on_wheels
-		icon = GFX_goal_CES_Industry_TS_Car_Road
+		icon = GFX_goal_LOI_bike
 		cost = 40
 		x = 0
 		y = 1
@@ -1869,7 +1868,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_contr_under_wheels
-		icon = GFX_goal_TLA_Zap_car
+		icon = GFX_goal_LOI_soviet_tank5
 		cost = 40
 		x = 0
 		y = 2
@@ -1883,7 +1882,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_congratulate_our_heroes
-		icon = GFX_goal_generic_medal
+		icon = GFX_focus_stc_party_cadet_dominated_army
 		cost = 40
 		x = 0
 		y = 2
@@ -1898,7 +1897,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_get_enemy_general_1
-		icon = GFX_goal_generic_beret_skull
+		icon = GFX_focus_stc_party_secret_police
 		cost = 40
 		x = -1
 		y = 1
@@ -1914,7 +1913,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_get_enemy_general_2
-		icon = GFX_goal_TLA_Max_soldier
+		icon = GFX_goal_LOI_soviet_soldier3
 		cost = 40
 		x = 1
 		y = 1
@@ -1929,7 +1928,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_eternal_enemy_of_revolution
-		icon = GFX_focus_canada_soldier
+		icon = GFX_goal_LOI_soviet_the_people
 		cost = 40
 		x = 0
 		y = 2
@@ -1946,7 +1945,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_revolution_takes_flight
-		icon = GFX_goal_commie_plane
+		icon = GFX_focus_stc_party_red_air_force
 		cost = 40
 		x = 0
 		y = 1
@@ -1969,7 +1968,7 @@ focus_tree = {
 	}
 	focus = {
 		id = whc_brave_sons_and_daughters
-		icon = GFX_goal_eur_plane_device
+		icon = GFX_focus_stc_purging_local_leaders
 		cost = 40
 		x = 0
 		y = 2

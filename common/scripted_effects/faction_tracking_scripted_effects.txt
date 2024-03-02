@@ -17777,6 +17777,852 @@ remove_northern_union_ally_strategies = {
 	}
 }
 
+create_or_join_bloody_electorals = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_bloody_electorals (scripted_effect) entered"
+	}
+	if = {
+		limit = {
+			bloody_electorals_exists = no
+		}
+		leave_current_faction = yes
+		create_faction = bloody_electorals
+		mark_as_bloody_electorals_member = yes
+		set_variable = { GLOBAL.bloody_electorals_leader = THIS }
+	}
+	else = {
+		join_bloody_electorals = yes
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_bloody_electorals (scripted_effect) exited"
+	}
+}
+
+d_join_bloody_electorals = {
+	log = "[GetDateText]: Adding [This.GetNameDef] to bloody_electorals..."
+	create_or_join_bloody_electorals = yes
+}
+
+ask_to_join_bloody_electorals = {
+	custom_effect_tooltip = ask_to_join_bloody_electorals_tt
+	hidden_effect = {
+		var:GLOBAL.bloody_electorals_leader = {
+			country_event = {
+				id = bloody_electorals_faction_events.1
+			}
+		}
+	}
+}
+
+invite_to_bloody_electorals = {
+	custom_effect_tooltip = invite_to_bloody_electorals_tt
+	hidden_effect = {
+		country_event = {
+			id = bloody_electorals_faction_events.5
+		}
+	}
+}
+
+join_bloody_electorals = {
+	custom_effect_tooltip = join_bloody_electorals_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_bloody_electorals (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_bloody_electorals_member = no }
+			leave_current_faction = yes
+			var:GLOBAL.bloody_electorals_leader = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_bloody_electorals - adding to faction via [This.GetName]... (scripted_effect)"
+				}
+				add_to_faction = PREV
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_bloody_electorals - added to faction via [This.GetName]... (scripted_effect)"
+				}
+			}
+			mark_as_bloody_electorals_member = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_bloody_electorals (scripted_effect) exited"
+		}
+	}
+}
+
+leave_bloody_electorals = {
+	custom_effect_tooltip = leave_bloody_electorals_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_bloody_electorals (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_bloody_electorals_member = yes }
+			unmark_as_bloody_electorals_member = yes
+			leave_faction = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_bloody_electorals (scripted_effect) exited"
+		}
+	}
+}
+
+mark_as_bloody_electorals_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_bloody_electorals_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_bloody_electorals_member = no }
+		unmark_from_current_faction = yes
+		set_variable = { current_faction = STN }
+		add_to_array = { GLOBAL.bloody_electorals_members = THIS }
+		add_bloody_electorals_ally_strategies = yes
+		#add_bloody_electorals_faction_effects = yes
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_bloody_electorals_member = no
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_bloody_electorals_member - also marking [This.GetName]... (scripted_effect)"
+			}
+			leave_current_faction = yes
+			mark_as_bloody_electorals_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_bloody_electorals_member - done also marking [This.GetName]. (scripted_effect)"
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_bloody_electorals_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+unmark_as_bloody_electorals_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_bloody_electorals_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_bloody_electorals_member = yes }
+		remove_bloody_electorals_ally_strategies = yes
+		#remove_bloody_electorals_faction_effects = yes
+		clear_variable = current_faction
+		remove_from_array = { GLOBAL.bloody_electorals_members = THIS }
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_bloody_electorals_member = yes
+			}
+			unmark_as_bloody_electorals_member = yes
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_bloody_electorals_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+add_bloody_electorals_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_bloody_electorals_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = {
+			is_bloody_electorals_member = yes
+			NOT = { tag = PREV }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: add_bloody_electorals_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = -200
+		}
+		PREV = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: add_bloody_electorals_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = -200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_bloody_electorals_ally_strategies (scripted_effect) exited"
+	}
+}
+
+remove_bloody_electorals_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_bloody_electorals_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = { is_bloody_electorals_member = yes }
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = 200
+		}
+		PREV = {
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = 200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_bloody_electorals_ally_strategies (scripted_effect) exited"
+	}
+}
+
+create_or_join_canadian_watchdogs = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_canadian_watchdogs (scripted_effect) entered"
+	}
+	if = {
+		limit = {
+			canadian_watchdogs_exists = no
+		}
+		leave_current_faction = yes
+		create_faction = canadian_watchdogs
+		mark_as_canadian_watchdogs_member = yes
+		set_variable = { GLOBAL.canadian_watchdogs_leader = THIS }
+	}
+	else = {
+		join_canadian_watchdogs = yes
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_canadian_watchdogs (scripted_effect) exited"
+	}
+}
+
+d_join_canadian_watchdogs = {
+	log = "[GetDateText]: Adding [This.GetNameDef] to canadian_watchdogs..."
+	create_or_join_canadian_watchdogs = yes
+}
+
+ask_to_join_canadian_watchdogs = {
+	custom_effect_tooltip = ask_to_join_canadian_watchdogs_tt
+	hidden_effect = {
+		var:GLOBAL.canadian_watchdogs_leader = {
+			country_event = {
+				id = canadian_watchdogs_faction_events.1
+			}
+		}
+	}
+}
+
+invite_to_canadian_watchdogs = {
+	custom_effect_tooltip = invite_to_canadian_watchdogs_tt
+	hidden_effect = {
+		country_event = {
+			id = canadian_watchdogs_faction_events.5
+		}
+	}
+}
+
+join_canadian_watchdogs = {
+	custom_effect_tooltip = join_canadian_watchdogs_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_canadian_watchdogs (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_canadian_watchdogs_member = no }
+			leave_current_faction = yes
+			var:GLOBAL.canadian_watchdogs_leader = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_canadian_watchdogs - adding to faction via [This.GetName]... (scripted_effect)"
+				}
+				add_to_faction = PREV
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_canadian_watchdogs - added to faction via [This.GetName]... (scripted_effect)"
+				}
+			}
+			mark_as_canadian_watchdogs_member = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_canadian_watchdogs (scripted_effect) exited"
+		}
+	}
+}
+
+leave_canadian_watchdogs = {
+	custom_effect_tooltip = leave_canadian_watchdogs_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_canadian_watchdogs (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_canadian_watchdogs_member = yes }
+			unmark_as_canadian_watchdogs_member = yes
+			leave_faction = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_canadian_watchdogs (scripted_effect) exited"
+		}
+	}
+}
+
+mark_as_canadian_watchdogs_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_canadian_watchdogs_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_canadian_watchdogs_member = no }
+		unmark_from_current_faction = yes
+		set_variable = { current_faction = BRA }
+		add_to_array = { GLOBAL.canadian_watchdogs_members = THIS }
+		add_canadian_watchdogs_ally_strategies = yes
+		#add_canadian_watchdogs_faction_effects = yes
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_canadian_watchdogs_member = no
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_canadian_watchdogs_member - also marking [This.GetName]... (scripted_effect)"
+			}
+			leave_current_faction = yes
+			mark_as_canadian_watchdogs_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_canadian_watchdogs_member - done also marking [This.GetName]. (scripted_effect)"
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_canadian_watchdogs_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+unmark_as_canadian_watchdogs_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_canadian_watchdogs_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_canadian_watchdogs_member = yes }
+		remove_canadian_watchdogs_ally_strategies = yes
+		#remove_canadian_watchdogs_faction_effects = yes
+		clear_variable = current_faction
+		remove_from_array = { GLOBAL.canadian_watchdogs_members = THIS }
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_canadian_watchdogs_member = yes
+			}
+			unmark_as_canadian_watchdogs_member = yes
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_canadian_watchdogs_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+add_canadian_watchdogs_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_canadian_watchdogs_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = {
+			is_canadian_watchdogs_member = yes
+			NOT = { tag = PREV }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: add_canadian_watchdogs_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = -200
+		}
+		PREV = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: add_canadian_watchdogs_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = -200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_canadian_watchdogs_ally_strategies (scripted_effect) exited"
+	}
+}
+
+remove_canadian_watchdogs_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_canadian_watchdogs_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = { is_canadian_watchdogs_member = yes }
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = 200
+		}
+		PREV = {
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = 200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_canadian_watchdogs_ally_strategies (scripted_effect) exited"
+	}
+}
+
+create_or_join_kingdom_of_manitoba = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_kingdom_of_manitoba (scripted_effect) entered"
+	}
+	if = {
+		limit = {
+			kingdom_of_manitoba_exists = no
+		}
+		leave_current_faction = yes
+		create_faction = kingdom_of_manitoba
+		mark_as_kingdom_of_manitoba_member = yes
+		set_variable = { GLOBAL.kingdom_of_manitoba_leader = THIS }
+	}
+	else = {
+		join_kingdom_of_manitoba = yes
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_kingdom_of_manitoba (scripted_effect) exited"
+	}
+}
+
+d_join_kingdom_of_manitoba = {
+	log = "[GetDateText]: Adding [This.GetNameDef] to kingdom_of_manitoba..."
+	create_or_join_kingdom_of_manitoba = yes
+}
+
+ask_to_join_kingdom_of_manitoba = {
+	custom_effect_tooltip = ask_to_join_kingdom_of_manitoba_tt
+	hidden_effect = {
+		var:GLOBAL.kingdom_of_manitoba_leader = {
+			country_event = {
+				id = kingdom_of_manitoba_faction_events.1
+			}
+		}
+	}
+}
+
+invite_to_kingdom_of_manitoba = {
+	custom_effect_tooltip = invite_to_kingdom_of_manitoba_tt
+	hidden_effect = {
+		country_event = {
+			id = kingdom_of_manitoba_faction_events.5
+		}
+	}
+}
+
+join_kingdom_of_manitoba = {
+	custom_effect_tooltip = join_kingdom_of_manitoba_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_kingdom_of_manitoba (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_kingdom_of_manitoba_member = no }
+			leave_current_faction = yes
+			var:GLOBAL.kingdom_of_manitoba_leader = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_kingdom_of_manitoba - adding to faction via [This.GetName]... (scripted_effect)"
+				}
+				add_to_faction = PREV
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_kingdom_of_manitoba - added to faction via [This.GetName]... (scripted_effect)"
+				}
+			}
+			mark_as_kingdom_of_manitoba_member = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_kingdom_of_manitoba (scripted_effect) exited"
+		}
+	}
+}
+
+leave_kingdom_of_manitoba = {
+	custom_effect_tooltip = leave_kingdom_of_manitoba_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_kingdom_of_manitoba (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_kingdom_of_manitoba_member = yes }
+			unmark_as_kingdom_of_manitoba_member = yes
+			leave_faction = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_kingdom_of_manitoba (scripted_effect) exited"
+		}
+	}
+}
+
+mark_as_kingdom_of_manitoba_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_kingdom_of_manitoba_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_kingdom_of_manitoba_member = no }
+		unmark_from_current_faction = yes
+		set_variable = { current_faction = BRA }
+		add_to_array = { GLOBAL.kingdom_of_manitoba_members = THIS }
+		add_kingdom_of_manitoba_ally_strategies = yes
+		#add_kingdom_of_manitoba_faction_effects = yes
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_kingdom_of_manitoba_member = no
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_kingdom_of_manitoba_member - also marking [This.GetName]... (scripted_effect)"
+			}
+			leave_current_faction = yes
+			mark_as_kingdom_of_manitoba_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_kingdom_of_manitoba_member - done also marking [This.GetName]. (scripted_effect)"
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_kingdom_of_manitoba_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+unmark_as_kingdom_of_manitoba_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_kingdom_of_manitoba_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_kingdom_of_manitoba_member = yes }
+		remove_kingdom_of_manitoba_ally_strategies = yes
+		#remove_kingdom_of_manitoba_faction_effects = yes
+		clear_variable = current_faction
+		remove_from_array = { GLOBAL.kingdom_of_manitoba_members = THIS }
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_kingdom_of_manitoba_member = yes
+			}
+			unmark_as_kingdom_of_manitoba_member = yes
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_kingdom_of_manitoba_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+add_kingdom_of_manitoba_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_kingdom_of_manitoba_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = {
+			is_kingdom_of_manitoba_member = yes
+			NOT = { tag = PREV }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: add_kingdom_of_manitoba_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = -200
+		}
+		PREV = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: add_kingdom_of_manitoba_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = -200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_kingdom_of_manitoba_ally_strategies (scripted_effect) exited"
+	}
+}
+
+remove_kingdom_of_manitoba_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_kingdom_of_manitoba_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = { is_kingdom_of_manitoba_member = yes }
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = 200
+		}
+		PREV = {
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = 200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_kingdom_of_manitoba_ally_strategies (scripted_effect) exited"
+	}
+}
+
 create_or_join_united_wallers = {
 	if = {
 		limit = { has_global_flag = debug_logs }
@@ -19187,288 +20033,6 @@ remove_fifth_world_ally_strategies = {
 	}
 }
 
-create_or_join_kingdom_of_manitoba = {
-	if = {
-		limit = { has_global_flag = debug_logs }
-		log = "[GetDateText]: [This.GetName] create_or_join_kingdom_of_manitoba (scripted_effect) entered"
-	}
-	if = {
-		limit = {
-			kingdom_of_manitoba_exists = no
-		}
-		leave_current_faction = yes
-		create_faction = kingdom_of_manitoba
-		mark_as_kingdom_of_manitoba_member = yes
-		set_variable = { GLOBAL.kingdom_of_manitoba_leader = THIS }
-	}
-	else = {
-		join_kingdom_of_manitoba = yes
-	}
-	if = {
-		limit = { has_global_flag = debug_logs }
-		log = "[GetDateText]: [This.GetName] create_or_join_kingdom_of_manitoba (scripted_effect) exited"
-	}
-}
-
-d_join_kingdom_of_manitoba = {
-	log = "[GetDateText]: Adding [This.GetNameDef] to kingdom_of_manitoba..."
-	create_or_join_kingdom_of_manitoba = yes
-}
-
-ask_to_join_kingdom_of_manitoba = {
-	custom_effect_tooltip = ask_to_join_kingdom_of_manitoba_tt
-	hidden_effect = {
-		var:GLOBAL.kingdom_of_manitoba_leader = {
-			country_event = {
-				id = kingdom_of_manitoba_faction_events.1
-			}
-		}
-	}
-}
-
-invite_to_kingdom_of_manitoba = {
-	custom_effect_tooltip = invite_to_kingdom_of_manitoba_tt
-	hidden_effect = {
-		country_event = {
-			id = kingdom_of_manitoba_faction_events.5
-		}
-	}
-}
-
-join_kingdom_of_manitoba = {
-	custom_effect_tooltip = join_kingdom_of_manitoba_tt
-	hidden_effect = {
-		if = {
-			limit = { has_global_flag = debug_logs }
-			log = "[GetDateText]: [This.GetName] join_kingdom_of_manitoba (scripted_effect) entered"
-		}
-		if = {
-			limit = { is_kingdom_of_manitoba_member = no }
-			leave_current_faction = yes
-			var:GLOBAL.kingdom_of_manitoba_leader = {
-				if = {
-					limit = { has_global_flag = debug_logs }
-					log = "[GetDateText]: [Prev.GetName] join_kingdom_of_manitoba - adding to faction via [This.GetName]... (scripted_effect)"
-				}
-				add_to_faction = PREV
-				if = {
-					limit = { has_global_flag = debug_logs }
-					log = "[GetDateText]: [Prev.GetName] join_kingdom_of_manitoba - added to faction via [This.GetName]... (scripted_effect)"
-				}
-			}
-			mark_as_kingdom_of_manitoba_member = yes
-		}
-		if = {
-			limit = { has_global_flag = debug_logs }
-			log = "[GetDateText]: [This.GetName] join_kingdom_of_manitoba (scripted_effect) exited"
-		}
-	}
-}
-
-leave_kingdom_of_manitoba = {
-	custom_effect_tooltip = leave_kingdom_of_manitoba_tt
-	hidden_effect = {
-		if = {
-			limit = { has_global_flag = debug_logs }
-			log = "[GetDateText]: [This.GetName] leave_kingdom_of_manitoba (scripted_effect) entered"
-		}
-		if = {
-			limit = { is_kingdom_of_manitoba_member = yes }
-			unmark_as_kingdom_of_manitoba_member = yes
-			leave_faction = yes
-		}
-		if = {
-			limit = { has_global_flag = debug_logs }
-			log = "[GetDateText]: [This.GetName] leave_kingdom_of_manitoba (scripted_effect) exited"
-		}
-	}
-}
-
-mark_as_kingdom_of_manitoba_member = {
-	if = {
-		limit = { has_global_flag = debug_logs }
-		log = "[GetDateText]: [This.GetName] mark_as_kingdom_of_manitoba_member because of [From.GetName] (scripted_effect) entered"
-	}
-	if = {
-		limit = { is_kingdom_of_manitoba_member = no }
-		unmark_from_current_faction = yes
-		set_variable = { current_faction = BRA }
-		add_to_array = { GLOBAL.kingdom_of_manitoba_members = THIS }
-		add_kingdom_of_manitoba_ally_strategies = yes
-		#add_kingdom_of_manitoba_faction_effects = yes
-
-		every_country = {
-			limit = {
-				is_subject_of = PREV
-				is_kingdom_of_manitoba_member = no
-			}
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Prev.GetName] mark_as_kingdom_of_manitoba_member - also marking [This.GetName]... (scripted_effect)"
-			}
-			leave_current_faction = yes
-			mark_as_kingdom_of_manitoba_member = yes
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Prev.GetName] mark_as_kingdom_of_manitoba_member - done also marking [This.GetName]. (scripted_effect)"
-			}
-		}
-	}
-	if = {
-		limit = { has_global_flag = debug_logs }
-		log = "[GetDateText]: [This.GetName] mark_as_kingdom_of_manitoba_member because of [From.GetName] (scripted_effect) exited"
-	}
-}
-
-unmark_as_kingdom_of_manitoba_member = {
-	if = {
-		limit = { has_global_flag = debug_logs }
-		log = "[GetDateText]: [This.GetName] unmark_as_kingdom_of_manitoba_member because of [From.GetName] (scripted_effect) entered"
-	}
-	if = {
-		limit = { is_kingdom_of_manitoba_member = yes }
-		remove_kingdom_of_manitoba_ally_strategies = yes
-		#remove_kingdom_of_manitoba_faction_effects = yes
-		clear_variable = current_faction
-		remove_from_array = { GLOBAL.kingdom_of_manitoba_members = THIS }
-
-		every_country = {
-			limit = {
-				is_subject_of = PREV
-				is_kingdom_of_manitoba_member = yes
-			}
-			unmark_as_kingdom_of_manitoba_member = yes
-		}
-	}
-	if = {
-		limit = { has_global_flag = debug_logs }
-		log = "[GetDateText]: [This.GetName] unmark_as_kingdom_of_manitoba_member because of [From.GetName] (scripted_effect) exited"
-	}
-}
-
-add_kingdom_of_manitoba_ally_strategies = {
-	if = {
-		limit = { has_global_flag = debug_logs }
-		log = "[GetDateText]: [This.GetName] add_kingdom_of_manitoba_ally_strategies (scripted_effect) entered"
-	}
-	every_country = {
-		limit = {
-			is_kingdom_of_manitoba_member = yes
-			NOT = { tag = PREV }
-		}
-		if = {
-			limit = { has_global_flag = debug_logs }
-			log = "[GetDateText]: add_kingdom_of_manitoba_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
-		}
-		add_ai_strategy = {
-			type = alliance
-			id = PREV
-			value = 200
-		}
-		add_ai_strategy = {
-			type = befriend
-			id = PREV
-			value = 200
-		}
-		add_ai_strategy = {
-			type = protect
-			id = PREV
-			value = 200
-		}
-		add_ai_strategy = {
-			type = ignore
-			id = PREV
-			value = -200
-		}
-		PREV = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: add_kingdom_of_manitoba_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
-			}
-			add_ai_strategy = {
-				type = alliance
-				id = PREV
-				value = 200
-			}
-			add_ai_strategy = {
-				type = befriend
-				id = PREV
-				value = 200
-			}
-			add_ai_strategy = {
-				type = protect
-				id = PREV
-				value = 200
-			}
-			add_ai_strategy = {
-				type = ignore
-				id = PREV
-				value = -200
-			}
-		}
-	}
-	if = {
-		limit = { has_global_flag = debug_logs }
-		log = "[GetDateText]: [This.GetName] add_kingdom_of_manitoba_ally_strategies (scripted_effect) exited"
-	}
-}
-
-remove_kingdom_of_manitoba_ally_strategies = {
-	if = {
-		limit = { has_global_flag = debug_logs }
-		log = "[GetDateText]: [This.GetName] remove_kingdom_of_manitoba_ally_strategies (scripted_effect) entered"
-	}
-	every_country = {
-		limit = { is_kingdom_of_manitoba_member = yes }
-		add_ai_strategy = {
-			type = alliance
-			id = PREV
-			value = -200
-		}
-		add_ai_strategy = {
-			type = befriend
-			id = PREV
-			value = -200
-		}
-		add_ai_strategy = {
-			type = protect
-			id = PREV
-			value = -200
-		}
-		add_ai_strategy = {
-			type = ignore
-			id = PREV
-			value = 200
-		}
-		PREV = {
-			add_ai_strategy = {
-				type = alliance
-				id = PREV
-				value = -200
-			}
-			add_ai_strategy = {
-				type = befriend
-				id = PREV
-				value = -200
-			}
-			add_ai_strategy = {
-				type = protect
-				id = PREV
-				value = -200
-			}
-			add_ai_strategy = {
-				type = ignore
-				id = PREV
-				value = 200
-			}
-		}
-	}
-	if = {
-		limit = { has_global_flag = debug_logs }
-		log = "[GetDateText]: [This.GetName] remove_kingdom_of_manitoba_ally_strategies (scripted_effect) exited"
-	}
-}
-
 create_or_join_red_shield = {
 	if = {
 		limit = { has_global_flag = debug_logs }
@@ -19751,6 +20315,852 @@ remove_red_shield_ally_strategies = {
 	}
 }
 
+create_or_join_wardens_of_white = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_wardens_of_white (scripted_effect) entered"
+	}
+	if = {
+		limit = {
+			wardens_of_white_exists = no
+		}
+		leave_current_faction = yes
+		create_faction = wardens_of_white
+		mark_as_wardens_of_white_member = yes
+		set_variable = { GLOBAL.wardens_of_white_leader = THIS }
+	}
+	else = {
+		join_wardens_of_white = yes
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_wardens_of_white (scripted_effect) exited"
+	}
+}
+
+d_join_wardens_of_white = {
+	log = "[GetDateText]: Adding [This.GetNameDef] to wardens_of_white..."
+	create_or_join_wardens_of_white = yes
+}
+
+ask_to_join_wardens_of_white = {
+	custom_effect_tooltip = ask_to_join_wardens_of_white_tt
+	hidden_effect = {
+		var:GLOBAL.wardens_of_white_leader = {
+			country_event = {
+				id = wardens_of_white_faction_events.1
+			}
+		}
+	}
+}
+
+invite_to_wardens_of_white = {
+	custom_effect_tooltip = invite_to_wardens_of_white_tt
+	hidden_effect = {
+		country_event = {
+			id = wardens_of_white_faction_events.5
+		}
+	}
+}
+
+join_wardens_of_white = {
+	custom_effect_tooltip = join_wardens_of_white_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_wardens_of_white (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_wardens_of_white_member = no }
+			leave_current_faction = yes
+			var:GLOBAL.wardens_of_white_leader = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_wardens_of_white - adding to faction via [This.GetName]... (scripted_effect)"
+				}
+				add_to_faction = PREV
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_wardens_of_white - added to faction via [This.GetName]... (scripted_effect)"
+				}
+			}
+			mark_as_wardens_of_white_member = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_wardens_of_white (scripted_effect) exited"
+		}
+	}
+}
+
+leave_wardens_of_white = {
+	custom_effect_tooltip = leave_wardens_of_white_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_wardens_of_white (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_wardens_of_white_member = yes }
+			unmark_as_wardens_of_white_member = yes
+			leave_faction = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_wardens_of_white (scripted_effect) exited"
+		}
+	}
+}
+
+mark_as_wardens_of_white_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_wardens_of_white_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_wardens_of_white_member = no }
+		unmark_from_current_faction = yes
+		set_variable = { current_faction = TOC }
+		add_to_array = { GLOBAL.wardens_of_white_members = THIS }
+		add_wardens_of_white_ally_strategies = yes
+		#add_wardens_of_white_faction_effects = yes
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_wardens_of_white_member = no
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_wardens_of_white_member - also marking [This.GetName]... (scripted_effect)"
+			}
+			leave_current_faction = yes
+			mark_as_wardens_of_white_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_wardens_of_white_member - done also marking [This.GetName]. (scripted_effect)"
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_wardens_of_white_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+unmark_as_wardens_of_white_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_wardens_of_white_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_wardens_of_white_member = yes }
+		remove_wardens_of_white_ally_strategies = yes
+		#remove_wardens_of_white_faction_effects = yes
+		clear_variable = current_faction
+		remove_from_array = { GLOBAL.wardens_of_white_members = THIS }
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_wardens_of_white_member = yes
+			}
+			unmark_as_wardens_of_white_member = yes
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_wardens_of_white_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+add_wardens_of_white_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_wardens_of_white_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = {
+			is_wardens_of_white_member = yes
+			NOT = { tag = PREV }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: add_wardens_of_white_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = -200
+		}
+		PREV = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: add_wardens_of_white_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = -200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_wardens_of_white_ally_strategies (scripted_effect) exited"
+	}
+}
+
+remove_wardens_of_white_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_wardens_of_white_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = { is_wardens_of_white_member = yes }
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = 200
+		}
+		PREV = {
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = 200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_wardens_of_white_ally_strategies (scripted_effect) exited"
+	}
+}
+
+create_or_join_miscounts = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_miscounts (scripted_effect) entered"
+	}
+	if = {
+		limit = {
+			miscounts_exists = no
+		}
+		leave_current_faction = yes
+		create_faction = miscounts
+		mark_as_miscounts_member = yes
+		set_variable = { GLOBAL.miscounts_leader = THIS }
+	}
+	else = {
+		join_miscounts = yes
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_miscounts (scripted_effect) exited"
+	}
+}
+
+d_join_miscounts = {
+	log = "[GetDateText]: Adding [This.GetNameDef] to miscounts..."
+	create_or_join_miscounts = yes
+}
+
+ask_to_join_miscounts = {
+	custom_effect_tooltip = ask_to_join_miscounts_tt
+	hidden_effect = {
+		var:GLOBAL.miscounts_leader = {
+			country_event = {
+				id = miscounts_faction_events.1
+			}
+		}
+	}
+}
+
+invite_to_miscounts = {
+	custom_effect_tooltip = invite_to_miscounts_tt
+	hidden_effect = {
+		country_event = {
+			id = miscounts_faction_events.5
+		}
+	}
+}
+
+join_miscounts = {
+	custom_effect_tooltip = join_miscounts_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_miscounts (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_miscounts_member = no }
+			leave_current_faction = yes
+			var:GLOBAL.miscounts_leader = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_miscounts - adding to faction via [This.GetName]... (scripted_effect)"
+				}
+				add_to_faction = PREV
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_miscounts - added to faction via [This.GetName]... (scripted_effect)"
+				}
+			}
+			mark_as_miscounts_member = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_miscounts (scripted_effect) exited"
+		}
+	}
+}
+
+leave_miscounts = {
+	custom_effect_tooltip = leave_miscounts_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_miscounts (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_miscounts_member = yes }
+			unmark_as_miscounts_member = yes
+			leave_faction = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_miscounts (scripted_effect) exited"
+		}
+	}
+}
+
+mark_as_miscounts_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_miscounts_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_miscounts_member = no }
+		unmark_from_current_faction = yes
+		set_variable = { current_faction = NOR }
+		add_to_array = { GLOBAL.miscounts_members = THIS }
+		add_miscounts_ally_strategies = yes
+		#add_miscounts_faction_effects = yes
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_miscounts_member = no
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_miscounts_member - also marking [This.GetName]... (scripted_effect)"
+			}
+			leave_current_faction = yes
+			mark_as_miscounts_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_miscounts_member - done also marking [This.GetName]. (scripted_effect)"
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_miscounts_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+unmark_as_miscounts_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_miscounts_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_miscounts_member = yes }
+		remove_miscounts_ally_strategies = yes
+		#remove_miscounts_faction_effects = yes
+		clear_variable = current_faction
+		remove_from_array = { GLOBAL.miscounts_members = THIS }
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_miscounts_member = yes
+			}
+			unmark_as_miscounts_member = yes
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_miscounts_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+add_miscounts_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_miscounts_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = {
+			is_miscounts_member = yes
+			NOT = { tag = PREV }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: add_miscounts_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = -200
+		}
+		PREV = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: add_miscounts_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = -200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_miscounts_ally_strategies (scripted_effect) exited"
+	}
+}
+
+remove_miscounts_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_miscounts_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = { is_miscounts_member = yes }
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = 200
+		}
+		PREV = {
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = 200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_miscounts_ally_strategies (scripted_effect) exited"
+	}
+}
+
+create_or_join_royal_accord = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_royal_accord (scripted_effect) entered"
+	}
+	if = {
+		limit = {
+			royal_accord_exists = no
+		}
+		leave_current_faction = yes
+		create_faction = royal_accord
+		mark_as_royal_accord_member = yes
+		set_variable = { GLOBAL.royal_accord_leader = THIS }
+	}
+	else = {
+		join_royal_accord = yes
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] create_or_join_royal_accord (scripted_effect) exited"
+	}
+}
+
+d_join_royal_accord = {
+	log = "[GetDateText]: Adding [This.GetNameDef] to royal_accord..."
+	create_or_join_royal_accord = yes
+}
+
+ask_to_join_royal_accord = {
+	custom_effect_tooltip = ask_to_join_royal_accord_tt
+	hidden_effect = {
+		var:GLOBAL.royal_accord_leader = {
+			country_event = {
+				id = royal_accord_faction_events.1
+			}
+		}
+	}
+}
+
+invite_to_royal_accord = {
+	custom_effect_tooltip = invite_to_royal_accord_tt
+	hidden_effect = {
+		country_event = {
+			id = royal_accord_faction_events.5
+		}
+	}
+}
+
+join_royal_accord = {
+	custom_effect_tooltip = join_royal_accord_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_royal_accord (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_royal_accord_member = no }
+			leave_current_faction = yes
+			var:GLOBAL.royal_accord_leader = {
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_royal_accord - adding to faction via [This.GetName]... (scripted_effect)"
+				}
+				add_to_faction = PREV
+				if = {
+					limit = { has_global_flag = debug_logs }
+					log = "[GetDateText]: [Prev.GetName] join_royal_accord - added to faction via [This.GetName]... (scripted_effect)"
+				}
+			}
+			mark_as_royal_accord_member = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] join_royal_accord (scripted_effect) exited"
+		}
+	}
+}
+
+leave_royal_accord = {
+	custom_effect_tooltip = leave_royal_accord_tt
+	hidden_effect = {
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_royal_accord (scripted_effect) entered"
+		}
+		if = {
+			limit = { is_royal_accord_member = yes }
+			unmark_as_royal_accord_member = yes
+			leave_faction = yes
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: [This.GetName] leave_royal_accord (scripted_effect) exited"
+		}
+	}
+}
+
+mark_as_royal_accord_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_royal_accord_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_royal_accord_member = no }
+		unmark_from_current_faction = yes
+		set_variable = { current_faction = DLN }
+		add_to_array = { GLOBAL.royal_accord_members = THIS }
+		add_royal_accord_ally_strategies = yes
+		#add_royal_accord_faction_effects = yes
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_royal_accord_member = no
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_royal_accord_member - also marking [This.GetName]... (scripted_effect)"
+			}
+			leave_current_faction = yes
+			mark_as_royal_accord_member = yes
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Prev.GetName] mark_as_royal_accord_member - done also marking [This.GetName]. (scripted_effect)"
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] mark_as_royal_accord_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+unmark_as_royal_accord_member = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_royal_accord_member because of [From.GetName] (scripted_effect) entered"
+	}
+	if = {
+		limit = { is_royal_accord_member = yes }
+		remove_royal_accord_ally_strategies = yes
+		#remove_royal_accord_faction_effects = yes
+		clear_variable = current_faction
+		remove_from_array = { GLOBAL.royal_accord_members = THIS }
+
+		every_country = {
+			limit = {
+				is_subject_of = PREV
+				is_royal_accord_member = yes
+			}
+			unmark_as_royal_accord_member = yes
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] unmark_as_royal_accord_member because of [From.GetName] (scripted_effect) exited"
+	}
+}
+
+add_royal_accord_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_royal_accord_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = {
+			is_royal_accord_member = yes
+			NOT = { tag = PREV }
+		}
+		if = {
+			limit = { has_global_flag = debug_logs }
+			log = "[GetDateText]: add_royal_accord_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = 200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = -200
+		}
+		PREV = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: add_royal_accord_ally_strategies - adding ai strategy for [This.GetName] -> [Prev.GetName] (scripted_effect) entered"
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = -200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] add_royal_accord_ally_strategies (scripted_effect) exited"
+	}
+}
+
+remove_royal_accord_ally_strategies = {
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_royal_accord_ally_strategies (scripted_effect) entered"
+	}
+	every_country = {
+		limit = { is_royal_accord_member = yes }
+		add_ai_strategy = {
+			type = alliance
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = protect
+			id = PREV
+			value = -200
+		}
+		add_ai_strategy = {
+			type = ignore
+			id = PREV
+			value = 200
+		}
+		PREV = {
+			add_ai_strategy = {
+				type = alliance
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = PREV
+				value = -200
+			}
+			add_ai_strategy = {
+				type = ignore
+				id = PREV
+				value = 200
+			}
+		}
+	}
+	if = {
+		limit = { has_global_flag = debug_logs }
+		log = "[GetDateText]: [This.GetName] remove_royal_accord_ally_strategies (scripted_effect) exited"
+	}
+}
+
 
 
 join_from_faction = {
@@ -20012,6 +21422,18 @@ join_from_faction = {
 		join_northern_union = yes
 	}
 	else_if = {
+		limit = { FROM = { is_bloody_electorals_member = yes } }
+		join_bloody_electorals = yes
+	}
+	else_if = {
+		limit = { FROM = { is_canadian_watchdogs_member = yes } }
+		join_canadian_watchdogs = yes
+	}
+	else_if = {
+		limit = { FROM = { is_kingdom_of_manitoba_member = yes } }
+		join_kingdom_of_manitoba = yes
+	}
+	else_if = {
 		limit = { FROM = { is_united_wallers_member = yes } }
 		join_united_wallers = yes
 	}
@@ -20032,12 +21454,20 @@ join_from_faction = {
 		join_fifth_world = yes
 	}
 	else_if = {
-		limit = { FROM = { is_kingdom_of_manitoba_member = yes } }
-		join_kingdom_of_manitoba = yes
-	}
-	else_if = {
 		limit = { FROM = { is_red_shield_member = yes } }
 		join_red_shield = yes
+	}
+	else_if = {
+		limit = { FROM = { is_wardens_of_white_member = yes } }
+		join_wardens_of_white = yes
+	}
+	else_if = {
+		limit = { FROM = { is_miscounts_member = yes } }
+		join_miscounts = yes
+	}
+	else_if = {
+		limit = { FROM = { is_royal_accord_member = yes } }
+		join_royal_accord = yes
 	}
 	else = {
 		custom_effect_tooltip = join_from_faction_tt
@@ -20306,6 +21736,18 @@ invite_to_from_faction = {
 		invite_to_northern_union = yes
 	}
 	else_if = {
+		limit = { FROM = { is_bloody_electorals_member = yes } }
+		invite_to_bloody_electorals = yes
+	}
+	else_if = {
+		limit = { FROM = { is_canadian_watchdogs_member = yes } }
+		invite_to_canadian_watchdogs = yes
+	}
+	else_if = {
+		limit = { FROM = { is_kingdom_of_manitoba_member = yes } }
+		invite_to_kingdom_of_manitoba = yes
+	}
+	else_if = {
 		limit = { FROM = { is_united_wallers_member = yes } }
 		invite_to_united_wallers = yes
 	}
@@ -20326,12 +21768,20 @@ invite_to_from_faction = {
 		invite_to_fifth_world = yes
 	}
 	else_if = {
-		limit = { FROM = { is_kingdom_of_manitoba_member = yes } }
-		invite_to_kingdom_of_manitoba = yes
-	}
-	else_if = {
 		limit = { FROM = { is_red_shield_member = yes } }
 		invite_to_red_shield = yes
+	}
+	else_if = {
+		limit = { FROM = { is_wardens_of_white_member = yes } }
+		invite_to_wardens_of_white = yes
+	}
+	else_if = {
+		limit = { FROM = { is_miscounts_member = yes } }
+		invite_to_miscounts = yes
+	}
+	else_if = {
+		limit = { FROM = { is_royal_accord_member = yes } }
+		invite_to_royal_accord = yes
 	}
 	else = {
 		custom_effect_tooltip = invite_to_from_faction_tt
@@ -20601,6 +22051,18 @@ join_prev_faction = {
 		join_northern_union = yes
 	}
 	else_if = {
+		limit = { PREV = { is_bloody_electorals_member = yes } }
+		join_bloody_electorals = yes
+	}
+	else_if = {
+		limit = { PREV = { is_canadian_watchdogs_member = yes } }
+		join_canadian_watchdogs = yes
+	}
+	else_if = {
+		limit = { PREV = { is_kingdom_of_manitoba_member = yes } }
+		join_kingdom_of_manitoba = yes
+	}
+	else_if = {
 		limit = { PREV = { is_united_wallers_member = yes } }
 		join_united_wallers = yes
 	}
@@ -20621,12 +22083,20 @@ join_prev_faction = {
 		join_fifth_world = yes
 	}
 	else_if = {
-		limit = { PREV = { is_kingdom_of_manitoba_member = yes } }
-		join_kingdom_of_manitoba = yes
-	}
-	else_if = {
 		limit = { PREV = { is_red_shield_member = yes } }
 		join_red_shield = yes
+	}
+	else_if = {
+		limit = { PREV = { is_wardens_of_white_member = yes } }
+		join_wardens_of_white = yes
+	}
+	else_if = {
+		limit = { PREV = { is_miscounts_member = yes } }
+		join_miscounts = yes
+	}
+	else_if = {
+		limit = { PREV = { is_royal_accord_member = yes } }
+		join_royal_accord = yes
 	}
 	else = {
 		custom_effect_tooltip = join_prev_faction_tt
@@ -20895,6 +22365,18 @@ invite_to_prev_faction = {
 		invite_to_northern_union = yes
 	}
 	else_if = {
+		limit = { PREV = { is_bloody_electorals_member = yes } }
+		invite_to_bloody_electorals = yes
+	}
+	else_if = {
+		limit = { PREV = { is_canadian_watchdogs_member = yes } }
+		invite_to_canadian_watchdogs = yes
+	}
+	else_if = {
+		limit = { PREV = { is_kingdom_of_manitoba_member = yes } }
+		invite_to_kingdom_of_manitoba = yes
+	}
+	else_if = {
 		limit = { PREV = { is_united_wallers_member = yes } }
 		invite_to_united_wallers = yes
 	}
@@ -20915,12 +22397,20 @@ invite_to_prev_faction = {
 		invite_to_fifth_world = yes
 	}
 	else_if = {
-		limit = { PREV = { is_kingdom_of_manitoba_member = yes } }
-		invite_to_kingdom_of_manitoba = yes
-	}
-	else_if = {
 		limit = { PREV = { is_red_shield_member = yes } }
 		invite_to_red_shield = yes
+	}
+	else_if = {
+		limit = { PREV = { is_wardens_of_white_member = yes } }
+		invite_to_wardens_of_white = yes
+	}
+	else_if = {
+		limit = { PREV = { is_miscounts_member = yes } }
+		invite_to_miscounts = yes
+	}
+	else_if = {
+		limit = { PREV = { is_royal_accord_member = yes } }
+		invite_to_royal_accord = yes
 	}
 	else = {
 		custom_effect_tooltip = invite_to_prev_faction_tt
@@ -21190,6 +22680,18 @@ join_root_faction = {
 		join_northern_union = yes
 	}
 	else_if = {
+		limit = { ROOT = { is_bloody_electorals_member = yes } }
+		join_bloody_electorals = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_canadian_watchdogs_member = yes } }
+		join_canadian_watchdogs = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_kingdom_of_manitoba_member = yes } }
+		join_kingdom_of_manitoba = yes
+	}
+	else_if = {
 		limit = { ROOT = { is_united_wallers_member = yes } }
 		join_united_wallers = yes
 	}
@@ -21210,12 +22712,20 @@ join_root_faction = {
 		join_fifth_world = yes
 	}
 	else_if = {
-		limit = { ROOT = { is_kingdom_of_manitoba_member = yes } }
-		join_kingdom_of_manitoba = yes
-	}
-	else_if = {
 		limit = { ROOT = { is_red_shield_member = yes } }
 		join_red_shield = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_wardens_of_white_member = yes } }
+		join_wardens_of_white = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_miscounts_member = yes } }
+		join_miscounts = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_royal_accord_member = yes } }
+		join_royal_accord = yes
 	}
 	else = {
 		custom_effect_tooltip = join_root_faction_tt
@@ -21484,6 +22994,18 @@ invite_to_root_faction = {
 		invite_to_northern_union = yes
 	}
 	else_if = {
+		limit = { ROOT = { is_bloody_electorals_member = yes } }
+		invite_to_bloody_electorals = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_canadian_watchdogs_member = yes } }
+		invite_to_canadian_watchdogs = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_kingdom_of_manitoba_member = yes } }
+		invite_to_kingdom_of_manitoba = yes
+	}
+	else_if = {
 		limit = { ROOT = { is_united_wallers_member = yes } }
 		invite_to_united_wallers = yes
 	}
@@ -21504,12 +23026,20 @@ invite_to_root_faction = {
 		invite_to_fifth_world = yes
 	}
 	else_if = {
-		limit = { ROOT = { is_kingdom_of_manitoba_member = yes } }
-		invite_to_kingdom_of_manitoba = yes
-	}
-	else_if = {
 		limit = { ROOT = { is_red_shield_member = yes } }
 		invite_to_red_shield = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_wardens_of_white_member = yes } }
+		invite_to_wardens_of_white = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_miscounts_member = yes } }
+		invite_to_miscounts = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_royal_accord_member = yes } }
+		invite_to_royal_accord = yes
 	}
 	else = {
 		custom_effect_tooltip = invite_to_root_faction_tt
@@ -21778,6 +23308,18 @@ leave_current_faction = {
 		leave_northern_union = yes
 	}
 	else_if = {
+		limit = { is_bloody_electorals_member = yes }
+		leave_bloody_electorals = yes
+	}
+	else_if = {
+		limit = { is_canadian_watchdogs_member = yes }
+		leave_canadian_watchdogs = yes
+	}
+	else_if = {
+		limit = { is_kingdom_of_manitoba_member = yes }
+		leave_kingdom_of_manitoba = yes
+	}
+	else_if = {
 		limit = { is_united_wallers_member = yes }
 		leave_united_wallers = yes
 	}
@@ -21798,12 +23340,20 @@ leave_current_faction = {
 		leave_fifth_world = yes
 	}
 	else_if = {
-		limit = { is_kingdom_of_manitoba_member = yes }
-		leave_kingdom_of_manitoba = yes
-	}
-	else_if = {
 		limit = { is_red_shield_member = yes }
 		leave_red_shield = yes
+	}
+	else_if = {
+		limit = { is_wardens_of_white_member = yes }
+		leave_wardens_of_white = yes
+	}
+	else_if = {
+		limit = { is_miscounts_member = yes }
+		leave_miscounts = yes
+	}
+	else_if = {
+		limit = { is_royal_accord_member = yes }
+		leave_royal_accord = yes
 	}
 	if = {
 		limit = { has_global_flag = debug_logs }
@@ -22081,6 +23631,18 @@ become_puppet_of_prev = {
 			mark_as_northern_union_member = yes
 		}
 		else_if = {
+			limit = { PREV = { is_bloody_electorals_member = yes } }
+			mark_as_bloody_electorals_member = yes
+		}
+		else_if = {
+			limit = { PREV = { is_canadian_watchdogs_member = yes } }
+			mark_as_canadian_watchdogs_member = yes
+		}
+		else_if = {
+			limit = { PREV = { is_kingdom_of_manitoba_member = yes } }
+			mark_as_kingdom_of_manitoba_member = yes
+		}
+		else_if = {
 			limit = { PREV = { is_united_wallers_member = yes } }
 			mark_as_united_wallers_member = yes
 		}
@@ -22101,12 +23663,20 @@ become_puppet_of_prev = {
 			mark_as_fifth_world_member = yes
 		}
 		else_if = {
-			limit = { PREV = { is_kingdom_of_manitoba_member = yes } }
-			mark_as_kingdom_of_manitoba_member = yes
-		}
-		else_if = {
 			limit = { PREV = { is_red_shield_member = yes } }
 			mark_as_red_shield_member = yes
+		}
+		else_if = {
+			limit = { PREV = { is_wardens_of_white_member = yes } }
+			mark_as_wardens_of_white_member = yes
+		}
+		else_if = {
+			limit = { PREV = { is_miscounts_member = yes } }
+			mark_as_miscounts_member = yes
+		}
+		else_if = {
+			limit = { PREV = { is_royal_accord_member = yes } }
+			mark_as_royal_accord_member = yes
 		}
 	}
 	if = {
@@ -22373,6 +23943,18 @@ unmark_from_current_faction = {
 		unmark_as_northern_union_member = yes
 	}
 	else_if = {
+		limit = { ROOT = { is_bloody_electorals_member = yes } }
+		unmark_as_bloody_electorals_member = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_canadian_watchdogs_member = yes } }
+		unmark_as_canadian_watchdogs_member = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_kingdom_of_manitoba_member = yes } }
+		unmark_as_kingdom_of_manitoba_member = yes
+	}
+	else_if = {
 		limit = { ROOT = { is_united_wallers_member = yes } }
 		unmark_as_united_wallers_member = yes
 	}
@@ -22393,12 +23975,20 @@ unmark_from_current_faction = {
 		unmark_as_fifth_world_member = yes
 	}
 	else_if = {
-		limit = { ROOT = { is_kingdom_of_manitoba_member = yes } }
-		unmark_as_kingdom_of_manitoba_member = yes
-	}
-	else_if = {
 		limit = { ROOT = { is_red_shield_member = yes } }
 		unmark_as_red_shield_member = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_wardens_of_white_member = yes } }
+		unmark_as_wardens_of_white_member = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_miscounts_member = yes } }
+		unmark_as_miscounts_member = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_royal_accord_member = yes } }
+		unmark_as_royal_accord_member = yes
 	}
 	if = {
 		limit = { has_global_flag = debug_logs }

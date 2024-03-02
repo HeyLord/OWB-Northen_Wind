@@ -266,6 +266,18 @@ defined_text = {
 		localization_key = northern_union
 	}
 	text = {
+		trigger = { is_bloody_electorals_member = yes }
+		localization_key = bloody_electorals
+	}
+	text = {
+		trigger = { is_canadian_watchdogs_member = yes }
+		localization_key = canadian_watchdogs
+	}
+	text = {
+		trigger = { is_kingdom_of_manitoba_member = yes }
+		localization_key = kingdom_of_manitoba
+	}
+	text = {
 		trigger = { is_united_wallers_member = yes }
 		localization_key = united_wallers
 	}
@@ -286,12 +298,20 @@ defined_text = {
 		localization_key = fifth_world
 	}
 	text = {
-		trigger = { is_kingdom_of_manitoba_member = yes }
-		localization_key = kingdom_of_manitoba
-	}
-	text = {
 		trigger = { is_red_shield_member = yes }
 		localization_key = red_shield
+	}
+	text = {
+		trigger = { is_wardens_of_white_member = yes }
+		localization_key = wardens_of_white
+	}
+	text = {
+		trigger = { is_miscounts_member = yes }
+		localization_key = miscounts
+	}
+	text = {
+		trigger = { is_royal_accord_member = yes }
+		localization_key = royal_accord
 	}
 	text = {
 		localization_key = "None"
@@ -553,6 +573,18 @@ defined_text = {
 		localization_key = can_ask_to_join_faction_northern_union_tt
 	}
 	text = {
+		trigger = { FROM = { is_bloody_electorals_member = yes } }
+		localization_key = can_ask_to_join_faction_bloody_electorals_tt
+	}
+	text = {
+		trigger = { FROM = { is_canadian_watchdogs_member = yes } }
+		localization_key = can_ask_to_join_faction_canadian_watchdogs_tt
+	}
+	text = {
+		trigger = { FROM = { is_kingdom_of_manitoba_member = yes } }
+		localization_key = can_ask_to_join_faction_kingdom_of_manitoba_tt
+	}
+	text = {
 		trigger = { FROM = { is_united_wallers_member = yes } }
 		localization_key = can_ask_to_join_faction_united_wallers_tt
 	}
@@ -573,12 +605,20 @@ defined_text = {
 		localization_key = can_ask_to_join_faction_fifth_world_tt
 	}
 	text = {
-		trigger = { FROM = { is_kingdom_of_manitoba_member = yes } }
-		localization_key = can_ask_to_join_faction_kingdom_of_manitoba_tt
-	}
-	text = {
 		trigger = { FROM = { is_red_shield_member = yes } }
 		localization_key = can_ask_to_join_faction_red_shield_tt
+	}
+	text = {
+		trigger = { FROM = { is_wardens_of_white_member = yes } }
+		localization_key = can_ask_to_join_faction_wardens_of_white_tt
+	}
+	text = {
+		trigger = { FROM = { is_miscounts_member = yes } }
+		localization_key = can_ask_to_join_faction_miscounts_tt
+	}
+	text = {
+		trigger = { FROM = { is_royal_accord_member = yes } }
+		localization_key = can_ask_to_join_faction_royal_accord_tt
 	}
 	text = {
 		localization_key = "None"
@@ -967,6 +1007,24 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			is_bloody_electorals_member = yes
+		}
+		localization_key = can_offer_to_join_faction_bloody_electorals_tt
+	}
+	text = {
+		trigger = {
+			is_canadian_watchdogs_member = yes
+		}
+		localization_key = can_offer_to_join_faction_canadian_watchdogs_tt
+	}
+	text = {
+		trigger = {
+			is_kingdom_of_manitoba_member = yes
+		}
+		localization_key = can_offer_to_join_faction_kingdom_of_manitoba_tt
+	}
+	text = {
+		trigger = {
 			is_united_wallers_member = yes
 		}
 		localization_key = can_offer_to_join_faction_united_wallers_tt
@@ -997,15 +1055,27 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			is_kingdom_of_manitoba_member = yes
-		}
-		localization_key = can_offer_to_join_faction_kingdom_of_manitoba_tt
-	}
-	text = {
-		trigger = {
 			is_red_shield_member = yes
 		}
 		localization_key = can_offer_to_join_faction_red_shield_tt
+	}
+	text = {
+		trigger = {
+			is_wardens_of_white_member = yes
+		}
+		localization_key = can_offer_to_join_faction_wardens_of_white_tt
+	}
+	text = {
+		trigger = {
+			is_miscounts_member = yes
+		}
+		localization_key = can_offer_to_join_faction_miscounts_tt
+	}
+	text = {
+		trigger = {
+			is_royal_accord_member = yes
+		}
+		localization_key = can_offer_to_join_faction_royal_accord_tt
 	}
 	text = {
 		localization_key = "None"

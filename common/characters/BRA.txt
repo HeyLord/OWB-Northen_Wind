@@ -1,0 +1,684 @@
+characters={
+	BRA_king_gunn = {
+		name=BRA_king_gunn
+		portraits={
+			civilian={
+				large = GFX_Portrait_BRA_gunn
+			}
+		}
+		country_leader={
+			desc="BRA_king_gunn_desc"
+			ideology=benevolent_dictatorship
+			traits = {
+				bra_ancient_one
+			}
+			expire="3000.01.01.01"
+			id=-1
+		}
+		country_leader={
+			desc="BRA_king_gunn_desc"
+			ideology = constitutional_monarchy
+			traits = {
+				bra_ancient_one
+			}
+			expire="3000.01.01.01"
+			id=-1
+		}
+		country_leader={
+			desc="BRA_king_gunn_desc"
+			traits = {
+				bra_ancient_one
+			}
+			ideology = meritocracy
+			expire="3000.01.01.01"
+			id=-1
+		}
+		country_leader={
+			desc="BRA_king_gunn_desc"
+			ideology = feudalism
+			traits = {
+				bra_ancient_one
+			}
+			expire="3000.01.01.01"
+			id=-1
+		}
+	}
+	BRA_regency = {
+		name = BRA_regency
+		portraits = {
+			civilian={
+				large = GFX_Portrait_BRA_regency
+			}
+		}
+	}
+	BRA_queen_eleanor = {
+		name = BRA_QUEEN_ELEANOR_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_BRA_queen_eleanor
+			}
+		}
+	}
+	BRA_mountie = {
+		name = BRA_mountie
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_DUK_mountie_leader
+				small = GFX_idea_BRA_william_tanner
+			}
+			army = {
+				large = GFX_Portrait_DUK_mountie_leader
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BRA_grandmaster_advisor
+			allowed = {
+				original_tag = BRA
+			}
+			available = {
+				has_completed_focus = bra_the_upstart
+			}
+			traits = {
+				BRA_north_hound
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		corps_commander = {
+			traits = {
+				strong_trait
+				perceptive_trait
+				intelligent_trait
+				animal_friend_trait
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+
+	# Starting Generals
+	BRA_hauser = {
+		name = BRA_hauser
+		portraits = {
+			army = {
+				large = GFX_Portrait_BRA_grayson_hauser
+			}
+			civilian = {
+				small = GFX_idea_BRA_grayson_hauser
+			}
+		}
+		corps_commander = {
+			traits = {
+				perceptive_trait
+				charismatic_trait
+				awareness_trait
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+		advisor = {
+			desc = BRA_hauser_desc
+			slot = army_chief
+			idea_token = BRA_hauser_army_chief
+			ledger = army
+			available = {
+				not_already_hired_except_as = army_chief
+			}
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_jack_of_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		advisor = {
+			desc = BRA_hauser_desc
+			slot = high_command
+			idea_token = BRA_hauser_high_command
+			ledger = army
+			available = {
+				not_already_hired_except_as = high_command
+			}
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_jack_of
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+
+	BRA_grimaldi = {
+		name = BRA_grimaldi
+		portraits = {
+			army = {
+				large = GFX_Portrait_BRA_alexander_grimaldi
+			}
+			civilian = {
+				small = GFX_idea_BRA_alexander_grimaldi
+			}
+		}
+		corps_commander = {
+			traits = {
+				strong_trait
+				agile_trait
+				inspirational_trait
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = -1
+		}
+		advisor = {
+			desc = BRA_grimaldi_desc
+			slot = army_chief
+			idea_token = BRA_grimaldi_army_chief
+			ledger = army
+			available = {
+				not_already_hired_except_as = army_chief
+			}
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_aggressive_attacker_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		advisor = {
+			desc = BRA_grimaldi_desc
+			slot = high_command
+			idea_token = BRA_grimaldi_high_command
+			ledger = army
+			available = {
+				not_already_hired_except_as = high_command
+			}
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_aggressive_attacker
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+
+	BRA_toharek = {
+		name = BRA_toharek
+		portraits = {
+			army = {
+				large = GFX_Portrait_BRA_jack_toharek
+			}
+			civilian = {
+				small = GFX_idea_BRA_jack_toharek
+			}
+		}
+		corps_commander = {
+			traits = {
+				enduring_trait
+				lucky_trait
+				life_giver_trait
+				rooted_trait
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+		advisor = {
+			desc = BRA_toharek_desc
+			slot = army_chief
+			idea_token = BRA_toharek_army_chief
+			ledger = army
+			available = {
+				not_already_hired_except_as = army_chief
+			}
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_wall_of_manitoba_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		advisor = {
+			desc = BRA_toharek_desc
+			slot = high_command
+			idea_token = BRA_toharek_high_command
+			ledger = army
+			available = {
+				not_already_hired_except_as = high_command
+			}
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_wall_of_manitoba
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	}
+
+	# later generals
+	BRA_tobias = {
+		name = BRA_tobias
+		portraits = {
+			army = {
+				large = GFX_Portrait_BRA_knight_tobias
+			}
+		}
+		# field_marshal = {
+		# 	traits = {
+		# 		perceptive_trait
+		# 		enduring_trait
+		# 		intelligent_trait
+		# 	}
+		# 	skill = 5
+		# 	attack_skill = 4
+		# 	defense_skill = 3
+		# 	planning_skill = 3
+		# 	logistics_skill = 4
+		# 	visible = {
+		# 		has_country_flag = BRA_recruit_tobias
+		# 	}
+		# }
+	}
+
+	# Advisors
+	BRA_mailman = {
+		name = BRA_mailman
+		portraits = {
+			civilian = {
+				small = GFX_idea_BRA_postmaster
+			}
+		}
+		advisor = {
+			desc = BRA_mailman_desc
+			slot = economic_advisor
+			idea_token = BRA_mailman
+			allowed = {
+				original_tag = BRA
+			}
+			available = {
+				has_completed_focus = bra_reopen_the_canadian_postal_service
+			}
+			traits = {
+				BRA_trait_mailman
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	BRA_wolf_mcneil = {
+		name = BRA_wolf_mcneil_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_BRA_wolf_mcneil
+			}
+		}
+		advisor = {
+			desc = BRA_wolf_mcneil_desc
+			slot = economic_advisor
+			idea_token = BRA_wolf_mcneil_advisor
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_rogue_trader
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	BRA_simon_oz = {
+		name = BRA_simon_oz_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_BRA_simon_oz
+			}
+		}
+		advisor = {
+			desc = BRA_simon_oz_desc
+			slot = economic_advisor
+			idea_token = BRA_simon_oz_advisor
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_cleptocrat
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	BRA_james_gillingham = {
+		name = BRA_james_gillingham_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_BRA_james_gillingham
+			}
+		}
+		advisor = {
+			desc = BRA_james_gillingham_desc
+			slot = economic_advisor
+			idea_token = BRA_james_gillingham_advisor
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_bureaucrat
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	BRA_marina_tyee = {
+		name = BRA_marina_tyee_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_BRA_marina_tyee
+			}
+		}
+		advisor = {
+			desc = BRA_marina_tyee_desc
+			slot = economic_advisor
+			idea_token = BRA_marina_tyee_advisor
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_economist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	BRA_thomas_neu = {
+		name = BRA_thomas_neu_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_BRA_thomas_neu
+			}
+		}
+		advisor = {
+			desc = BRA_thomas_new_desc
+			slot = economic_advisor
+			idea_token = BRA_thomas_neu_advisor
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_handyman
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	BRA_research_advisor = {
+		name = BRA_research_advisor_name
+		portraits = {
+			army = {
+				small = GFX_idea_BRA_henry_bradford
+			}
+		}
+		advisor = {
+			desc = BRA_research_advisor_desc
+			slot = research_advisor
+			idea_token = BRA_research_advisor
+			ledger = army
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				military_theorist
+			}
+			research_bonus = {
+				cat_land_doctrine = 0.1
+			}
+			cost = 100
+		}
+	}
+	BRA_research_advisor_2 = {
+		name = BRA_research_advisor_2_name
+		portraits = {
+			army = {
+				small = GFX_idea_BRA_charles_macleod
+			}
+		}
+		advisor = {
+			desc = BRA_research_advisor_2_desc
+			slot = research_advisor
+			idea_token = BRA_research_advisor_2
+			ledger = army
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				military_theorist
+			}
+			research_bonus = {
+				cat_terror_tactics = 0.15
+			}
+			cost = 100
+		}
+	}
+
+	BRA_eleanor_yorkton = {
+		name = BRA_eleanor_yorkton_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_BRA_eleanor_yorkton
+			}
+		}
+		advisor = {
+			desc = BRA_eleanor_yorkton_desc
+			slot = cultural_advisor
+			idea_token = BRA_eleanor_yorkton_advisor
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_forward_thinker
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	BRA_cornelius_thornburg = {
+		name = BRA_cornelius_thornburg_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_BRA_cornelius_thornburg
+			}
+		}
+		advisor = {
+			desc = BRA_cornelius_thornburg_desc
+			slot = cultural_advisor
+			idea_token = BRA_cornelius_thornburg_advisor
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_bloody_baron
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	BRA_sandra_davidson = {
+		name = BRA_sandra_davidson_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_BRA_sandra_davidson
+			}
+		}
+		advisor = {
+			desc = BRA_sandra_davidson_desc
+			slot = cultural_advisor
+			idea_token = BRA_sandra_davidson_advisor
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_militarist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	BRA_josephine_sol = {
+		name = BRA_josephine_sol_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_BRA_josephine_sol
+			}
+		}
+		advisor = {
+			desc = BRA_josephine_sol_desc
+			slot = cultural_advisor
+			idea_token = BRA_josephine_sol_advisor
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_healing_hand
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	BRA_neville_burke = {
+		name = BRA_neville_burke_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_BRA_neville_burke
+			}
+		}
+		advisor = {
+			desc = BRA_neville_bruke_desc
+			slot = cultural_advisor
+			idea_token = BRA_neville_burke_advisor
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				BRA_iron_wall
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+
+	BRA_gilles_hawco = {
+		name = BRA_gilles_hawco_name
+		portraits = {
+			civilian = {
+				small = GFX_idea_BRA_gilles_hawco
+			}
+		}
+		advisor = {
+			desc = BRA_gilles_hawco_desc
+			slot = navy_chief
+			idea_token = BRA_gilles_hawco_navy_chief
+			ledger = navy
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				settler_navy_buff
+			}
+			modifier = {
+				cat_naval_river_fleet_doctrine_cost_factor = -0.25
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+
+	BRA_earl_mcrae = {
+		name = BRA_earl_mcrae_name
+		portraits = {
+			army = {
+				small = GFX_idea_BRA_earl_macrae
+			}
+		}
+		advisor = {
+			desc = BRA_earl_mcrae_desc
+			slot = air_chief
+			idea_token = BRA_earl_mcrae_air_chief
+			ledger = air
+			allowed = {
+				tag = BRA
+			}
+			traits = {
+				settler_air_buff
+			}
+			modifier = {
+				cat_pragmatic_aviation_doctrine_cost_factor = -0.25
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}

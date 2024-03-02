@@ -58,6 +58,11 @@ BDT = {
 	color_ui = rgb { 39 0 97 }
 }
 
+BYE = {
+	color = rgb { 255 69 0 }
+	color_ui = rgb { 255 69 0 }
+}
+
 LUL = {
 	color = rgb { 39 0 97 }
 	color_ui = rgb { 39 0 97 }
@@ -235,6 +240,11 @@ EXE = {
 FAR = {
 	color = rgb { 50 205 50 }
 	color_ui = rgb { 50 205 50 }
+}
+
+FEN = {
+	color = rgb { 0 0 0 }
+	color_ui = rgb { 0 0 0 }
 }
 
 FIE = {
@@ -1151,6 +1161,14 @@ MNC = {
 	color = rgb { 0 106 164 }
 	color_ui = rgb { 0 106 164 }
 }
+BCA = {
+	color = rgb { 0 106 164 }
+	color_ui = rgb { 0 106 164 }
+}
+SOH = {
+	color = rgb { 0 106 164 }
+	color_ui = rgb { 0 106 164 }
+}
 PRO = {
 	color = rgb { 78 177 102 }
 	color_ui = rgb { 78 177 102 }
@@ -1257,22 +1275,27 @@ SNO = {
 	color_ui = rgb { 180 105 105 }
 }
 
-VER = {
-	color = rgb { 165 65 57 }
-	color_ui = rgb { 165 65 57 }
-}
-
 STC = {
 	color = rgb { 122 0 0 }
 	color_ui = rgb { 122 0 0 }
 }
 
-NOR = {
+BAD = {
+	color = rgb { 40 9 61 }
+	color_ui = rgb { 40 9 61 }
+}
+
+MDM = {
 	color = rgb { 189 142 0 }
 	color_ui = rgb { 189 142 0 }
 }
 
 WPG = {
+	color = rgb { 0 42 135 }
+	color_ui = rgb { 0 42 135 }
+}
+
+KIN = {
 	color = rgb { 0 42 135 }
 	color_ui = rgb { 0 42 135 }
 }
@@ -1297,36 +1320,6 @@ BRA = {
 	color_ui = rgb { 0 42 255 }
 }
 
-ATT = {
-	color = rgb { 170 141 80 }
-	color_ui = rgb { 170 141 80 }
-}
-
-BUM = {
-	color = rgb { 182 160 53 }
-	color_ui = rgb { 182 160 53 }
-}
-
-WSP = {
-	color = rgb { 191 142 19 }
-	color_ui = rgb { 191 142 19 }
-}
-
-YLJ = {
-	color = rgb { 142 128 56 }
-	color_ui = rgb { 142 128 56 }
-}
-
-TER = {
-	color = rgb { 55 36 63 }
-	color_ui = rgb { 55 36 63 }
-}
-
-MSQ = {
-	color = rgb { 53 12 12 }
-	color_ui = rgb { 52 12 12 }
-}
-
 COM = {
 	color = rgb { 30 91 170 }
 	color_ui = rgb { 30 91 170 }
@@ -1347,11 +1340,6 @@ BGR = {
 	color_ui = rgb { 75 0 40 }
 }
 
-WHC = {
-	color = rgb { 138 120 140 }
-	color_ui = rgb { 138 120 140 }
-}
-
 NEU = {
 	color = rgb { 187 212 158 }
 	color_ui = rgb { 187 212 158 }
@@ -1362,14 +1350,9 @@ ENT = {
 	color_ui = rgb { 65 89 92 }
 }
 
-HBC = {
-	color = rgb { 147 79 43 }
-	color_ui = rgb { 147 79 43 }
-}
-
 DLN  = {
-	color = rgb { 90 90 40 }
-	color_ui = rgb { 90 90 40 }
+	color = rgb { 1 68 33 }
+	color_ui = rgb { 1 68 33 }
 }
 
 YRK = {
@@ -1407,19 +1390,9 @@ MTC = {
 	color_ui = rgb { 13 53 128 }
 }
 
-CPH = {
-	color = rgb { 47 47 47 }
-	color_ui = rgb { 47 47 47 }
-}
-
 ARB = {
 	color = rgb { 220 220 220 }
 	color_ui = rgb { 220 220 220 }
-}
-
-WAK = {
-	color = rgb { 53 197 116 }
-	color_ui = rgb { 53 197 116 }
 }
 
 SBR = {
@@ -1477,6 +1450,11 @@ RMM = {
 	color_ui = rgb { 224 229 91 }
 }
 
+WHC = {
+	color = rgb { 138 120 140 }
+	color_ui = rgb { 138 120 140 }
+}
+
 MTR = {
 	color = rgb { 190 200 70 }
 	color_ui = rgb { 170 170 75 }
@@ -1485,11 +1463,6 @@ MTR = {
 PLT = {
 	color = rgb { 136 203 132 }
 	color_ui = rgb { 136 203 132 }
-}
-
-BKB = {
-	color = rgb { 171 136 77 }
-	color_ui = rgb { 171 136 77 }
 }
 
 BGC = {
@@ -1528,3 +1501,65 @@ WNC = {
 	color = rgb { 0 78 102 }
 	color_ui = rgb { 0 78 102 }
 }
+CPL = {
+	color = rgb { 204 0 0 }
+	color_ui = rgb { 204 0 0 }
+}
+
+CAC = {
+	color = rgb { 37 94 48 }
+	color_ui = rgb { 37 94 48 }
+}
+NWC = {
+	color = rgb { 24 74 135 }
+	color_ui = rgb { 24 74 135 }
+}
+WCO = {
+	color = rgb { 24 74 135 }
+	color_ui = rgb { 24 74 135 }
+}
+MCO = {
+	color = rgb { 24 74 135 }
+	color_ui = rgb { 24 74 135 }
+}
+TXC = {
+	color = rgb { 24 74 135 }
+	color_ui = rgb { 24 74 135 }
+}
+MUC = {
+	color = rgb { 24 74 135 }
+	color_ui = rgb { 24 74 135 }
+}
+FSC = {
+	color = rgb { 24 74 135 }
+	color_ui = rgb { 24 74 135 }
+}
+RIC = {
+	color = rgb { 24 74 135 }
+	color_ui = rgb { 24 74 135 }
+}
+PNC = {
+	color = rgb { 24 74 135 }
+	color_ui = rgb { 24 74 135 }
+}
+SHE = {
+	color = rgb { 178 33 50 }
+	color_ui = rgb { 178 33 50 }
+}
+RID = {
+	color = rgb { 230 230 230 }
+	color_ui = rgb { 230 230 230 }
+}
+MIC = {
+	color = rgb { 0 104 72 }
+	color_ui = rgb { 0 104 72 }
+}
+UCF = {
+	color = rgb { 223 0 37 }
+	color_ui = rgb { 223 0 37 }
+}
+EOS = {
+	color = rgb { 135 0 0 }
+	color_ui = rgb { 135 0 0 }
+}
+

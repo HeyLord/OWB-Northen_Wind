@@ -1,0 +1,19 @@
+CPF_seven_front_war = {
+	priority = {
+		base = 10000
+	}
+	icon = GFX_decision_cat_burning_flag_canada
+	allowed = {
+		OR = {
+			original_tag = STC
+			original_tag = COM
+			original_tag = LOI
+			original_tag = BGR
+			original_tag = WHC
+		}
+	}
+	visible_when_empty = no
+	visible = {
+		has_global_flag = seven_front_war_began
+	}
+}

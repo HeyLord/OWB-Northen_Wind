@@ -9965,6 +9965,480 @@ has_mutually_positive_opinion_with_northern_union = {
 	}
 }
 
+# bloody_electorals
+is_bloody_electorals_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_bloody_electorals_member_tt
+		is_in_array = {
+			array = GLOBAL.bloody_electorals_members
+			value = THIS
+		}
+	}
+}
+
+is_not_bloody_electorals_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_bloody_electorals_member_tt
+		NOT = { is_bloody_electorals_member = yes }
+	}
+}
+
+is_bloody_electorals_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_bloody_electorals_leader_tt
+		is_bloody_electorals_member = yes
+		is_faction_leader = yes
+	}
+}
+
+is_not_bloody_electorals_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_bloody_electorals_leader_tt
+		NOT = { is_bloody_electorals_leader = yes }
+	}
+}
+
+bloody_electorals_exists = {
+	custom_trigger_tooltip = {
+		tooltip = bloody_electorals_exists_tt
+		has_variable = GLOBAL.bloody_electorals_leader
+	}
+}
+
+does_bloody_electorals_exist = {
+	bloody_electorals_exists = yes
+}
+
+bloody_electorals_does_not_exist = {
+	custom_trigger_tooltip = {
+		tooltip = bloody_electorals_does_not_exist_tt
+		NOT = { bloody_electorals_exists = yes }
+	}
+}
+
+does_bloody_electorals_not_exist = {
+	bloody_electorals_does_not_exist = yes
+}
+
+has_border_war_with_bloody_electorals = {
+	custom_trigger_tooltip = {
+		tooltip = has_border_war_with_bloody_electorals_tt
+		any_country = {
+			is_bloody_electorals_member = yes
+			has_border_war_with = PREV
+		}
+	}
+}
+
+has_war_with_bloody_electorals = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_with_bloody_electorals_tt
+		any_enemy_country = {
+			is_bloody_electorals_member = yes
+		}
+	}
+}
+
+at_peace_with_bloody_electorals = {
+	custom_trigger_tooltip = {
+		tooltip = at_peace_with_bloody_electorals_tt
+		NOT = {
+			any_country = {
+				is_bloody_electorals_member = yes
+				OR = {
+					has_war_with = PREV
+					has_border_war_with = PREV
+				}
+			}
+		}
+	}
+}
+
+borders_bloody_electorals = {
+	custom_trigger_tooltip = {
+		tooltip = borders_bloody_electorals_tt
+		any_neighbor_country = {
+			is_bloody_electorals_member = yes
+		}
+	}
+}
+
+borders_bloody_electorals_preline = {
+	custom_trigger_tooltip = {
+		tooltip = borders_bloody_electorals_preline_tt
+		any_neighbor_country = {
+			is_bloody_electorals_member = yes
+		}
+	}
+}
+
+does_not_border_bloody_electorals = {
+	custom_trigger_tooltip = {
+		tooltip = does_not_border_bloody_electorals_tt
+		borders_bloody_electorals = no
+	}
+}
+
+can_join_bloody_electorals = {
+	can_join_bloody_electorals_generic = yes
+	can_join_bloody_electorals_specific = yes
+}
+
+can_join_bloody_electorals_generic = {
+	# You must not be at war with the faction.
+	at_peace_with_bloody_electorals = yes
+
+	# Must have mutually positive relations.
+	has_mutually_positive_opinion_with_bloody_electorals = yes
+
+	# The leader must not hate you or vice-versa.
+	NOT = { has_country_leader_with_trait = isolationist }
+	NOT = { has_country_leader_with_trait = dislikes_bloody_electorals }
+
+	if = {
+		limit = {
+			var:GLOBAL.bloody_electorals_leader = {
+				is_brotherhood_nation = yes
+			}
+		}
+		NOT = { has_country_leader_with_trait = dislikes_brotherhood_of_steel }
+	}
+	else_if = {
+		limit = {
+			var:GLOBAL.bloody_electorals_leader = {
+				has_country_leader_with_trait = dislikes_brotherhood_of_steel
+			}
+		}
+		is_not_brotherhood_nation = yes
+	}
+}
+
+has_mutually_positive_opinion_with_bloody_electorals = {
+	custom_trigger_tooltip = {
+		tooltip = has_mutually_positive_opinion_with_bloody_electorals_tt
+		any_other_country = {
+			is_bloody_electorals_leader = yes
+			has_mutually_positive_opinion_with_prev = yes
+		}
+	}
+}
+
+# canadian_watchdogs
+is_canadian_watchdogs_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_canadian_watchdogs_member_tt
+		is_in_array = {
+			array = GLOBAL.canadian_watchdogs_members
+			value = THIS
+		}
+	}
+}
+
+is_not_canadian_watchdogs_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_canadian_watchdogs_member_tt
+		NOT = { is_canadian_watchdogs_member = yes }
+	}
+}
+
+is_canadian_watchdogs_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_canadian_watchdogs_leader_tt
+		is_canadian_watchdogs_member = yes
+		is_faction_leader = yes
+	}
+}
+
+is_not_canadian_watchdogs_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_canadian_watchdogs_leader_tt
+		NOT = { is_canadian_watchdogs_leader = yes }
+	}
+}
+
+canadian_watchdogs_exists = {
+	custom_trigger_tooltip = {
+		tooltip = canadian_watchdogs_exists_tt
+		has_variable = GLOBAL.canadian_watchdogs_leader
+	}
+}
+
+does_canadian_watchdogs_exist = {
+	canadian_watchdogs_exists = yes
+}
+
+canadian_watchdogs_does_not_exist = {
+	custom_trigger_tooltip = {
+		tooltip = canadian_watchdogs_does_not_exist_tt
+		NOT = { canadian_watchdogs_exists = yes }
+	}
+}
+
+does_canadian_watchdogs_not_exist = {
+	canadian_watchdogs_does_not_exist = yes
+}
+
+has_border_war_with_canadian_watchdogs = {
+	custom_trigger_tooltip = {
+		tooltip = has_border_war_with_canadian_watchdogs_tt
+		any_country = {
+			is_canadian_watchdogs_member = yes
+			has_border_war_with = PREV
+		}
+	}
+}
+
+has_war_with_canadian_watchdogs = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_with_canadian_watchdogs_tt
+		any_enemy_country = {
+			is_canadian_watchdogs_member = yes
+		}
+	}
+}
+
+at_peace_with_canadian_watchdogs = {
+	custom_trigger_tooltip = {
+		tooltip = at_peace_with_canadian_watchdogs_tt
+		NOT = {
+			any_country = {
+				is_canadian_watchdogs_member = yes
+				OR = {
+					has_war_with = PREV
+					has_border_war_with = PREV
+				}
+			}
+		}
+	}
+}
+
+borders_canadian_watchdogs = {
+	custom_trigger_tooltip = {
+		tooltip = borders_canadian_watchdogs_tt
+		any_neighbor_country = {
+			is_canadian_watchdogs_member = yes
+		}
+	}
+}
+
+borders_canadian_watchdogs_preline = {
+	custom_trigger_tooltip = {
+		tooltip = borders_canadian_watchdogs_preline_tt
+		any_neighbor_country = {
+			is_canadian_watchdogs_member = yes
+		}
+	}
+}
+
+does_not_border_canadian_watchdogs = {
+	custom_trigger_tooltip = {
+		tooltip = does_not_border_canadian_watchdogs_tt
+		borders_canadian_watchdogs = no
+	}
+}
+
+can_join_canadian_watchdogs = {
+	can_join_canadian_watchdogs_generic = yes
+	can_join_canadian_watchdogs_specific = yes
+}
+
+can_join_canadian_watchdogs_generic = {
+	# You must not be at war with the faction.
+	at_peace_with_canadian_watchdogs = yes
+
+	# Must have mutually positive relations.
+	has_mutually_positive_opinion_with_canadian_watchdogs = yes
+
+	# The leader must not hate you or vice-versa.
+	NOT = { has_country_leader_with_trait = isolationist }
+	NOT = { has_country_leader_with_trait = dislikes_canadian_watchdogs }
+
+	if = {
+		limit = {
+			var:GLOBAL.canadian_watchdogs_leader = {
+				is_brotherhood_nation = yes
+			}
+		}
+		NOT = { has_country_leader_with_trait = dislikes_brotherhood_of_steel }
+	}
+	else_if = {
+		limit = {
+			var:GLOBAL.canadian_watchdogs_leader = {
+				has_country_leader_with_trait = dislikes_brotherhood_of_steel
+			}
+		}
+		is_not_brotherhood_nation = yes
+	}
+}
+
+has_mutually_positive_opinion_with_canadian_watchdogs = {
+	custom_trigger_tooltip = {
+		tooltip = has_mutually_positive_opinion_with_canadian_watchdogs_tt
+		any_other_country = {
+			is_canadian_watchdogs_leader = yes
+			has_mutually_positive_opinion_with_prev = yes
+		}
+	}
+}
+
+# kingdom_of_manitoba
+is_kingdom_of_manitoba_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_kingdom_of_manitoba_member_tt
+		is_in_array = {
+			array = GLOBAL.kingdom_of_manitoba_members
+			value = THIS
+		}
+	}
+}
+
+is_not_kingdom_of_manitoba_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_kingdom_of_manitoba_member_tt
+		NOT = { is_kingdom_of_manitoba_member = yes }
+	}
+}
+
+is_kingdom_of_manitoba_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_kingdom_of_manitoba_leader_tt
+		is_kingdom_of_manitoba_member = yes
+		is_faction_leader = yes
+	}
+}
+
+is_not_kingdom_of_manitoba_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_kingdom_of_manitoba_leader_tt
+		NOT = { is_kingdom_of_manitoba_leader = yes }
+	}
+}
+
+kingdom_of_manitoba_exists = {
+	custom_trigger_tooltip = {
+		tooltip = kingdom_of_manitoba_exists_tt
+		has_variable = GLOBAL.kingdom_of_manitoba_leader
+	}
+}
+
+does_kingdom_of_manitoba_exist = {
+	kingdom_of_manitoba_exists = yes
+}
+
+kingdom_of_manitoba_does_not_exist = {
+	custom_trigger_tooltip = {
+		tooltip = kingdom_of_manitoba_does_not_exist_tt
+		NOT = { kingdom_of_manitoba_exists = yes }
+	}
+}
+
+does_kingdom_of_manitoba_not_exist = {
+	kingdom_of_manitoba_does_not_exist = yes
+}
+
+has_border_war_with_kingdom_of_manitoba = {
+	custom_trigger_tooltip = {
+		tooltip = has_border_war_with_kingdom_of_manitoba_tt
+		any_country = {
+			is_kingdom_of_manitoba_member = yes
+			has_border_war_with = PREV
+		}
+	}
+}
+
+has_war_with_kingdom_of_manitoba = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_with_kingdom_of_manitoba_tt
+		any_enemy_country = {
+			is_kingdom_of_manitoba_member = yes
+		}
+	}
+}
+
+at_peace_with_kingdom_of_manitoba = {
+	custom_trigger_tooltip = {
+		tooltip = at_peace_with_kingdom_of_manitoba_tt
+		NOT = {
+			any_country = {
+				is_kingdom_of_manitoba_member = yes
+				OR = {
+					has_war_with = PREV
+					has_border_war_with = PREV
+				}
+			}
+		}
+	}
+}
+
+borders_kingdom_of_manitoba = {
+	custom_trigger_tooltip = {
+		tooltip = borders_kingdom_of_manitoba_tt
+		any_neighbor_country = {
+			is_kingdom_of_manitoba_member = yes
+		}
+	}
+}
+
+borders_kingdom_of_manitoba_preline = {
+	custom_trigger_tooltip = {
+		tooltip = borders_kingdom_of_manitoba_preline_tt
+		any_neighbor_country = {
+			is_kingdom_of_manitoba_member = yes
+		}
+	}
+}
+
+does_not_border_kingdom_of_manitoba = {
+	custom_trigger_tooltip = {
+		tooltip = does_not_border_kingdom_of_manitoba_tt
+		borders_kingdom_of_manitoba = no
+	}
+}
+
+can_join_kingdom_of_manitoba = {
+	can_join_kingdom_of_manitoba_generic = yes
+	can_join_kingdom_of_manitoba_specific = yes
+}
+
+can_join_kingdom_of_manitoba_generic = {
+	# You must not be at war with the faction.
+	at_peace_with_kingdom_of_manitoba = yes
+
+	# Must have mutually positive relations.
+	has_mutually_positive_opinion_with_kingdom_of_manitoba = yes
+
+	# The leader must not hate you or vice-versa.
+	NOT = { has_country_leader_with_trait = isolationist }
+	NOT = { has_country_leader_with_trait = dislikes_kingdom_of_manitoba }
+
+	if = {
+		limit = {
+			var:GLOBAL.kingdom_of_manitoba_leader = {
+				is_brotherhood_nation = yes
+			}
+		}
+		NOT = { has_country_leader_with_trait = dislikes_brotherhood_of_steel }
+	}
+	else_if = {
+		limit = {
+			var:GLOBAL.kingdom_of_manitoba_leader = {
+				has_country_leader_with_trait = dislikes_brotherhood_of_steel
+			}
+		}
+		is_not_brotherhood_nation = yes
+	}
+}
+
+has_mutually_positive_opinion_with_kingdom_of_manitoba = {
+	custom_trigger_tooltip = {
+		tooltip = has_mutually_positive_opinion_with_kingdom_of_manitoba_tt
+		any_other_country = {
+			is_kingdom_of_manitoba_leader = yes
+			has_mutually_positive_opinion_with_prev = yes
+		}
+	}
+}
+
 # united_wallers
 is_united_wallers_member = {
 	custom_trigger_tooltip = {
@@ -10755,164 +11229,6 @@ has_mutually_positive_opinion_with_fifth_world = {
 	}
 }
 
-# kingdom_of_manitoba
-is_kingdom_of_manitoba_member = {
-	custom_trigger_tooltip = {
-		tooltip = is_kingdom_of_manitoba_member_tt
-		is_in_array = {
-			array = GLOBAL.kingdom_of_manitoba_members
-			value = THIS
-		}
-	}
-}
-
-is_not_kingdom_of_manitoba_member = {
-	custom_trigger_tooltip = {
-		tooltip = is_not_kingdom_of_manitoba_member_tt
-		NOT = { is_kingdom_of_manitoba_member = yes }
-	}
-}
-
-is_kingdom_of_manitoba_leader = {
-	custom_trigger_tooltip = {
-		tooltip = is_kingdom_of_manitoba_leader_tt
-		is_kingdom_of_manitoba_member = yes
-		is_faction_leader = yes
-	}
-}
-
-is_not_kingdom_of_manitoba_leader = {
-	custom_trigger_tooltip = {
-		tooltip = is_not_kingdom_of_manitoba_leader_tt
-		NOT = { is_kingdom_of_manitoba_leader = yes }
-	}
-}
-
-kingdom_of_manitoba_exists = {
-	custom_trigger_tooltip = {
-		tooltip = kingdom_of_manitoba_exists_tt
-		has_variable = GLOBAL.kingdom_of_manitoba_leader
-	}
-}
-
-does_kingdom_of_manitoba_exist = {
-	kingdom_of_manitoba_exists = yes
-}
-
-kingdom_of_manitoba_does_not_exist = {
-	custom_trigger_tooltip = {
-		tooltip = kingdom_of_manitoba_does_not_exist_tt
-		NOT = { kingdom_of_manitoba_exists = yes }
-	}
-}
-
-does_kingdom_of_manitoba_not_exist = {
-	kingdom_of_manitoba_does_not_exist = yes
-}
-
-has_border_war_with_kingdom_of_manitoba = {
-	custom_trigger_tooltip = {
-		tooltip = has_border_war_with_kingdom_of_manitoba_tt
-		any_country = {
-			is_kingdom_of_manitoba_member = yes
-			has_border_war_with = PREV
-		}
-	}
-}
-
-has_war_with_kingdom_of_manitoba = {
-	custom_trigger_tooltip = {
-		tooltip = has_war_with_kingdom_of_manitoba_tt
-		any_enemy_country = {
-			is_kingdom_of_manitoba_member = yes
-		}
-	}
-}
-
-at_peace_with_kingdom_of_manitoba = {
-	custom_trigger_tooltip = {
-		tooltip = at_peace_with_kingdom_of_manitoba_tt
-		NOT = {
-			any_country = {
-				is_kingdom_of_manitoba_member = yes
-				OR = {
-					has_war_with = PREV
-					has_border_war_with = PREV
-				}
-			}
-		}
-	}
-}
-
-borders_kingdom_of_manitoba = {
-	custom_trigger_tooltip = {
-		tooltip = borders_kingdom_of_manitoba_tt
-		any_neighbor_country = {
-			is_kingdom_of_manitoba_member = yes
-		}
-	}
-}
-
-borders_kingdom_of_manitoba_preline = {
-	custom_trigger_tooltip = {
-		tooltip = borders_kingdom_of_manitoba_preline_tt
-		any_neighbor_country = {
-			is_kingdom_of_manitoba_member = yes
-		}
-	}
-}
-
-does_not_border_kingdom_of_manitoba = {
-	custom_trigger_tooltip = {
-		tooltip = does_not_border_kingdom_of_manitoba_tt
-		borders_kingdom_of_manitoba = no
-	}
-}
-
-can_join_kingdom_of_manitoba = {
-	can_join_kingdom_of_manitoba_generic = yes
-	can_join_kingdom_of_manitoba_specific = yes
-}
-
-can_join_kingdom_of_manitoba_generic = {
-	# You must not be at war with the faction.
-	at_peace_with_kingdom_of_manitoba = yes
-
-	# Must have mutually positive relations.
-	has_mutually_positive_opinion_with_kingdom_of_manitoba = yes
-
-	# The leader must not hate you or vice-versa.
-	NOT = { has_country_leader_with_trait = isolationist }
-	NOT = { has_country_leader_with_trait = dislikes_kingdom_of_manitoba }
-
-	if = {
-		limit = {
-			var:GLOBAL.kingdom_of_manitoba_leader = {
-				is_brotherhood_nation = yes
-			}
-		}
-		NOT = { has_country_leader_with_trait = dislikes_brotherhood_of_steel }
-	}
-	else_if = {
-		limit = {
-			var:GLOBAL.kingdom_of_manitoba_leader = {
-				has_country_leader_with_trait = dislikes_brotherhood_of_steel
-			}
-		}
-		is_not_brotherhood_nation = yes
-	}
-}
-
-has_mutually_positive_opinion_with_kingdom_of_manitoba = {
-	custom_trigger_tooltip = {
-		tooltip = has_mutually_positive_opinion_with_kingdom_of_manitoba_tt
-		any_other_country = {
-			is_kingdom_of_manitoba_leader = yes
-			has_mutually_positive_opinion_with_prev = yes
-		}
-	}
-}
-
 # red_shield
 is_red_shield_member = {
 	custom_trigger_tooltip = {
@@ -11066,6 +11382,480 @@ has_mutually_positive_opinion_with_red_shield = {
 		tooltip = has_mutually_positive_opinion_with_red_shield_tt
 		any_other_country = {
 			is_red_shield_leader = yes
+			has_mutually_positive_opinion_with_prev = yes
+		}
+	}
+}
+
+# wardens_of_white
+is_wardens_of_white_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_wardens_of_white_member_tt
+		is_in_array = {
+			array = GLOBAL.wardens_of_white_members
+			value = THIS
+		}
+	}
+}
+
+is_not_wardens_of_white_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_wardens_of_white_member_tt
+		NOT = { is_wardens_of_white_member = yes }
+	}
+}
+
+is_wardens_of_white_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_wardens_of_white_leader_tt
+		is_wardens_of_white_member = yes
+		is_faction_leader = yes
+	}
+}
+
+is_not_wardens_of_white_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_wardens_of_white_leader_tt
+		NOT = { is_wardens_of_white_leader = yes }
+	}
+}
+
+wardens_of_white_exists = {
+	custom_trigger_tooltip = {
+		tooltip = wardens_of_white_exists_tt
+		has_variable = GLOBAL.wardens_of_white_leader
+	}
+}
+
+does_wardens_of_white_exist = {
+	wardens_of_white_exists = yes
+}
+
+wardens_of_white_does_not_exist = {
+	custom_trigger_tooltip = {
+		tooltip = wardens_of_white_does_not_exist_tt
+		NOT = { wardens_of_white_exists = yes }
+	}
+}
+
+does_wardens_of_white_not_exist = {
+	wardens_of_white_does_not_exist = yes
+}
+
+has_border_war_with_wardens_of_white = {
+	custom_trigger_tooltip = {
+		tooltip = has_border_war_with_wardens_of_white_tt
+		any_country = {
+			is_wardens_of_white_member = yes
+			has_border_war_with = PREV
+		}
+	}
+}
+
+has_war_with_wardens_of_white = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_with_wardens_of_white_tt
+		any_enemy_country = {
+			is_wardens_of_white_member = yes
+		}
+	}
+}
+
+at_peace_with_wardens_of_white = {
+	custom_trigger_tooltip = {
+		tooltip = at_peace_with_wardens_of_white_tt
+		NOT = {
+			any_country = {
+				is_wardens_of_white_member = yes
+				OR = {
+					has_war_with = PREV
+					has_border_war_with = PREV
+				}
+			}
+		}
+	}
+}
+
+borders_wardens_of_white = {
+	custom_trigger_tooltip = {
+		tooltip = borders_wardens_of_white_tt
+		any_neighbor_country = {
+			is_wardens_of_white_member = yes
+		}
+	}
+}
+
+borders_wardens_of_white_preline = {
+	custom_trigger_tooltip = {
+		tooltip = borders_wardens_of_white_preline_tt
+		any_neighbor_country = {
+			is_wardens_of_white_member = yes
+		}
+	}
+}
+
+does_not_border_wardens_of_white = {
+	custom_trigger_tooltip = {
+		tooltip = does_not_border_wardens_of_white_tt
+		borders_wardens_of_white = no
+	}
+}
+
+can_join_wardens_of_white = {
+	can_join_wardens_of_white_generic = yes
+	can_join_wardens_of_white_specific = yes
+}
+
+can_join_wardens_of_white_generic = {
+	# You must not be at war with the faction.
+	at_peace_with_wardens_of_white = yes
+
+	# Must have mutually positive relations.
+	has_mutually_positive_opinion_with_wardens_of_white = yes
+
+	# The leader must not hate you or vice-versa.
+	NOT = { has_country_leader_with_trait = isolationist }
+	NOT = { has_country_leader_with_trait = dislikes_wardens_of_white }
+
+	if = {
+		limit = {
+			var:GLOBAL.wardens_of_white_leader = {
+				is_brotherhood_nation = yes
+			}
+		}
+		NOT = { has_country_leader_with_trait = dislikes_brotherhood_of_steel }
+	}
+	else_if = {
+		limit = {
+			var:GLOBAL.wardens_of_white_leader = {
+				has_country_leader_with_trait = dislikes_brotherhood_of_steel
+			}
+		}
+		is_not_brotherhood_nation = yes
+	}
+}
+
+has_mutually_positive_opinion_with_wardens_of_white = {
+	custom_trigger_tooltip = {
+		tooltip = has_mutually_positive_opinion_with_wardens_of_white_tt
+		any_other_country = {
+			is_wardens_of_white_leader = yes
+			has_mutually_positive_opinion_with_prev = yes
+		}
+	}
+}
+
+# miscounts
+is_miscounts_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_miscounts_member_tt
+		is_in_array = {
+			array = GLOBAL.miscounts_members
+			value = THIS
+		}
+	}
+}
+
+is_not_miscounts_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_miscounts_member_tt
+		NOT = { is_miscounts_member = yes }
+	}
+}
+
+is_miscounts_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_miscounts_leader_tt
+		is_miscounts_member = yes
+		is_faction_leader = yes
+	}
+}
+
+is_not_miscounts_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_miscounts_leader_tt
+		NOT = { is_miscounts_leader = yes }
+	}
+}
+
+miscounts_exists = {
+	custom_trigger_tooltip = {
+		tooltip = miscounts_exists_tt
+		has_variable = GLOBAL.miscounts_leader
+	}
+}
+
+does_miscounts_exist = {
+	miscounts_exists = yes
+}
+
+miscounts_does_not_exist = {
+	custom_trigger_tooltip = {
+		tooltip = miscounts_does_not_exist_tt
+		NOT = { miscounts_exists = yes }
+	}
+}
+
+does_miscounts_not_exist = {
+	miscounts_does_not_exist = yes
+}
+
+has_border_war_with_miscounts = {
+	custom_trigger_tooltip = {
+		tooltip = has_border_war_with_miscounts_tt
+		any_country = {
+			is_miscounts_member = yes
+			has_border_war_with = PREV
+		}
+	}
+}
+
+has_war_with_miscounts = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_with_miscounts_tt
+		any_enemy_country = {
+			is_miscounts_member = yes
+		}
+	}
+}
+
+at_peace_with_miscounts = {
+	custom_trigger_tooltip = {
+		tooltip = at_peace_with_miscounts_tt
+		NOT = {
+			any_country = {
+				is_miscounts_member = yes
+				OR = {
+					has_war_with = PREV
+					has_border_war_with = PREV
+				}
+			}
+		}
+	}
+}
+
+borders_miscounts = {
+	custom_trigger_tooltip = {
+		tooltip = borders_miscounts_tt
+		any_neighbor_country = {
+			is_miscounts_member = yes
+		}
+	}
+}
+
+borders_miscounts_preline = {
+	custom_trigger_tooltip = {
+		tooltip = borders_miscounts_preline_tt
+		any_neighbor_country = {
+			is_miscounts_member = yes
+		}
+	}
+}
+
+does_not_border_miscounts = {
+	custom_trigger_tooltip = {
+		tooltip = does_not_border_miscounts_tt
+		borders_miscounts = no
+	}
+}
+
+can_join_miscounts = {
+	can_join_miscounts_generic = yes
+	can_join_miscounts_specific = yes
+}
+
+can_join_miscounts_generic = {
+	# You must not be at war with the faction.
+	at_peace_with_miscounts = yes
+
+	# Must have mutually positive relations.
+	has_mutually_positive_opinion_with_miscounts = yes
+
+	# The leader must not hate you or vice-versa.
+	NOT = { has_country_leader_with_trait = isolationist }
+	NOT = { has_country_leader_with_trait = dislikes_miscounts }
+
+	if = {
+		limit = {
+			var:GLOBAL.miscounts_leader = {
+				is_brotherhood_nation = yes
+			}
+		}
+		NOT = { has_country_leader_with_trait = dislikes_brotherhood_of_steel }
+	}
+	else_if = {
+		limit = {
+			var:GLOBAL.miscounts_leader = {
+				has_country_leader_with_trait = dislikes_brotherhood_of_steel
+			}
+		}
+		is_not_brotherhood_nation = yes
+	}
+}
+
+has_mutually_positive_opinion_with_miscounts = {
+	custom_trigger_tooltip = {
+		tooltip = has_mutually_positive_opinion_with_miscounts_tt
+		any_other_country = {
+			is_miscounts_leader = yes
+			has_mutually_positive_opinion_with_prev = yes
+		}
+	}
+}
+
+# royal_accord
+is_royal_accord_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_royal_accord_member_tt
+		is_in_array = {
+			array = GLOBAL.royal_accord_members
+			value = THIS
+		}
+	}
+}
+
+is_not_royal_accord_member = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_royal_accord_member_tt
+		NOT = { is_royal_accord_member = yes }
+	}
+}
+
+is_royal_accord_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_royal_accord_leader_tt
+		is_royal_accord_member = yes
+		is_faction_leader = yes
+	}
+}
+
+is_not_royal_accord_leader = {
+	custom_trigger_tooltip = {
+		tooltip = is_not_royal_accord_leader_tt
+		NOT = { is_royal_accord_leader = yes }
+	}
+}
+
+royal_accord_exists = {
+	custom_trigger_tooltip = {
+		tooltip = royal_accord_exists_tt
+		has_variable = GLOBAL.royal_accord_leader
+	}
+}
+
+does_royal_accord_exist = {
+	royal_accord_exists = yes
+}
+
+royal_accord_does_not_exist = {
+	custom_trigger_tooltip = {
+		tooltip = royal_accord_does_not_exist_tt
+		NOT = { royal_accord_exists = yes }
+	}
+}
+
+does_royal_accord_not_exist = {
+	royal_accord_does_not_exist = yes
+}
+
+has_border_war_with_royal_accord = {
+	custom_trigger_tooltip = {
+		tooltip = has_border_war_with_royal_accord_tt
+		any_country = {
+			is_royal_accord_member = yes
+			has_border_war_with = PREV
+		}
+	}
+}
+
+has_war_with_royal_accord = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_with_royal_accord_tt
+		any_enemy_country = {
+			is_royal_accord_member = yes
+		}
+	}
+}
+
+at_peace_with_royal_accord = {
+	custom_trigger_tooltip = {
+		tooltip = at_peace_with_royal_accord_tt
+		NOT = {
+			any_country = {
+				is_royal_accord_member = yes
+				OR = {
+					has_war_with = PREV
+					has_border_war_with = PREV
+				}
+			}
+		}
+	}
+}
+
+borders_royal_accord = {
+	custom_trigger_tooltip = {
+		tooltip = borders_royal_accord_tt
+		any_neighbor_country = {
+			is_royal_accord_member = yes
+		}
+	}
+}
+
+borders_royal_accord_preline = {
+	custom_trigger_tooltip = {
+		tooltip = borders_royal_accord_preline_tt
+		any_neighbor_country = {
+			is_royal_accord_member = yes
+		}
+	}
+}
+
+does_not_border_royal_accord = {
+	custom_trigger_tooltip = {
+		tooltip = does_not_border_royal_accord_tt
+		borders_royal_accord = no
+	}
+}
+
+can_join_royal_accord = {
+	can_join_royal_accord_generic = yes
+	can_join_royal_accord_specific = yes
+}
+
+can_join_royal_accord_generic = {
+	# You must not be at war with the faction.
+	at_peace_with_royal_accord = yes
+
+	# Must have mutually positive relations.
+	has_mutually_positive_opinion_with_royal_accord = yes
+
+	# The leader must not hate you or vice-versa.
+	NOT = { has_country_leader_with_trait = isolationist }
+	NOT = { has_country_leader_with_trait = dislikes_royal_accord }
+
+	if = {
+		limit = {
+			var:GLOBAL.royal_accord_leader = {
+				is_brotherhood_nation = yes
+			}
+		}
+		NOT = { has_country_leader_with_trait = dislikes_brotherhood_of_steel }
+	}
+	else_if = {
+		limit = {
+			var:GLOBAL.royal_accord_leader = {
+				has_country_leader_with_trait = dislikes_brotherhood_of_steel
+			}
+		}
+		is_not_brotherhood_nation = yes
+	}
+}
+
+has_mutually_positive_opinion_with_royal_accord = {
+	custom_trigger_tooltip = {
+		tooltip = has_mutually_positive_opinion_with_royal_accord_tt
+		any_other_country = {
+			is_royal_accord_leader = yes
 			has_mutually_positive_opinion_with_prev = yes
 		}
 	}
@@ -11326,6 +12116,18 @@ can_join_prev_faction = {
 		can_join_northern_union = yes
 	}
 	else_if = {
+		limit = { PREV = { is_bloody_electorals_member = yes } }
+		can_join_bloody_electorals = yes
+	}
+	else_if = {
+		limit = { PREV = { is_canadian_watchdogs_member = yes } }
+		can_join_canadian_watchdogs = yes
+	}
+	else_if = {
+		limit = { PREV = { is_kingdom_of_manitoba_member = yes } }
+		can_join_kingdom_of_manitoba = yes
+	}
+	else_if = {
 		limit = { PREV = { is_united_wallers_member = yes } }
 		can_join_united_wallers = yes
 	}
@@ -11346,12 +12148,20 @@ can_join_prev_faction = {
 		can_join_fifth_world = yes
 	}
 	else_if = {
-		limit = { PREV = { is_kingdom_of_manitoba_member = yes } }
-		can_join_kingdom_of_manitoba = yes
-	}
-	else_if = {
 		limit = { PREV = { is_red_shield_member = yes } }
 		can_join_red_shield = yes
+	}
+	else_if = {
+		limit = { PREV = { is_wardens_of_white_member = yes } }
+		can_join_wardens_of_white = yes
+	}
+	else_if = {
+		limit = { PREV = { is_miscounts_member = yes } }
+		can_join_miscounts = yes
+	}
+	else_if = {
+		limit = { PREV = { is_royal_accord_member = yes } }
+		can_join_royal_accord = yes
 	}
 	else = {
 		always = yes
@@ -11612,6 +12422,18 @@ can_join_root_faction = {
 		can_join_northern_union = yes
 	}
 	else_if = {
+		limit = { ROOT = { is_bloody_electorals_member = yes } }
+		can_join_bloody_electorals = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_canadian_watchdogs_member = yes } }
+		can_join_canadian_watchdogs = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_kingdom_of_manitoba_member = yes } }
+		can_join_kingdom_of_manitoba = yes
+	}
+	else_if = {
 		limit = { ROOT = { is_united_wallers_member = yes } }
 		can_join_united_wallers = yes
 	}
@@ -11632,12 +12454,20 @@ can_join_root_faction = {
 		can_join_fifth_world = yes
 	}
 	else_if = {
-		limit = { ROOT = { is_kingdom_of_manitoba_member = yes } }
-		can_join_kingdom_of_manitoba = yes
-	}
-	else_if = {
 		limit = { ROOT = { is_red_shield_member = yes } }
 		can_join_red_shield = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_wardens_of_white_member = yes } }
+		can_join_wardens_of_white = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_miscounts_member = yes } }
+		can_join_miscounts = yes
+	}
+	else_if = {
+		limit = { ROOT = { is_royal_accord_member = yes } }
+		can_join_royal_accord = yes
 	}
 	else = {
 		always = yes

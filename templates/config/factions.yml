@@ -184,8 +184,8 @@ factions:
     def_name: "the NCR"
     tag: "NCR"
   the_second_coalition:
-    name: "The Second Coalition"
-    def_name: "The Second Coalition"
+    name: "Second Coalition"
+    def_name: "the Second Coalition"
     tag: "WPG"
   imperium_mexicanum:
     name: "Imperium Mexicanum"
@@ -251,6 +251,18 @@ factions:
     name: "Northern Union"
     def_name: "the Northern Union"
     tag: "TOC"
+  bloody_electorals:
+    name: "Bloody Electorals"
+    def_name: "the Bloody Electorals"
+    tag: "SBR"
+  canadian_watchdogs:
+    name: "Canadian Watchdogs"
+    def_name: "the Canadian Watchdogs"
+    tag: "BRA"
+  kingdom_of_manitoba:
+    name: "Kingdom of Manitoba"
+    def_name: "the Kingdom of Manitoba"
+    tag: "BRA"
   united_wallers:
     name: "United Wallers of Nebraska"
     def_name: "the United Wallers of Nebraska"
@@ -271,11 +283,23 @@ factions:
     name: "Fifth World"
     def_name: "the Fifth World"
     tag: "NAV"
-  kingdom_of_manitoba:
-    name: "Kingdom of Manitoba"
-    def_name: "the Kingdom of Manitoba"
-    tag: "BRA"
   red_shield:
     name: "Red Shield"
     def_name: "the Red Shield"
     tag: "WHC"
+  wardens_of_white:
+    name: "Wardens of the White"
+    def_name: "the Wardens of the White"
+    tag: "TOC"
+  bloody_electorals:
+    name: "Bloody Electorals"
+    def_name: "the Bloody Electorals"
+    tag: "STN"
+  miscounts:
+    name: "Miscounts"
+    def_name: "the Miscounts"
+    tag: "NOR"
+  royal_accord:
+    name: "Royal Accord"
+    def_name: "the Royal Accord"
+    tag: "DLN"
