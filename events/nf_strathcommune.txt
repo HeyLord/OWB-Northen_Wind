@@ -136,10 +136,9 @@ country_event = {
 				use_nuke = no
 			}
 			news_event = {id = nf_strath.5 days = 2 }
-			LOI = { news_event = {id = nf_strath.5 days = 2 } }
-			BGR = { news_event = {id = nf_strath.5 days = 2 } }
-			COM = { news_event = {id = nf_strath.5 days = 2 } }
-			WHC = { news_event = {id = nf_strath.5 days = 2 } }
+			LOI = { news_event = {id = nf_strath.31 days = 2 } }
+			#BGR = { news_event = {id = nf_strath.5 days = 2 } }
+			#COM = { news_event = {id = nf_strath.5 days = 2 } }
 		}
 		set_global_flag = seven_front_war_began
 		LOI = {
@@ -163,7 +162,6 @@ country_event = {
 		trigger = {
 			original_tag  = STC
 		}
-		set_country_flag = strathcommune_opposition_grows
 		hidden_effect = {
 			goto_state = 1116
 			STC = {
@@ -173,9 +171,9 @@ country_event = {
 				}
 			}
 			news_event = { id = nf_strath.5 days = 2 }
-			LOI = { news_event = {id = nf_strath.5 days = 2 } }
-			BGR = { news_event = {id = nf_strath.5 days = 2 } }
-			COM = { news_event = {id = nf_strath.5 days = 2 } }
+			LOI = { news_event = {id = nf_strath.31 days = 2 } }
+			#BGR = { news_event = {id = nf_strath.5 days = 2 } }
+			#COM = { news_event = {id = nf_strath.5 days = 2 } }
 		}
 		set_global_flag = seven_front_war_began
 		LOI = {
@@ -201,12 +199,11 @@ news_event = {
 
 	option = {
 		name = nf_strath.5.a
-		custom_effect_tooltip = nf_strath.5.a_tt
+		#custom_effect_tooltip = nf_strath.5.a_tt
 		set_global_flag = strath_marches
-		activate_mission = CPF_war_breaks_out
+		#activate_mission = CPF_war_breaks_out
 	}
 }
-
 
 country_event = {
 	id = nf_strath.6
@@ -230,6 +227,7 @@ country_event = {
 		STC = {news_event = nf_strath.8 }
 	}
 }
+
 news_event = {
 	id = nf_strath.7
 	title = nf_strath.7.t
@@ -286,67 +284,7 @@ news_event = {
 		set_country_flag = STC_retaliates
 	}
 }
-news_event = {
-	id = nf_strath.9
-	title = nf_strath.9.t
-	desc = nf_strath.9.d
-	picture = GFX_event_BRK_village_raid
 
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = nf_strath.9.a
-		army_experience = 25
-		transfer_state = 1139
-		add_days_mission_timeout = {
-			mission = CPF_war_breaks_out
-			days = -50
-		}
-	}
-}
-news_event = {
-	id = nf_strath.10
-	title = nf_strath.10.t
-	desc = nf_strath.10.d
-	picture = GFX_event_BRK_village_raid
-	is_triggered_only = yes
-
-	option = {
-		name = nf_strath.10.a
-		add_war_support = 0.05
-	}
-}
-
-news_event = {
-	id = nf_strath.11
-	title = nf_strath.11.t
-	desc = nf_strath.11.d
-	picture = GFX_event_BRK_village_raid
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = nf_strath.11.a
-	}
-}
-
-news_event = {
-	id = nf_strath.12
-	title = nf_strath.12.t
-	desc = nf_strath.12.d
-	picture = GFX_event_BRK_village_raid
-
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = nf_strath.12.a
-		add_war_support = 0.05
-		army_experience = 30
-	}
-}
 news_event = {
 	id = nf_strath.13
 	title = nf_strath.13.t
@@ -357,9 +295,7 @@ news_event = {
 	option = {
 		name = nf_strath.13.a
 		hidden_effect = {
-			STC = {
-				set_country_flag = stc_six_front_war_began
-			}
+			set_global_flag = stc_six_front_war_began
 		}
 		STC = {
 			declare_war_on = {
@@ -379,7 +315,29 @@ news_event = {
 				type = annex_everything
 			}
 		}
+		LOI = {
+			declare_war_on = {
+				target = BGR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = COM
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STC
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = WHC
+				type = annex_everything
+			}
+		}
 		BGR = {
+			declare_war_on = {
+				target = STC
+				type = annex_everything
+			}
 			declare_war_on = {
 				target = COM
 				type = annex_everything
@@ -395,6 +353,14 @@ news_event = {
 		}
 		COM = {
 			declare_war_on = {
+				target = STC
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGR
+				type = annex_everything
+			}
+			declare_war_on = {
 				target = LOI
 				type = annex_everything
 			}
@@ -403,11 +369,289 @@ news_event = {
 				type = annex_everything
 			}
 		}
-		WHC = {
-			declare_war_on = {
-				target = LOI
-				type = annex_everything
+	}
+}
+country_event = {
+	id = nf_strath.14
+	title = nf_strath.14.t
+	desc = nf_strath.14.d
+	picture = GFX_event_generic_civil_unrest
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.14.a
+		complete_national_focus = stc_articles_of_union
+		STC_colonel_thao = {
+			remove_unit_leader_role = yes
+		}
+	}
+	option = {
+		name = nf_strath.14.b
+		complete_national_focus = CPL_revoluionary_administration
+	}
+}
+country_event = {
+	id = nf_strath.15
+	title = nf_strath.15.t
+	desc = nf_strath.15.d
+	picture = GFX_event_generic_ruins_burning
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.15.a
+
+	}
+}
+country_event = {
+	id = nf_strath.16
+	title = nf_strath.16.t
+	desc = nf_strath.16.d
+	picture = GFX_event_cold_winter_location
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.16.a
+		complete_national_focus = stc_novemberists_start
+	}
+	option = {
+		name = nf_strath.16.b
+		complete_national_focus = stc_cadets_start
+	}
+}
+country_event = {
+	id = nf_strath.17
+	title = nf_strath.17.t
+	desc = nf_strath.17.d
+	picture = GFX_event_china_poster
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.17.a
+	}
+}
+country_event = {
+	id = nf_strath.18
+	title = nf_strath.18.t
+	desc = nf_strath.18.d
+	picture = GFX_event_generic_civil_unrest
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.18.a
+		swap_ideas = {
+			remove_idea = strath_china_ideology
+			add_idea = stc_chairwomen_teresee_thought_n
+		}
+		set_cosmetic_tag = STC_novemberists
+		set_politics = {
+			ruling_party = intellectuals
+			elections_allowed = no
+		}
+	}
+	option = {
+		name = nf_strath.18.b
+		country_event = { id = nf_cpl.18 }
+	}
+}
+country_event = {
+	id = nf_strath.19
+	title = nf_strath.19.t
+	desc = nf_strath.19.d
+	picture = GFX_event_sub_generic_ruins_8
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.19.a
+		swap_ideas = {
+			remove_idea = strath_china_ideology
+			add_idea = stc_chairwomen_teresee_thought_c
+		}
+		set_cosmetic_tag = STC_cadets
+		hidden_effect = {
+			create_country_leader = {
+				name = "Amy Teresee"
+				desc = "TERESEE_DESC"
+				picture = "gfx/leaders/STC/portrait_teresee.dds"
+				expire = "3000.1.1"
+				ideology = militarist_oligarchy
+				traits = {
+					paranoid
+					war_industrialist
+					commissariat
+					big_sister
+				}
 			}
 		}
+	}
+}
+country_event = {
+	id = nf_strath.20
+	title = nf_strath.20.t
+	desc = nf_strath.20.d
+	picture = GFX_event_sub_generic_war_room
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.20.a
+		set_country_flag = strath_kapastarov_plan
+	}
+	option = {
+		name = nf_strath.20.b
+		set_country_flag = strath_russanova_plan
+	}
+	option = {
+		name = nf_strath.20.c
+		set_country_flag = strath_blovoski_plan
+	}
+}
+country_event = {
+	id = nf_strath.21
+	title = nf_strath.21.t
+	desc = nf_strath.21.d
+	picture = GFX_event_china_poster
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.21.a
+
+	}
+}
+country_event = {
+	id = nf_strath.22
+	title = nf_strath.22.t
+	desc = nf_strath.22.d
+	picture = GFX_event_generic_ruins_burning
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.22.a
+
+	}
+}
+country_event = {
+	id = nf_strath.24
+	title = nf_strath.24.t
+	desc = nf_strath.24.d
+	picture = GFX_event_sub_generic_wasteland_river
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.24.a
+
+	}
+}
+country_event = {
+	id = nf_strath.25
+	title = nf_strath.25.t
+	desc = nf_strath.25.d
+	picture = GFX_event_sub_generic_wasteland_river
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.25.a
+
+	}
+}
+country_event = {
+	id = nf_strath.26
+	title = nf_strath.26.t
+	desc = nf_strath.26.d
+	picture = GFX_event_sub_generic_wasteland_river
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.26.a
+
+	}
+}
+country_event = {
+	id = nf_strath.27
+	title = nf_strath.27.t
+	desc = nf_strath.27.d
+	picture = GFX_event_sub_generic_wasteland_river
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.27.a
+
+	}
+}
+country_event = {
+	id = nf_strath.28
+	title = nf_strath.28.t
+	desc = nf_strath.28.d
+	picture = GFX_event_china_poster
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.28.a
+	}
+}
+country_event = {
+	id = nf_strath.29
+	title = nf_strath.29.t
+	desc = nf_strath.29.d
+	picture = GFX_event_china_poster
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.29.a
+	}
+}
+country_event = {
+	id = nf_strath.30
+	title = nf_strath.30.t
+	desc = nf_strath.30.d
+	picture = GFX_event_china_poster
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.30.a
+	}
+}
+news_event = {
+	id = nf_strath.31
+	title = nf_strath.31.t
+	desc = nf_strath.31.d
+	picture = GFX_event_china_poster
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_strath.31.a
+		add_war_support = 0.05
+		add_stability = -0.05
 	}
 }
